@@ -15,7 +15,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void TeleportPlayer(Door door)
     {
         player.transform.rotation = door.partnerDoor.transform.rotation;
-        player.transform.position = door.partnerDoor.transform.position + Vector3.back;
+        player.transform.position = door.partnerDoor.transform.position + Vector3.forward;
         
     }
 
