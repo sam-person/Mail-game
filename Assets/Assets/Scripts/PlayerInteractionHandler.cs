@@ -9,13 +9,14 @@ public class PlayerInteractionHandler : MonoBehaviour
     public GameObject player;
     private bool interactorFocused = false;
     private Collider focusCollider;
+    public UIController UIController;
     
 
 
     private void TeleportPlayer(Door door)
     {
-        player.transform.rotation = door.partnerDoor.transform.rotation;
-        player.transform.position = door.partnerDoor.transform.position + Vector3.forward;
+        player.transform.rotation = door.spawnPoint.transform.rotation;
+        player.transform.position = door.spawnPoint.transform.position;
         
     }
 
@@ -26,6 +27,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
+                StartCoroutine(UIController.FadeBlackOutSquare());
                 TeleportPlayer(focusCollider.gameObject.GetComponent<Door>());
             }
         }

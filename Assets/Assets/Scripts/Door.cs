@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
 
     public Door partnerDoor;
+    public Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()

@@ -46,9 +46,11 @@ namespace cakeslice
 			SkinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
 			SpriteRenderer = GetComponent<SpriteRenderer>();
 			MeshFilter = GetComponent<MeshFilter>();
-            this.enabled = false;
-            this.enabled = true;
-            this.enabled = false;
+        }
+
+        private void Start()
+        {
+			this.enabled = false;
         }
 
         void OnEnable()
