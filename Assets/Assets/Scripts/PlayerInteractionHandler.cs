@@ -10,14 +10,18 @@ public class PlayerInteractionHandler : MonoBehaviour
     private bool interactorFocused = false;
     private Collider focusCollider;
     public UIController UIController;
-    
 
+    Coroutine teleportCoroutine;
+    Coroutine fadeInCoroutine;
+    Coroutine fadeOutCoroutine;
 
-    private void TeleportPlayer(Door door)
+    private IEnumerator TeleportPlayer(Door door)
     {
+        yield return new WaitForSeconds(0.2f);
         player.transform.rotation = door.spawnPoint.transform.rotation;
         player.transform.position = door.spawnPoint.transform.position;
-        
+
+
     }
 
 
@@ -27,8 +31,9 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
-                StartCoroutine(UIController.FadeBlackOutSquare());
-                TeleportPlayer(focusCollider.gameObject.GetComponent<Door>());
+                fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
+                teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
+                //fadeOutCoroutine = StartCoroutine(UIController.FadeBlackOutSquare(false));
             }
         }
     }

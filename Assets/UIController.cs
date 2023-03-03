@@ -12,21 +12,21 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartCoroutine(FadeBlackOutSquare());
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    StartCoroutine(FadeBlackOutSquare());
+        //}
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            StartCoroutine(FadeBlackOutSquare(false));
-        }
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    StartCoroutine(FadeBlackOutSquare(false));
+        //}
 
     }
 
     private void Start()
     {
-        StartCoroutine(FadeBlackOutSquare(false));
+        
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 5)
@@ -35,8 +35,11 @@ public class UIController : MonoBehaviour
         Color objectColor = blackOutSquare.GetComponent<Image>().color;
         float fadeAmount;
 
+
         if (fadeToBlack)
         {
+            //bool fadefinished = false;
+
             while (blackOutSquare.GetComponent<Image>().color.a < 1)
             {
                 fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
@@ -44,6 +47,19 @@ public class UIController : MonoBehaviour
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
+            }
+
+            if(blackOutSquare.GetComponent<Image>().color.a >= 1)
+            {
+                yield return new WaitForSeconds(0.5f);
+                while (blackOutSquare.GetComponent<Image>().color.a > 0)
+                {
+                    fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+
+                    objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                    blackOutSquare.GetComponent<Image>().color = objectColor;
+                    yield return null;
+                }
             }
         }
         else
