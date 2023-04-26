@@ -11,6 +11,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     private Collider focusCollider;
     public UIController UIController;
 
+    public Animator animator;
+
     Coroutine teleportCoroutine;
     Coroutine fadeInCoroutine;
     Coroutine fadeOutCoroutine;
@@ -34,6 +36,14 @@ public class PlayerInteractionHandler : MonoBehaviour
                 fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
                 teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
                 //fadeOutCoroutine = StartCoroutine(UIController.FadeBlackOutSquare(false));
+
+                animator.SetBool("interact", true);
+            }
+
+            else
+            {
+                animator.SetBool("interact", false);
+
             }
         }
     }
