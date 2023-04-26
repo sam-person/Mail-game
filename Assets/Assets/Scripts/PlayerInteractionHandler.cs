@@ -44,7 +44,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
         if (other.tag == "Interactable")
         {
-
+            Debug.Log("interactor focused");
             focusCollider = other;
             focusCollider.gameObject.GetComponent<Outline>().enabled = true;
 
