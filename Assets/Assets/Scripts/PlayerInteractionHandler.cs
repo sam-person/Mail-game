@@ -10,6 +10,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     private bool interactorFocused = false;
     private Collider focusCollider;
     public UIController UIController;
+    public Camera mainCamera;
+
 
     public Animator animator;
 
@@ -22,7 +24,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         player.transform.rotation = door.spawnPoint.transform.rotation;
         player.transform.position = door.spawnPoint.transform.position;
-
+        mainCamera.clearFlags = CameraClearFlags.SolidColor;
 
     }
 
@@ -46,15 +48,20 @@ public class PlayerInteractionHandler : MonoBehaviour
 
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            mainCamera.clearFlags = CameraClearFlags.Skybox;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         
 
-        if (other.tag == "Interactable")
+        if (other.tag == "InteractableDoor")
         {
-            Debug.Log("interactor focused");
+            Debug.Log("interactor focused on a Door");
             focusCollider = other;
             focusCollider.gameObject.GetComponent<Outline>().enabled = true;
 
@@ -68,7 +75,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "InteractableDoor")
         {
             interactorFocused = false;
             focusCollider.gameObject.GetComponent<Outline>().enabled = false;
