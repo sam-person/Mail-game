@@ -13,6 +13,9 @@ public class PlayerInteractionHandler : MonoBehaviour
     public UIController UIController;
     public Camera mainCamera;
 
+    public AudioSource doorSource;
+    public AudioClip doorClip;
+
 
     private bool interactorDoorInBool = false;
     private bool interactorDoorOutBool = false;
@@ -35,6 +38,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             player.transform.position = door.spawnPoint.transform.position;
             mainCamera.clearFlags = CameraClearFlags.SolidColor;
             animator.SetBool("interact", false);
+            doorSource.PlayOneShot(doorClip);
 
         }
 
@@ -45,6 +49,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             player.transform.position = door.spawnPoint.transform.position;
             mainCamera.clearFlags = CameraClearFlags.Skybox;
             animator.SetBool("interact", false);
+            doorSource.PlayOneShot(doorClip);
+
         }
 
     }
