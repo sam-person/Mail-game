@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using cakeslice;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem.XR;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
-
+    public ParticleSystem meowParticle;
     public GameObject player;
     private Collider focusCollider;
     public UIController UIController;
@@ -16,6 +17,9 @@ public class PlayerInteractionHandler : MonoBehaviour
     public AudioSource doorSource;
     public AudioClip doorClip;
 
+
+    public AudioClip[] meows;
+    [Range(0, 1)] public float meowsVolume = 0.5f;
 
     private bool interactorDoorInBool = false;
     private bool interactorDoorOutBool = false;
@@ -39,7 +43,6 @@ public class PlayerInteractionHandler : MonoBehaviour
             mainCamera.clearFlags = CameraClearFlags.SolidColor;
             animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);
-
         }
 
         else 
@@ -50,9 +53,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             mainCamera.clearFlags = CameraClearFlags.Skybox;
             animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);
-
         }
-
     }
 
 
@@ -67,8 +68,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
             teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
-            animator.SetBool("interact", true);
-            
+            animator.SetBool("interact", true);  
         }
 
         if (interactorDoorOutBool)
@@ -76,29 +76,35 @@ public class PlayerInteractionHandler : MonoBehaviour
             fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
             teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
             animator.SetBool("interact", true);
-
         }
+    }
 
 
+    private void MeowButton()
+    {
+        if (meows.Length > 0)
+        {
+            var index = Random.Range(0, meows.Length);
+            AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
+            meowParticle.Emit(1);
+        }
     }
 
     private void Update()
     {
-
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             CattoInteractor();
         }
 
-
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            MeowButton();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-
-
-
         switch (other.tag)
         {
             case "InteractableDoorIn":
@@ -135,8 +141,6 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
-
         switch (other.tag)
         {
             case "InteractableDoorIn":
@@ -162,8 +166,5 @@ public class PlayerInteractionHandler : MonoBehaviour
             default:
                 break;
         }
-
-
     }
-
 }
