@@ -77,17 +77,23 @@ public class PlayerInteractionHandler : MonoBehaviour
             teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
             animator.SetBool("interact", true);
         }
+
+        if (interactorDialogueBool)
+        {
+             
+            var index = Random.Range(0, meows.Length);
+            AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
+            meowParticle.Emit(1);
+            
+        }
     }
 
 
     private void MeowButton()
     {
-        if (meows.Length > 0)
-        {
-            var index = Random.Range(0, meows.Length);
-            AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
-            meowParticle.Emit(1);
-        }
+        var index = Random.Range(0, meows.Length);
+        AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
+        meowParticle.Emit(1); 
     }
 
     private void Update()
