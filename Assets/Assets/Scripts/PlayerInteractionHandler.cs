@@ -19,7 +19,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public GameObject dialogueCamera;
 
     private ThirdPersonController thirdPersonController;
-
+    private PlayerInteractionHandler playerInteractionHandler;
     public AudioSource doorSource;
     public AudioClip doorClip;
 
@@ -46,6 +46,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
+        playerInteractionHandler = GetComponent<PlayerInteractionHandler>();
     }
 
 
@@ -77,6 +78,10 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (!interactorDoorInBool && !interactorDoorOutBool && !interactorItemBool && !interactorDialogueBool)
         {
+            dialogueCamera.gameObject.SetActive(false);
+            thirdPersonController.enabled = true;
+            playerInteractionHandler.enabled = true;
+            animator.SetBool("talking", false);
             return;
         }
 
@@ -99,8 +104,13 @@ public class PlayerInteractionHandler : MonoBehaviour
             targetGroup.m_Targets[1].target = focusCollider.gameObject.transform;
             dialogueCamera.gameObject.SetActive(true);
             thirdPersonController.enabled = !thirdPersonController.enabled;
+            playerInteractionHandler.enabled = !playerInteractionHandler.enabled;
+
             focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+            interactorDialogueBool = false;
+            animator.SetBool("talking", true);
         }
+
     }
 
 
