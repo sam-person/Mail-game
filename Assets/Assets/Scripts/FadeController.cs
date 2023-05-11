@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class FadeController : MonoBehaviour
 {
 
     public GameObject blackOutSquare;
@@ -12,15 +12,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    StartCoroutine(FadeBlackOutSquare());
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    StartCoroutine(FadeBlackOutSquare(false));
-        //}
 
     }
 

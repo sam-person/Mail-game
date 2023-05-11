@@ -5,14 +5,20 @@ using UnityEngine.InputSystem;
 using cakeslice;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem.XR;
+using StarterAssets;
+using Cinemachine;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
     public ParticleSystem meowParticle;
     public GameObject player;
     private Collider focusCollider;
-    public UIController UIController;
+    public FadeController FadeController;
     public Camera mainCamera;
+    public CinemachineTargetGroup targetGroup;
+    public GameObject dialogueCamera;
+
+    private ThirdPersonController thirdPersonController;
 
     public AudioSource doorSource;
     public AudioClip doorClip;
@@ -27,11 +33,21 @@ public class PlayerInteractionHandler : MonoBehaviour
     private bool interactorDialogueBool = false;
 
 
+    
+
+
     public Animator animator;
 
     Coroutine teleportCoroutine;
     Coroutine fadeInCoroutine;
     Coroutine fadeOutCoroutine;
+
+
+    private void Start()
+    {
+        thirdPersonController = GetComponent<ThirdPersonController>();
+    }
+
 
     private IEnumerator TeleportPlayer(Door door)
     {
@@ -66,25 +82,24 @@ public class PlayerInteractionHandler : MonoBehaviour
 
         if (interactorDoorInBool)
         {
-            fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
+            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
             teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
             animator.SetBool("interact", true);  
         }
 
         if (interactorDoorOutBool)
         {
-            fadeInCoroutine = StartCoroutine(UIController.FadeBlackOutSquare());
+            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
             teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
             animator.SetBool("interact", true);
         }
 
         if (interactorDialogueBool)
         {
-             
-            var index = Random.Range(0, meows.Length);
-            AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
-            meowParticle.Emit(1);
-            
+            targetGroup.m_Targets[1].target = focusCollider.gameObject.transform;
+            dialogueCamera.gameObject.SetActive(true);
+            thirdPersonController.enabled = !thirdPersonController.enabled;
+            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
         }
     }
 
@@ -107,6 +122,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             MeowButton();
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
