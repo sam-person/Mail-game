@@ -10,16 +10,19 @@ using Cinemachine;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
+
+    public static PlayerInteractionHandler instance;
+
     public ParticleSystem meowParticle;
     public GameObject player;
-    private Collider focusCollider;
+    public Collider focusCollider;
     public FadeController FadeController;
     public Camera mainCamera;
     public CinemachineTargetGroup targetGroup;
     public GameObject dialogueCamera;
 
-    private ThirdPersonController thirdPersonController;
-    private PlayerInteractionHandler playerInteractionHandler;
+    public ThirdPersonController thirdPersonController;
+    public PlayerInteractionHandler playerInteractionHandler;
     public AudioSource doorSource;
     public AudioClip doorClip;
 
@@ -41,12 +44,19 @@ public class PlayerInteractionHandler : MonoBehaviour
     Coroutine teleportCoroutine;
     Coroutine fadeInCoroutine;
     Coroutine fadeOutCoroutine;
+    Coroutine talkingCoroutine;
 
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         playerInteractionHandler = GetComponent<PlayerInteractionHandler>();
+        
     }
 
 
@@ -78,10 +88,6 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (!interactorDoorInBool && !interactorDoorOutBool && !interactorItemBool && !interactorDialogueBool)
         {
-            dialogueCamera.gameObject.SetActive(false);
-            thirdPersonController.enabled = true;
-            playerInteractionHandler.enabled = true;
-            animator.SetBool("talking", false);
             return;
         }
 
@@ -101,24 +107,26 @@ public class PlayerInteractionHandler : MonoBehaviour
 
         if (interactorDialogueBool)
         {
-            targetGroup.m_Targets[1].target = focusCollider.gameObject.transform;
-            dialogueCamera.gameObject.SetActive(true);
-            thirdPersonController.enabled = !thirdPersonController.enabled;
-            playerInteractionHandler.enabled = !playerInteractionHandler.enabled;
-
+            talkingCoroutine = StartCoroutine(InterfaceManager.instance.DialogueController(true));
+            //InterfaceManager.instance.DialogueController(true);           
             focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-            interactorDialogueBool = false;
-            animator.SetBool("talking", true);
+            
         }
 
     }
 
 
-    private void MeowButton()
+    public  void MeowButton()
     {
         var index = Random.Range(0, meows.Length);
         AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
         meowParticle.Emit(1); 
+    }
+
+    public void MeowConversation()
+    {
+        var index = Random.Range(0, meows.Length);
+        AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
     }
 
     private void Update()
@@ -132,7 +140,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             MeowButton();
         }
-
+         
     }
 
     private void OnTriggerEnter(Collider other)
@@ -157,6 +165,9 @@ public class PlayerInteractionHandler : MonoBehaviour
                 Debug.Log("interactor focused on a person");
                 focusCollider = other;
                 focusCollider.gameObject.GetComponent<Outline>().enabled = true;
+
+                InterfaceManager.instance.currentChar = other.GetComponent<CharacterScript>();
+
                 interactorDialogueBool = true;
                 break;
             
@@ -188,6 +199,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             case "InteractableDialogue":
                 Debug.Log("interactor stop focused on a person");
                 interactorDoorInBool = false;
+                InterfaceManager.instance.currentChar = null;
                 focusCollider.gameObject.GetComponent<Outline>().enabled = false;
                 break;
             case "InteractableDItem":
