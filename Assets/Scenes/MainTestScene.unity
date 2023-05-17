@@ -2044,7 +2044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c17739a012430458d87867fee5b5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 1233639776}
 --- !u!114 &470696340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3578,7 +3578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c17739a012430458d87867fee5b5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 954035707}
 --- !u!54 &811186401
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6024,6 +6024,11 @@ Transform:
   m_Father: {fileID: 871468032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1233639776 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6042799183506736199, guid: 6d0c05c9f153bd548b3f801e846dd333, type: 3}
+  m_PrefabInstance: {fileID: 1412543223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1269058288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9158254143596351873, guid: 41b014a2a822d114dab84be2575153d4, type: 3}
@@ -6986,6 +6991,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1517784788}
     m_Modifications:
+    - target: {fileID: 1768173869439369473, guid: 6d0c05c9f153bd548b3f801e846dd333, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1402636213}
     - target: {fileID: 3917113974601060144, guid: 6d0c05c9f153bd548b3f801e846dd333, type: 3}
       propertyPath: m_Name
       value: Prefab_Bakery
