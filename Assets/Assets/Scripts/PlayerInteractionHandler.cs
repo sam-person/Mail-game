@@ -25,7 +25,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public PlayerInteractionHandler playerInteractionHandler;
     public AudioSource doorSource;
     public AudioClip doorClip;
-
+    public bool isGamePaused = false;
 
     public AudioClip[] meows;
     [Range(0, 1)] public float meowsVolume = 0.5f;
@@ -47,6 +47,10 @@ public class PlayerInteractionHandler : MonoBehaviour
     Coroutine talkingCoroutine;
 
 
+    //public delegate void GamePaused(bool isPaused);
+    //public static event GamePaused gamePaused;
+
+
     private void Awake()
     {
         instance = this;
@@ -56,9 +60,23 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         playerInteractionHandler = GetComponent<PlayerInteractionHandler>();
-        
+        GameManager.gamePaused += PauseAnim;
+        GameManager.gamePaused += pihIsDisabled;
+
+
     }
 
+    public void PauseAnim(bool animPause)
+    {
+        if (animPause)
+        {
+            animator.speed = 0;
+        }
+        else
+        {
+            animator.speed = 1;
+        }
+    }
 
     private IEnumerator TeleportPlayer(Door door)
     {
@@ -140,7 +158,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             MeowButton();
         }
-         
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -209,6 +227,20 @@ public class PlayerInteractionHandler : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    public void pihIsDisabled(bool isDisabled)
+    {
+        if (isDisabled)
+        {
+            this.enabled = false;
+            thirdPersonController.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+            thirdPersonController.enabled = true;
         }
     }
 }

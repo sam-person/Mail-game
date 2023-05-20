@@ -18,7 +18,19 @@ public class cameraZoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.gamePaused += czIsDisabled;
+    }
+
+    public void czIsDisabled(bool isDisabled)
+    {
+        if (isDisabled)
+        {
+            this.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+        }
     }
 
     // Update is called once per frame

@@ -8,6 +8,8 @@ public class FadeController : MonoBehaviour
 
     public GameObject blackOutSquare;
 
+    Coroutine fadePauseCoroutine;
+
 
     // Update is called once per frame
     void Update()
@@ -17,7 +19,7 @@ public class FadeController : MonoBehaviour
 
     private void Start()
     {
-        
+        GameManager.gamePaused += PauseFadeController;
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 5)
@@ -34,7 +36,6 @@ public class FadeController : MonoBehaviour
             while (blackOutSquare.GetComponent<Image>().color.a < 1)
             {
                 fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
-
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
@@ -46,7 +47,6 @@ public class FadeController : MonoBehaviour
                 while (blackOutSquare.GetComponent<Image>().color.a > 0)
                 {
                     fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
-
                     objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                     blackOutSquare.GetComponent<Image>().color = objectColor;
                     yield return null;
@@ -59,6 +59,67 @@ public class FadeController : MonoBehaviour
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
 
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                blackOutSquare.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+
+
+    }
+
+
+    public void PauseFadeController(bool isPaused)
+    {
+        if (isPaused)
+        {
+            fadePauseCoroutine = StartCoroutine(FadePauseSquare(true));
+        }
+        else
+        {
+            fadePauseCoroutine = StartCoroutine(FadePauseSquare(false));
+        }
+    }
+
+    public IEnumerator FadePauseSquare(bool fadeToBlack = true, int fadeSpeed = 5)
+    {
+
+        Color objectColor = blackOutSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+
+        if (fadeToBlack)
+        {
+            //bool fadefinished = false;
+
+            while (blackOutSquare.GetComponent<Image>().color.a < 0.65)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                blackOutSquare.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+
+            //if (blackOutSquare.GetComponent<Image>().color.a >= 1)
+            //{
+            //    yield return new WaitForSeconds(0.5f);
+            //    while (blackOutSquare.GetComponent<Image>().color.a > 0)
+            //    {
+            //        fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+            //        Debug.Log("I am decreasing the black");
+            //        objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            //        blackOutSquare.GetComponent<Image>().color = objectColor;
+            //        yield return null;
+            //    }
+            //}
+        }
+        else
+        {
+            while (blackOutSquare.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
