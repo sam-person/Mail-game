@@ -2,20 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static PlayerInteractionHandler;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     public int gameState;
-
     public bool isGamePaused = false;
-
     public AudioSource bgmAudio;
 
-
-    public Texture2D cursorTexture;
-    public CursorMode cursorMode = CursorMode.Auto;
-    public Vector2 hotSpot = Vector2.zero;
+    public GameObject UIButtonGroup;
 
 
 
@@ -27,10 +23,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         Debug.Log("The game state is " + gameState);
         gamePaused += TurnOffAnimators;
         gamePaused += PauseAudio;
-        //Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        gamePaused += ShowUIButtons;
     }
 
     public void TurnOffAnimators(bool animsOff)
@@ -55,6 +52,36 @@ public class GameManager : MonoBehaviour
         else
         {
             bgmAudio.volume = startingBGMAudio * 3;
+        }
+    }
+
+    public void Button_Exit()
+    {
+
+        Application.Quit();
+        EditorApplication.isPlaying = false;
+
+    }
+
+    public void Button_Unpause()
+    {
+        gamePaused?.Invoke(false);
+        isGamePaused = false;
+        Cursor.visible = false;
+       
+    }
+
+
+
+public void ShowUIButtons(bool isPaused)
+    {
+        if (isPaused)
+        {
+            UIButtonGroup.SetActive(true);
+        }
+        else
+        {
+            UIButtonGroup.SetActive(false);
         }
     }
 
