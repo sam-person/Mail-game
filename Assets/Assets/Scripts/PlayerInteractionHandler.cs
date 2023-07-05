@@ -35,6 +35,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     private bool interactorItemBool = false;
     private bool interactorDialogueBool = false;
 
+    
+    public List<GameObject> collisionObjects = new List<GameObject>();
 
     
 
@@ -163,9 +165,13 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+
         switch (other.tag)
         {
             case "InteractableDoorIn":
+                collisionObjects.Add(other.gameObject);
+                Debug.Log("Added object to focused list: " + other);
                 interactorDoorInBool = true;
                 Debug.Log("interactor focused on a Door In");
                 focusCollider = other;
@@ -173,6 +179,8 @@ public class PlayerInteractionHandler : MonoBehaviour
                 break;
 
             case "InteractableDoorOut":
+                collisionObjects.Add(other.gameObject);
+                Debug.Log("Added object to focused list: " + other);
                 Debug.Log("interactor focused on a Door Out");
                 focusCollider = other;
                 focusCollider.gameObject.GetComponent<Outline>().enabled = true;
@@ -180,6 +188,8 @@ public class PlayerInteractionHandler : MonoBehaviour
                 break;
             
             case "InteractableDialogue":
+                collisionObjects.Add(other.gameObject);
+                Debug.Log("Added object to focused list: " + other);
                 Debug.Log("interactor focused on a person");
                 focusCollider = other;
                 focusCollider.gameObject.GetComponent<Outline>().enabled = true;
@@ -190,6 +200,8 @@ public class PlayerInteractionHandler : MonoBehaviour
                 break;
             
             case "InteractableItem":
+                collisionObjects.Add(other.gameObject);
+                Debug.Log("Added object to focused list: " + other);
                 Debug.Log("interactor focused on an item");
                 focusCollider = other;
                 focusCollider.gameObject.GetComponent<Outline>().enabled = true;
@@ -202,6 +214,20 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        List<GameObject> toDelete = new List<GameObject>();
+
+        foreach (GameObject gameObject in collisionObjects)
+        {
+            toDelete.Add(gameObject);
+        }
+
+        foreach (var collider in toDelete)
+        {
+            collider.gameObject.GetComponent<Outline>().enabled = false;
+            collisionObjects.Remove(collider);
+            Debug.Log("Removed object from focused list: " + other);
+        }
+
         switch (other.tag)
         {
             case "InteractableDoorIn":

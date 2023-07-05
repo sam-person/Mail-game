@@ -6,12 +6,17 @@ public class OcclusionMasking : MonoBehaviour
 {
 
     private ObjectFade _fader;
+    public GameObject player;
 
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+// Update is called once per frame
+void Update()
+    {
+        
 
 
         if (player != null)
