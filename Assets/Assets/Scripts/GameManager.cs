@@ -20,10 +20,19 @@ public class GameManager : MonoBehaviour
     public static event GamePaused gamePaused;
 
 
+
+
+
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
+
         Debug.Log("The game state is " + gameState);
         gamePaused += TurnOffAnimators;
         gamePaused += PauseAudio;
@@ -69,7 +78,8 @@ public class GameManager : MonoBehaviour
         gamePaused?.Invoke(false);
         isGamePaused = false;
         Cursor.visible = false;
-       
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
 
@@ -107,10 +117,8 @@ public void ShowUIButtons(bool isPaused)
             {
                 gamePaused?.Invoke(true);
                 isGamePaused = true;
-
-                
                 Cursor.visible = true;
-                
+                Cursor.lockState = CursorLockMode.Confined;
             }
 
         }
@@ -118,10 +126,10 @@ public void ShowUIButtons(bool isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                
                 gamePaused?.Invoke(false);
                 isGamePaused = false;
                 Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }

@@ -21,6 +21,9 @@ public class PlayerInteractionHandler : MonoBehaviour
     public CinemachineTargetGroup targetGroup;
     public GameObject dialogueCamera;
 
+    public IInteractable currentItem;
+    public IInteractable currentItemGO;
+
     public ThirdPersonController thirdPersonController;
     public PlayerInteractionHandler playerInteractionHandler;
     public AudioSource doorSource;
@@ -47,6 +50,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     Coroutine fadeInCoroutine;
     Coroutine fadeOutCoroutine;
     Coroutine talkingCoroutine;
+    Coroutine itemCoroutine;
+    Coroutine interactionAnimatorCoroutine;
 
 
     //public delegate void GamePaused(bool isPaused);
@@ -103,6 +108,12 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
     }
 
+    private IEnumerator InteractionAnimator()
+    {
+            yield return new WaitForSeconds(0.2f);
+            animator.SetBool("interact", false);     
+    }
+
 
     public void CattoInteractor()
     {
@@ -131,6 +142,17 @@ public class PlayerInteractionHandler : MonoBehaviour
             //InterfaceManager.instance.DialogueController(true);           
             focusCollider.gameObject.GetComponent<Outline>().enabled = false;
             
+        }
+
+        if (interactorItemBool)
+        {
+
+            interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
+            Debug.Log("currentItem is equal to " + currentItem);
+            currentItemGO.Interact(true);
+            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+            animator.SetBool("interact", true);
+
         }
 
     }
@@ -200,6 +222,10 @@ public class PlayerInteractionHandler : MonoBehaviour
                 break;
             
             case "InteractableItem":
+
+                IInteractable currentItem = other.gameObject.GetComponent<IInteractable>();
+                currentItemGO = currentItem;
+
                 collisionObjects.Add(other.gameObject);
                 Debug.Log("Added object to focused list: " + other);
                 Debug.Log("interactor focused on an item");
