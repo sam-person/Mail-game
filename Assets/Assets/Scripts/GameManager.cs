@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         gamePaused += TurnOffAnimators;
         gamePaused += PauseAudio;
         gamePaused += ShowUIButtons;
+        gamePaused += FreezeTime;
     }
 
     public void TurnOffAnimators(bool animsOff)
@@ -85,6 +86,18 @@ public void ShowUIButtons(bool isPaused)
         }
     }
 
+    public void FreezeTime(bool isPaused)
+    {
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -105,6 +118,7 @@ public void ShowUIButtons(bool isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                
                 gamePaused?.Invoke(false);
                 isGamePaused = false;
                 Cursor.visible = false;

@@ -35,7 +35,7 @@ public class FadeController : MonoBehaviour
 
             while (blackOutSquare.GetComponent<Image>().color.a < 1)
             {
-                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                fadeAmount = objectColor.a + (fadeSpeed * Time.unscaledDeltaTime);
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
@@ -46,7 +46,7 @@ public class FadeController : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
                 while (blackOutSquare.GetComponent<Image>().color.a > 0)
                 {
-                    fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                    fadeAmount = objectColor.a - (fadeSpeed * Time.unscaledDeltaTime);
                     objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                     blackOutSquare.GetComponent<Image>().color = objectColor;
                     yield return null;
@@ -57,7 +57,7 @@ public class FadeController : MonoBehaviour
         {
             while (blackOutSquare.GetComponent<Image>().color.a > 0)
             {
-                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                fadeAmount = objectColor.a - (fadeSpeed * Time.unscaledDeltaTime);
 
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
@@ -96,7 +96,7 @@ public class FadeController : MonoBehaviour
 
             while (blackOutSquare.GetComponent<Image>().color.a < 0.65)
             {
-                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                fadeAmount = objectColor.a + (fadeSpeed * Time.unscaledDeltaTime);
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
@@ -119,7 +119,7 @@ public class FadeController : MonoBehaviour
         {
             while (blackOutSquare.GetComponent<Image>().color.a > 0)
             {
-                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                fadeAmount = objectColor.a - (fadeSpeed * Time.unscaledDeltaTime);
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
