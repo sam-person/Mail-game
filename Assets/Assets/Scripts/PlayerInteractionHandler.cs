@@ -92,6 +92,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             player.transform.rotation = door.spawnPoint.transform.rotation;
             player.transform.position = door.spawnPoint.transform.position;
+            thirdPersonController.SetCameraAngle(door.xRot, door.yRot);
+            VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             mainCamera.clearFlags = CameraClearFlags.SolidColor;
             animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);
@@ -102,6 +104,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             player.transform.rotation = door.spawnPoint.transform.rotation;
             player.transform.position = door.spawnPoint.transform.position;
+            thirdPersonController.SetCameraAngle(door.xRot, door.yRot);
+            VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             mainCamera.clearFlags = CameraClearFlags.Skybox;
             animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);

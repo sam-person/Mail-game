@@ -6,16 +6,8 @@ public class Door : MonoBehaviour
 {
 
     public Transform spawnPoint;
+    public float xRot;
+    public float yRot = 10f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
