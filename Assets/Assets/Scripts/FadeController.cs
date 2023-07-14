@@ -10,13 +10,6 @@ public class FadeController : MonoBehaviour
 
     Coroutine fadePauseCoroutine;
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void Start()
     {
         GameManager.gamePaused += PauseFadeController;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class blink : MonoBehaviour
+public class Blink : MonoBehaviour
 {
     public SkinnedMeshRenderer EyeRenderer;
 
@@ -23,10 +23,10 @@ public class blink : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Blink());
+        StartCoroutine(BlinkCoroutine());
     }
 
-    private IEnumerator Blink()
+    private IEnumerator BlinkCoroutine()
     {
         
 

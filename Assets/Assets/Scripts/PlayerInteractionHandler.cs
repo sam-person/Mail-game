@@ -193,97 +193,97 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
 
 
-        switch (other.tag)
-        {
-            case "InteractableDoorIn":
-                collisionObjects.Add(other.gameObject);
-                Debug.Log("Added object to focused list: " + other);
-                interactorDoorInBool = true;
-                Debug.Log("interactor focused on a Door In");
-                focusCollider = other;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-                break;
+        //switch (other.tag)
+        //{
+        //    case "InteractableDoorIn":
+        //        collisionObjects.Add(other.gameObject);
+        //        Debug.Log("Added object to focused list: " + other);
+        //        interactorDoorInBool = true;
+        //        Debug.Log("interactor focused on a Door In");
+        //        focusCollider = other;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = true;
+        //        break;
 
-            case "InteractableDoorOut":
-                collisionObjects.Add(other.gameObject);
-                Debug.Log("Added object to focused list: " + other);
-                Debug.Log("interactor focused on a Door Out");
-                focusCollider = other;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-                interactorDoorOutBool = true;
-                break;
+        //    case "InteractableDoorOut":
+        //        collisionObjects.Add(other.gameObject);
+        //        Debug.Log("Added object to focused list: " + other);
+        //        Debug.Log("interactor focused on a Door Out");
+        //        focusCollider = other;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = true;
+        //        interactorDoorOutBool = true;
+        //        break;
             
-            case "InteractableDialogue":
-                collisionObjects.Add(other.gameObject);
-                Debug.Log("Added object to focused list: " + other);
-                Debug.Log("interactor focused on a person");
-                focusCollider = other;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = true;
+        //    case "InteractableDialogue":
+        //        collisionObjects.Add(other.gameObject);
+        //        Debug.Log("Added object to focused list: " + other);
+        //        Debug.Log("interactor focused on a person");
+        //        focusCollider = other;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = true;
 
-                InterfaceManager.instance.currentChar = other.GetComponent<CharacterScript>();
+        //        InterfaceManager.instance.currentChar = other.GetComponent<CharacterScript>();
 
-                interactorDialogueBool = true;
-                break;
+        //        interactorDialogueBool = true;
+        //        break;
             
-            case "InteractableItem":
+        //    case "InteractableItem":
 
-                IInteractable currentItem = other.gameObject.GetComponent<IInteractable>();
-                currentItemGO = currentItem;
+        //        IInteractable currentItem = other.gameObject.GetComponent<IInteractable>();
+        //        currentItemGO = currentItem;
 
-                collisionObjects.Add(other.gameObject);
-                Debug.Log("Added object to focused list: " + other);
-                Debug.Log("interactor focused on an item");
-                focusCollider = other;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-                interactorItemBool = true;
-                break;
-            default:
-                break;
-        }
+        //        collisionObjects.Add(other.gameObject);
+        //        Debug.Log("Added object to focused list: " + other);
+        //        Debug.Log("interactor focused on an item");
+        //        focusCollider = other;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = true;
+        //        interactorItemBool = true;
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 
     private void OnTriggerExit(Collider other)
     {
-        List<GameObject> toDelete = new List<GameObject>();
+        //List<GameObject> toDelete = new List<GameObject>();
 
-        foreach (GameObject gameObject in collisionObjects)
-        {
-            toDelete.Add(gameObject);
-        }
+        //foreach (GameObject gameObject in collisionObjects)
+        //{
+        //    toDelete.Add(gameObject);
+        //}
 
-        foreach (var collider in toDelete)
-        {
-            collider.gameObject.GetComponent<Outline>().enabled = false;
-            collisionObjects.Remove(collider);
-            Debug.Log("Removed object from focused list: " + other);
-        }
+        //foreach (var collider in toDelete)
+        //{
+        //    collider.gameObject.GetComponent<Outline>().enabled = false;
+        //    collisionObjects.Remove(collider);
+        //    Debug.Log("Removed object from focused list: " + other);
+        //}
 
-        switch (other.tag)
-        {
-            case "InteractableDoorIn":
-                Debug.Log("interactor stop focused on a Door In");
-                interactorDoorInBool = false;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-                break;
-            case "InteractableDoorOut":
-                Debug.Log("interactor stop focused on a Door Out");
-                interactorDoorOutBool = false;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-                break;
-            case "InteractableDialogue":
-                Debug.Log("interactor stop focused on a person");
-                interactorDoorInBool = false;
-                InterfaceManager.instance.currentChar = null;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-                break;
-            case "InteractableDItem":
-                Debug.Log("interactor stop focused on an item");
-                interactorDoorInBool = false;
-                focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-                break;
-            default:
-                break;
-        }
+        //switch (other.tag)
+        //{
+        //    case "InteractableDoorIn":
+        //        Debug.Log("interactor stop focused on a Door In");
+        //        interactorDoorInBool = false;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+        //        break;
+        //    case "InteractableDoorOut":
+        //        Debug.Log("interactor stop focused on a Door Out");
+        //        interactorDoorOutBool = false;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+        //        break;
+        //    case "InteractableDialogue":
+        //        Debug.Log("interactor stop focused on a person");
+        //        interactorDoorInBool = false;
+        //        InterfaceManager.instance.currentChar = null;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+        //        break;
+        //    case "InteractableDItem":
+        //        Debug.Log("interactor stop focused on an item");
+        //        interactorDoorInBool = false;
+        //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 
     public void pihIsDisabled(bool isDisabled)
