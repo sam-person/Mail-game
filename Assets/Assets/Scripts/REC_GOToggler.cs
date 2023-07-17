@@ -7,7 +7,7 @@ public class REC_GOToggler : Receiver
 
     public List<GameObject> gameObjects;
 
-    public enum ToggleType { Off, On, Toggle};
+    public enum ToggleType { Off, On, Toggle };
 
     public ToggleType toggleType = ToggleType.Off;
 
