@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public delegate void GamePaused(bool isPaused);
     public static event GamePaused gamePaused;
 
+    public static GameManager Instance;
+    public GameState State;
 
 
 
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Instance = this;
     }
 
     // Start is called before the first frame update
@@ -133,4 +136,39 @@ public void ShowUIButtons(bool isPaused)
             }
         }
     }
+
+
+
+
+    public void UpdateGateState(GameState newState)
+    {
+        State = newState;
+        switch (newState)
+        {
+            case GameState.EarlyMorning:
+                break;
+                
+            case GameState.MidMorning:
+                break;
+                
+            case GameState.Lunchtime:
+                break;
+                
+            case GameState.Afternoon:
+                break;
+
+            case GameState.Evening:
+                break;
+        }
+    }
+
+    public enum GameState
+    {
+        EarlyMorning,
+        MidMorning,
+        Lunchtime,
+        Afternoon,
+        Evening,
+    }
+
 }

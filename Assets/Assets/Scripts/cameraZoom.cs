@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class CameraZoom : MonoBehaviour
+public class cameraZoom : MonoBehaviour
 {
 
     [SerializeField] CinemachineVirtualCamera virtualCamera;
