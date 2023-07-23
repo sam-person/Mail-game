@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
 public class REC_GOToggler : Receiver
 {
 
-    public List<GameObject> gameObjects;
+    public List<MeshRenderer> meshObjects;
 
     public enum ToggleType { Off, On, Toggle};
 
@@ -19,23 +20,27 @@ public class REC_GOToggler : Receiver
         {
             case ToggleType.Off:
 
-                foreach (GameObject go in gameObjects)
+                foreach (MeshRenderer go in meshObjects)
                 {
-                    go.SetActive(false);
+                    go.enabled = false;
+                    this.gameObject.GetComponent<Outline>().enabled = false;
+                    this.gameObject.GetComponent<TRI_Focus>().enabled = false;
                 }
                 break;
             case ToggleType.On:
 
-                foreach (GameObject go in gameObjects)
+                foreach (MeshRenderer go in meshObjects)
                 {
-                    go.SetActive(true);
+                    go.enabled = true;
+                    this.gameObject.GetComponent<Outline>().enabled = true;
+                    this.gameObject.GetComponent<TRI_Focus>().enabled = true;
                 }
                 break;
             case ToggleType.Toggle:
 
-                foreach (GameObject go in gameObjects)
+                foreach (MeshRenderer go in meshObjects)
                 {
-                    go.SetActive(!go.activeSelf);
+                    go.enabled = (!enabled);
                 }
                 break;
         }

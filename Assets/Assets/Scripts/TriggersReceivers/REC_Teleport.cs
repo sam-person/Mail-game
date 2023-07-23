@@ -43,6 +43,7 @@ public class REC_Teleport : Receiver
         }
         else
         {
+            yield return new WaitForSeconds(0.2f);
             base.Activate();
             player.transform.rotation = doorSpawn.transform.rotation;
             player.transform.position = doorSpawn.transform.position;

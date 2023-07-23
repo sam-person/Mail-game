@@ -36,6 +36,7 @@ public class InterfaceManager : MonoBehaviour
     public int conversationStage = 0;
     public bool dialogueEnabled;
     bool firstTime = false;
+    public GameObject focusTarget;
 
     public float timer = 0.5f;
     public bool haveWaited = false;
@@ -106,6 +107,15 @@ public class InterfaceManager : MonoBehaviour
     public IEnumerator DialogueController(bool currentlytalking)
     {
         Animator tempAnimator;
+        if (currentChar != null)
+        {
+            Debug.Log("Current Character is " + currentChar);
+
+        }
+        else
+        {
+            Debug.Log("Current character is NULL");
+        }
 
         if (currentlytalking && currentChar != null)
         {
@@ -115,7 +125,9 @@ public class InterfaceManager : MonoBehaviour
 
             Debug.Log("I am now talking");
             dialogueEnabled = true;
-            targetGroup.m_Targets[1].target = playerInteractionHandler.focusCollider.gameObject.transform;
+            //targetGroup.m_Targets[1].target = playerInteractionHandler.focusCollider.gameObject.transform;
+            targetGroup.m_Targets[1].target = focusTarget.transform;
+
             dialogueCamera.gameObject.SetActive(true);
 
             playerInteractionHandler.thirdPersonController.enabled = false;

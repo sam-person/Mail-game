@@ -112,54 +112,55 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
     }
 
-    private IEnumerator InteractionAnimator()
+    public IEnumerator InteractionAnimator()
     {
             yield return new WaitForSeconds(0.2f);
+            Debug.Log("Interaction bool turned off");
             animator.SetBool("interact", false);     
     }
 
 
-    public void CattoInteractor()
-    {
-        if (!interactorDoorInBool && !interactorDoorOutBool && !interactorItemBool && !interactorDialogueBool)
-        {
-            return;
-        }
+    //public void CattoInteractor()
+    //{
+    //    if (!interactorDoorInBool && !interactorDoorOutBool && !interactorItemBool && !interactorDialogueBool)
+    //    {
+    //        return;
+    //    }
 
-        if (interactorDoorInBool)
-        {
-            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
-            teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
-            animator.SetBool("interact", true);  
-        }
+    //    if (interactorDoorInBool)
+    //    {
+    //        fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
+    //        teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
+    //        animator.SetBool("interact", true);  
+    //    }
 
-        if (interactorDoorOutBool)
-        {
-            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
-            teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
-            animator.SetBool("interact", true);
-        }
+    //    if (interactorDoorOutBool)
+    //    {
+    //        fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
+    //        teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
+    //        animator.SetBool("interact", true);
+    //    }
 
-        if (interactorDialogueBool)
-        {
-            talkingCoroutine = StartCoroutine(InterfaceManager.instance.DialogueController(true));
-            //InterfaceManager.instance.DialogueController(true);           
-            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+    //    if (interactorDialogueBool)
+    //    {
+    //        talkingCoroutine = StartCoroutine(InterfaceManager.instance.DialogueController(true));
+    //        //InterfaceManager.instance.DialogueController(true);           
+    //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
             
-        }
+    //    }
 
-        if (interactorItemBool)
-        {
+    //    if (interactorItemBool)
+    //    {
 
-            interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
-            Debug.Log("currentItem is equal to " + currentItem);
-            currentItemGO.Interact(true);
-            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-            animator.SetBool("interact", true);
+    //        interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
+    //        Debug.Log("currentItem is equal to " + currentItem);
+    //        currentItemGO.Interact(true);
+    //        focusCollider.gameObject.GetComponent<Outline>().enabled = false;
+    //        animator.SetBool("interact", true);
 
-        }
+    //    }
 
-    }
+    //}
 
 
     public  void MeowButton()
@@ -177,10 +178,10 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            CattoInteractor();
-        }
+        //    if (Keyboard.current.eKey.wasPressedThisFrame)
+        //    {
+        //        CattoInteractor();
+        //    }
 
         if (Input.GetMouseButtonDown(0))
         {
