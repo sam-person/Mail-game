@@ -13,21 +13,21 @@ public class ObjectFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Mat = GetComponent<Renderer>().material;
-        originalOpacity = Mat.color.a;
+        //Mat = GetComponent<Renderer>().material;
+        //originalOpacity = Mat.color.a;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(DoFade) 
-        {
-            FadeNow();
-        }
-        else
-        {
-            ResetFade();
-        }
+        //if(DoFade) 
+        //{
+        //    FadeNow();
+        //}
+        //else
+        //{
+        //    ResetFade();
+        //}
     }
 
     void FadeNow()

@@ -1,0 +1,4166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5233137618593560982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4954210768383957093}
+  - component: {fileID: 8844327393760517457}
+  m_Layer: 0
+  m_Name: LightmapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4954210768383957093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5233137618593560982}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.287907, y: -7.1207304, z: 8.32475}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844327393760517457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5233137618593560982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09124a080bc92124684404fb66545de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_savedSceneLightmaps:
+  - friendlyName: 12pm
+    customLightmaps:
+    - lightmapColor: {fileID: 2800000, guid: 29b7f25984fb53d4fa75d72e6589c601, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 47226f17d295433489b3a7bf7a841f28, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 4cd6328641332a941b24e95d32e7bd50, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: c2765d518096b2d4a80931f445c44374, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 2b4bc4697dba56648b9054bf2b4328a8, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: f87869b583fed2148b21152658e7f1d9, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 2f7428917f517aa4a9d360a54335bbaf, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 969a523ff32265a439617bb5d164acca, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 17601ad0ddb1bb74796285dcc542df87, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: c3c8a2b40c1ea354aac5683dd4bf3e8a, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: bcf0a491312a57643b6c823282325a99, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 286160277d6a68443b7098be72985421, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 7440e7310ef8f734cae043486776647c, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 44f4ab9d6d737b84b85ac2500f0a0a93, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: b1f44bab8a280fe4b97cfc645c0d9e58, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: f7b3d9db7b223944ebcff6f8ad110d99, type: 3}
+    info: The following array is for show in the inspector. BUT also to save the
+      non-serializable internal dictionary of instance ids
+    meshRendererLightmapDataFromScene_inspector:
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143264
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022321, y: 0.0054259794, z: 0.99724305, w: 0.19793326}
+    - friendlyName: Chains
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143298
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.0074995495, y: 0.007470602, z: 0.97665703, w: 0.32390976}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143304
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.42717543, w: 0.98906106}
+    - friendlyName: Walls.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143316
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.18193866, y: 0.18232298, z: 0.834959, w: 0.49916276}
+    - friendlyName: Brick
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143326
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0059092054, y: 0.0063879876, z: 0.8626704, w: 0.9924932}
+    - friendlyName: Plane.563
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143330
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.033600256, y: 0.033580575, z: 0.8319712, w: 0.878625}
+    - friendlyName: Window1.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143352
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.0593611, y: 0.06198682, z: 0.7294546, w: 0.27184466}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143360
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660648, y: 0.005477913, z: 0.9948117, w: 0.67781687}
+    - friendlyName: bedroom roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143372
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.11008163, y: 0.10985398, z: 0.72398496, w: 0.8785543}
+    - friendlyName: Box (26)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143386
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662216, z: 0.5813549, w: -0.00003521208}
+    - friendlyName: bed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143392
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.059189837, y: 0.059131015, z: 0.92896366, w: 0.70047784}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143408
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04666733, y: 0.045101147, z: 0.9351804, w: 0.91292554}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143414
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917568, y: 0.007223584, z: 0.99658155, w: 0.2344838}
+    - friendlyName: Roof top
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143442
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.11727838, y: 0.117274635, z: 0.5142729, w: 0.87752146}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143452
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320645, y: 0.005425944, z: 0.4273454, w: 0.95473516}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143460
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.05757906, y: 0.05821287, z: 0.95134676, w: 0.87583005}
+    - friendlyName: Pan
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143474
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.024089223, y: 0.024065692, z: 0.5145088, w: 0.31097597}
+    - friendlyName: PlantPot_Wide (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143482
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048299, y: 0.025051331, z: 0.3063712, w: 0.97435135}
+    - friendlyName: light string
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143488
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009812605, y: 0.009697594, z: 0.332409, w: 0.9895652}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143512
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660222, y: 0.00547787, z: 0.9680999, w: 0.99260694}
+    - friendlyName: RoseBud_Red (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143516
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0018068376, y: 0.0017248836, z: 0.9948506, w: 0.33404812}
+    - friendlyName: Cosmos_Yellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143534
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420867, y: 0.0038968234, z: 0.92946595, w: 0.99304813}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143540
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766046, y: 0.005477895, z: 0.95719224, w: 0.99260694}
+    - friendlyName: Cube.099
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143546
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.047494918, y: 0.047483996, z: 0.763584, w: 0.2706411}
+    - friendlyName: VioletPlant (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143552
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510693, y: 0.009582723, z: 0.04889608, w: 0.98756504}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143556
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235544, z: 0.9945834, w: 0.48876613}
+    - friendlyName: Brick.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143560
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630394, y: 0.015556453, z: 0.48747176, w: 0.88441813}
+    - friendlyName: BackgroundBuilding4 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143568
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.30949223, y: 0.3094919, z: 0.0014655481, w: 0.6746838}
+    - friendlyName: Box (19)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143580
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.5301461, y: 0.52853805, z: -0.00064407534, w: 0.34527954}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143590
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965444, y: 0.064399265, z: 0.34608823, w: 0.94609135}
+    - friendlyName: book
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143602
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.010803228, y: 0.010879036, z: 0.0005998791, w: 0.98709637}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|10
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143606
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009949224, y: -0.0017564286, z: 0.9990054, w: 0.13881277}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143626
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917372, y: 0.0072235647, z: 0.8566273, w: 0.9284494}
+    - friendlyName: Cube.101
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143632
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.13196394, y: 0.1319686, z: 0.86147606, w: 0.47902057}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143644
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791892, y: 0.046310734, z: 0.5305482, w: 0.3084676}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143650
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320668, y: 0.005425946, z: 0.42782176, w: 0.93678784}
+    - friendlyName: Box (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143660
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662213, z: -0.000042377083, w: 0.70483196}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143672
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965466, y: 0.06439929, z: 0.2776773, w: 0.94609135}
+    - friendlyName: Hanging plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143692
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.031375606, y: 0.031376313, z: 0.4827508, w: 0.88411456}
+    - friendlyName: Roof base
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143700
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.21436091, y: 0.21512403, z: 0.8256546, w: -0.00084535463}
+    - friendlyName: Brick.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143714
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0051057963, y: 0.005409582, z: 0.99389994, w: 0.37501213}
+    - friendlyName: KITCHEN.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143722
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.01684745, y: 0.016856773, z: 0.38718134, w: 0.98040193}
+    - friendlyName: Cube.102
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143726
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.18005839, y: 0.18009627, z: 0.8049371, w: 0.8031057}
+    - friendlyName: table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143740
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.4022009, y: 0.40225247, z: -0.2317663, w: 0.8690081}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143744
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.007223568, z: 0.42717543, w: 0.945795}
+    - friendlyName: Cube.096
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143748
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19660681, y: 0.19660038, z: 0.27378082, w: 0.6914204}
+    - friendlyName: Cube.102
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143758
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.18005839, y: 0.18009627, z: 0.8049371, w: 0.6215148}
+    - friendlyName: todo list
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143764
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.021032872, y: 0.021032877, z: 0.19524758, w: 0.975852}
+    - friendlyName: Plane.056
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143770
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0077157263, y: 0.012000351, z: 0.9931475, w: 0.30349964}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143774
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320624, y: 0.0054259417, z: 0.9947534, w: 0.5412833}
+    - friendlyName: box.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143780
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02762713, y: 0.02762713, z: 0.42992803, w: 0.9708846}
+    - friendlyName: Body
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143790
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19698744, y: 0.19699647, z: 0.8030135, w: 0.34549937}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143794
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917233, y: 0.0072235507, z: 0.9945834, w: 0.5236279}
+    - friendlyName: Text
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143816
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018425107, y: 0.018426152, z: 0.36671484, w: 0.9799392}
+    - friendlyName: Hedge3 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143826
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419878, y: 0.046452526, z: 0.929734, w: 0.05521752}
+    - friendlyName: Cosmos_Yellow (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143852
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420913, y: 0.0038968283, z: 0.8965885, w: 0.99304813}
+    - friendlyName: Box
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143864
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.3822925, y: 0.38067827, z: -0.00003872102, w: -0.000032173986}
+    - friendlyName: Big Plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143872
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09232183, y: 0.089970626, z: 0.0952753, w: 0.9137798}
+    - friendlyName: window
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143888
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.044822987, y: 0.04472789, z: 0.9316833, w: 0.19651899}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143902
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320405, y: 0.0054259202, z: 0.9947535, w: 0.6266069}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143922
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130872, y: 0.047564685, z: 0.931484, w: 0.6768628}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|15
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143936
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948935, y: -0.0017563998, z: 0.9990054, w: 0.1352746}
+    - friendlyName: Window1.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143942
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.2607639, y: 0.25129977, z: 0.42428827, w: 0.90406835}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143950
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009949134, y: -0.0017564197, z: 0.9990054, w: 0.1370437}
+    - friendlyName: fridge
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143956
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.09353402, y: 0.09352579, z: 0.41627023, w: 0.67523056}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143964
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917477, y: 0.007223575, z: 0.9946274, w: 0.31592992}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 143972
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0491308, y: 0.04756462, z: 0.931484, w: 0.77824026}
+    - friendlyName: Box (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144024
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.516299, y: 0.5147329, z: -0.00062725245, w: 0.33626103}
+    - friendlyName: Hedge (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144036
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937434, y: 0.049950074, z: 0.9285432, w: 0.65669155}
+    - friendlyName: bear bun.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144042
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.015899977, y: 0.015912157, z: 0.40985614, w: 0.9283869}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|16
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144046
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948565, y: -0.0017563627, z: 0.9990054, w: 0.12996727}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144050
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591749, y: 0.0072235763, z: 0.99658155, w: 0.26063007}
+    - friendlyName: Cube.025
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144066
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.104006656, y: 0.10422669, z: 0.41370744, w: 0.8887868}
+    - friendlyName: Box (18)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144074
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: -0.00021616231, w: 0.67355406}
+    - friendlyName: Hedge (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144086
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937453, y: 0.04995009, z: 0.9285432, w: 0.5357664}
+    - friendlyName: bedside table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144092
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.038362067, y: 0.03837101, z: 0.95850086, w: 0.15830667}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144102
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660817, y: 0.0054779304, z: 0.8594013, w: 0.9846461}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144110
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.039421137, y: 0.039442476, z: 0.95848554, w: 0.080432795}
+    - friendlyName: Box (13)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144142
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.5156401, y: 0.5140758, z: -0.00062645215, w: -0.0006201081}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144176
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000994829, y: -0.0017563353, z: 0.9990054, w: 0.12819815}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144188
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950082, y: -0.0017565147, z: 0.9990054, w: 0.14235088}
+    - friendlyName: Shevles
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144194
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.059658155, y: 0.05981099, z: 0.9288899, w: 0.7581159}
+    - friendlyName: Box (25)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144214
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.5156399, y: 0.51407576, z: -0.0006264517, w: 0.33583176}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144222
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917256, y: 0.007223553, z: 0.9945834, w: 0.50619704}
+    - friendlyName: bagel.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144228
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0236365, y: 0.023637913, z: 0.28222236, w: 0.97537225}
+    - friendlyName: Cube.098
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144232
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.11560408, y: 0.11560859, z: 0.31296104, w: 0.86960065}
+    - friendlyName: Box (14)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144240
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.24996783}
+    - friendlyName: BackgroundBuilding4
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144266
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.30934766, y: 0.30934733, z: 0.5162201, w: 0.0014648633}
+    - friendlyName: Cube.100
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144282
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03418957, y: 0.03412473, z: 0.95847905, w: 0.37372214}
+    - friendlyName: poster
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144298
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.035693128, y: 0.035693135, z: 0.9584621, w: 0.26946536}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144330
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0659655, y: 0.06439932, z: 0.93141574, w: 0.28649732}
+    - friendlyName: Cube.098
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144336
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.1156041, y: 0.1156086, z: 0.8279573, w: 0.21223882}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144362
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.06053606, y: 0.06055741, z: 0.42716727, w: 0.9255467}
+    - friendlyName: Doorsupport
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144372
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.041988343, y: 0.042029526, z: 0.9584807, w: -0.00050515257}
+    - friendlyName: Cosmos (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144376
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040421006, y: 0.0038968376, z: 0.99428535, w: 0.40886006}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144380
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235554, z: 0.9945834, w: 0.48005074}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144388
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965444, y: 0.064399265, z: 0.41600266, w: 0.8857838}
+    - friendlyName: Plane.059
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144394
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00079705566, y: 0.004424358, z: 0.8569766, w: 0.963661}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144404
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232038, y: 0.0054259175, z: 0.9947535, w: 0.63385856}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144408
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660636, y: 0.0054779123, z: 0.9948117, w: 0.6851823}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144412
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232064, y: 0.0054259435, z: 0.4273454, w: 0.97201043}
+    - friendlyName: PlantPot_Round (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144418
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.8875027}
+    - friendlyName: Plane.064
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144426
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0020962523, y: 0.0064855074, z: 0.9945084, w: 0.7358033}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|5
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144430
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000995068, y: -0.0017565741, z: 0.99900544, w: 0.14942686}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144450
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.10616602, y: 0.10616603, z: 0.8475893, w: 0.8776022}
+    - friendlyName: utensils
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144456
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.014067637, y: 0.0139885, z: 0.019634074, w: 0.98524964}
+    - friendlyName: Box (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144466
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662213, z: 0.41856033, w: 0.70483196}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144480
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0659655, y: 0.06439932, z: 0.07244441, w: 0.94609135}
+    - friendlyName: box
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144488
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02314871, y: 0.023148708, z: 0.15129308, w: 0.975742}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144492
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660526, y: 0.005477901, z: 0.9948117, w: 0.7293745}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144506
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.57754153}
+    - friendlyName: Brick.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144510
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630397, y: 0.015556455, z: 0.49788043, w: 0.86814225}
+    - friendlyName: bedframe
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144522
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.076336585, y: 0.076338, z: -0.0004732523, w: 0.9099834}
+    - friendlyName: PlantPot_Round (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144528
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.87022734}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144540
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130823, y: 0.04756464, z: 0.931484, w: 0.74444777}
+    - friendlyName: roof tiles
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144554
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.14858064, y: 0.14858523, z: 0.8256838, w: 0.1689424}
+    - friendlyName: Cube.099
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144558
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04743457, y: 0.047423657, z: 0.92854834, w: 0.8029266}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144564
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660712, y: 0.0054779197, z: 0.9948117, w: 0.6557207}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144576
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.039421137, y: 0.039442476, z: 0.95848554, w: 0.041008536}
+    - friendlyName: PlantPot_Wide (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144592
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048295, y: 0.025051324, z: 0.595519, w: 0.97146106}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144596
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.060512666, y: 0.060534, z: 0.73697287, w: 0.9089066}
+    - friendlyName: PlantPot_Round (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144604
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478295, y: 0.017563293, z: 0.98243165, w: 0.9220532}
+    - friendlyName: Cosmos (11)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144614
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042097, y: 0.0038968336, z: 0.99179816, w: 0.8649537}
+    - friendlyName: bun.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144630
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.031074665, y: 0.031041032, z: 0.7380142, w: 0.96889037}
+    - friendlyName: Hedge3 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144642
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419874, y: 0.04645252, z: 0.929734, w: 0.1016678}
+    - friendlyName: Awning
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144648
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.11602582, y: 0.11698977, z: 0.41377747, w: 0.76793635}
+    - friendlyName: Prefab_BakeryOutside
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144654
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.19830565, y: 0.19831714, z: 0.31102446, w: 0.67274714}
+    - friendlyName: Hibiscus_BlueSkyBlue (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144658
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8351873}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144666
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918893, y: 0.04631071, z: 0.5811248, w: 0.30846757}
+    - friendlyName: Window
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144676
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.050449677, y: 0.05037922, z: 0.92847395, w: 0.7065758}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144686
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.060512666, y: 0.060534, z: 0.7955177, w: 0.9089066}
+    - friendlyName: catto broom roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144714
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.11051, y: 0.11050628, z: 0.6315299, w: 0.8775259}
+    - friendlyName: Brick.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144724
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630377, y: 0.015556435, z: 0.48747176, w: 0.9006941}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144732
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130872, y: 0.047564685, z: 0.931484, w: 0.7106553}
+    - friendlyName: Plane.060
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144748
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0064051817, y: 0.008421014, z: 0.9938951, w: 0.26934695}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|13
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144752
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950744, y: -0.0017565808, z: 0.99900544, w: 0.15119584}
+    - friendlyName: SnapDragon_Yellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144764
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917403, y: 0.00891446, z: 0.13366792, w: 0.9876994}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|9
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144784
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950327, y: -0.0017565389, z: 0.99900544, w: 0.1441199}
+    - friendlyName: BackgroundBuilding1 (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144790
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.2776539, y: 0.27765277, z: 0.527507, w: 0.61827946}
+    - friendlyName: PlantPot_Ribbed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144796
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018947238, y: 0.018960925, z: 0.26022038, w: 0.976937}
+    - friendlyName: Hibiscus_SkyBlueBlue (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144812
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.79053724}
+    - friendlyName: window sill
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144820
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0392192, y: 0.037650995, z: 0.5072168, w: 0.97052574}
+    - friendlyName: plant pot
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144836
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00028020746, y: 0.00028179146, z: 0.99801564, w: 0.4035224}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144848
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.057652652, y: 0.058287274, z: 0.8561646, w: 0.26894572}
+    - friendlyName: PlantPot_Ribbed (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144854
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018947223, y: 0.01896091, z: 0.34632218, w: 0.9799226}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144858
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.5702899}
+    - friendlyName: Hibiscus_PinkRed (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144868
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.98796374}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144872
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760527, y: 0.032600876, z: 0.7434458, w: 0.3097111}
+    - friendlyName: Bowl
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144890
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.035513844, y: 0.03555353, z: 0.9584721, w: 0.30452067}
+    - friendlyName: Cabinet
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144902
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 1.3221178, y: 1.3120394, z: 0.3789974, w: -0.5931198}
+    - friendlyName: Hedge (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144912
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.3859158}
+    - friendlyName: Sunflower (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144930
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804344, y: 0.022808611, z: 0.6224719, w: 0.97339374}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|12
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144938
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948813, y: -0.0017563874, z: 0.9990054, w: 0.13350551}
+    - friendlyName: Cube
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144948
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.025534013, y: 0.024912512, z: 0.65569127, w: 0.31063974}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|18
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144952
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009952118, y: -0.0017567183, z: 0.99900544, w: 0.15650268}
+    - friendlyName: Mailbox
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144956
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04448565, y: 0.044483017, z: 0.9297283, w: 0.38110828}
+    - friendlyName: Bricks
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144964
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.01845837, y: 0.018304946, z: 0.40867597, w: 0.909866}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144968
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.057579048, y: 0.058212865, z: 0.95134676, w: 0.9314604}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144978
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223567, z: 0.42717543, w: 0.96307033}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 144998
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660724, y: 0.00547792, z: 0.9948117, w: 0.64835536}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145006
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130797, y: 0.04756461, z: 0.931484, w: 0.84582514}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145012
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.06053606, y: 0.06055741, z: 0.42716727, w: 0.86658466}
+    - friendlyName: Brick.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145034
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005345637, y: 0.005963746, z: 0.99386996, w: 0.382262}
+    - friendlyName: Cylinder.004 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145042
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.048071384, y: 0.047770444, z: 0.9295238, w: 0.46831423}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145048
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660472, y: 0.005477896, z: 0.94992054, w: 0.99260694}
+    - friendlyName: Cosmos (13)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145072
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420895, y: 0.0038968266, z: 0.90316397, w: 0.99304813}
+    - friendlyName: BackgroundBuilding1 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145078
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.27765405, y: 0.27765292, z: -0.0017294473, w: 0.69010484}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145082
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.8566273, w: 0.91101855}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145086
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.03507879, z: 0.8981508, w: 0.9110188}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145098
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.56303823}
+    - friendlyName: BackgroundBuilding2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145110
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.4305248, y: 0.43052474, z: -0.00021675606, w: 0.47927198}
+    - friendlyName: PlantPot_SquareTaper (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145118
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844, y: 0.02388938, z: 0.6091679, w: 0.3109436}
+    - friendlyName: purple flower
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145124
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.008196431, y: 0.008256273, z: 0.9559385, w: 0.32389483}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145144
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320794, y: 0.005425959, z: 0.99724305, w: 0.21243662}
+    - friendlyName: Hibiscus_RedPink (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145150
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.7979789}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|17
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145154
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000994953, y: -0.0017564595, z: 0.9990054, w: 0.14058183}
+    - friendlyName: Window1.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145158
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.26107615, y: 0.25160068, z: 0.5087212, w: 0.26472616}
+    - friendlyName: Box (23)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145166
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.7499678}
+    - friendlyName: Hedge (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145178
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04993745, y: 0.049950086, z: 0.9285432, w: 0.60674137}
+    - friendlyName: Box (21)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145186
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337347, z: 0.5151969, w: -0.00020981052}
+    - friendlyName: box.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145196
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04563484, y: 0.045634843, z: 0.9275387, w: 0.5517665}
+    - friendlyName: PlantPot_SquareTaper (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145200
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844, y: 0.02388938, z: 0.63261193, w: 0.3109436}
+    - friendlyName: Box (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145214
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.516299, y: 0.5147329, z: -0.00062725245, w: -0.0006209006}
+    - friendlyName: BackgroundBuilding2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145220
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.43052456, y: 0.4305245, z: 0.43075544, w: 0.47927198}
+    - friendlyName: Brick.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145224
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0039706565, y: 0.003925913, z: 0.9945382, w: 0.39071882}
+    - friendlyName: Box (10)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145234
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.51588106, y: 0.5143161, z: -0.00062674494, w: -0.000620398}
+    - friendlyName: Trellis
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145242
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.026313946, y: 0.026294371, z: 0.709507, w: 0.9711162}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145256
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596544, y: 0.06439926, z: 0.41600266, w: 0.93049824}
+    - friendlyName: Catto Bedroom
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145268
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.1286158, y: 0.1285923, z: 0.86152506, w: 0.7427263}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145284
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766046, y: 0.005477895, z: 0.9608281, w: 0.99260694}
+    - friendlyName: Sink and benchtop
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145290
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09872651, y: 0.09874722, z: 0.41381055, w: 0.7907413}
+    - friendlyName: Hedge (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145302
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937468, y: 0.0499501, z: 0.3205271, w: 0.9431932}
+    - friendlyName: PlantPot_SquareTaper (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145306
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844015, y: 0.023889394, z: 0.56227976, w: 0.3109436}
+    - friendlyName: Hibiscus_YellowOrange
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145310
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253156, y: 0.005013531, z: 0.9933708, w: 0.4570887}
+    - friendlyName: Awning.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145316
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.020276915, y: 0.019376112, z: -0.0011086699, w: 0.9836846}
+    - friendlyName: Cosmos (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145320
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420927, y: 0.0038968294, z: 0.8834375, w: 0.99304813}
+    - friendlyName: flower stem
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145324
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.004129351, y: -0.0031835758, z: 1.0001255, w: 0.043370906}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145342
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320575, y: 0.0054259365, z: 0.9947534, w: 0.5485349}
+    - friendlyName: Vintage table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145348
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.23111732, y: 0.23111731, z: 0.5947199, w: 0.80508494}
+    - friendlyName: BackgroundBuilding3 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145352
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.47933024, y: 0.4793302, z: 0.47908458, w: -0.00040740226}
+    - friendlyName: Hibiscus_OrangeYellow (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145356
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253156, y: 0.005013531, z: 0.9933708, w: 0.449647}
+    - friendlyName: PlantPot_CatEars2 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145360
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.014272557, y: 0.014279971, z: 0.98444575, w: 0.9586277}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|8
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145364
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950595, y: -0.0017565659, z: 0.99900544, w: 0.14588891}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145368
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.0072235693, z: 0.9946274, w: 0.32464534}
+    - friendlyName: VioletPlant (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145380
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510693, y: 0.009582723, z: 0.060495112, w: 0.98756504}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145404
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660497, y: 0.0054778983, z: 0.94264877, w: 0.99260694}
+    - friendlyName: Trays
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145412
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.034651317, y: 0.03460814, z: 0.960449, w: 0.23538674}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145418
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660607, y: 0.0054779085, z: 0.9948117, w: 0.70727843}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145434
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320673, y: 0.0054259463, z: 0.40641013, w: 0.98740333}
+    - friendlyName: Stool and Table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145442
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04680062, y: 0.04680385, z: 0.8110348, w: 0.270669}
+    - friendlyName: Fence_WhitePicket_Piece2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145446
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.033175047, y: 0.033143543, z: 0.83199614, w: 0.9119263}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145474
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06882085, y: 0.06725467, z: 0.0011876145, w: 0.9460798}
+    - friendlyName: blanket
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145482
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.05632695, y: 0.05634396, z: 0.9432533, w: 0.210313}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145490
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596544, y: 0.06439926, z: 0.93141574, w: 0.33808747}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145498
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760524, y: 0.032600872, z: 0.7754101, w: 0.3097111}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145502
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.03507879, z: 0.9332648, w: 0.87850296}
+    - friendlyName: Box (16)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145510
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.51588106, y: 0.5143161, z: -0.00062674494, w: 0.33598876}
+    - friendlyName: Box (12)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145520
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: -0.00021588648, w: 0.6726942}
+    - friendlyName: Box (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145532
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.41460362, y: 0.41303873, z: 0.5147798, w: 0.700766}
+    - friendlyName: Awning (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145540
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04816309, y: 0.047980968, z: 0.92961377, w: 0.23968062}
+    - friendlyName: PlantPot_Ribbed (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145544
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.022671489, y: 0.022685181, z: 0.53936696, w: 0.31184107}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145548
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917303, y: 0.0072235577, z: 0.8566273, w: 0.9458803}
+    - friendlyName: Cube.097
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145552
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06596622, y: 0.06601608, z: 0.21633224, w: 0.9099876}
+    - friendlyName: Box (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145560
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: 0.5151969, w: 0.6077941}
+    - friendlyName: flower white
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145566
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0009468039, y: 0.0007561183, z: 0.9943015, w: 0.4033686}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145572
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320542, y: 0.005425934, z: 0.9947534, w: 0.59204483}
+    - friendlyName: Sunflower
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145582
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02280434, y: 0.022808608, z: 0.77083206, w: 0.9708607}
+    - friendlyName: Roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145588
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.17030375, y: 0.17032719, z: 0.82574064, w: -0.00036482312}
+    - friendlyName: Sunflower (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145594
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804335, y: 0.022808604, z: 0.7985315, w: 0.9708607}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145604
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918852, y: 0.046310667, z: 0.6822779, w: 0.27540994}
+    - friendlyName: PlantPot_Round
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145612
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.9792246}
+    - friendlyName: Prefab_Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145628
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04271509, y: 0.04270354, z: 0.9297227, w: 0.51144457}
+    - friendlyName: PlantPot_Round (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145634
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.96194935}
+    - friendlyName: Box (20)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145650
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229245, y: 0.3806782, z: 0.3824492, w: 0.24996783}
+    - friendlyName: PostOffice
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145662
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.117028415, y: 0.11763289, z: 0.41467535, w: 0.6732996}
+    - friendlyName: PlantPot_Round (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145668
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.9446741}
+    - friendlyName: Cube.097
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145672
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06596631, y: 0.06601616, z: 0.15146285, w: 0.9099876}
+    - friendlyName: ExternalFloor
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145686
+      RendererLightmapIndex: 0
+      RendererLightmapScaleOffset: {x: 0.9970703, y: 0.9970703, z: 0.0014648438, w: 0.0014648438}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145694
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320563, y: 0.0054259356, z: 0.9947534, w: 0.5557866}
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145706
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00223207, y: 0.0054259496, z: 0.40641013, w: 0.9801517}
+    - friendlyName: Cube.096
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145710
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19660684, y: 0.1966004, z: 0.8030173, w: -0.00041385225}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145722
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918886, y: 0.0463107, z: 0.63170135, w: 0.30846754}
+    - friendlyName: Hibiscus_BlueSkyBlue
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145732
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.78309554}
+    - friendlyName: box.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145748
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02180409, y: 0.021804087, z: 0.17390554, w: 0.9758641}
+    - friendlyName: BackgroundBuilding3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145752
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.47933024, y: 0.4793302, z: -0.00040740235, w: -0.00040740226}
+    - friendlyName: Catloaf.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145758
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03732562, y: 0.037299678, z: 0.9584806, w: 0.19664453}
+    - friendlyName: SnapDragon_Pink (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145768
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917406, y: 0.008914465, z: 0.1223978, w: 0.9876994}
+    - friendlyName: PlantPot_SquareTaper
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145772
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844011, y: 0.023889389, z: 0.5857238, w: 0.3109436}
+    - friendlyName: Light
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145776
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0058778194, y: 0.0057904576, z: 0.991316, w: 0.857102}
+    - friendlyName: BackgroundBuilding1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145794
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.27765402, y: 0.27765286, z: 0.527507, w: 0.3441878}
+    - friendlyName: Text
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145812
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.009748526, y: 0.009767854, z: 0.94432646, w: 0.3234281}
+    - friendlyName: PlantCrate2 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145818
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.051686764, y: 0.051693, z: 0.9290109, w: 0.9226814}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|19
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145822
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000995255, y: -0.0017567613, z: 0.99900544, w: 0.15827155}
+    - friendlyName: Hibiscus_BlueSkyBlue (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145826
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.98052204}
+    - friendlyName: Cosmos
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145842
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420843, y: 0.0038968213, z: 0.9360414, w: 0.99304813}
+    - friendlyName: Hibiscus_SkyBlueBlue (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145848
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7682122}
+    - friendlyName: SnapDragon_Yellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145862
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00891741, y: 0.008914468, z: 0.1111277, w: 0.9876994}
+    - friendlyName: Hibiscus_RedPink (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145868
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7533288}
+    - friendlyName: Cosmos (14)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145874
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042098, y: 0.0038968348, z: 0.99428535, w: 0.43403634}
+    - friendlyName: Hibiscus_PinkRed (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145880
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253146, y: 0.0050135297, z: 0.9933708, w: 0.47197208}
+    - friendlyName: Rose_Red
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145892
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.013005741, y: 0.012981093, z: 0.84700066, w: 0.969986}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145896
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.106301725, y: 0.10630173, z: 0.51501125, w: 0.878724}
+    - friendlyName: Display shelf
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145902
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.10502685, y: 0.10506237, z: 0.6205559, w: 0.8786432}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145914
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660466, y: 0.0054778955, z: 0.9535564, w: 0.99260694}
+    - friendlyName: Sign
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145924
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.03390595, y: 0.033916242, z: 0.86543196, w: 0.8786053}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145928
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.42717543, w: 0.9803456}
+    - friendlyName: Cosmos (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145936
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042096, y: 0.0038968327, z: 0.87028646, w: 0.99304813}
+    - friendlyName: Hibiscus_PinkRed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145944
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253104, y: 0.005013526, z: 0.9917367, w: 0.842629}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|4
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145958
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009947809, y: -0.0017562871, z: 0.9990054, w: 0.12642896}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145970
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130883, y: 0.047564697, z: 0.931484, w: 0.6430702}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145976
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232029, y: 0.0054259086, z: 0.9947535, w: 0.6411102}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145980
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660531, y: 0.0054779015, z: 0.9948117, w: 0.7220092}
+    - friendlyName: Hibiscus_Pink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145984
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025309, y: 0.005013524, z: 0.9917367, w: 0.8500707}
+    - friendlyName: Box (15)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145992
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: 0.5145392, w: 0.33624235}
+    - friendlyName: Hibiscus_SkyBlueBlue (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 145998
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025315, y: 0.00501353, z: 0.9933708, w: 0.46453038}
+    - friendlyName: Cosmos (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146008
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042087, y: 0.003896824, z: 0.9228904, w: 0.99304813}
+    - friendlyName: Cosmos (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146014
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420988, y: 0.003896836, z: 0.99428535, w: 0.41515413}
+    - friendlyName: Hedge (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146030
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.48581624}
+    - friendlyName: Plane.061
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146034
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0042252312, y: 0.008496154, z: 0.42704448, w: 0.9271564}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146040
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660665, y: 0.0054779146, z: 0.9948117, w: 0.6704515}
+    - friendlyName: Cylinder.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146044
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04807139, y: 0.047770448, z: 0.9295238, w: 0.4253698}
+    - friendlyName: Boxes
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146050
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.16433072, y: 0.16057622, z: 0.18553573, w: 0.8571455}
+    - friendlyName: Hibiscus_OrangeYellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146072
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.97308034}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146080
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596548, y: 0.064399295, z: 0.20926635, w: 0.94609135}
+    - friendlyName: book.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146088
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.010155362, y: 0.009976479, z: 0.84698945, w: 0.9844588}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146092
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766059, y: 0.0054779076, z: 0.9948117, w: 0.7146438}
+    - friendlyName: Hibiscus_OrangeYellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146096
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8277456}
+    - friendlyName: Cosmos (15)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146106
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003204315, y: 0.0030590517, z: 0.9952961, w: 0.28498292}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146120
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.0382805, y: 0.038932145, z: 0.7634328, w: 0.27316454}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146128
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965496, y: 0.06439932, z: 0.14085539, w: 0.94609135}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146144
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.007223568, z: 0.07204455, w: 0.98706454}
+    - friendlyName: Oven
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146152
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.12094526, y: 0.12094535, z: 0.86151934, w: 0.8703615}
+    - friendlyName: PlantCrate1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146156
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.053807653, y: 0.053807277, z: 0.9451785, w: 0.26849887}
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146162
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232094, y: 0.0054259733, z: 0.99724305, w: 0.20518494}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146166
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320705, y: 0.00542595, z: 0.99724305, w: 0.22693995}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|7
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146174
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948661, y: -0.0017563723, z: 0.9990054, w: 0.13173638}
+    - friendlyName: Cosmos (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146178
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042089, y: 0.0038968262, z: 0.91631496, w: 0.99304813}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146182
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.10616602, y: 0.10616603, z: 0.74209934, w: 0.8776022}
+    - friendlyName: rectangle pot
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146190
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.011753961, y: 0.011817786, z: 0.33332413, w: 0.976284}
+    - friendlyName: PlantPot_Wide
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146196
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048297, y: 0.025051327, z: 0.54547817, w: 0.97146106}
+    - friendlyName: Hibiscus_RedPink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146202
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.820304}
+    - friendlyName: Hedge (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146212
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.435866}
+    - friendlyName: Plane.527
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146220
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.033232413, y: 0.033232838, z: 0.9585017, w: 0.44057146}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146230
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130883, y: 0.047564697, z: 0.931484, w: 0.6092777}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146236
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591729, y: 0.0072235567, z: 0.8566273, w: 0.9545957}
+    - friendlyName: Box (22)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146244
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.5301461, y: 0.52853805, z: -0.00064407534, w: -0.00063755317}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146250
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660619, y: 0.0054779104, z: 0.9948117, w: 0.6925476}
+    - friendlyName: Plane.062
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146254
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0036247517, y: 0.00455448, z: 0.9945902, w: 0.29517713}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|14
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146260
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950674, y: -0.0017565738, z: 0.99900544, w: 0.14765789}
+    - friendlyName: VioletPlant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146266
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510697, y: 0.009582726, z: 0.037297044, w: 0.98756504}
+    - friendlyName: BackgroundBuilding1 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146272
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.2776541, y: 0.27765295, z: 0.527507, w: -0.0017292959}
+    - friendlyName: PlantPot_Round (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146276
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478295, y: 0.01756329, z: 0.98243165, w: 0.9393285}
+    - friendlyName: Brick.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146280
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.0136304, y: 0.015556457, z: 0.48747176, w: 0.86814225}
+    - friendlyName: Awning
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146290
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.07104051, y: 0.070196986, z: 0.92843145, w: 0.8160115}
+    - friendlyName: MoneyTree2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146294
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03842928, y: 0.03842942, z: 0.95849746, w: 0.11986998}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146302
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791892, y: 0.046310734, z: 0.5811248, w: 0.27540994}
+    - friendlyName: PlantPot_CatEars
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146310
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.021632727, y: 0.02156797, z: 0.23758006, w: 0.9758644}
+    - friendlyName: Cosmos (12)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146314
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420983, y: 0.0038968348, z: 0.99428535, w: 0.42774227}
+    - friendlyName: Hibiscus_OrangeYellow (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146318
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.77565384}
+    - friendlyName: PlantPot_Wide (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146326
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048295, y: 0.025051324, z: 0.5704986, w: 0.97146106}
+    - friendlyName: Big plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146332
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09652053, y: 0.094169326, z: 0.0004207555, w: 0.9123161}
+    - friendlyName: Plane.065
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146336
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0018137158, y: 0.0018231107, z: 0.9991077, w: 0.12159358}
+    - friendlyName: Cube.100
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146346
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.034189355, y: 0.034124512, z: 0.95847905, w: 0.40713742}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146354
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009951339, y: -0.0017566404, z: 0.99900544, w: 0.1529648}
+    - friendlyName: Plane.058
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146362
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001132833, y: 0.0046995534, z: 0.42871344, w: 0.9113342}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146366
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320717, y: 0.0054259505, z: 0.99724305, w: 0.2196883}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|11
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146376
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009951453, y: -0.0017566517, z: 0.99900544, w: 0.15473373}
+    - friendlyName: bear bun.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146382
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.023114583, y: 0.023131417, z: 0.8224237, w: 0.96994585}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146386
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660491, y: 0.0054778974, z: 0.94628465, w: 0.99260694}
+    - friendlyName: Trellis
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146392
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.026313996, y: 0.026294423, z: 0.680792, w: 0.9711162}
+    - friendlyName: croissant.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146398
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.046239458, y: 0.046234988, z: 0.92956823, w: 0.7562461}
+    - friendlyName: Cube.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146402
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06961957, y: 0.06988282, z: 0.3451212, w: 0.90980613}
+    - friendlyName: Sunflower (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146408
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804342, y: 0.02280861, z: 0.64727837, w: 0.97339374}
+    - friendlyName: book.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146414
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009879176, y: 0.009842564, z: 0.07663152, w: 0.9872436}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146422
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917244, y: 0.007223552, z: 0.9945834, w: 0.5149124}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146428
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.5847932}
+    - friendlyName: Hedge3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146444
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419874, y: 0.04645252, z: 0.929734, w: 0.14811806}
+    - friendlyName: Window1.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146448
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.05781062, y: 0.06036776, z: 0.48118088, w: 0.9271043}
+    - friendlyName: PlantPot_Round (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146452
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.90477794}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146456
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.03476053, y: 0.03260088, z: 0.71148145, w: 0.3097111}
+    - friendlyName: Hibiscus_BlueSkyBlue (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146460
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253123, y: 0.005013527, z: 0.9917367, w: 0.8054206}
+    - friendlyName: Cosmos (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146464
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0032043098, y: 0.0030590463, z: 0.9952961, w: 0.29055375}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146468
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0353362, y: 0.035078824, z: 0.8981508, w: 0.87850296}
+    - friendlyName: Cosmos (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146472
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040421016, y: 0.003896838, z: 0.9942856, w: 0.39701998}
+    - friendlyName: MODEL_Bakery
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146480
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.36698055, y: 0.36738697, z: 0.5143111, w: 0.335922}
+    - friendlyName: Cosmos (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146484
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420988, y: 0.003896836, z: 0.99428535, w: 0.4214482}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146492
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791889, y: 0.046310708, z: 0.63170135, w: 0.27540994}
+    - friendlyName: Box (17)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146502
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.49996784}
+    - friendlyName: Cube.101
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146508
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.13196388, y: 0.13196854, z: 0.86147606, w: 0.6108487}
+    - friendlyName: Prefab_PostOffice
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146518
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 1.8750553, y: 1.8625811, z: -0.20916452, w: -0.9985452}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146532
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591714, y: 0.0072235414, z: 0.9945834, w: 0.53234327}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146536
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320515, y: 0.005425931, z: 0.9947534, w: 0.61210364}
+    - friendlyName: Box (11)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146544
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: 0.38244924, w: -0.000032173888}
+    - friendlyName: PlantCrate2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146550
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.05166261, y: 0.05166884, z: 0.26918602, w: 0.943227}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146554
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917338, y: 0.0072235614, z: 0.8566273, w: 0.93716484}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146558
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917512, y: 0.0072235786, z: 0.99658155, w: 0.25191465}
+    - friendlyName: Vintage table 2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146564
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.1421419, y: 0.14217022, z: 0.23587197, w: 0.91003627}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146568
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320538, y: 0.0054259333, z: 0.9947534, w: 0.59929645}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146574
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917556, y: 0.0072235833, z: 0.99658155, w: 0.24319923}
+    - friendlyName: Hibiscus_SkyBlueBlue
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146584
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025317, y: 0.0050135315, z: 0.9933708, w: 0.44220534}
+    - friendlyName: Cosmos_Yellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146590
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420955, y: 0.003896832, z: 0.87686205, w: 0.99304813}
+    - friendlyName: cross bread.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146596
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02441541, y: 0.024415698, z: 0.45780563, w: 0.9724876}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146604
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791894, y: 0.04631076, z: 0.5305482, w: 0.27540994}
+    - friendlyName: Hibiscus_RedPink (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146610
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253146, y: 0.0050135297, z: 0.14500926, w: 0.9877713}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146614
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.057652652, y: 0.058287274, z: 0.92808, w: -0.002176219}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146618
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660619, y: 0.0054779104, z: 0.9948117, w: 0.699913}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146622
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235544, z: 0.9945834, w: 0.49748155}
+    - friendlyName: RoseBud_Red
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146626
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0018068404, y: 0.0017248865, z: 0.99527055, w: 0.30187193}
+    - friendlyName: Sunflower (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146640
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.029239338, y: 0.029243613, z: 0.97048366, w: 0.8805926}
+    - friendlyName: Sign
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146646
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03983473, y: 0.039373644, z: 0.9581927, w: 0.33932078}
+    - friendlyName: SnapDragon_Pink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146650
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917415, y: 0.008914472, z: 0.09985759, w: 0.9876994}
+    - friendlyName: Plane.063
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146654
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0007917789, y: 0.004391273, z: 0.42875606, w: 0.91811496}
+    - friendlyName: Cosmos
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146660
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420922, y: 0.003896829, z: 0.89001304, w: 0.99304813}
+    - friendlyName: Cosmos (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146664
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042089, y: 0.0038968262, z: 0.9097395, w: 0.99304813}
+    - friendlyName: Box (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146674
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: 0.5151969, w: 0.33667213}
+    - friendlyName: VioletPlant (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146686
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0095107015, y: 0.00958273, z: 0.025698004, w: 0.98756504}
+    - friendlyName: SnapDragon_Pink (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146692
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917431, y: 0.008914488, z: 0.08858747, w: 0.9876994}
+    - friendlyName: PlantPot_CatEars2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146720
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.014272555, y: 0.014279969, z: 0.98444575, w: 0.97531337}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146728
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130797, y: 0.04756461, z: 0.931484, w: 0.8120327}
+    - friendlyName: Brick.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146734
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.01363038, y: 0.015556438, z: 0.49788043, w: 0.88441813}
+    - friendlyName: Fence_WhitePicket_Piece2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146738
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.03317504, y: 0.033143535, z: 0.83199614, w: 0.94477123}
+    - friendlyName: Hibiscus_PinkRed (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146744
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7607705}
+    - friendlyName: Box (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146754
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: 0.5145392, w: 0.6070182}
+    - friendlyName: Hedge (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146782
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04993746, y: 0.049950097, z: 0.9285432, w: 0.33596557}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146786
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.037280645, y: 0.037915263, z: 0.8650886, w: 0.9440447}
+    - friendlyName: Door (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146806
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04671339, y: 0.0451052, z: 0.68228275, w: 0.30847245}
+    - friendlyName: KITCHEN
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146816
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.1612353, y: 0.1612351, z: 0.837091, w: 0.33807468}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146822
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660396, y: 0.005477888, z: 0.964464, w: 0.99260694}
+    - friendlyName: PlantPot_CatEars2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146828
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.014278074, y: 0.014285491, z: 0.81080306, w: 0.31292662}
+    - friendlyName: light
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146832
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.008986357, y: 0.009126206, z: 0.965845, w: 0.3234218}
+    - friendlyName: Tray
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146838
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.023734406, y: 0.023733139, z: 0.48469132, w: 0.97339374}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146854
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760535, y: 0.032600887, z: 0.6795171, w: 0.3097111}
+    - friendlyName: Hibiscus_Pink2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146858
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8128623}
+    - friendlyName: BackgroundBuilding4 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146868
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.30949265, y: 0.30949232, z: 0.5164614, w: 0.0014655481}
+    - friendlyName: PlantCrate2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146872
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.051686764, y: 0.051693, z: 0.9290109, w: 0.87118006}
+    - friendlyName: Prefab_Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146890
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04266056, y: 0.042649023, z: 0.370268, w: 0.9431869}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146894
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320477, y: 0.0054259268, z: 0.9947534, w: 0.61935526}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146902
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046667326, y: 0.045101147, z: 0.9351804, w: 0.9451197}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146928
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917384, y: 0.007223566, z: 0.8566273, w: 0.91973394}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|6
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146932
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009952832, y: -0.0017567897, z: 0.99882185, w: 0.1604748}
+    - friendlyName: Fence_WhitePicket_Piece
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146936
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.07146345, y: 0.06772868, z: 0.8004708, w: 0.19342855}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146944
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.035078786, z: 0.8981508, w: 0.9435346}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146948
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660671, y: 0.0054779155, z: 0.9948117, w: 0.6630861}
+    - friendlyName: Cosmos (10)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146952
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0032043161, y: 0.0030590533, z: 0.9952961, w: 0.27941212}
+    - friendlyName: Box (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 146970
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.58239657, y: 0.58063, z: -0.0007075545, w: -0.0007003895}
+  - friendlyName: Night
+    customLightmaps:
+    - lightmapColor: {fileID: 2800000, guid: a68210df57b2cb840b120c2d0ffd367b, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 27e515cfe55aa694aa751b44235b299a, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: f098c59918fb83749874888a686cadad, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 9f02ef7b7ca3a4d4e808c5604a1c5bc3, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 4783a6fa75358904faf525be82f16695, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: edbaec62282617a4c8debe74d0c69ce7, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: edb9ba648eebb454483d3b07b3c86661, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: dc6b062aa5867a84cbbc3e2a81ed1447, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: c8d6fd6ef53b49a42b82b20067d0bf9b, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 3b8902966f5ee3e4c939eacee70e93f0, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 9895034aac7110141b6e2ea934bd8f4f, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 06bd214d8a13e724f8f7691fcf52ed41, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 3e092e5849f0f61408552d9c1617cfb4, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: 2d1a8f2d0f68ce044ab7e5c217c10379, type: 3}
+    - lightmapColor: {fileID: 2800000, guid: 1c982ad50a7d6ba488ef810235ba3427, type: 3}
+      lightmapDir: {fileID: 0}
+      shadowMask: {fileID: 2800000, guid: c0aa4ed564bdcb44ba060ed11b8396a8, type: 3}
+    info: The following array is for show in the inspector. BUT also to save the
+      non-serializable internal dictionary of instance ids
+    meshRendererLightmapDataFromScene_inspector:
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161740
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022321, y: 0.0054259794, z: 0.99724305, w: 0.19793326}
+    - friendlyName: Chains
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161774
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.0074995495, y: 0.007470602, z: 0.97665703, w: 0.32390976}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161780
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.42717543, w: 0.98906106}
+    - friendlyName: Walls.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161792
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.18193866, y: 0.18232298, z: 0.834959, w: 0.49916276}
+    - friendlyName: Brick
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161802
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0059092054, y: 0.0063879876, z: 0.8626704, w: 0.9924932}
+    - friendlyName: Plane.563
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161806
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.033600256, y: 0.033580575, z: 0.8319712, w: 0.878625}
+    - friendlyName: Window1.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161828
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.0593611, y: 0.06198682, z: 0.7294546, w: 0.27184466}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161836
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660648, y: 0.005477913, z: 0.9948117, w: 0.67781687}
+    - friendlyName: bedroom roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161848
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.11008163, y: 0.10985398, z: 0.72398496, w: 0.8785543}
+    - friendlyName: Box (26)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161862
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662216, z: 0.5813549, w: -0.00003521208}
+    - friendlyName: bed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161868
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.059189837, y: 0.059131015, z: 0.92896366, w: 0.70047784}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161884
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04666733, y: 0.045101147, z: 0.9351804, w: 0.91292554}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161890
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917568, y: 0.007223584, z: 0.99658155, w: 0.2344838}
+    - friendlyName: Roof top
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161918
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.11727838, y: 0.117274635, z: 0.5142729, w: 0.87752146}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161928
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320645, y: 0.005425944, z: 0.4273454, w: 0.95473516}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161936
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.05757906, y: 0.05821287, z: 0.95134676, w: 0.87583005}
+    - friendlyName: Pan
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161950
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.024089223, y: 0.024065692, z: 0.5145088, w: 0.31097597}
+    - friendlyName: PlantPot_Wide (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161958
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048299, y: 0.025051331, z: 0.3063712, w: 0.97435135}
+    - friendlyName: light string
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161964
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009812605, y: 0.009697594, z: 0.332409, w: 0.9895652}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161988
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660222, y: 0.00547787, z: 0.9680999, w: 0.99260694}
+    - friendlyName: RoseBud_Red (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 161992
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0018068376, y: 0.0017248836, z: 0.9948506, w: 0.33404812}
+    - friendlyName: Cosmos_Yellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162010
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420867, y: 0.0038968234, z: 0.92946595, w: 0.99304813}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162016
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766046, y: 0.005477895, z: 0.95719224, w: 0.99260694}
+    - friendlyName: Cube.099
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162022
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.047494918, y: 0.047483996, z: 0.763584, w: 0.2706411}
+    - friendlyName: VioletPlant (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162028
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510693, y: 0.009582723, z: 0.04889608, w: 0.98756504}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162032
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235544, z: 0.9945834, w: 0.48876613}
+    - friendlyName: Brick.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162036
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630394, y: 0.015556453, z: 0.48747176, w: 0.88441813}
+    - friendlyName: BackgroundBuilding4 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162044
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.30949223, y: 0.3094919, z: 0.0014655481, w: 0.6746838}
+    - friendlyName: Box (19)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162054
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.5301461, y: 0.52853805, z: -0.00064407534, w: 0.34527954}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162064
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965444, y: 0.064399265, z: 0.34608823, w: 0.94609135}
+    - friendlyName: book
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162076
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.010803228, y: 0.010879036, z: 0.0005998791, w: 0.98709637}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|10
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162082
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009949224, y: -0.0017564286, z: 0.9990054, w: 0.13881277}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162102
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917372, y: 0.0072235647, z: 0.8566273, w: 0.9284494}
+    - friendlyName: Cube.101
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162108
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.13196394, y: 0.1319686, z: 0.86147606, w: 0.47902057}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162120
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791892, y: 0.046310734, z: 0.5305482, w: 0.3084676}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162126
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320668, y: 0.005425946, z: 0.42782176, w: 0.93678784}
+    - friendlyName: Box (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162136
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662213, z: -0.000042377083, w: 0.70483196}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162148
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965466, y: 0.06439929, z: 0.2776773, w: 0.94609135}
+    - friendlyName: Hanging plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162168
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.031375606, y: 0.031376313, z: 0.4827508, w: 0.88411456}
+    - friendlyName: Roof base
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162176
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.21436091, y: 0.21512403, z: 0.8256546, w: -0.00084535463}
+    - friendlyName: Brick.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162190
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0051057963, y: 0.005409582, z: 0.99389994, w: 0.37501213}
+    - friendlyName: KITCHEN.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162198
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.01684745, y: 0.016856773, z: 0.38718134, w: 0.98040193}
+    - friendlyName: Cube.102
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162202
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.18005839, y: 0.18009627, z: 0.8049371, w: 0.8031057}
+    - friendlyName: table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162216
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.4022009, y: 0.40225247, z: -0.2317663, w: 0.8690081}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162220
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.007223568, z: 0.42717543, w: 0.945795}
+    - friendlyName: Cube.096
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162224
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19660681, y: 0.19660038, z: 0.27378082, w: 0.6914204}
+    - friendlyName: Cube.102
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162234
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.18005839, y: 0.18009627, z: 0.8049371, w: 0.6215148}
+    - friendlyName: todo list
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162240
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.021032872, y: 0.021032877, z: 0.19524758, w: 0.975852}
+    - friendlyName: Plane.056
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162246
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0077157263, y: 0.012000351, z: 0.9931475, w: 0.30349964}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162250
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320624, y: 0.0054259417, z: 0.9947534, w: 0.5412833}
+    - friendlyName: box.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162256
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02762713, y: 0.02762713, z: 0.42992803, w: 0.9708846}
+    - friendlyName: Body
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162266
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19698744, y: 0.19699647, z: 0.8030135, w: 0.34549937}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162270
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917233, y: 0.0072235507, z: 0.9945834, w: 0.5236279}
+    - friendlyName: Text
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162292
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018425107, y: 0.018426152, z: 0.36671484, w: 0.9799392}
+    - friendlyName: Hedge3 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162302
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419878, y: 0.046452526, z: 0.929734, w: 0.05521752}
+    - friendlyName: Cosmos_Yellow (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162328
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420913, y: 0.0038968283, z: 0.8965885, w: 0.99304813}
+    - friendlyName: Box
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162338
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.3822925, y: 0.38067827, z: -0.00003872102, w: -0.000032173986}
+    - friendlyName: Big Plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162346
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09232183, y: 0.089970626, z: 0.0952753, w: 0.9137798}
+    - friendlyName: window
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162362
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.044822987, y: 0.04472789, z: 0.9316833, w: 0.19651899}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162376
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320405, y: 0.0054259202, z: 0.9947535, w: 0.6266069}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162396
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130872, y: 0.047564685, z: 0.931484, w: 0.6768628}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|15
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162410
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948935, y: -0.0017563998, z: 0.9990054, w: 0.1352746}
+    - friendlyName: Window1.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162414
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.2607639, y: 0.25129977, z: 0.42428827, w: 0.90406835}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162422
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009949134, y: -0.0017564197, z: 0.9990054, w: 0.1370437}
+    - friendlyName: fridge
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162428
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.09353402, y: 0.09352579, z: 0.41627023, w: 0.67523056}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162436
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917477, y: 0.007223575, z: 0.9946274, w: 0.31592992}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162444
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0491308, y: 0.04756462, z: 0.931484, w: 0.77824026}
+    - friendlyName: Box (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162496
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.516299, y: 0.5147329, z: -0.00062725245, w: 0.33626103}
+    - friendlyName: Hedge (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162508
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937434, y: 0.049950074, z: 0.9285432, w: 0.65669155}
+    - friendlyName: bear bun.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162514
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.015899977, y: 0.015912157, z: 0.40985614, w: 0.9283869}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|16
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162518
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948565, y: -0.0017563627, z: 0.9990054, w: 0.12996727}
+    - friendlyName: GrassBlade.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162522
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591749, y: 0.0072235763, z: 0.99658155, w: 0.26063007}
+    - friendlyName: Cube.025
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162538
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.104006656, y: 0.10422669, z: 0.41370744, w: 0.8887868}
+    - friendlyName: Box (18)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162546
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: -0.00021616231, w: 0.67355406}
+    - friendlyName: Hedge (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162558
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937453, y: 0.04995009, z: 0.9285432, w: 0.5357664}
+    - friendlyName: bedside table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162564
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.038362067, y: 0.03837101, z: 0.95850086, w: 0.15830667}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162574
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660817, y: 0.0054779304, z: 0.8594013, w: 0.9846461}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162582
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.039421137, y: 0.039442476, z: 0.95848554, w: 0.080432795}
+    - friendlyName: Box (13)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162614
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.5156401, y: 0.5140758, z: -0.00062645215, w: -0.0006201081}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162648
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000994829, y: -0.0017563353, z: 0.9990054, w: 0.12819815}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162660
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950082, y: -0.0017565147, z: 0.9990054, w: 0.14235088}
+    - friendlyName: Shevles
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162666
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.059658155, y: 0.05981099, z: 0.9288899, w: 0.7581159}
+    - friendlyName: Box (25)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162686
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.5156399, y: 0.51407576, z: -0.0006264517, w: 0.33583176}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162694
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917256, y: 0.007223553, z: 0.9945834, w: 0.50619704}
+    - friendlyName: bagel.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162700
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0236365, y: 0.023637913, z: 0.28222236, w: 0.97537225}
+    - friendlyName: Cube.098
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162704
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.11560408, y: 0.11560859, z: 0.31296104, w: 0.86960065}
+    - friendlyName: Box (14)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162712
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.24996783}
+    - friendlyName: BackgroundBuilding4
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162738
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.30934766, y: 0.30934733, z: 0.5162201, w: 0.0014648633}
+    - friendlyName: Cube.100
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162754
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03418957, y: 0.03412473, z: 0.95847905, w: 0.37372214}
+    - friendlyName: poster
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162770
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.035693128, y: 0.035693135, z: 0.9584621, w: 0.26946536}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162798
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0659655, y: 0.06439932, z: 0.93141574, w: 0.28649732}
+    - friendlyName: Cube.098
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162804
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.1156041, y: 0.1156086, z: 0.8279573, w: 0.21223882}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162828
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.06053606, y: 0.06055741, z: 0.42716727, w: 0.9255467}
+    - friendlyName: Doorsupport
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162838
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.041988343, y: 0.042029526, z: 0.9584807, w: -0.00050515257}
+    - friendlyName: Cosmos (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162842
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040421006, y: 0.0038968376, z: 0.99428535, w: 0.40886006}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162846
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235554, z: 0.9945834, w: 0.48005074}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162854
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965444, y: 0.064399265, z: 0.41600266, w: 0.8857838}
+    - friendlyName: Plane.059
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162860
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00079705566, y: 0.004424358, z: 0.8569766, w: 0.963661}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162870
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232038, y: 0.0054259175, z: 0.9947535, w: 0.63385856}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162874
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660636, y: 0.0054779123, z: 0.9948117, w: 0.6851823}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162878
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232064, y: 0.0054259435, z: 0.4273454, w: 0.97201043}
+    - friendlyName: PlantPot_Round (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162884
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.8875027}
+    - friendlyName: Plane.064
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162892
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0020962523, y: 0.0064855074, z: 0.9945084, w: 0.7358033}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|5
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162896
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000995068, y: -0.0017565741, z: 0.99900544, w: 0.14942686}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162916
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.10616602, y: 0.10616603, z: 0.8475893, w: 0.8776022}
+    - friendlyName: utensils
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162922
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.014067637, y: 0.0139885, z: 0.019634074, w: 0.98524964}
+    - friendlyName: Box (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162932
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.4183888, y: 0.41662213, z: 0.41856033, w: 0.70483196}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162946
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0659655, y: 0.06439932, z: 0.07244441, w: 0.94609135}
+    - friendlyName: box
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162954
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02314871, y: 0.023148708, z: 0.15129308, w: 0.975742}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162958
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660526, y: 0.005477901, z: 0.9948117, w: 0.7293745}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162972
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.57754153}
+    - friendlyName: Brick.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162976
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630397, y: 0.015556455, z: 0.49788043, w: 0.86814225}
+    - friendlyName: bedframe
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162990
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.076336585, y: 0.076338, z: -0.0004732523, w: 0.9099834}
+    - friendlyName: PlantPot_Round (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 162996
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.87022734}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163008
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130823, y: 0.04756464, z: 0.931484, w: 0.74444777}
+    - friendlyName: roof tiles
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163022
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.14858064, y: 0.14858523, z: 0.8256838, w: 0.1689424}
+    - friendlyName: Cube.099
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163026
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04743457, y: 0.047423657, z: 0.92854834, w: 0.8029266}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163032
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660712, y: 0.0054779197, z: 0.9948117, w: 0.6557207}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163044
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.039421137, y: 0.039442476, z: 0.95848554, w: 0.041008536}
+    - friendlyName: PlantPot_Wide (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163060
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048295, y: 0.025051324, z: 0.595519, w: 0.97146106}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163064
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.060512666, y: 0.060534, z: 0.73697287, w: 0.9089066}
+    - friendlyName: PlantPot_Round (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163072
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478295, y: 0.017563293, z: 0.98243165, w: 0.9220532}
+    - friendlyName: Cosmos (11)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163082
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042097, y: 0.0038968336, z: 0.99179816, w: 0.8649537}
+    - friendlyName: bun.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163098
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.031074665, y: 0.031041032, z: 0.7380142, w: 0.96889037}
+    - friendlyName: Hedge3 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163110
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419874, y: 0.04645252, z: 0.929734, w: 0.1016678}
+    - friendlyName: Awning
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163116
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.11602582, y: 0.11698977, z: 0.41377747, w: 0.76793635}
+    - friendlyName: Prefab_BakeryOutside
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163122
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.19830565, y: 0.19831714, z: 0.31102446, w: 0.67274714}
+    - friendlyName: Hibiscus_BlueSkyBlue (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163126
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8351873}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163134
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918893, y: 0.04631071, z: 0.5811248, w: 0.30846757}
+    - friendlyName: Window
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163144
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.050449677, y: 0.05037922, z: 0.92847395, w: 0.7065758}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163154
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.060512666, y: 0.060534, z: 0.7955177, w: 0.9089066}
+    - friendlyName: catto broom roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163182
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.11051, y: 0.11050628, z: 0.6315299, w: 0.8775259}
+    - friendlyName: Brick.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163192
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.013630377, y: 0.015556435, z: 0.48747176, w: 0.9006941}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163202
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130872, y: 0.047564685, z: 0.931484, w: 0.7106553}
+    - friendlyName: Plane.060
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163218
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0064051817, y: 0.008421014, z: 0.9938951, w: 0.26934695}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|13
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163222
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950744, y: -0.0017565808, z: 0.99900544, w: 0.15119584}
+    - friendlyName: SnapDragon_Yellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163234
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917403, y: 0.00891446, z: 0.13366792, w: 0.9876994}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|9
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163254
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950327, y: -0.0017565389, z: 0.99900544, w: 0.1441199}
+    - friendlyName: BackgroundBuilding1 (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163260
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.2776539, y: 0.27765277, z: 0.527507, w: 0.61827946}
+    - friendlyName: PlantPot_Ribbed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163266
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018947238, y: 0.018960925, z: 0.26022038, w: 0.976937}
+    - friendlyName: Hibiscus_SkyBlueBlue (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163282
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.79053724}
+    - friendlyName: window sill
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163290
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0392192, y: 0.037650995, z: 0.5072168, w: 0.97052574}
+    - friendlyName: plant pot
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163306
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00028020746, y: 0.00028179146, z: 0.99801564, w: 0.4035224}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163318
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.057652652, y: 0.058287274, z: 0.8561646, w: 0.26894572}
+    - friendlyName: PlantPot_Ribbed (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163324
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.018947223, y: 0.01896091, z: 0.34632218, w: 0.9799226}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163328
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.5702899}
+    - friendlyName: Hibiscus_PinkRed (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163338
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.98796374}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163342
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760527, y: 0.032600876, z: 0.7434458, w: 0.3097111}
+    - friendlyName: Bowl
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163360
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.035513844, y: 0.03555353, z: 0.9584721, w: 0.30452067}
+    - friendlyName: Cabinet
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163372
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 1.3221178, y: 1.3120394, z: 0.3789974, w: -0.5931198}
+    - friendlyName: Hedge (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163382
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.3859158}
+    - friendlyName: Sunflower (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163400
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804344, y: 0.022808611, z: 0.6224719, w: 0.97339374}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|12
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163408
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948813, y: -0.0017563874, z: 0.9990054, w: 0.13350551}
+    - friendlyName: Cube
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163418
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.025534013, y: 0.024912512, z: 0.65569127, w: 0.31063974}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|18
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163422
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009952118, y: -0.0017567183, z: 0.99900544, w: 0.15650268}
+    - friendlyName: Mailbox
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163426
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04448565, y: 0.044483017, z: 0.9297283, w: 0.38110828}
+    - friendlyName: Bricks
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163434
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.01845837, y: 0.018304946, z: 0.40867597, w: 0.909866}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163438
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.057579048, y: 0.058212865, z: 0.95134676, w: 0.9314604}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163448
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223567, z: 0.42717543, w: 0.96307033}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163468
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660724, y: 0.00547792, z: 0.9948117, w: 0.64835536}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163476
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130797, y: 0.04756461, z: 0.931484, w: 0.84582514}
+    - friendlyName: Plane.542
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163482
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.06053606, y: 0.06055741, z: 0.42716727, w: 0.86658466}
+    - friendlyName: Brick.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163504
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005345637, y: 0.005963746, z: 0.99386996, w: 0.382262}
+    - friendlyName: Cylinder.004 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163512
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.048071384, y: 0.047770444, z: 0.9295238, w: 0.46831423}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163518
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660472, y: 0.005477896, z: 0.94992054, w: 0.99260694}
+    - friendlyName: Cosmos (13)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163542
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420895, y: 0.0038968266, z: 0.90316397, w: 0.99304813}
+    - friendlyName: BackgroundBuilding1 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163548
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.27765405, y: 0.27765292, z: -0.0017294473, w: 0.69010484}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163552
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.8566273, w: 0.91101855}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163556
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.03507879, z: 0.8981508, w: 0.9110188}
+    - friendlyName: GrassBlade.018
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163568
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.56303823}
+    - friendlyName: BackgroundBuilding2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163580
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.4305248, y: 0.43052474, z: -0.00021675606, w: 0.47927198}
+    - friendlyName: PlantPot_SquareTaper (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163588
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844, y: 0.02388938, z: 0.6091679, w: 0.3109436}
+    - friendlyName: purple flower
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163594
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.008196431, y: 0.008256273, z: 0.9559385, w: 0.32389483}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163614
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320794, y: 0.005425959, z: 0.99724305, w: 0.21243662}
+    - friendlyName: Hibiscus_RedPink (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163620
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.7979789}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|17
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163624
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000994953, y: -0.0017564595, z: 0.9990054, w: 0.14058183}
+    - friendlyName: Window1.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163628
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.26107615, y: 0.25160068, z: 0.5087212, w: 0.26472616}
+    - friendlyName: Box (23)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163636
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.7499678}
+    - friendlyName: Hedge (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163648
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04993745, y: 0.049950086, z: 0.9285432, w: 0.60674137}
+    - friendlyName: Box (21)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163656
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337347, z: 0.5151969, w: -0.00020981052}
+    - friendlyName: box.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163666
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04563484, y: 0.045634843, z: 0.9275387, w: 0.5517665}
+    - friendlyName: PlantPot_SquareTaper (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163670
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844, y: 0.02388938, z: 0.63261193, w: 0.3109436}
+    - friendlyName: Box (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163684
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.516299, y: 0.5147329, z: -0.00062725245, w: -0.0006209006}
+    - friendlyName: BackgroundBuilding2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163690
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.43052456, y: 0.4305245, z: 0.43075544, w: 0.47927198}
+    - friendlyName: Brick.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163694
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0039706565, y: 0.003925913, z: 0.9945382, w: 0.39071882}
+    - friendlyName: Box (10)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163704
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.51588106, y: 0.5143161, z: -0.00062674494, w: -0.000620398}
+    - friendlyName: Trellis
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163712
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.026313946, y: 0.026294371, z: 0.709507, w: 0.9711162}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163726
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596544, y: 0.06439926, z: 0.41600266, w: 0.93049824}
+    - friendlyName: Catto Bedroom
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163738
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.1286158, y: 0.1285923, z: 0.86152506, w: 0.7427263}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163754
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766046, y: 0.005477895, z: 0.9608281, w: 0.99260694}
+    - friendlyName: Sink and benchtop
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163760
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09872651, y: 0.09874722, z: 0.41381055, w: 0.7907413}
+    - friendlyName: Hedge (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163772
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937468, y: 0.0499501, z: 0.3205271, w: 0.9431932}
+    - friendlyName: PlantPot_SquareTaper (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163776
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844015, y: 0.023889394, z: 0.56227976, w: 0.3109436}
+    - friendlyName: Hibiscus_YellowOrange
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163780
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253156, y: 0.005013531, z: 0.9933708, w: 0.4570887}
+    - friendlyName: Awning.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163788
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.020276915, y: 0.019376112, z: -0.0011086699, w: 0.9836846}
+    - friendlyName: Cosmos (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163794
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420927, y: 0.0038968294, z: 0.8834375, w: 0.99304813}
+    - friendlyName: flower stem
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163798
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.004129351, y: -0.0031835758, z: 1.0001255, w: 0.043370906}
+    - friendlyName: GrassBlade.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163816
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320575, y: 0.0054259365, z: 0.9947534, w: 0.5485349}
+    - friendlyName: Vintage table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163822
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.23111732, y: 0.23111731, z: 0.5947199, w: 0.80508494}
+    - friendlyName: BackgroundBuilding3 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163826
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.47933024, y: 0.4793302, z: 0.47908458, w: -0.00040740226}
+    - friendlyName: Hibiscus_OrangeYellow (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163830
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253156, y: 0.005013531, z: 0.9933708, w: 0.449647}
+    - friendlyName: PlantPot_CatEars2 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163834
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.014272557, y: 0.014279971, z: 0.98444575, w: 0.9586277}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|8
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163838
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950595, y: -0.0017565659, z: 0.99900544, w: 0.14588891}
+    - friendlyName: GrassBlade.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163842
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.0072235693, z: 0.9946274, w: 0.32464534}
+    - friendlyName: VioletPlant (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163854
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510693, y: 0.009582723, z: 0.060495112, w: 0.98756504}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163878
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660497, y: 0.0054778983, z: 0.94264877, w: 0.99260694}
+    - friendlyName: Trays
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163886
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.034651317, y: 0.03460814, z: 0.960449, w: 0.23538674}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163892
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660607, y: 0.0054779085, z: 0.9948117, w: 0.70727843}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163908
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320673, y: 0.0054259463, z: 0.40641013, w: 0.98740333}
+    - friendlyName: Stool and Table
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163916
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04680062, y: 0.04680385, z: 0.8110348, w: 0.270669}
+    - friendlyName: Fence_WhitePicket_Piece2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163920
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.033175047, y: 0.033143543, z: 0.83199614, w: 0.9119263}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163948
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06882085, y: 0.06725467, z: 0.0011876145, w: 0.9460798}
+    - friendlyName: blanket
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163956
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.05632695, y: 0.05634396, z: 0.9432533, w: 0.210313}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163964
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596544, y: 0.06439926, z: 0.93141574, w: 0.33808747}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163970
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760524, y: 0.032600872, z: 0.7754101, w: 0.3097111}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163974
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.03507879, z: 0.9332648, w: 0.87850296}
+    - friendlyName: Box (16)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163982
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.51588106, y: 0.5143161, z: -0.00062674494, w: 0.33598876}
+    - friendlyName: Box (12)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 163992
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: -0.00021588648, w: 0.6726942}
+    - friendlyName: Box (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164004
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.41460362, y: 0.41303873, z: 0.5147798, w: 0.700766}
+    - friendlyName: Awning (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164012
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04816309, y: 0.047980968, z: 0.92961377, w: 0.23968062}
+    - friendlyName: PlantPot_Ribbed (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164016
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.022671489, y: 0.022685181, z: 0.53936696, w: 0.31184107}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164020
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917303, y: 0.0072235577, z: 0.8566273, w: 0.9458803}
+    - friendlyName: Cube.097
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164024
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06596622, y: 0.06601608, z: 0.21633224, w: 0.9099876}
+    - friendlyName: Box (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164032
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: 0.5151969, w: 0.6077941}
+    - friendlyName: flower white
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164038
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0009468039, y: 0.0007561183, z: 0.9943015, w: 0.4033686}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164044
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320542, y: 0.005425934, z: 0.9947534, w: 0.59204483}
+    - friendlyName: Sunflower
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164054
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02280434, y: 0.022808608, z: 0.77083206, w: 0.9708607}
+    - friendlyName: Roof
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164060
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.17030375, y: 0.17032719, z: 0.82574064, w: -0.00036482312}
+    - friendlyName: Sunflower (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164066
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804335, y: 0.022808604, z: 0.7985315, w: 0.9708607}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164076
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918852, y: 0.046310667, z: 0.6822779, w: 0.27540994}
+    - friendlyName: PlantPot_Round
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164084
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.9792246}
+    - friendlyName: Prefab_Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164100
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04271509, y: 0.04270354, z: 0.9297227, w: 0.51144457}
+    - friendlyName: PlantPot_Round (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164106
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.96194935}
+    - friendlyName: Box (20)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164122
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229245, y: 0.3806782, z: 0.3824492, w: 0.24996783}
+    - friendlyName: PostOffice
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164134
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.117028415, y: 0.11763289, z: 0.41467535, w: 0.6732996}
+    - friendlyName: PlantPot_Round (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164140
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478298, y: 0.017563295, z: 0.40873483, w: 0.9446741}
+    - friendlyName: Cube.097
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164144
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06596631, y: 0.06601616, z: 0.15146285, w: 0.9099876}
+    - friendlyName: ExternalFloor
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164158
+      RendererLightmapIndex: 0
+      RendererLightmapScaleOffset: {x: 0.9970703, y: 0.9970703, z: 0.0014648438, w: 0.0014648438}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164166
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320563, y: 0.0054259356, z: 0.9947534, w: 0.5557866}
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164178
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00223207, y: 0.0054259496, z: 0.40641013, w: 0.9801517}
+    - friendlyName: Cube.096
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164182
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.19660684, y: 0.1966004, z: 0.8030173, w: -0.00041385225}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164194
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.047918886, y: 0.0463107, z: 0.63170135, w: 0.30846754}
+    - friendlyName: Hibiscus_BlueSkyBlue
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164204
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025313, y: 0.0050135283, z: 0.9917367, w: 0.78309554}
+    - friendlyName: box.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164220
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02180409, y: 0.021804087, z: 0.17390554, w: 0.9758641}
+    - friendlyName: BackgroundBuilding3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164224
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.47933024, y: 0.4793302, z: -0.00040740235, w: -0.00040740226}
+    - friendlyName: Catloaf.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164230
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03732562, y: 0.037299678, z: 0.9584806, w: 0.19664453}
+    - friendlyName: SnapDragon_Pink (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164240
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917406, y: 0.008914465, z: 0.1223978, w: 0.9876994}
+    - friendlyName: PlantPot_SquareTaper
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164244
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.023844011, y: 0.023889389, z: 0.5857238, w: 0.3109436}
+    - friendlyName: Light
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164248
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0058778194, y: 0.0057904576, z: 0.991316, w: 0.857102}
+    - friendlyName: BackgroundBuilding1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164266
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.27765402, y: 0.27765286, z: 0.527507, w: 0.3441878}
+    - friendlyName: Text
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164284
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.009748526, y: 0.009767854, z: 0.94432646, w: 0.3234281}
+    - friendlyName: PlantCrate2 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164290
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.051686764, y: 0.051693, z: 0.9290109, w: 0.9226814}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|19
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164294
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.000995255, y: -0.0017567613, z: 0.99900544, w: 0.15827155}
+    - friendlyName: Hibiscus_BlueSkyBlue (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164298
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.98052204}
+    - friendlyName: Cosmos
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164314
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420843, y: 0.0038968213, z: 0.9360414, w: 0.99304813}
+    - friendlyName: Hibiscus_SkyBlueBlue (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164320
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7682122}
+    - friendlyName: SnapDragon_Yellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164334
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.00891741, y: 0.008914468, z: 0.1111277, w: 0.9876994}
+    - friendlyName: Hibiscus_RedPink (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164340
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7533288}
+    - friendlyName: Cosmos (14)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164346
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042098, y: 0.0038968348, z: 0.99428535, w: 0.43403634}
+    - friendlyName: Hibiscus_PinkRed (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164352
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253146, y: 0.0050135297, z: 0.9933708, w: 0.47197208}
+    - friendlyName: Rose_Red
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164364
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.013005741, y: 0.012981093, z: 0.84700066, w: 0.969986}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164368
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.106301725, y: 0.10630173, z: 0.51501125, w: 0.878724}
+    - friendlyName: Display shelf
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164374
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.10502685, y: 0.10506237, z: 0.6205559, w: 0.8786432}
+    - friendlyName: GrassBlade.014
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164386
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660466, y: 0.0054778955, z: 0.9535564, w: 0.99260694}
+    - friendlyName: Sign
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164396
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.03390595, y: 0.033916242, z: 0.86543196, w: 0.8786053}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164400
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917396, y: 0.007223566, z: 0.42717543, w: 0.9803456}
+    - friendlyName: Cosmos (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164408
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042096, y: 0.0038968327, z: 0.87028646, w: 0.99304813}
+    - friendlyName: Hibiscus_PinkRed
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164416
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253104, y: 0.005013526, z: 0.9917367, w: 0.842629}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|4
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164430
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009947809, y: -0.0017562871, z: 0.9990054, w: 0.12642896}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164442
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130883, y: 0.047564697, z: 0.931484, w: 0.6430702}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164448
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232029, y: 0.0054259086, z: 0.9947535, w: 0.6411102}
+    - friendlyName: GrassBlade.017
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164452
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660531, y: 0.0054779015, z: 0.9948117, w: 0.7220092}
+    - friendlyName: Hibiscus_Pink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164456
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025309, y: 0.005013524, z: 0.9917367, w: 0.8500707}
+    - friendlyName: Box (15)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164464
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: 0.5145392, w: 0.33624235}
+    - friendlyName: Hibiscus_SkyBlueBlue (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164470
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025315, y: 0.00501353, z: 0.9933708, w: 0.46453038}
+    - friendlyName: Cosmos (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164480
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042087, y: 0.003896824, z: 0.9228904, w: 0.99304813}
+    - friendlyName: Cosmos (7)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164486
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420988, y: 0.003896836, z: 0.99428535, w: 0.41515413}
+    - friendlyName: Hedge (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164502
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.48581624}
+    - friendlyName: Plane.061
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164506
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0042252312, y: 0.008496154, z: 0.42704448, w: 0.9271564}
+    - friendlyName: GrassBlade.020
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164512
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660665, y: 0.0054779146, z: 0.9948117, w: 0.6704515}
+    - friendlyName: Cylinder.004
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164516
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.04807139, y: 0.047770448, z: 0.9295238, w: 0.4253698}
+    - friendlyName: Boxes
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164522
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.16433072, y: 0.16057622, z: 0.18553573, w: 0.8571455}
+    - friendlyName: Hibiscus_OrangeYellow
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164544
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025314, y: 0.005013529, z: 0.67177075, w: 0.97308034}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164552
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.06596548, y: 0.064399295, z: 0.20926635, w: 0.94609135}
+    - friendlyName: book.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164560
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.010155362, y: 0.009976479, z: 0.84698945, w: 0.9844588}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164564
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001766059, y: 0.0054779076, z: 0.9948117, w: 0.7146438}
+    - friendlyName: Hibiscus_OrangeYellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164568
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8277456}
+    - friendlyName: Cosmos (15)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164578
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003204315, y: 0.0030590517, z: 0.9952961, w: 0.28498292}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164592
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.0382805, y: 0.038932145, z: 0.7634328, w: 0.27316454}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164600
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.065965496, y: 0.06439932, z: 0.14085539, w: 0.94609135}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164616
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591742, y: 0.007223568, z: 0.07204455, w: 0.98706454}
+    - friendlyName: Oven
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164624
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.12094526, y: 0.12094535, z: 0.86151934, w: 0.8703615}
+    - friendlyName: PlantCrate1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164628
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.053807653, y: 0.053807277, z: 0.9451785, w: 0.26849887}
+    - friendlyName: GrassBlade.012
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164634
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.002232094, y: 0.0054259733, z: 0.99724305, w: 0.20518494}
+    - friendlyName: GrassBlade.009
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164638
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320705, y: 0.00542595, z: 0.99724305, w: 0.22693995}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|7
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164646
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009948661, y: -0.0017563723, z: 0.9990054, w: 0.13173638}
+    - friendlyName: Cosmos (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164650
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042089, y: 0.0038968262, z: 0.91631496, w: 0.99304813}
+    - friendlyName: GrassPlane
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164654
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.10616602, y: 0.10616603, z: 0.74209934, w: 0.8776022}
+    - friendlyName: rectangle pot
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164660
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.011753961, y: 0.011817786, z: 0.33332413, w: 0.976284}
+    - friendlyName: PlantPot_Wide
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164666
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048297, y: 0.025051327, z: 0.54547817, w: 0.97146106}
+    - friendlyName: Hibiscus_RedPink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164672
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.820304}
+    - friendlyName: Hedge (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164682
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.049937457, y: 0.049950093, z: 0.9285432, w: 0.435866}
+    - friendlyName: Plane.527
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164690
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.033232413, y: 0.033232838, z: 0.9585017, w: 0.44057146}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164700
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130883, y: 0.047564697, z: 0.931484, w: 0.6092777}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164706
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591729, y: 0.0072235567, z: 0.8566273, w: 0.9545957}
+    - friendlyName: Box (22)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164714
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.5301461, y: 0.52853805, z: -0.00064407534, w: -0.00063755317}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164720
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660619, y: 0.0054779104, z: 0.9948117, w: 0.6925476}
+    - friendlyName: Plane.062
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164724
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0036247517, y: 0.00455448, z: 0.9945902, w: 0.29517713}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|14
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164730
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009950674, y: -0.0017565738, z: 0.99900544, w: 0.14765789}
+    - friendlyName: VioletPlant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164736
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009510697, y: 0.009582726, z: 0.037297044, w: 0.98756504}
+    - friendlyName: BackgroundBuilding1 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164742
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.2776541, y: 0.27765295, z: 0.527507, w: -0.0017292959}
+    - friendlyName: PlantPot_Round (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164746
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478295, y: 0.01756329, z: 0.98243165, w: 0.9393285}
+    - friendlyName: Brick.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164750
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.0136304, y: 0.015556457, z: 0.48747176, w: 0.86814225}
+    - friendlyName: Awning
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164760
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.07104051, y: 0.070196986, z: 0.92843145, w: 0.8160115}
+    - friendlyName: MoneyTree2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164764
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03842928, y: 0.03842942, z: 0.95849746, w: 0.11986998}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164772
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791892, y: 0.046310734, z: 0.5811248, w: 0.27540994}
+    - friendlyName: PlantPot_CatEars
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164780
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.021632727, y: 0.02156797, z: 0.23758006, w: 0.9758644}
+    - friendlyName: Cosmos (12)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164784
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420983, y: 0.0038968348, z: 0.99428535, w: 0.42774227}
+    - friendlyName: Hibiscus_OrangeYellow (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164788
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.77565384}
+    - friendlyName: PlantPot_Wide (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164796
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.025048295, y: 0.025051324, z: 0.5704986, w: 0.97146106}
+    - friendlyName: Big plant
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164802
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.09652053, y: 0.094169326, z: 0.0004207555, w: 0.9123161}
+    - friendlyName: Plane.065
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164806
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0018137158, y: 0.0018231107, z: 0.9991077, w: 0.12159358}
+    - friendlyName: Cube.100
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164816
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.034189355, y: 0.034124512, z: 0.95847905, w: 0.40713742}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|1
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164824
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009951339, y: -0.0017566404, z: 0.99900544, w: 0.1529648}
+    - friendlyName: Plane.058
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164832
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.001132833, y: 0.0046995534, z: 0.42871344, w: 0.9113342}
+    - friendlyName: GrassBlade.021
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164836
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320717, y: 0.0054259505, z: 0.99724305, w: 0.2196883}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|11
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164846
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009951453, y: -0.0017566517, z: 0.99900544, w: 0.15473373}
+    - friendlyName: bear bun.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164852
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.023114583, y: 0.023131417, z: 0.8224237, w: 0.96994585}
+    - friendlyName: GrassBlade.005
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164856
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660491, y: 0.0054778974, z: 0.94628465, w: 0.99260694}
+    - friendlyName: Trellis
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164862
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.026313996, y: 0.026294423, z: 0.680792, w: 0.9711162}
+    - friendlyName: croissant.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164868
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.046239458, y: 0.046234988, z: 0.92956823, w: 0.7562461}
+    - friendlyName: Cube.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164872
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.06961957, y: 0.06988282, z: 0.3451212, w: 0.90980613}
+    - friendlyName: Sunflower (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164878
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.022804342, y: 0.02280861, z: 0.64727837, w: 0.97339374}
+    - friendlyName: book.001
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164884
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.009879176, y: 0.009842564, z: 0.07663152, w: 0.9872436}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164892
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917244, y: 0.007223552, z: 0.9945834, w: 0.5149124}
+    - friendlyName: GrassBlade.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164898
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320559, y: 0.0054259356, z: 0.9947534, w: 0.5847932}
+    - friendlyName: Hedge3
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164914
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046419874, y: 0.04645252, z: 0.929734, w: 0.14811806}
+    - friendlyName: Window1.006
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164918
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.05781062, y: 0.06036776, z: 0.48118088, w: 0.9271043}
+    - friendlyName: PlantPot_Round (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164922
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.017478297, y: 0.017563293, z: 0.98243165, w: 0.90477794}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164926
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.03476053, y: 0.03260088, z: 0.71148145, w: 0.3097111}
+    - friendlyName: Hibiscus_BlueSkyBlue (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164932
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253123, y: 0.005013527, z: 0.9917367, w: 0.8054206}
+    - friendlyName: Cosmos (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164936
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0032043098, y: 0.0030590463, z: 0.9952961, w: 0.29055375}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164940
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.0353362, y: 0.035078824, z: 0.8981508, w: 0.87850296}
+    - friendlyName: Cosmos (4)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164944
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040421016, y: 0.003896838, z: 0.9942856, w: 0.39701998}
+    - friendlyName: MODEL_Bakery
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164952
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.36698055, y: 0.36738697, z: 0.5143111, w: 0.335922}
+    - friendlyName: Cosmos (8)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164956
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420988, y: 0.003896836, z: 0.99428535, w: 0.4214482}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164964
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791889, y: 0.046310708, z: 0.63170135, w: 0.27540994}
+    - friendlyName: Box (17)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164974
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: -0.000038720897, w: 0.49996784}
+    - friendlyName: Cube.101
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164980
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.13196388, y: 0.13196854, z: 0.86147606, w: 0.6108487}
+    - friendlyName: Prefab_PostOffice
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 164990
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 1.8750553, y: 1.8625811, z: -0.20916452, w: -0.9985452}
+    - friendlyName: GrassBlade.007
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165004
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591714, y: 0.0072235414, z: 0.9945834, w: 0.53234327}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165008
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320515, y: 0.005425931, z: 0.9947534, w: 0.61210364}
+    - friendlyName: Box (11)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165016
+      RendererLightmapIndex: 7
+      RendererLightmapScaleOffset: {x: 0.38229248, y: 0.38067824, z: 0.38244924, w: -0.000032173888}
+    - friendlyName: PlantCrate2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165022
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.05166261, y: 0.05166884, z: 0.26918602, w: 0.943227}
+    - friendlyName: GrassBlade.010
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165026
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917338, y: 0.0072235614, z: 0.8566273, w: 0.93716484}
+    - friendlyName: GrassBlade.022
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165030
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917512, y: 0.0072235786, z: 0.99658155, w: 0.25191465}
+    - friendlyName: Vintage table 2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165036
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.1421419, y: 0.14217022, z: 0.23587197, w: 0.91003627}
+    - friendlyName: GrassBlade.015
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165040
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320538, y: 0.0054259333, z: 0.9947534, w: 0.59929645}
+    - friendlyName: GrassBlade.013
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165046
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917556, y: 0.0072235833, z: 0.99658155, w: 0.24319923}
+    - friendlyName: Hibiscus_SkyBlueBlue
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165056
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025317, y: 0.0050135315, z: 0.9933708, w: 0.44220534}
+    - friendlyName: Cosmos_Yellow (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165062
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420955, y: 0.003896832, z: 0.87686205, w: 0.99304813}
+    - friendlyName: cross bread.002
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165068
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.02441541, y: 0.024415698, z: 0.45780563, w: 0.9724876}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165076
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04791894, y: 0.04631076, z: 0.5305482, w: 0.27540994}
+    - friendlyName: Hibiscus_RedPink (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165082
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253146, y: 0.0050135297, z: 0.14500926, w: 0.9877713}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165086
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.057652652, y: 0.058287274, z: 0.92808, w: -0.002176219}
+    - friendlyName: GrassBlade.011
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165090
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660619, y: 0.0054779104, z: 0.9948117, w: 0.699913}
+    - friendlyName: GrassBlade.016
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165094
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.003591728, y: 0.0072235544, z: 0.9945834, w: 0.49748155}
+    - friendlyName: RoseBud_Red
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165098
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0018068404, y: 0.0017248865, z: 0.99527055, w: 0.30187193}
+    - friendlyName: Sunflower (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165112
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.029239338, y: 0.029243613, z: 0.97048366, w: 0.8805926}
+    - friendlyName: Sign
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165118
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.03983473, y: 0.039373644, z: 0.9581927, w: 0.33932078}
+    - friendlyName: SnapDragon_Pink
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165122
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917415, y: 0.008914472, z: 0.09985759, w: 0.9876994}
+    - friendlyName: Plane.063
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165126
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0007917789, y: 0.004391273, z: 0.42875606, w: 0.91811496}
+    - friendlyName: Cosmos
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165132
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0040420922, y: 0.003896829, z: 0.89001304, w: 0.99304813}
+    - friendlyName: Cosmos (6)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165136
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.004042089, y: 0.0038968262, z: 0.9097395, w: 0.99304813}
+    - friendlyName: Box (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165146
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.41493958, y: 0.41337344, z: 0.5151969, w: 0.33667213}
+    - friendlyName: VioletPlant (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165158
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0095107015, y: 0.00958273, z: 0.025698004, w: 0.98756504}
+    - friendlyName: SnapDragon_Pink (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165164
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.008917431, y: 0.008914488, z: 0.08858747, w: 0.9876994}
+    - friendlyName: PlantPot_CatEars2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165192
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.014272555, y: 0.014279969, z: 0.98444575, w: 0.97531337}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165200
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.049130797, y: 0.04756461, z: 0.931484, w: 0.8120327}
+    - friendlyName: Brick.003
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165206
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.01363038, y: 0.015556438, z: 0.49788043, w: 0.88441813}
+    - friendlyName: Fence_WhitePicket_Piece2 (1)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165210
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.03317504, y: 0.033143535, z: 0.83199614, w: 0.94477123}
+    - friendlyName: Hibiscus_PinkRed (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165218
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0050253137, y: 0.0050135287, z: 0.9917367, w: 0.7607705}
+    - friendlyName: Box (5)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165228
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.41440994, y: 0.41284576, z: 0.5145392, w: 0.6070182}
+    - friendlyName: Hedge (9)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165256
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04993746, y: 0.049950097, z: 0.9285432, w: 0.33596557}
+    - friendlyName: Cube.027
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165260
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.037280645, y: 0.037915263, z: 0.8650886, w: 0.9440447}
+    - friendlyName: Door (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165280
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.04671339, y: 0.0451052, z: 0.68228275, w: 0.30847245}
+    - friendlyName: KITCHEN
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165290
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.1612353, y: 0.1612351, z: 0.837091, w: 0.33807468}
+    - friendlyName: GrassBlade.023
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165296
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660396, y: 0.005477888, z: 0.964464, w: 0.99260694}
+    - friendlyName: PlantPot_CatEars2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165302
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.014278074, y: 0.014285491, z: 0.81080306, w: 0.31292662}
+    - friendlyName: light
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165306
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.008986357, y: 0.009126206, z: 0.965845, w: 0.3234218}
+    - friendlyName: Tray
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165312
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.023734406, y: 0.023733139, z: 0.48469132, w: 0.97339374}
+    - friendlyName: Cube.095
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165328
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.034760535, y: 0.032600887, z: 0.6795171, w: 0.3097111}
+    - friendlyName: Hibiscus_Pink2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165332
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.005025312, y: 0.0050135264, z: 0.9917367, w: 0.8128623}
+    - friendlyName: BackgroundBuilding4 (2)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165342
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.30949265, y: 0.30949232, z: 0.5164614, w: 0.0014655481}
+    - friendlyName: PlantCrate2
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165346
+      RendererLightmapIndex: 2
+      RendererLightmapScaleOffset: {x: 0.051686764, y: 0.051693, z: 0.9290109, w: 0.87118006}
+    - friendlyName: Prefab_Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165364
+      RendererLightmapIndex: 3
+      RendererLightmapScaleOffset: {x: 0.04266056, y: 0.042649023, z: 0.370268, w: 0.9431869}
+    - friendlyName: GrassBlade.024
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165368
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0022320477, y: 0.0054259268, z: 0.9947534, w: 0.61935526}
+    - friendlyName: Door
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165376
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.046667326, y: 0.045101147, z: 0.9351804, w: 0.9451197}
+    - friendlyName: GrassBlade.019
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165404
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0035917384, y: 0.007223566, z: 0.8566273, w: 0.91973394}
+    - friendlyName: KITCHEN.002|kitchen stuff.006|Dupli|6
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165408
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: -0.0009952832, y: -0.0017567897, z: 0.99882185, w: 0.1604748}
+    - friendlyName: Fence_WhitePicket_Piece
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165412
+      RendererLightmapIndex: 5
+      RendererLightmapScaleOffset: {x: 0.07146345, y: 0.06772868, z: 0.8004708, w: 0.19342855}
+    - friendlyName: Cube.093
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165420
+      RendererLightmapIndex: 4
+      RendererLightmapScaleOffset: {x: 0.035336163, y: 0.035078786, z: 0.8981508, w: 0.9435346}
+    - friendlyName: GrassBlade.008
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165424
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0017660671, y: 0.0054779155, z: 0.9948117, w: 0.6630861}
+    - friendlyName: Cosmos (10)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165428
+      RendererLightmapIndex: 1
+      RendererLightmapScaleOffset: {x: 0.0032043161, y: 0.0030590533, z: 0.9952961, w: 0.27941212}
+    - friendlyName: Box (3)
+      actualMeshRenderer: {fileID: 0}
+      objectHash: 165446
+      RendererLightmapIndex: 6
+      RendererLightmapScaleOffset: {x: 0.58239657, y: 0.58063, z: -0.0007075545, w: -0.0007003895}
+  info0: "Press this bool after you finished a full bake \nto record all generated
+    lightmap references."
+  m_SaveNewLightmapData: 0
+  info1: "Press this bool after you Render Selected Groups \nand you see the other
+    non-re-rendered groups \nsuddenly got broken lightmaps/UVs. Or if \nyou just
+    want to swap between different lightmap variants (e.g. day/night)."
+  m_LightmapSelectionToRestoreFrom: 0
+  m_LoadLightmapFromSelection: 0
+  m_AlsoSaveLightmapDataFromAllMeshRenderers: 1
+  info2: Be patient when you click Save or Load. It may take a while (e.g. up to
+    10 seconds) if you have many thousands of mesh renderers in your scene.
