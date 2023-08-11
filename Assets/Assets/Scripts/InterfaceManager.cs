@@ -37,6 +37,7 @@ public class InterfaceManager : MonoBehaviour
     public bool dialogueEnabled;
     bool firstTime = false;
     public GameObject focusTarget;
+    public GameManager.TimeOfDay timeofDay;
 
     public float timer = 0.5f;
     public bool haveWaited = false;
@@ -65,28 +66,52 @@ public class InterfaceManager : MonoBehaviour
 
     public void StartTalking()
     {
-
-        if (gameManager.gameState == 1)
-        {
             if (!firstTime)
             {
-                foreach (string conversation in currentChar.DialogueList[0].conversationBlock)
+                if (timeofDay == GameManager.TimeOfDay.EarlyMorning)
+                {
+                    foreach (string conversation in currentChar.DialogueEMorning[0].conversationBlock)
+                    {
+                        dialogueArray.Add(conversation);
+
+                    if (dialogueArray.Count == currentChar.DialogueEMorning[0].conversationBlock.Count)
+                        {
+                        firstTime = true;
+                        }
+
+                    }
+
+                }
+
+                else if (timeofDay == GameManager.TimeOfDay.MidMorning)
+            {
+                foreach (string conversation in currentChar.DialogueMMorning[0].conversationBlock)
                 {
                     dialogueArray.Add(conversation);
 
-                    if (dialogueArray.Count == currentChar.DialogueList[0].conversationBlock.Count)
+                    if (dialogueArray.Count == currentChar.DialogueMMorning[0].conversationBlock.Count)
                     {
                         firstTime = true;
                     }
 
                 }
             }
+            }
             if (conversationStage < dialogueArray.Count)
             {
-             
-                currentDialogue = currentChar.DialogueList[0].conversationBlock[conversationStage];
+             if (timeofDay == GameManager.TimeOfDay.EarlyMorning)
+            {
+                currentDialogue = currentChar.DialogueEMorning[0].conversationBlock[conversationStage];
                 dialogueText.text = currentDialogue;
                 teletypingCoroutine = StartCoroutine(teleType.TypeText());
+
+            }
+             else if (timeofDay == GameManager.TimeOfDay.MidMorning)
+            {
+                currentDialogue = currentChar.DialogueMMorning[0].conversationBlock[conversationStage];
+                dialogueText.text = currentDialogue;
+                teletypingCoroutine = StartCoroutine(teleType.TypeText());
+            }
             }
             else
             {
@@ -99,7 +124,7 @@ public class InterfaceManager : MonoBehaviour
 
             }
 
-        }
+        
 
 
     }
