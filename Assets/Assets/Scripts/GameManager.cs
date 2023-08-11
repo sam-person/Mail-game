@@ -7,7 +7,7 @@ using UnityEditor;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    public int gameStateInt;
+    public int gameState;
     public bool isGamePaused = false;
     public AudioSource bgmAudio;
 
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public static event GamePaused gamePaused;
 
     public static GameManager Instance;
-    public TimeOfDay TimePeriod;
+    public GameState State;
 
 
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("The game state is " + gameStateInt);
+        Debug.Log("The game state is " + gameState);
         gamePaused += TurnOffAnimators;
         gamePaused += PauseAudio;
         gamePaused += ShowUIButtons;
@@ -140,32 +140,29 @@ public void ShowUIButtons(bool isPaused)
 
 
 
-    public void UpdateTimeOfDay(TimeOfDay newTime)
+    public void UpdateGateState(GameState newState)
     {
-        TimePeriod = newTime;
-        gameStateInt = 0;
-        switch (newTime)
+        State = newState;
+        switch (newState)
         {
-
-            case TimeOfDay.EarlyMorning:
+            case GameState.EarlyMorning:
                 break;
                 
-            case TimeOfDay.MidMorning:
- 
+            case GameState.MidMorning:
                 break;
                 
-            case TimeOfDay.Lunchtime:
+            case GameState.Lunchtime:
                 break;
                 
-            case TimeOfDay.Afternoon:
+            case GameState.Afternoon:
                 break;
 
-            case TimeOfDay.Evening:
+            case GameState.Evening:
                 break;
         }
     }
 
-    public enum TimeOfDay
+    public enum GameState
     {
         EarlyMorning,
         MidMorning,

@@ -7,9 +7,5 @@ public class DialogueData : ScriptableObject
 {
     [TextArea(4, 4)]
     public List<string> conversationBlock;
-
-    public bool increaseGS = false;
-
-
 }
 

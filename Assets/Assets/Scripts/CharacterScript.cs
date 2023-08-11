@@ -5,12 +5,7 @@ using UnityEngine;
 public class CharacterScript : MonoBehaviour
 {
 
-    public List<DialogueData> DialogueEMorning;
-    public List<DialogueData> DialogueMMorning;
-    public List<DialogueData> DialogueLunchTime;
-    public List<DialogueData> DialogueAfternoon;
-    public List<DialogueData> DialogueEvening;
-
+    public List<DialogueData> DialogueList;
     public CharacterData data;
 
 
@@ -21,6 +16,12 @@ public class CharacterScript : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
     }
 }
