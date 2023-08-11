@@ -6,6 +6,10 @@ using UnityEngine;
 public class TimeOfDayToggler : MonoBehaviour
 {
     [SerializeField]
+    bool toggleBakedLighting;
+    bool bakedLightIsOff;
+
+    [SerializeField]
     bool toggleTime;
 
     public BakeryLightmapManager lightManager;
@@ -35,6 +39,21 @@ public class TimeOfDayToggler : MonoBehaviour
                 TimeSwitchMidday();
             }
             toggleTime = false;
+        }
+
+        if(toggleBakedLighting)
+        {
+            if(bakedLightIsOff)
+            {
+                TimeSwitchMidday();
+            }
+            else
+            {
+                lightManager.LoadLightmapData(2);
+                bakedLightIsOff = true;
+            }
+
+            toggleBakedLighting = false;
         }
        
 #endif
@@ -68,6 +87,7 @@ public class TimeOfDayToggler : MonoBehaviour
         RenderSettings.ambientLight = ambientColorDay;
         RenderSettings.skybox = daySkyMaterial;
         isday = true;
+        bakedLightIsOff = false;
     }
 
     public void TimeSwitchNight()
@@ -87,5 +107,6 @@ public class TimeOfDayToggler : MonoBehaviour
         RenderSettings.ambientLight = ambientColorNight;
         RenderSettings.skybox = nightSkyMaterial;
         isday = false;
+        bakedLightIsOff = false;
     }
 }

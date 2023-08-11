@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d3ccfd5a7167cb45b02876b79562a44
+guid: e58b38f0bf1b94a49a91bfdded9ca00c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: LeafTiled
+    second: {fileID: 2100000, guid: 73f327260e1998146ae6629b08f725e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leafs
+    second: {fileID: 2100000, guid: ee4a95487eb8f8c4db4b53d160a0634e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeafsDome
+    second: {fileID: 2100000, guid: 63029b54932bbc74d961deb67e36ba7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sunflower
-    second: {fileID: 2100000, guid: 4c2d08f3458169c43868efb9a94641df, type: 2}
+    second: {fileID: 2100000, guid: 512a6044f4fd3c04f965a3fc417eed7f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +50,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Cylinder.005","Cube.038","Cube.030"],"padding":[37,30,21],"unwrapper":[0,0,0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -62,7 +78,7 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    meshOptimizationFlags: 0
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
