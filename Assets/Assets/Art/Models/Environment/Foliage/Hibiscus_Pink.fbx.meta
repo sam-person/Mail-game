@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55f4010a514f79b42a8ff2596a71a339
+guid: 62d60e4075bbe0c4a968bb7ad59cad63
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 512a6044f4fd3c04f965a3fc417eed7f, type: 2}
+      name: Flowers
+    second: {fileID: 2100000, guid: 40ebe1a66c7ed39449cd725f60854e0d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,8 +35,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Hibiscus_Pink"],"padding":[256],"unwrapper":[0]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -53,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -63,7 +62,7 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    meshOptimizationFlags: 0
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -82,7 +81,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -101,7 +100,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

@@ -70,15 +70,18 @@ public class TimeOfDayToggler : MonoBehaviour
         }
     }
 
+    //Set to day time
     public void TimeSwitchMidday()
     {
         lightManager.LoadLightmapData(0);
 
+        //Activate all day time objects
         foreach(GameObject gameObject in dayLight)
         {
             gameObject.SetActive(true);
         }
 
+        //Deactivate all night time objects
         foreach (GameObject gameObject in nightLight)
         {
             gameObject.SetActive(false);
@@ -90,15 +93,18 @@ public class TimeOfDayToggler : MonoBehaviour
         bakedLightIsOff = false;
     }
 
+    //Set to night time
     public void TimeSwitchNight()
     {
         lightManager.LoadLightmapData(1);
 
+        //Deactivate all day time objects
         foreach (GameObject gameObject in dayLight)
         {
             gameObject.SetActive(false);
         }
 
+        //Activate all night time objects
         foreach (GameObject gameObject in nightLight)
         {
             gameObject.SetActive(true);
