@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b00c4fd5ce816e449511b2311d6796a
+guid: f1966d982330265469bf3159dbe18f42
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Sunflower
+      name: Gradient
     second: {fileID: 2100000, guid: 512a6044f4fd3c04f965a3fc417eed7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: 2100000, guid: bdb22237349df2e428a0ca5c09867aeb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -36,14 +41,14 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["VioletPlant"],"padding":[172],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["Cube.124"],"padding":[5],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -82,7 +87,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -101,7 +106,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
