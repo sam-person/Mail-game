@@ -111,7 +111,12 @@ public class PlayerInteractionHandler : MonoBehaviour
             doorSource.PlayOneShot(doorClip);
         }
     }
+    public void PlayInteractionAnim()
+    {
+        interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
+        animator.SetBool("interact", true);
 
+    }
     private IEnumerator InteractionAnimator()
     {
             yield return new WaitForSeconds(0.2f);
@@ -160,6 +165,8 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
 
     }
+
+ 
 
 
     public  void MeowButton()
