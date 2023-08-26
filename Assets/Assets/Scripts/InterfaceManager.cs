@@ -9,7 +9,6 @@ using System;
 using TMPro.Examples;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using Sirenix.Utilities;
 
 public class InterfaceManager : MonoBehaviour
 {
