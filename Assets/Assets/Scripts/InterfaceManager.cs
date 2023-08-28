@@ -99,6 +99,41 @@ public class InterfaceManager : MonoBehaviour
 
         }
 
+        if (gameManager.gameState == 2)
+        {
+            if (!firstTime)
+            {
+                foreach (string conversation in currentChar.DialogueList[1].conversationBlock)
+                {
+                    dialogueArray.Add(conversation);
+
+                    if (dialogueArray.Count == currentChar.DialogueList[1].conversationBlock.Count)
+                    {
+                        firstTime = true;
+                    }
+
+                }
+            }
+            if (conversationStage < dialogueArray.Count)
+            {
+
+                currentDialogue = currentChar.DialogueList[1].conversationBlock[conversationStage];
+                dialogueText.text = currentDialogue;
+                teletypingCoroutine = StartCoroutine(teleType.TypeText());
+            }
+            else
+            {
+                firstTime = false;
+                conversationStage = 0;
+                talkingCoroutine = StartCoroutine(DialogueController(false));
+                //DialogueController(false);
+                dialogueEnabled = false;
+                dialogueArray.Clear();
+
+            }
+
+        }
+
 
     }
 
