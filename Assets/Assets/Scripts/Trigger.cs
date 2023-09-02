@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour
     private bool alreadyTriggered = false;
 
     [Button]
-    public void Activate()
+    public virtual void Activate()
     {
         if(oneShot && alreadyTriggered) 
         {

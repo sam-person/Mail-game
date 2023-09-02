@@ -7,6 +7,8 @@ using Unity.VisualScripting;
 using UnityEngine.InputSystem.XR;
 using StarterAssets;
 using Cinemachine;
+using Sirenix.OdinInspector;
+using System.Linq;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
@@ -53,6 +55,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     Coroutine itemCoroutine;
     Coroutine interactionAnimatorCoroutine;
 
+    [ReadOnly]
+    public TRI_Interactable closestInteractable;
 
     //public delegate void GamePaused(bool isPaused);
     //public static event GamePaused gamePaused;
@@ -66,7 +70,6 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
-        playerInteractionHandler = GetComponent<PlayerInteractionHandler>();
         GameManager.gamePaused += PauseAnim;
         GameManager.gamePaused += pihIsDisabled;
 
@@ -83,6 +86,45 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             animator.speed = 1;
         }
+    }
+
+    //Calculate the closest interactable
+    void CalculateClosestInteractable() {
+        //If the gamemanager has no interactables, we can't find any
+        if (GameManager.instance.interactables.Count == 0) {
+            SetClosestInteractable(null);
+            return;
+        }
+
+        //If there are none in range, we can't find any
+        if (!GameManager.instance.interactables.Any(x => Vector3.Distance(x.transform.position, this.transform.position) < x.interactionRange)) {
+            SetClosestInteractable(null);
+            return;
+        }
+
+        //Take the closest interactable that we have in range, that's our closest.
+        TRI_Interactable foundInteractable = GameManager.instance.interactables.Where(x => Vector3.Distance(x.transform.position, this.transform.position) < x.interactionRange).OrderBy(x => Vector3.Distance(x.transform.position, this.transform.position)).First();
+        SetClosestInteractable(foundInteractable);
+
+
+    }
+
+    void SetClosestInteractable(TRI_Interactable interactable) {
+        //if the new interactable is the same as the old interactable, do nothing.
+        if (closestInteractable == interactable) return;
+
+        //if we already have an interactable, we need to turn off its outline
+        if (closestInteractable != null) {
+            closestInteractable.outline.enabled = false;
+        }
+
+        //if the new interactable isn't null, we need to set it up
+        if (interactable != null) {
+            //set up the new interactable
+            interactable.outline.enabled = true;
+        }
+        
+        closestInteractable = interactable;
     }
 
     private IEnumerator TeleportPlayer(Door door)
@@ -194,6 +236,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             MeowButton();
         }
 
+        //for the time being, check for closest interactable every frame
+        CalculateClosestInteractable();
     }
 
     private void OnTriggerEnter(Collider other)

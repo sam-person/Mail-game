@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static PlayerInteractionHandler;
 using UnityEditor;
+using Sirenix.OdinInspector;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,19 +21,27 @@ public class GameManager : MonoBehaviour
     public static event GamePaused gamePaused;
 
 
-
-
-
+    #region Singleton
+    public static GameManager instance;
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (instance == null) {
+            instance = this;
+        }
     }
+    #endregion
+
+    //Store a list of all interactables
+    [ReadOnly]
+    public List<TRI_Interactable> interactables;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Debug.Log("The game state is " + gameState);
         gamePaused += TurnOffAnimators;
         gamePaused += PauseAudio;
