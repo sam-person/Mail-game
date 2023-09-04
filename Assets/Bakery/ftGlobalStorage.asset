@@ -94,7 +94,9 @@ MonoBehaviour:
   - Assets/Assets/Art/Models/Environment/Foliage/Hibiscus_Pink4.fbx
   - Assets/Assets/Art/Models/Environment/Foliage/Hibiscus_Red2.fbx
   - Assets/Assets/Art/Models/Environment/Umbrella.fbx
-  modifiedAssetPaddingHash: f549f5edecc12491f227c11531a3bb0fc5d15080f537ed04ecc124915b8f1ac26627f69eed37ed04cd5634b7ecc12491f525b8ef0aa3dddeecc12491275031eeecc12491ac344cf2ecc12491de09ecc0ecc12491ecc12491ecc124913e3fd3d9ecc12491ecc12491f166e2a8ecc124918ec7298c9150cf35ecc12491c007e3f3acfc85a3ecc124910cf43a06ecc12491ec8d7d4becc124911c7e9363eaae79166d67e2a873778feb49a1a650d8c12491567e9363b7f23a0678c6d890f1c1249119423adb611da274b7f23a06fc03d3c487c02fda610496c384239279fe27c115ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc1249114f33a06ecc12491ecc124918818b158ecc12491ecc124916ac870f5f50aecc0ef37ed04ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491eddb894b
+  - Assets/Assets/Art/Models/Environment/Table.fbx
+  - Assets/Assets/Art/Models/Environment/BackgroundBuilding1.fbx
+  modifiedAssetPaddingHash: f549f5edecc12491f227c11531a3bb0fc5d15080f537ed04ecc124915b8f1ac26627f69eed37ed04cd5634b7ecc12491f525b8ef0aa3dddeecc12491275031eeecc12491ac344cf2ecc12491de09ecc0ecc12491ecc12491ecc124913e3fd3d9ecc12491ecc12491f166e2a8ecc124918ec7298c9150cf35ecc12491c007e3f3acfc85a3ecc124910cf43a06ecc12491ec8d7d4becc124911c7e9363eaae79166d67e2a873778feb49a1a650d8c12491567e9363b7f23a0678c6d890f1c1249119423adb611da274b7f23a06fc03d3c487c02fda610496c384239279fe27c115ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc1249114f33a06ecc12491ecc124919c865656ecc12491ecc124916ac870f5f50aecc0ef37ed04ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491ecc12491eddb894bf827c1151b3a8033
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -880,8 +882,9 @@ MonoBehaviour:
     - Cube.110
     - Cube.117
     - Cube.111
-    padding: 1000000096000000aa000000
-    unwrapper: 000000000000000000000000
+    - Florist
+    padding: 21000000000100000001000021000000
+    unwrapper: 00000000000000000000000000000000
   - meshName:
     - Cosmos_Pink
     padding: 00010000
@@ -942,6 +945,14 @@ MonoBehaviour:
     - Cylinder.007
     padding: 2e000000
     unwrapper: 00000000
+  - meshName:
+    - Table
+    padding: 66000000
+    unwrapper: 00000000
+  - meshName:
+    - Cube.106
+    padding: 0f000000
+    unwrapper: 00000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -981,7 +992,7 @@ MonoBehaviour:
   - Assets/Assets/Art/Models/Environment/Can.fbx
   - Assets/Assets/Art/Models/Environment/ParkBench.fbx
   - Assets/Assets/Art/Models/Environment/Umbrella.fbx
-  uvOverlapAssetList: 00000000ffffffff000000000101000001010000000000000000000000000000000000000000000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000
+  uvOverlapAssetList: 00000000ffffffff000000000101000001010000000000000000000000000000000000000000000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000000000000010100000101000001010000
   xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce RTX 2080 SUPER
@@ -1071,7 +1082,7 @@ MonoBehaviour:
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
   tagOverrides: []
-  modifiedMeshPaddingArray: 2e000000
+  modifiedMeshPaddingArray: 00010000
   modifiedMeshUnwrapperArray: 00000000
   texSettingsKey: []
   texSettingsVal: []
