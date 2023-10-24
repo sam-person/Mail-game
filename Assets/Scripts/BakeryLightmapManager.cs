@@ -106,7 +106,7 @@ public class BakeryLightmapManager : MonoBehaviour
     bool m_LoadLightmapFromSelection;
 
     [Space(20)]
-    [Header("________________________________________________________________________________ Nice custom GUI skills amirite?")]
+    [Header("________________________________________________________________________________")]
     [Space(45)]
     [SerializeField]
     bool m_AlsoSaveLightmapDataFromAllMeshRenderers = false;
