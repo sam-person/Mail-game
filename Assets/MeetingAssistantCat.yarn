@@ -2,7 +2,7 @@
 position: -2,-36
 ---
 Assistant Cat: Good morning Catto! I hope you slept well. 
-///Assistant Cat: Here’s some news for today.
+///Assistant Cat: Here’s some news for today. 
 ///Assistant Cat: It’s a beautiful sunny day out there, perfect for delivering some mail! 
 ///Assistant Cat: We’re in peak sunflower season.
 Assistant Cat: Overnight I got a new leaf on my snapdragon plant!
@@ -11,6 +11,9 @@ Assistant Cat: I think that’s all for news.
     <<jump AnythingElseHappening>>
 -> Catto: Thanks, I’m ready to start the day!
     <<jump ReadyToStartTheDay>>
+-> Catto: Third Option
+    <<jump ReadyToStartTheDay>>
+    
 ===
 
 title: AnythingElseHappening
@@ -29,5 +32,5 @@ position: 6,326
 ---
 Assistant Cat: I have a few packages I still need to process, I have this one ready to be delivered.
 Assistant Cat: I hope you’ve stretched because you’re going to need to take this one up the hill to the bakery.
--> Catto: Thanks, I’ll pick up that package and take it to the bakery now.
+-> Catto: I’ll take the package to the bakery now!
 ===
