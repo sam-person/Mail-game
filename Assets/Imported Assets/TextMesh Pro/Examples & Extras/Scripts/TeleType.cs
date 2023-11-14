@@ -44,7 +44,7 @@ namespace TMPro.Examples
             m_textMeshPro.maxVisibleCharacters = 0;
             // Force and update of the mesh to get valid information.
             m_textMeshPro.ForceMeshUpdate();
-            m_textString = InterfaceManager.instance.currentDialogue;
+            //m_textString = InterfaceManager.instance.currentDialogue;
             bool played = false;
             int totalVisibleCharacters = m_textMeshPro.textInfo.characterCount; // Get # of Visible Character in text object
             int counter = 0;
@@ -72,7 +72,7 @@ namespace TMPro.Examples
                 if (counter == m_textString.Length + 1)
                 {
                     played = true;
-                    InterfaceManager.instance.conversationStage++;
+                    
 
                 }
 
@@ -97,7 +97,7 @@ namespace TMPro.Examples
 
                 else
                 {
-                    InterfaceManager.instance.StartTalking();
+                    //InterfaceManager.instance.StartTalking();
                 }
             }
         }

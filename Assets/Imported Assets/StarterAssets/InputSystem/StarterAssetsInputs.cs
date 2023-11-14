@@ -77,7 +77,7 @@ namespace StarterAssets
 
 		private void SetCursorState(bool newState)
 		{
-			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.Confined;
+			//Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.Confined;
 		}
 	}
 	
