@@ -24,29 +24,38 @@ public class InterfaceManager : MonoBehaviour
     //Script variables
     public CharacterScript currentChar;
 
+    public TextMeshProUGUI debugGameState;
+
+    public GameObject pauseMenu;
 
     private void Awake()
     {
         instance = this;
     }
-    
+
+    private void Update()
+    {
+        debugGameState.text = GameManager.instance.gameState.ToString();
+    }
+
+    public void ShowPauseMenu(bool _active) {
+        pauseMenu.SetActive(_active);
+    }
+
+    public void PauseButton_Quit() {
+        GameManager.instance.Quit();
+    }
+
+    public void PauseButton_Resume()
+    {
+        GameManager.instance.TogglePause();
+    }
+
     /// <summary>
     /// Called through a unity event when yarn spinner finishes dialogue
     /// </summary>
     public void OnDialogueEnd() {
-        //Animator tempAnimator;
-        //Debug.Log("I am not talking anymore");
-        GameManager.instance.dialogueCamera.gameObject.SetActive(false);
-        PlayerInteractionHandler.instance.animator.SetBool("talking", false);
-        //tempAnimator = currentChar.GetComponentInParent<Animator>();
-        //tempAnimator.SetBool("talking", false);
-        //tempAnimator = null;
-        //PlayerInteractionHandler.instance.animator.SetFloat("MotionSpeed", 0);
-        PlayerInteractionHandler.instance.thirdPersonController.enabled = true;
-        PlayerInteractionHandler.instance.enabled = true;
-
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = false;
+        GameManager.instance.SetGameState(GameManager.GameState.Gameplay);
     }
 
     /// <summary>
@@ -54,17 +63,7 @@ public class InterfaceManager : MonoBehaviour
     /// </summary>
     /// <param name="node">Which node to play</param>
     public void StartDialogue(string node) {
-        GameManager.instance.targetGroup.m_Targets[1].target = PlayerInteractionHandler.instance.closestInteractable.transform;
-        GameManager.instance.dialogueCamera.gameObject.SetActive(true);
-
-        PlayerInteractionHandler.instance.thirdPersonController.enabled = false;
-        PlayerInteractionHandler.instance.enabled = false;
-        PlayerInteractionHandler.instance.animator.SetBool("talking", true);
-        PlayerInteractionHandler.instance.animator.SetFloat("Speed", 0);
-
-        UnityEngine.Cursor.lockState = CursorLockMode.None;
-        UnityEngine.Cursor.visible = true;
-
+        GameManager.instance.SetGameState(GameManager.GameState.Dialogue);
         dialogueRunner.StartDialogue(node);
     }
 

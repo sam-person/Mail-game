@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static PlayerInteractionHandler;
 using UnityEditor;
 using Sirenix.OdinInspector;
 using Cinemachine;
+using TMPro;
+using Yarn.Unity;
+using Yarn;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    public int gameState;
-    public bool isGamePaused = false;
+
     public AudioSource bgmAudio;
 
-    public GameObject UIButtonGroup;
 
     //Cinemachine References
     public CinemachineTargetGroup targetGroup;
@@ -21,11 +20,9 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera playerFollowCamera;
     public Camera mainCamera;
 
-
-
-    //Delegate declaration and instancing
-    public delegate void GamePaused(bool isPaused);
-    public static event GamePaused gamePaused;
+    public enum GameState {Gameplay, Dialogue, Paused };
+    public GameState gameState = GameState.Gameplay;
+    public GameState previousState;
 
 
     #region Singleton
@@ -42,113 +39,130 @@ public class GameManager : MonoBehaviour
     [ReadOnly]
     public List<TRI_Interactable> interactables;
 
-
+    InMemoryVariableStorage yarnVariables;
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        Debug.Log("The game state is " + gameState);
-        gamePaused += TurnOffAnimators;
-        gamePaused += PauseAudio;
-        gamePaused += ShowUIButtons;
-        gamePaused += FreezeTime;
-    }
-
-    public void TurnOffAnimators(bool animsOff)
-    {
-        Animator[] animators = (Animator[]) GameObject.FindObjectsOfType(typeof(Animator));
-
-        foreach (Animator animator in animators)
-        {
-            animator.enabled = !animsOff;
-        }
-    }
-
-
-    public void PauseAudio(bool isPaused)
-    {
-        float startingBGMAudio = bgmAudio.volume;
-
-        if (isPaused)
-        {
-            bgmAudio.volume = startingBGMAudio / 3;
-        }
-        else
-        {
-            bgmAudio.volume = startingBGMAudio * 3;
-        }
-    }
-
-    public void Button_Exit()
-    {
-
-        Application.Quit();
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#endif
-
-    }
-
-    public void Button_Unpause()
-    {
-        gamePaused?.Invoke(false);
-        isGamePaused = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
-    }
-
-
-
-public void ShowUIButtons(bool isPaused)
-    {
-        if (isPaused)
-        {
-            UIButtonGroup.SetActive(true);
-        }
-        else
-        {
-            UIButtonGroup.SetActive(false);
-        }
-    }
-
-    public void FreezeTime(bool isPaused)
-    {
-        if (isPaused)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+        yarnVariables = InterfaceManager.instance.GetComponent<InMemoryVariableStorage>();
+        SetGameState(GameState.Gameplay);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isGamePaused)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                gamePaused?.Invoke(true);
-                isGamePaused = true;
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.Confined;
-            }
+        HandlePauseInput();
+    }
+    public void SetGameState(GameState newState) {
+        //check that we're changing to a new state
+        //if (gameState == newState) return;
 
-        }
-        else
+        //keep track of the old state
+        previousState = gameState;
+        //leave the old state
+        OnStateExit(gameState);
+        //enter the newState
+        OnStateEnter(newState);
+        //set the new state
+        gameState = newState;
+    }
+
+    void OnStateExit(GameState oldState) {
+        switch (oldState)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                gamePaused?.Invoke(false);
-                isGamePaused = false;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            case GameState.Gameplay:
+                break;
+            case GameState.Dialogue:
+                PlayerInteractionHandler.instance.animator.SetBool("talking", false);
+                dialogueCamera.gameObject.SetActive(false);
+                break;
+            case GameState.Paused:
+                Time.timeScale = 1f;
+                InterfaceManager.instance.ShowPauseMenu(false);
+                break;
         }
     }
+
+    void OnStateEnter(GameState newState)
+    {
+        switch (newState)
+        {
+            case GameState.Gameplay:
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                PlayerInteractionHandler.instance.thirdPersonController.enabled = true;
+                PlayerInteractionHandler.instance.enabled = true;
+                break;
+            case GameState.Dialogue:
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                PlayerInteractionHandler.instance.thirdPersonController.enabled = false;
+                PlayerInteractionHandler.instance.enabled = false;
+                PlayerInteractionHandler.instance.animator.SetBool("talking", true);
+                PlayerInteractionHandler.instance.animator.SetFloat("Speed", 0);
+                targetGroup.m_Targets[1].target = PlayerInteractionHandler.instance.closestInteractable.transform;
+                dialogueCamera.gameObject.SetActive(true);
+                break;
+            case GameState.Paused:
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = 0f;
+                InterfaceManager.instance.ShowPauseMenu(true);
+                break;
+        }
+
+        
+    }
+
+    void HandlePauseInput() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            TogglePause();
+        }
+    }
+
+    public void TogglePause() {
+        switch (gameState)
+        {
+            case GameState.Gameplay:
+                SetGameState(GameState.Paused);
+                break;
+            case GameState.Dialogue:
+                SetGameState(GameState.Paused);
+                break;
+            case GameState.Paused:
+                switch (previousState)
+                {
+                    case GameState.Gameplay:
+                        SetGameState(GameState.Gameplay);
+                        break;
+                    case GameState.Dialogue:
+                        SetGameState(GameState.Dialogue);
+                        break;
+                    case GameState.Paused:
+                        SetGameState(GameState.Gameplay);
+                        break;
+                }
+                break;
+        }
+    }
+
+    public void Quit() {
+        Application.Quit();
+    }
+
+    public T GetYarnVariable<T>(string variableName) {
+        T output;
+        if (yarnVariables.TryGetValue("$testVariable", out output))
+        {
+            return output;
+        }
+        else {
+            return default(T);
+        }
+    }
+
+    public void SetYarnVariable<T>(string variableName, T value) {
+        yarnVariables.SetValue(variableName, value.ToString());
+    }
+
 }

@@ -1,0 +1,12 @@
+﻿title: OutsideCat
+position: -2,-36
+---
+OutsideCat: Good Morning!
+OutsideCat: I'm waiting for a package! Do you have a package for me?
+-> Catto: Yes I Do! Here you go! <<if $holding == "Package">>
+	<<set $holding = "nothing">>
+	OutsideCat: Thank you so much!
+-> Catto: I don't have a package for you sorry :(
+	OutsideCat: That's ok! Let me know if you do!
+    
+===

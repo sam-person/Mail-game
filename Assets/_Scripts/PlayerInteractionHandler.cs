@@ -60,23 +60,10 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
-        GameManager.gamePaused += PauseAnim;
-        GameManager.gamePaused += pihIsDisabled;
 
 
     }
 
-    public void PauseAnim(bool animPause)
-    {
-        if (animPause)
-        {
-            animator.speed = 0;
-        }
-        else
-        {
-            animator.speed = 1;
-        }
-    }
 
     //Calculate the closest interactable
     void CalculateClosestInteractable() {
@@ -166,45 +153,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         if (closestInteractable) {
             closestInteractable.Activate();
         }
-        /*
-        if (!interactorDoorInBool && !interactorDoorOutBool && !interactorItemBool && !interactorDialogueBool)
-        {
-            return;
-        }
-
-        if (interactorDoorInBool)
-        {
-            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
-            teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
-            animator.SetBool("interact", true);  
-        }
-
-        if (interactorDoorOutBool)
-        {
-            fadeInCoroutine = StartCoroutine(FadeController.FadeBlackOutSquare());
-            teleportCoroutine = StartCoroutine(TeleportPlayer(focusCollider.gameObject.GetComponent<Door>()));
-            animator.SetBool("interact", true);
-        }
-
-        if (interactorDialogueBool)
-        {
-            
-            //InterfaceManager.instance.DialogueController(true);           
-            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-            
-        }
-
-        if (interactorItemBool)
-        {
-
-            interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
-            Debug.Log("currentItem is equal to " + currentItem);
-            currentItemGO.Interact(true);
-            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-            animator.SetBool("interact", true);
-
-        }
-        */
 
     }
 
@@ -240,114 +188,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         CalculateClosestInteractable();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
+    
 
-
-    //    switch (other.tag)
-    //    {
-    //        case "InteractableDoorIn":
-    //            collisionObjects.Add(other.gameObject);
-    //            Debug.Log("Added object to focused list: " + other);
-    //            interactorDoorInBool = true;
-    //            Debug.Log("interactor focused on a Door In");
-    //            focusCollider = other;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-    //            break;
-
-    //        case "InteractableDoorOut":
-    //            collisionObjects.Add(other.gameObject);
-    //            Debug.Log("Added object to focused list: " + other);
-    //            Debug.Log("interactor focused on a Door Out");
-    //            focusCollider = other;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-    //            interactorDoorOutBool = true;
-    //            break;
-            
-    //        case "InteractableDialogue":
-    //            collisionObjects.Add(other.gameObject);
-    //            Debug.Log("Added object to focused list: " + other);
-    //            Debug.Log("interactor focused on a person");
-    //            focusCollider = other;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-
-    //            InterfaceManager.instance.currentChar = other.GetComponent<CharacterScript>();
-
-    //            interactorDialogueBool = true;
-    //            break;
-            
-    //        case "InteractableItem":
-
-    //            IInteractable currentItem = other.gameObject.GetComponent<IInteractable>();
-    //            currentItemGO = currentItem;
-
-    //            collisionObjects.Add(other.gameObject);
-    //            Debug.Log("Added object to focused list: " + other);
-    //            Debug.Log("interactor focused on an item");
-    //            focusCollider = other;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = true;
-    //            interactorItemBool = true;
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    List<GameObject> toDelete = new List<GameObject>();
-
-    //    foreach (GameObject gameObject in collisionObjects)
-    //    {
-    //        toDelete.Add(gameObject);
-    //    }
-
-    //    foreach (var collider in toDelete)
-    //    {
-    //        collider.gameObject.GetComponent<Outline>().enabled = false;
-    //        collisionObjects.Remove(collider);
-    //        Debug.Log("Removed object from focused list: " + other);
-    //    }
-
-    //    switch (other.tag)
-    //    {
-    //        case "InteractableDoorIn":
-    //            Debug.Log("interactor stop focused on a Door In");
-    //            interactorDoorInBool = false;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-    //            break;
-    //        case "InteractableDoorOut":
-    //            Debug.Log("interactor stop focused on a Door Out");
-    //            interactorDoorOutBool = false;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-    //            break;
-    //        case "InteractableDialogue":
-    //            Debug.Log("interactor stop focused on a person");
-    //            interactorDoorInBool = false;
-    //            InterfaceManager.instance.currentChar = null;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-    //            break;
-    //        case "InteractableDItem":
-    //            Debug.Log("interactor stop focused on an item");
-    //            interactorDoorInBool = false;
-    //            focusCollider.gameObject.GetComponent<Outline>().enabled = false;
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //}
-
-    public void pihIsDisabled(bool isDisabled)
-    {
-        if (isDisabled)
-        {
-            this.enabled = false;
-            thirdPersonController.enabled = false;
-        }
-        else
-        {
-            this.enabled = true;
-            thirdPersonController.enabled = true;
-        }
-    }
 }

@@ -166,7 +166,7 @@ namespace StarterAssets
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if(GameManager.instance.gameState == GameManager.GameState.Gameplay) CameraRotation();
         }
 
         private void AssignAnimationIDs()
