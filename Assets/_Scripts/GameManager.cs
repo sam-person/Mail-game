@@ -161,8 +161,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetYarnVariable<T>(string variableName, T value) {
-        yarnVariables.SetValue(variableName, value.ToString());
+    public void SetYarnVariable(string variableName, string value) {
+        yarnVariables.SetValue(variableName, value);
     }
 
 }

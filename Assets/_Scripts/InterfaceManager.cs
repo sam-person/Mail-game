@@ -27,6 +27,7 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI debugGameState;
 
     public GameObject pauseMenu;
+    public GameObject debugObject;
 
     private void Awake()
     {
@@ -36,6 +37,9 @@ public class InterfaceManager : MonoBehaviour
     private void Update()
     {
         debugGameState.text = GameManager.instance.gameState.ToString();
+        if (Input.GetKeyDown(KeyCode.F)) {
+            debugObject.SetActive(!debugObject.activeInHierarchy);
+        }
     }
 
     public void ShowPauseMenu(bool _active) {

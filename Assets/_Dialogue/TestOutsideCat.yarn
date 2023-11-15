@@ -1,12 +1,22 @@
 ﻿title: OutsideCat
 position: -2,-36
 ---
+<<declare $outsideDelivered = false>>
+<<if $outsideDelivered>>
+	<<jump alreadyDelivered>>
+<<endif>>
 OutsideCat: Good Morning!
 OutsideCat: I'm waiting for a package! Do you have a package for me?
 -> Catto: Yes I Do! Here you go! <<if $holding == "Package">>
 	<<set $holding = "nothing">>
+	<<set $outsideDelivered = true>>
 	OutsideCat: Thank you so much!
 -> Catto: I don't have a package for you sorry :(
 	OutsideCat: That's ok! Let me know if you do!
     
+===
+
+title: alreadyDelivered
+---
+OutsideCat: Thank you for my package!
 ===
