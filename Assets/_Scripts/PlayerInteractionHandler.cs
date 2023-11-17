@@ -176,6 +176,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
+            animator.SetTrigger("interact");
             CattoInteractor();
         }
 
