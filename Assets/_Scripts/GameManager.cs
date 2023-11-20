@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameState gameState = GameState.Gameplay;
     public GameState previousState;
 
+    [ReadOnly]
+    public Transform cameraTarget;
 
     #region Singleton
     public static GameManager instance;
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
             case GameState.Dialogue:
                 PlayerInteractionHandler.instance.animator.SetBool("talking", false);
                 dialogueCamera.gameObject.SetActive(false);
+                //targetGroup.m_Targets[1].target = null;
                 break;
             case GameState.Paused:
                 Time.timeScale = 1f;
@@ -100,7 +103,14 @@ public class GameManager : MonoBehaviour
                 PlayerInteractionHandler.instance.enabled = false;
                 PlayerInteractionHandler.instance.animator.SetBool("talking", true);
                 PlayerInteractionHandler.instance.animator.SetFloat("Speed", 0);
-                targetGroup.m_Targets[1].target = PlayerInteractionHandler.instance.closestInteractable.transform;
+                if (cameraTarget != null)
+                {
+                    targetGroup.m_Targets[1].target = cameraTarget;
+
+                }
+                else {
+                    targetGroup.m_Targets[1].target = PlayerInteractionHandler.instance.thirdPersonController.CinemachineCameraTarget.transform;
+                }
                 dialogueCamera.gameObject.SetActive(true);
                 break;
             case GameState.Paused:
@@ -152,7 +162,7 @@ public class GameManager : MonoBehaviour
 
     public T GetYarnVariable<T>(string variableName) {
         T output;
-        if (yarnVariables.TryGetValue("$testVariable", out output))
+        if (yarnVariables.TryGetValue(variableName, out output))
         {
             return output;
         }
@@ -161,8 +171,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetYarnVariable(string variableName, string value) {
-        yarnVariables.SetValue(variableName, value);
+    public void SetYarnVariable(string variableName, string value, REC_NPC.NPC_DialogueNode.NPC_DialogueCondition.VariableType VariableType) {
+        switch (VariableType)
+        {
+            case REC_NPC.NPC_DialogueNode.NPC_DialogueCondition.VariableType.String:
+                yarnVariables.SetValue(variableName, value);
+                break;
+            case REC_NPC.NPC_DialogueNode.NPC_DialogueCondition.VariableType.Bool:
+                yarnVariables.SetValue(variableName, bool.Parse(value));
+                break;
+            case REC_NPC.NPC_DialogueNode.NPC_DialogueCondition.VariableType.Int:
+                yarnVariables.SetValue(variableName, int.Parse(value));
+                break;
+        }
+        //yarnVariables.SetValue(variableName, value);
     }
+
+
 
 }

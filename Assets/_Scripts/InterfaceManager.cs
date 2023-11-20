@@ -66,7 +66,8 @@ public class InterfaceManager : MonoBehaviour
     /// Call to start yarn spinner dialogue
     /// </summary>
     /// <param name="node">Which node to play</param>
-    public void StartDialogue(string node) {
+    public void StartDialogue(string node, Transform focus) {
+        GameManager.instance.cameraTarget = focus;
         GameManager.instance.SetGameState(GameManager.GameState.Dialogue);
         dialogueRunner.StartDialogue(node);
     }
