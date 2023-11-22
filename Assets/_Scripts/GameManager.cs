@@ -103,13 +103,17 @@ public class GameManager : MonoBehaviour
                 PlayerInteractionHandler.instance.enabled = false;
                 PlayerInteractionHandler.instance.animator.SetBool("talking", true);
                 PlayerInteractionHandler.instance.animator.SetFloat("Speed", 0);
+                //disable all the outlines
+                foreach (TRI_Interactable interactable in interactables) {
+                    if(interactable.outline) interactable.outline.enabled = false;
+                }
                 if (cameraTarget != null)
                 {
-                    targetGroup.m_Targets[1].target = cameraTarget;
+                    SetDialogueCameraTarget(1,cameraTarget);
 
                 }
                 else {
-                    targetGroup.m_Targets[1].target = PlayerInteractionHandler.instance.thirdPersonController.CinemachineCameraTarget.transform;
+                    SetDialogueCameraTarget(1, PlayerInteractionHandler.instance.thirdPersonController.CinemachineCameraTarget.transform);
                 }
                 dialogueCamera.gameObject.SetActive(true);
                 break;
@@ -122,6 +126,10 @@ public class GameManager : MonoBehaviour
         }
 
         
+    }
+
+    public void SetDialogueCameraTarget(int num, Transform target) {
+        targetGroup.m_Targets[num].target = target;
     }
 
     void HandlePauseInput() {

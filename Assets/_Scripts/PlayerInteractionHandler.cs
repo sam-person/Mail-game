@@ -98,7 +98,10 @@ public class PlayerInteractionHandler : MonoBehaviour
         //if the new interactable isn't null, we need to set it up
         if (interactable != null) {
             //set up the new interactable
-            interactable.outline.enabled = true;
+            if (interactable.getIsValid())
+            {
+                interactable.outline.enabled = true;
+            }
         }
         
         closestInteractable = interactable;
@@ -186,9 +189,19 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
 
         //for the time being, check for closest interactable every frame
-        CalculateClosestInteractable();
+        switch (GameManager.instance.gameState)
+        {
+            case GameManager.GameState.Gameplay:
+                CalculateClosestInteractable();
+                break;
+            case GameManager.GameState.Dialogue:
+                break;
+            case GameManager.GameState.Paused:
+                break;
+        }
+        
     }
 
-    
+
 
 }

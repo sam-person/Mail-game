@@ -35,4 +35,8 @@ public class Trigger : MonoBehaviour
 
         
     }
+
+    public bool getIsValid() {
+        return !(oneShot && alreadyTriggered);
+    }
 }
