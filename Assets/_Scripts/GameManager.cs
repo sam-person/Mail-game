@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     [ReadOnly]
     public Transform cameraTarget;
 
+    public Subarea currentSubarea;
+
     #region Singleton
     public static GameManager instance;
     private void Awake()

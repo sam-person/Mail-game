@@ -29,6 +29,10 @@ public class cameraZoom : MonoBehaviour
         {
             componentBase = virtualCamera.GetCinemachineComponent(CinemachineCore.Stage.Body);
         }
+        if (GameManager.instance.currentSubarea != null && GameManager.instance.currentSubarea.forceZoomValue) {
+            (componentBase as Cinemachine3rdPersonFollow).CameraDistance = GameManager.instance.currentSubarea.forcedZoomValue;
+            return;
+        }
 
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
