@@ -32,6 +32,8 @@ namespace StarterAssets
         public AudioClip LandingAudioClip;
         public AudioClip[] FootstepAudioClips;
         [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
+        public GameObject runningParticlePrefab;
+        public Transform rightFootParticleSpawner;
 
         [Space(10)]
         [Tooltip("The height the player can jump")]
@@ -394,6 +396,49 @@ namespace StarterAssets
                     AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
                 }
             }
+        }
+
+        private void OnFootstepRunning(AnimationEvent animationEvent)
+        {
+            if (animationEvent.animatorClipInfo.weight > 0.5f)
+            {
+                if (FootstepAudioClips.Length > 0)
+                {
+                    var index = Random.Range(0, FootstepAudioClips.Length);
+                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
+                }
+            }
+        }
+
+        private void OnFootstepParticle (AnimationEvent animationEvent)
+        {
+            if(_input.sprint)
+            {
+                GameObject particleInstance = Instantiate(runningParticlePrefab, rightFootParticleSpawner.position, rightFootParticleSpawner.rotation); //set this up to use object pooling! currently just deleting the particle.
+            }
+           
+            //if(isRunning)
+            //{
+            //    if(isLeftFoot)
+            //    {
+            //        //spawn running particle at left foot
+            //    }
+            //    else
+            //    {
+            //        //spawn running particle at right foot
+            //    }
+            //}
+            //else
+            //{
+            //    if (isLeftFoot)
+            //    {
+            //        //spawn walking particle at left foot
+            //    }
+            //    else
+            //    {
+            //        //spawn walking particle at right foot
+            //    }
+            //}
         }
 
         private void OnLand(AnimationEvent animationEvent)
