@@ -34,6 +34,9 @@ namespace StarterAssets
         [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
         public GameObject runningParticlePrefab;
         public Transform rightFootParticleSpawner;
+        public Transform pawPrintSpawner;
+        public Transform pawPrintSpawnerLeft;
+        public GameObject pawPrintPrefab;
 
         [Space(10)]
         [Tooltip("The height the player can jump")]
@@ -396,7 +399,18 @@ namespace StarterAssets
                     AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
                 }
             }
+            if (animationEvent.stringParameter == "left")
+            {
+                GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawnerLeft.position, pawPrintSpawnerLeft.rotation); //set this up to use object pooling! currently just deleting the particle.
+            }
+            else
+            {
+                GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawner.position, pawPrintSpawner.rotation); //set this up to use object pooling! currently just deleting the particle.
+            }
+
         }
+
+ 
 
         private void OnFootstepRunning(AnimationEvent animationEvent)
         {

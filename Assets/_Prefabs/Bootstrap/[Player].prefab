@@ -1050,6 +1050,7 @@ Transform:
   m_Children:
   - {fileID: 1973803508131246365}
   - {fileID: 7264889503322834645}
+  - {fileID: 7478238256724029013}
   m_Father: {fileID: 3724225607358051129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1423,6 +1424,9 @@ MonoBehaviour:
   FootstepAudioVolume: 0.509
   runningParticlePrefab: {fileID: 658789157157018774, guid: da4f97c2c05949449bdb3790d6bf275c, type: 3}
   rightFootParticleSpawner: {fileID: 2783807200195143774}
+  pawPrintSpawner: {fileID: 7478238256724029013}
+  pawPrintSpawnerLeft: {fileID: 8714031526545554148}
+  pawPrintPrefab: {fileID: 3274082889187096516, guid: f87eacaa827c2f94c956aeacddd262c5, type: 3}
   JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.3
@@ -1681,6 +1685,37 @@ Transform:
   m_Father: {fileID: 3679493600026551645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4748646682207354970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7478238256724029013}
+  m_Layer: 7
+  m_Name: PawPrintSpawnerRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7478238256724029013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748646682207354970}
+  m_LocalRotation: {x: 0, y: 0.70710677, z: 0.70710677, w: 0}
+  m_LocalPosition: {x: 0.061, y: 0.066, z: -0.123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2314614451012832076}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 90}
 --- !u!1 &4903436483198802985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2166,7 @@ Transform:
   m_Children:
   - {fileID: 7470833001385608174}
   - {fileID: 280268919672623938}
+  - {fileID: 8714031526545554148}
   m_Father: {fileID: 3285224509183474712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2197,6 +2233,37 @@ Transform:
   m_Father: {fileID: 1287456031741212977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6935095633347604567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8714031526545554148}
+  m_Layer: 7
+  m_Name: PawPrintSpawnerLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8714031526545554148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935095633347604567}
+  m_LocalRotation: {x: 0.07153719, y: 0.7034789, z: -0.7034789, w: -0.07153719}
+  m_LocalPosition: {x: -0.0513, y: -0.0305, z: 0.123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8824809407277696340}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 90}
 --- !u!1 &6984213026349090216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,6 +3332,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8004375115420510904}
     m_Modifications:
+    - target: {fileID: 1729628990900366686, guid: 5617d93106f4c2c44899860be6172401, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7443567846280544860, guid: 5617d93106f4c2c44899860be6172401, type: 3}
       propertyPath: m_RootOrder
       value: 1
