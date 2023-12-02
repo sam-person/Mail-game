@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,11 @@ using UnityEngine;
 public class REC_Dialogue : Receiver
 {
     public string YarnNode = "";
-    public Transform cameraTarget;
+    CinemachineVirtualCamera dialogueCamera;
 
     public override void Activate()
     {
         base.Activate();
-        InterfaceManager.instance.StartDialogue(YarnNode, cameraTarget);
+        InterfaceManager.instance.StartDialogue(YarnNode, dialogueCamera);
     }
 }

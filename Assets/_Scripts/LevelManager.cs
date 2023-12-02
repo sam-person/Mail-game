@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -12,6 +13,8 @@ public class LevelManager : MonoBehaviour
     public Transform startPoint;
     public GameManager gameManger_Prefab;
     public InterfaceManager ui_Prefab;
+
+    public Transform playerCameraTarget;
 
     private void Awake()
     {
@@ -37,9 +40,13 @@ public class LevelManager : MonoBehaviour
 
         //set the follow camera target
         gm.playerFollowCamera.Follow = player.thirdPersonController.CinemachineCameraTarget.transform;
-        gm.dialogueCamera.Follow = player.thirdPersonController.CinemachineCameraTarget.transform;
+        //gm.dialogueCamera.Follow = player.thirdPersonController.CinemachineCameraTarget.transform;
         //set the first target
-        gm.targetGroup.m_Targets[0].target = player.thirdPersonController.CinemachineCameraTarget.transform;
+        //gm.targetGroup.m_Targets[0].target = player.thirdPersonController.CinemachineCameraTarget.transform;
     }
 
+    private void Update()
+    {
+        playerCameraTarget.position = PlayerInteractionHandler.instance.transform.position;
+    }
 }

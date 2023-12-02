@@ -60,14 +60,18 @@ public class InterfaceManager : MonoBehaviour
     /// </summary>
     public void OnDialogueEnd() {
         GameManager.instance.SetGameState(GameManager.GameState.Gameplay);
+        if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
     }
+
+    CinemachineVirtualCamera dialogueCamera;
 
     /// <summary>
     /// Call to start yarn spinner dialogue
     /// </summary>
     /// <param name="node">Which node to play</param>
-    public void StartDialogue(string node, Transform focus) {
-        GameManager.instance.cameraTarget = focus;
+    public void StartDialogue(string node, CinemachineVirtualCamera _dialogueCamera) {
+        dialogueCamera = _dialogueCamera;
+        if(dialogueCamera != null) dialogueCamera.gameObject.SetActive(true);
         GameManager.instance.SetGameState(GameManager.GameState.Dialogue);
         dialogueRunner.StartDialogue(node);
     }

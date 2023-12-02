@@ -12,7 +12,7 @@ public class REC_Teleport : Receiver
 
     public enum TeleportType {Enter, Exit, None };
     public TeleportType teleType = TeleportType.Exit;
-    [ShowIf("teleType", TeleportType.Enter)]
+    [HideIf("teleType", TeleportType.None)]
     public Subarea subarea;
 
     public override void Activate()
@@ -23,9 +23,11 @@ public class REC_Teleport : Receiver
         {
             case TeleportType.Enter:
                 GameManager.instance.currentSubarea = subarea;
+                subarea.OnEnterSubarea();
                 break;
             case TeleportType.Exit:
                 GameManager.instance.currentSubarea = null;
+                subarea.OnExitSubarea();
                 break;
             case TeleportType.None:
                 break;

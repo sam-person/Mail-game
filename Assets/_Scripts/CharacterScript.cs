@@ -12,7 +12,7 @@ public class CharacterScript : Receiver
     public override void Activate()
     {
         base.Activate();
-        InterfaceManager.instance.StartDialogue(YarnNode, transform);
+        InterfaceManager.instance.StartDialogue(YarnNode, null);
     }
 
     // Start is called before the first frame update

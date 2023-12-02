@@ -109,15 +109,15 @@ public class GameManager : MonoBehaviour
                 foreach (TRI_Interactable interactable in interactables) {
                     if(interactable.outline) interactable.outline.enabled = false;
                 }
-                if (cameraTarget != null)
-                {
-                    SetDialogueCameraTarget(1,cameraTarget);
+                //if (cameraTarget != null)
+                //{
+                    //SetDialogueCameraTarget(1,cameraTarget);
 
-                }
-                else {
-                    SetDialogueCameraTarget(1, PlayerInteractionHandler.instance.thirdPersonController.CinemachineCameraTarget.transform);
-                }
-                dialogueCamera.gameObject.SetActive(true);
+                //}
+                //else {
+                //    SetDialogueCameraTarget(1, PlayerInteractionHandler.instance.thirdPersonController.CinemachineCameraTarget.transform);
+                //}
+                //dialogueCamera.gameObject.SetActive(true);
                 break;
             case GameState.Paused:
                 Cursor.visible = true;

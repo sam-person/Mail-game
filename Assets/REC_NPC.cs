@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Cinemachine;
 
 public class REC_NPC : Receiver
 {
+    public CinemachineVirtualCamera dialogueCamera;
+
     public List<NPC_DialogueNode> primaryDialogue;
     public List<NPC_DialogueNode> secondaryDialogue;
 
@@ -106,7 +109,7 @@ public class REC_NPC : Receiver
         foreach (NPC_DialogueNode node in primaryDialogue) {
             if (node.GetIsValid()) {
                 node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, this.transform);
+                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera);
                 return;
             }
         }
@@ -117,12 +120,17 @@ public class REC_NPC : Receiver
             if (node.GetIsValid())
             {
                 node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, this.transform);
+                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera);
                 return;
             }
         }
 
         //we ran out of dialogue!
         Debug.Log("Ran out of dialogue!");
+    }
+
+    private void Awake()
+    {
+        if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
     }
 }
