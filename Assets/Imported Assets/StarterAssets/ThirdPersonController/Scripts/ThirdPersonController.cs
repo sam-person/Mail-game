@@ -167,6 +167,9 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            // Debug.Log(_input.jump.ToString());
+            Debug.Log(Input.GetKey(KeyCode.Space).ToString());
+            _animator.SetBool("Jump", Input.GetKey(KeyCode.Space)); 
         }
 
         private void LateUpdate()
@@ -320,7 +323,7 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+                if (Input.GetKey(KeyCode.Space) && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
