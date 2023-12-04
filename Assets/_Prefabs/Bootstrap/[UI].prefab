@@ -1788,6 +1788,7 @@ GameObject:
   - component: {fileID: 1611564814894616543}
   - component: {fileID: 1611564814894616542}
   - component: {fileID: 8258395412419918451}
+  - component: {fileID: 810337581191056802}
   m_Layer: 5
   m_Name: '[UI]'
   m_TagString: Untagged
@@ -1843,6 +1844,12 @@ MonoBehaviour:
   debugGameState: {fileID: 3019138840350323323}
   pauseMenu: {fileID: 1611564816016012066}
   debugObject: {fileID: 3173141737117735582}
+  dialogueBackgroundImage: {fileID: 1611564815416927424}
+  dialogueOutlineImage: {fileID: 1611564815509592679}
+  dialogueLeftWhiskers: {fileID: 1611564814512916211}
+  dialogueRightWhiskers: {fileID: 1611564814289246525}
+  dialogueCharacterName: {fileID: 1611564814383546925}
+  dialogueText: {fileID: 1611564814730702569}
 --- !u!114 &1611564814894616543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,6 +1926,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLanguageCode: en-AU
+--- !u!114 &810337581191056802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611564814894616532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b95c9f69f04f2d8c08a817e7786af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueView: {fileID: 1611564816168597270}
+  continueActionType: 1
+  continueActionKeyCode: 32
+  continueActionReference: {fileID: 0}
+  continueAction:
+    m_Name: Skip
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: Submit
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    m_Flags: 0
+  enableActionOnStart: 1
 --- !u!1 &1611564814942892148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2241,6 @@ GameObject:
   - component: {fileID: 1611564815416927425}
   - component: {fileID: 1611564815416927424}
   - component: {fileID: 1611564815416927427}
-  - component: {fileID: 5896020575785437153}
   m_Layer: 5
   m_Name: BackgroundFill
   m_TagString: Untagged
@@ -2286,19 +2326,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &5896020575785437153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611564815416927429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d625fd25bbd846844bfb4b3e7d942032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiElement: {fileID: 0}
 --- !u!1 &1611564815509592680
 GameObject:
   m_ObjectHideFlags: 0

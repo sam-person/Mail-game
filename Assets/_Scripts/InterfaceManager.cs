@@ -24,7 +24,7 @@ public class InterfaceManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject debugObject;
 
-    public Image dialogueBackgroundImage;
+    public Image dialogueBackgroundImage, dialogueOutlineImage, dialogueLeftWhiskers, dialogueRightWhiskers;
     public TextMeshProUGUI dialogueCharacterName, dialogueText;
 
     private void Awake()
@@ -75,6 +75,9 @@ public class InterfaceManager : MonoBehaviour
             dialogueCharacterName.color = npc.fontColour;
 
             dialogueBackgroundImage.color = npc.backgroundColor;
+            dialogueOutlineImage.color = npc.outlineColor;
+            dialogueLeftWhiskers.color = npc.leftWhiskerColor;
+            dialogueRightWhiskers.color = npc.rightWhiskerColor;
         }
 
         dialogueCamera = _dialogueCamera;
