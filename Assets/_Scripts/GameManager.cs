@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
 
     //Cinemachine References
-    public CinemachineTargetGroup targetGroup;
-    public CinemachineVirtualCamera dialogueCamera;
+    //public CinemachineTargetGroup targetGroup;
+    //public CinemachineVirtualCamera dialogueCamera;
     public CinemachineVirtualCamera playerFollowCamera;
     public Camera mainCamera;
 
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Dialogue:
                 PlayerInteractionHandler.instance.animator.SetBool("talking", false);
-                dialogueCamera.gameObject.SetActive(false);
+                //dialogueCamera.gameObject.SetActive(false);
                 //targetGroup.m_Targets[1].target = null;
                 break;
             case GameState.Paused:
@@ -130,9 +130,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void SetDialogueCameraTarget(int num, Transform target) {
-        targetGroup.m_Targets[num].target = target;
-    }
+    //public void SetDialogueCameraTarget(int num, Transform target) {
+    //    //targetGroup.m_Targets[num].target = target;
+    //}
 
     void HandlePauseInput() {
         if (Input.GetKeyDown(KeyCode.Escape)) {

@@ -7,6 +7,7 @@ using Cinemachine;
 
 public class REC_NPC : Receiver
 {
+    public NPCDefinition NPCDefinition;
     public CinemachineVirtualCamera dialogueCamera;
 
     public List<NPC_DialogueNode> primaryDialogue;
@@ -109,7 +110,7 @@ public class REC_NPC : Receiver
         foreach (NPC_DialogueNode node in primaryDialogue) {
             if (node.GetIsValid()) {
                 node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera);
+                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
                 return;
             }
         }
@@ -120,7 +121,7 @@ public class REC_NPC : Receiver
             if (node.GetIsValid())
             {
                 node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera);
+                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
                 return;
             }
         }

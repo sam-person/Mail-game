@@ -6,13 +6,8 @@ using StarterAssets;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using TMPro.Examples;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using Yarn;
 using Yarn.Unity;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine.UIElements;
 
 public class InterfaceManager : MonoBehaviour
 {
@@ -28,6 +23,9 @@ public class InterfaceManager : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject debugObject;
+
+    public Image dialogueBackgroundImage;
+    public TextMeshProUGUI dialogueCharacterName, dialogueText;
 
     private void Awake()
     {
@@ -69,7 +67,16 @@ public class InterfaceManager : MonoBehaviour
     /// Call to start yarn spinner dialogue
     /// </summary>
     /// <param name="node">Which node to play</param>
-    public void StartDialogue(string node, CinemachineVirtualCamera _dialogueCamera) {
+    public void StartDialogue(string node, CinemachineVirtualCamera _dialogueCamera, NPCDefinition npc = null) {
+        if (npc != null) {
+            dialogueText.font = npc.font;
+            dialogueCharacterName.font = npc.font;
+            dialogueText.color = npc.fontColour;
+            dialogueCharacterName.color = npc.fontColour;
+
+            dialogueBackgroundImage.color = npc.backgroundColor;
+        }
+
         dialogueCamera = _dialogueCamera;
         if(dialogueCamera != null) dialogueCamera.gameObject.SetActive(true);
         GameManager.instance.SetGameState(GameManager.GameState.Dialogue);

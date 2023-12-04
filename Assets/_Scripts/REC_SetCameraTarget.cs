@@ -8,6 +8,6 @@ public class REC_SetCameraTarget : Receiver
     public override void Activate()
     {
         base.Activate();
-        GameManager.instance.SetDialogueCameraTarget(1, target);
+        //GameManager.instance.SetDialogueCameraTarget(1, target);
     }
 }
