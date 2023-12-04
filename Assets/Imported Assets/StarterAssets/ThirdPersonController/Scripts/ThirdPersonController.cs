@@ -168,7 +168,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
             // Debug.Log(_input.jump.ToString());
-            Debug.Log(Input.GetKey(KeyCode.Space).ToString());
+            //Debug.Log(Input.GetKey(KeyCode.Space).ToString());
             _animator.SetBool("Jump", Input.GetKey(KeyCode.Space)); 
         }
 
@@ -402,30 +402,36 @@ namespace StarterAssets
                     AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
                 }
             }
-            if (animationEvent.stringParameter == "left")
+
+            if(animationEvent.stringParameter != "")
             {
-                GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawnerLeft.position, pawPrintSpawnerLeft.rotation); //set this up to use object pooling! currently just deleting the particle.
-            }
-            else
-            {
-                GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawner.position, pawPrintSpawner.rotation); //set this up to use object pooling! currently just deleting the particle.
+                if (animationEvent.stringParameter == "left")
+                {
+                    //Debug.Log("LEFT FOOT");
+                    GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawnerLeft.position, pawPrintSpawnerLeft.rotation); //set this up to use object pooling! currently just deleting the particle.
+                }
+                else
+                {
+                    //Debug.Log("RIGHT FOOT");
+                    GameObject particleInstance = Instantiate(pawPrintPrefab, pawPrintSpawner.position, pawPrintSpawner.rotation); //set this up to use object pooling! currently just deleting the particle.
+                }
             }
 
         }
 
  
 
-        private void OnFootstepRunning(AnimationEvent animationEvent)
-        {
-            if (animationEvent.animatorClipInfo.weight > 0.5f)
-            {
-                if (FootstepAudioClips.Length > 0)
-                {
-                    var index = Random.Range(0, FootstepAudioClips.Length);
-                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
-                }
-            }
-        }
+        //private void OnFootstepRunning(AnimationEvent animationEvent)
+        //{
+        //    if (animationEvent.animatorClipInfo.weight > 0.5f)
+        //    {
+        //        if (FootstepAudioClips.Length > 0)
+        //        {
+        //            var index = Random.Range(0, FootstepAudioClips.Length);
+        //            AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
+        //        }
+        //    }
+        //}
 
         private void OnFootstepParticle (AnimationEvent animationEvent)
         {
