@@ -1,0 +1,28 @@
+﻿title: FloristWaitingForPackage
+
+---
+Florist: am waiting for package
+Florist: hope it arrives soon
+
+===
+
+title: Florist_Scissors
+---
+<<declare $scissorsQuest = false>>
+Florist: Ah, my delivery! Thanks Catto!
+Florist: I have my paws full at the moment. Can I ask you a huge favour?
+Florist: I think I dropped my scissors while I was collecting flowers in the garden.
+Florist: Would you be a sweetie and get the scissors from the garden for me?
+<<set $scissorsQuest = true>>
+===
+
+title: FloristGotScissors
+---
+Florist: Ah my scissors thank you Catto
+<<set $holding = "nothing">>
+===
+
+title: FloristDontHaveScissors
+---
+Florist: go get my fucking scissors
+===

@@ -7,3 +7,15 @@ Catto: It’s my birthday!
 Catto: I still have to go to work but I don’t mind, I like getting to meet different cats
 Catto: Anyway, I should probably get to work now
 ===
+
+title: PickUpScissors
+---
+<<declare $haveScissors = false>>
+Catto: oh hey some scissors
+<<if $scissorsQuest == true>>
+Catto: they must belong to the florist, i'll take it back to them
+<<set $haveScissors = true>>
+<<else>>
+Catto: hmm I wonder what this is...
+<<endif>>
+===
