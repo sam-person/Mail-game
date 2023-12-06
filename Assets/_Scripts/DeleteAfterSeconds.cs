@@ -6,7 +6,7 @@ public class DeleteAfterSeconds : MonoBehaviour
 {
     public float secondsUntilDelete = 1.2f; 
 
-    void Start()
+    void Awake()
     {
         Invoke("DeleteGameObject", secondsUntilDelete);
     }
