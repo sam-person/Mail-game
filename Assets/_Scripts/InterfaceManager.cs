@@ -27,6 +27,10 @@ public class InterfaceManager : MonoBehaviour
     public Image dialogueBackgroundImage, dialogueOutlineImage, dialogueLeftWhiskers, dialogueRightWhiskers;
     public TextMeshProUGUI dialogueCharacterName, dialogueText;
 
+    public RectTransform interactIcon;
+
+    public TextMeshProUGUI questText;
+
     private void Awake()
     {
         instance = this;
@@ -37,6 +41,15 @@ public class InterfaceManager : MonoBehaviour
         debugGameState.text = GameManager.instance.gameState.ToString();
         if (Input.GetKeyDown(KeyCode.F)) {
             debugObject.SetActive(!debugObject.activeInHierarchy);
+        }
+
+        if (PlayerInteractionHandler.instance.closestInteractable != null && GameManager.instance.gameState == GameManager.GameState.Gameplay)
+        {
+            interactIcon.gameObject.SetActive(true);
+            interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(PlayerInteractionHandler.instance.closestInteractable.transform.position);
+        }
+        else {
+            interactIcon.gameObject.SetActive(false);
         }
     }
 
@@ -86,5 +99,9 @@ public class InterfaceManager : MonoBehaviour
         dialogueRunner.StartDialogue(node);
     }
 
+    [YarnCommand("setQuest")]
+    public static void SetQuestText(string text) {
+        instance.questText.text = text;
+    }
     
 }
