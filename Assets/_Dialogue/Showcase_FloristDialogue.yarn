@@ -23,6 +23,7 @@ Florist: You found my scissors! You’re a cut above the rest Catto, thank you
 Florist: I can take the package off your paws now
 Florist: Have a splendid day Catto, and thanks again
 <<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
 <<set $floristPackageDelivered = true>>
 <<set $packageAssigned = false>>
 ===
