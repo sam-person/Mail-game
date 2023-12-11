@@ -1,7 +1,10 @@
-﻿title: PostOfficeIntro
+title: PostOfficeIntro
 ---
 ///what package Catto is holding
 <<declare $holding = "nothing">>
+<<declare $packagesDeliveredCount = 0>>
+<<declare $ThreePackagesDelivered = false>>
+<<declare $cafeDrinkDelivered = false>>
 <<set $holding = "nothing">>
 Assistant Cat: Good morning Catto! I hope you slept well
 Assistant Cat: Here’s some news for today
@@ -53,11 +56,11 @@ Assistant Cat: Which package would you like to deliver next?
 <<declare $cafePackageDelivered = false>>
 <<set $cafePackageDelivered = false>>
 
-<<jump PostOfficeChooseAnotherPackageV2>>
+<<jump PostOfficeChooseAnotherPackage>>
 ===
 
 
-title: PostOfficeChooseAnotherPackageV2
+title: PostOfficeChooseAnotherPackage
 ---
 <<declare $packageAssigned = false>>
 -> Catto: Cafe
@@ -80,7 +83,7 @@ Assistant Cat: Anyway, here’s the package for the Cafe!
 <<set $packageAssigned = true>>
 <<else>>
 Assistant Cat: You've already posted that one, choose another
-<<jump PostOfficeChooseAnotherPackageV2>>
+<<jump PostOfficeChooseAnotherPackage>>
 <<endif>>
 ===
 
@@ -94,7 +97,7 @@ Assistant Cat: Okay, here’s the package for the Florist!
 <<set $packageAssigned = true>>
 <<else>>
 Assistant Cat: You've already posted that one, choose another
-<<jump PostOfficeChooseAnotherPackageV2>>
+<<jump PostOfficeChooseAnotherPackage>>
 <<endif>>
 ===
 
@@ -108,106 +111,73 @@ Assistant Cat: Okay, here’s the package for the Grocery Store!
 <<set $packageAssigned = true>>
 <<else>>
 Assistant Cat: You've already posted that one, choose another
-<<jump PostOfficeChooseAnotherPackageV2>>
-<<endif>>
-===
-
-
-title: PostOfficeChooseAnotherPackage
----
-<<if $floristPackageDelivered == false && $cafePackageDelivered == true && $groceryPackageDelivered == false>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: Which package would you like to deliver next?
--> Catto: Florist
-	Assistant Cat: Okay, here’s the package for the Florist!
-	<<Trigger PackageFlorist>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
--> Catto: Grocery Store
-	Assistant Cat: Okay, here’s the package for the Grocery Store!
-	<<Trigger PackageGrocery>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
-<<elseif $floristPackageDelivered == true && $cafePackageDelivered == false && $groceryPackageDelivered == false>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: Which package would you like to deliver next?
--> Catto: Cafe
-	Assistant Cat: Okay, here’s the package for the cafe!
-	<<Trigger PackageCafe>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
--> Catto: Grocery Store
-	Assistant Cat: Okay, here’s the package for the Grocery Store!
-	<<Trigger PackageGrocery>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
-<<elseif $floristPackageDelivered == false && $cafePackageDelivered == false && $groceryPackageDelivered == true>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: Which package would you like to deliver next?
--> Catto: Cafe
-	Assistant Cat: Okay, here’s the package for the cafe!
-	<<Trigger PackageCafe>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
--> Catto: Florist
-	Assistant Cat: Okay, here’s the package for the florist!
-	<<Trigger PackageFlorist>>
-	<<setQuest "Pick up the package">>
-	<<set $packageAssigned = true>>
-<<elseif $floristPackageDelivered == false && $cafePackageDelivered == true && $groceryPackageDelivered == true>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: That means this one is for the florist
-<<Trigger PackageFlorist>>
-<<setQuest "Pick up the package">>
-<<set $packageAssigned = true>>
-Assistant Cat: Here you go!
-<<elseif $floristPackageDelivered == true && $cafePackageDelivered == false && $groceryPackageDelivered == true>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: That means this one is for the cafe
-<<Trigger PackageCafe>>
-<<setQuest "Pick up the package">>
-<<set $packageAssigned = true>>
-Assistant Cat: Here you go!
-<<elseif $floristPackageDelivered == true && $cafePackageDelivered == true && $groceryPackageDelivered == false>>
-Assistant Cat: Nice work getting that package delivered
-Assistant Cat: That means this one is for the grocery store
-<<Trigger PackageGrocery>>
-<<setQuest "Pick up the package">>
-<<set $packageAssigned = true>>
-Assistant Cat: Here you go!
+<<jump PostOfficeChooseAnotherPackage>>
 <<endif>>
 ===
 
 
 title: PostOffice3Packages
 ---
+///Needs to deliver package to florist
 <<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the florist
 
+///Needs to deliver package to cafe
 <<elseif $holding == "CafePackage" && $cafePackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the Cafe
 Assistant Cat: Don't forget my drink!
 Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
 
+///Needs to deliver package to grocery
 <<elseif $holding == "GroceryPackage" && $groceryPackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the grocery store
 
+///Hasn't picked up the package
 <<elseif $holding == "nothing" && $packageAssigned == true>>
 Assistant Cat: Don't forget the package on my desk
 
+//Has delivered package to cafe and has drink
+<<elseif $cafePackageDelivered == true && $cafeDrinkDelivered == false>>
+<<jump DeliverCafeDrink>>
+
+///Has delivered all packages
+<<elseif $floristPackageDelivered == true && $cafePackageDelivered == true && $groceryPackageDelivered == true>>
+<<jump PostOfficePackageForValerie>>
+
+//Needs a new package to deliver
 <<elseif $holding == "nothing" && $packageAssigned == false>>
 Assistant Cat: Nice work getting that package delivered
 Assistant Cat: Which package would you like to deliver next?
-<<jump PostOfficeChooseAnotherPackageV2>>
-
+<<jump PostOfficeChooseAnotherPackage>>
 <<endif>>
 ===
+
+
+title: DeliverCafeDrink
+---
+<<if $hasCorrectDrink>>
+Assistant Cat: You got the drink I wanted! You’re best, thanks Catto
+<<else>>
+Assistant Cat: Oh you got me a drink from the Cafe!
+Assistant Cat: I see you decided to surprise me. This isn’t exactly what I was after, but thank you!
+<<endif>>
+<<set $cafeDrinkDelivered = true>>
+<<jump PostOffice3Packages>>
+===
+
 
 title: PostOfficePackageForValerie
 ---
 Assistant Cat: That's all the content for the prototype so far, thanks for playing!
+<<set $ThreePackagesDelivered = true>>
 ///Assistant Cat: Back already? I’ve just finished processing this package
 ///Assistant Cat: This package is for Valerie at the Nursing home
+===
+
+
+title: ThreePackagesDelivered
+---
+Assistant Cat: You delivered all the packages that are in the game so far
 ===
 
 title: PostOfficeRandom1
