@@ -36,7 +36,7 @@ public class Trigger : MonoBehaviour
         
     }
 
-    public bool getIsValid() {
+    public bool getIsValid() { //might want to expand this to include generic states from trigger_interactable?
         return !(oneShot && alreadyTriggered);
     }
 }

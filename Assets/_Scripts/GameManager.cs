@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 PlayerInteractionHandler.instance.thirdPersonController.enabled = true;
                 PlayerInteractionHandler.instance.enabled = true;
+                PlayerInteractionHandler.instance.StartInteractionCooldown();//whenever we enter gameplay, start an interaction cooldown
                 break;
             case GameState.Dialogue:
                 Cursor.visible = true;

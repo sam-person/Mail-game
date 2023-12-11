@@ -33,7 +33,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     
     public List<GameObject> collisionObjects = new List<GameObject>();
 
-    
+    public float interactionCooldown = 2f;
+    float _interactionCooldown;
 
 
     public Animator animator;
@@ -60,13 +61,39 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
-
+        StartInteractionCooldown(); //make sure this logic starts if nothing else starts it, might not be needed
 
     }
 
+    void HandleInteractionCooldown() {
+        if (_interactionCooldown > 0f) {
+            _interactionCooldown -= Time.deltaTime;
+            if (_interactionCooldown <= 0f) {
+                _interactionCooldown = 0f;
+            }
+        }
+    }
+
+    public void StartInteractionCooldown(float customInteractionCooldown = 0f) {
+        //if you're using the default value
+        if (customInteractionCooldown == 0f)
+        {
+            _interactionCooldown = interactionCooldown;
+        }
+        else {//if you're using a custom valu 
+            _interactionCooldown = customInteractionCooldown;
+        }
+    }
 
     //Calculate the closest interactable
     void CalculateClosestInteractable() {
+        //check if we're on interactable cooldown
+        if (_interactionCooldown > 0f) {
+            SetClosestInteractable(null);
+            return;
+        }
+
+
         //If the gamemanager has no interactables, we can't find any
         if (GameManager.instance.interactables.Count == 0) {
             SetClosestInteractable(null);
@@ -81,12 +108,21 @@ public class PlayerInteractionHandler : MonoBehaviour
 
         //Take the closest interactable that we have in range, that's our closest.
         TRI_Interactable foundInteractable = GameManager.instance.interactables.Where(x => Vector3.Distance(x.transform.position, this.transform.position) < x.interactionRange).OrderBy(x => Vector3.Distance(x.transform.position, this.transform.position)).First();
+
+        //check it's state, if it's inactive, ignore it.
+        //would this be better handled in the range check, so we don't invalidate a second, in range interactable by standing next to an inactive one?
+        if (foundInteractable.interactionState == TRI_Interactable.InteractionType.Inactive) {
+            SetClosestInteractable(null);
+            return;
+        }
+        
         SetClosestInteractable(foundInteractable);
 
 
     }
 
     void SetClosestInteractable(TRI_Interactable interactable) {
+
         //if the new interactable is the same as the old interactable, do nothing.
         if (closestInteractable == interactable) return;
 
@@ -155,6 +191,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (closestInteractable) {
             closestInteractable.Activate();
+            StartInteractionCooldown();
         }
 
     }
@@ -192,6 +229,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         switch (GameManager.instance.gameState)
         {
             case GameManager.GameState.Gameplay:
+                HandleInteractionCooldown();
                 CalculateClosestInteractable();
                 break;
             case GameManager.GameState.Dialogue:

@@ -440,6 +440,7 @@ MonoBehaviour:
   - {fileID: 13519039}
   oneShot: 0
   conditions: []
+  interactionState: 1
   interactionRange: 2
   outline: {fileID: 13519040}
 --- !u!114 &13519039
@@ -1067,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 193175694}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 193175688}
 --- !u!65 &193175690
@@ -2151,6 +2153,7 @@ MonoBehaviour:
   - {fileID: 508460884}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 508460885}
 --- !u!65 &508460887
@@ -2301,6 +2304,7 @@ MonoBehaviour:
   - {fileID: 519547938}
   oneShot: 0
   conditions: []
+  interactionState: 2
   interactionRange: 2
   outline: {fileID: 519547939}
 --- !u!114 &519547938
@@ -3070,7 +3074,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601545047}
-  m_LocalRotation: {x: 0.13754861, y: -0.870622, z: -0.46657535, w: 0.07352093}
+  m_LocalRotation: {x: 0.52249336, y: 0.49255487, z: 0.47742084, w: 0.5064186}
   m_LocalPosition: {x: 0.028714366, y: -0.091298826, z: 0.030245347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3484,6 +3488,7 @@ MonoBehaviour:
   - {fileID: 821639050}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 821639045}
 --- !u!65 &821639047
@@ -4290,6 +4295,7 @@ MonoBehaviour:
   - {fileID: 1051530197}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 1051530191}
 --- !u!65 &1051530193
@@ -6037,6 +6043,7 @@ MonoBehaviour:
   - {fileID: 1609561682}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 1609561683}
 --- !u!114 &1609561682
@@ -14559,6 +14566,7 @@ MonoBehaviour:
     intComparison: 0
     boolComparison: 0
     value: nothing
+  interactionState: 0
   interactionRange: 2.5
   outline: {fileID: 4225050235697799149}
 --- !u!114 &4225050235697799154
@@ -15085,6 +15093,18 @@ PrefabInstance:
     - target: {fileID: 5175852216583680834, guid: befd98190533f6c4bac75dd789784ff1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175852217190694336, guid: befd98190533f6c4bac75dd789784ff1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0047919666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175852217190694336, guid: befd98190533f6c4bac75dd789784ff1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.17012502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175852217190694336, guid: befd98190533f6c4bac75dd789784ff1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0008273033
       objectReference: {fileID: 0}
     - target: {fileID: 5175852217605929695, guid: befd98190533f6c4bac75dd789784ff1, type: 3}
       propertyPath: primaryDialogue.Array.size
@@ -16459,7 +16479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153415749661193606, guid: e89fe9b379756404482a421b5b20ad91, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.004746084
+      value: 0.0047460897
       objectReference: {fileID: 0}
     - target: {fileID: 8153415749661193606, guid: e89fe9b379756404482a421b5b20ad91, type: 3}
       propertyPath: m_LocalRotation.y
@@ -16467,7 +16487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153415749661193606, guid: e89fe9b379756404482a421b5b20ad91, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0008709129
+      value: -0.00087091397
       objectReference: {fileID: 0}
     - target: {fileID: 8153415749671966284, guid: e89fe9b379756404482a421b5b20ad91, type: 3}
       propertyPath: spawnPoint
@@ -16932,6 +16952,7 @@ MonoBehaviour:
   - {fileID: 8153415748532476780}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 4
   outline: {fileID: 8153415748532476782}
 --- !u!114 &8153415748532476782
@@ -17489,7 +17510,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8153415749293247457}
-  m_LocalRotation: {x: 0.11888308, y: -0.74737614, z: 0.10360348, w: 0.64541614}
+  m_LocalRotation: {x: 0.007790787, y: 0.14931957, z: -0.0011765442, w: 0.9887576}
   m_LocalPosition: {x: -11.452, y: 11.878, z: 1.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17540,6 +17561,7 @@ MonoBehaviour:
   - {fileID: 8153415749304035369}
   oneShot: 0
   conditions: []
+  interactionState: 0
   interactionRange: 2
   outline: {fileID: 8153415749304035371}
 --- !u!114 &8153415749304035371

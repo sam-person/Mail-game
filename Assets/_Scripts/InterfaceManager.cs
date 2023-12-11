@@ -28,8 +28,11 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI dialogueCharacterName, dialogueText;
 
     public RectTransform interactIcon;
+    public Image interactImage;
 
     public TextMeshProUGUI questText;
+
+    public Sprite interact_active_icon, interact_locked_icon;
 
     private void Awake()
     {
@@ -47,6 +50,20 @@ public class InterfaceManager : MonoBehaviour
         {
             interactIcon.gameObject.SetActive(true);
             interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(PlayerInteractionHandler.instance.closestInteractable.transform.position);
+            switch (PlayerInteractionHandler.instance.closestInteractable.interactionState)
+            {
+                case TRI_Interactable.InteractionType.Active:
+                default:
+                    interactImage.sprite = interact_active_icon;
+                    break;
+                case TRI_Interactable.InteractionType.Inactive:
+                    //this shouldn't be possible...
+                    break;
+                case TRI_Interactable.InteractionType.Locked:
+                    interactImage.sprite = interact_locked_icon;
+                    break;
+                
+            }
         }
         else {
             interactIcon.gameObject.SetActive(false);
@@ -103,5 +120,5 @@ public class InterfaceManager : MonoBehaviour
     public static void SetQuestText(string text) {
         instance.questText.text = text;
     }
-    
+
 }
