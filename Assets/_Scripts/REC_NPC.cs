@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Cinemachine;
+using UnityEditor;
+using Yarn.Unity;
+using System.Linq;
 
 public class REC_NPC : Receiver
 {
@@ -36,7 +39,7 @@ public class REC_NPC : Receiver
 
         [System.Serializable]
         public class NPC_DialogueCondition {
-            [HorizontalGroup("var"), LabelWidth(50)]
+            [HorizontalGroup("var"), LabelWidth(50), ValueDropdown("GetYarnVariables", AppendNextDrawer = true)]
             public string variable;
             public enum VariableType {String, Bool, Int };
             [HorizontalGroup("var", 100), HideLabel]
@@ -100,6 +103,18 @@ public class REC_NPC : Receiver
                 }
                 return false;
             }
+
+#if UNITY_EDITOR
+            private IEnumerable GetYarnVariables()
+            {
+                YarnProject project = AssetDatabase.LoadAssetAtPath("Assets/_Prefabs/Bootstrap/[UI].prefab", typeof(GameObject)).GetComponent<Yarn.Unity.DialogueRunner>().yarnProject;
+                List<string> variables = project.InitialValues.Keys.ToList<string>();
+                for (int i = 0; i < variables.Count; i++)
+                {
+                    yield return variables[i];
+                }
+            }
+#endif
         }
     }
 
