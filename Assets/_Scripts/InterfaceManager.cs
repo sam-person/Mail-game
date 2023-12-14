@@ -8,6 +8,7 @@ using TMPro;
 using System;
 using Yarn;
 using Yarn.Unity;
+using Sirenix.OdinInspector;
 
 public class InterfaceManager : MonoBehaviour
 {
@@ -24,8 +25,15 @@ public class InterfaceManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject debugObject;
 
-    public Image dialogueBackgroundImage, dialogueOutlineImage, dialogueLeftWhiskers, dialogueRightWhiskers;
+    [BoxGroup("Dialogue")]
     public TextMeshProUGUI dialogueCharacterName, dialogueText;
+    [BoxGroup("Dialogue")]
+    public Image dialogueBackgroundImage, dialogueOutlineImage, dialogueLeftWhiskers, dialogueRightWhiskers;
+    [BoxGroup("Dialogue/Options")]
+    public TextMeshProUGUI /*dialogue_options_CharacterName,*/ dialogue_options_Text;
+    [BoxGroup("Dialogue/Options")]
+    public Image dialogue_options_BackgroundImage, dialogue_options_OutlineImage, dialogue_options_LeftWhiskers, dialogue_options_RightWhiskers;
+
 
     public RectTransform interactIcon;
     public Image interactImage;
@@ -99,6 +107,7 @@ public class InterfaceManager : MonoBehaviour
     /// <param name="node">Which node to play</param>
     public void StartDialogue(string node, CinemachineVirtualCamera _dialogueCamera, NPCDefinition npc = null) {
         if (npc != null) {
+            //main line
             dialogueText.font = npc.font;
             dialogueCharacterName.font = npc.font;
             dialogueText.color = npc.fontColour;
@@ -108,6 +117,14 @@ public class InterfaceManager : MonoBehaviour
             dialogueOutlineImage.color = npc.outlineColor;
             dialogueLeftWhiskers.color = npc.leftWhiskerColor;
             dialogueRightWhiskers.color = npc.rightWhiskerColor;
+
+            //options
+            dialogue_options_Text.font = npc.font;
+            dialogue_options_Text.color = npc.fontColour;
+            dialogue_options_BackgroundImage.color = npc.backgroundColor;
+            dialogue_options_OutlineImage.color = npc.outlineColor;
+            dialogue_options_LeftWhiskers.color = npc.leftWhiskerColor;
+            dialogue_options_RightWhiskers.color = npc.rightWhiskerColor;
         }
 
         dialogueCamera = _dialogueCamera;

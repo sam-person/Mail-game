@@ -17,6 +17,16 @@ public class TRI_Interactable : Trigger
     private void OnEnable()
     {
         GameManager.instance.interactables.Add(this);
+        SetInteractionColour();
+    }
+
+    public void SetInteractionState(InteractionType state) {
+        interactionState = state;
+        SetInteractionColour();
+    }
+
+    void SetInteractionColour()
+    {
         switch (interactionState)
         {
             case InteractionType.Active:
@@ -29,8 +39,9 @@ public class TRI_Interactable : Trigger
             case InteractionType.Locked:
                 outline.color = 1;
                 break;
-            
+
         }
+
     }
 
     private void OnDisable()
