@@ -1,8 +1,10 @@
+using cakeslice;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static REC_NPC.NPC_DialogueNode;
 
+[RequireComponent(typeof(Outline))]
 public class TRI_Interactable : Trigger
 {
     public enum InteractionType {Active, Inactive, Locked }; //add more types like door, npc, etc
@@ -10,7 +12,10 @@ public class TRI_Interactable : Trigger
 
     public float interactionRange = 2f;
 
-    
+    private void Reset()
+    {
+        outline = GetComponent<Outline>();
+    }
 
     public cakeslice.Outline outline;
 

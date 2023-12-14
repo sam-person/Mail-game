@@ -34,6 +34,10 @@ public class InterfaceManager : MonoBehaviour
     [BoxGroup("Dialogue/Options")]
     public Image dialogue_options_BackgroundImage, dialogue_options_OutlineImage, dialogue_options_LeftWhiskers, dialogue_options_RightWhiskers;
 
+    [BoxGroup("TutorialPanels")]
+    public Transform tutorialParent;
+    [BoxGroup("TutorialPanels")]
+    public UI_Tutorial_Panel panelObject;
 
     public RectTransform interactIcon;
     public Image interactImage;
@@ -136,6 +140,12 @@ public class InterfaceManager : MonoBehaviour
     [YarnCommand("setQuest")]
     public static void SetQuestText(string text) {
         instance.questText.text = text;
+    }
+
+    public void SpawnTutorialPanel(Sprite _image, string _text, float _time) {
+        UI_Tutorial_Panel spawned = Instantiate(panelObject, tutorialParent);
+        spawned.gameObject.SetActive(true);
+        spawned.SetPanel(_image, _text, _time);
     }
 
 }
