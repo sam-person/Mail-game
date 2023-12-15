@@ -5,6 +5,10 @@ title: PostOfficeIntro
 <<declare $packagesDeliveredCount = 0>>
 <<declare $ThreePackagesDelivered = false>>
 <<declare $cafeDrinkDelivered = false>>
+<<declare $playedPOIntro = false>>
+<<declare $cafePackageDelivered = false>>
+<<declare $floristPackageDelivered = false>>
+<<declare $groceryPackageDelivered = false>>
 <<set $holding = "nothing">>
 Assistant Cat: Good morning Catto! I hope you slept well
 Assistant Cat: Here’s some news for today
@@ -47,14 +51,14 @@ Assistant Cat: You’re back! I just finished processing 3 more packages.
 Assistant Cat: You can deliver them in any order you like, none are express so there’s no rush.
 Assistant Cat: The packages are for the Florist, the Grocery Store, and the Cafe
 Assistant Cat: Which package would you like to deliver next?
-<<declare $groceryPackageDelivered = false>>
-<<set $groceryPackageDelivered = false>>
 
-<<declare $floristPackageDelivered = false>>
-<<set $floristPackageDelivered = false>>
+///<<set $groceryPackageDelivered = false>>
 
-<<declare $cafePackageDelivered = false>>
-<<set $cafePackageDelivered = false>>
+
+///<<set $floristPackageDelivered = false>>
+
+
+///<<set $cafePackageDelivered = false>>
 
 <<jump PostOfficeChooseAnotherPackage>>
 ===
@@ -63,11 +67,11 @@ Assistant Cat: Which package would you like to deliver next?
 title: PostOfficeChooseAnotherPackage
 ---
 <<declare $packageAssigned = false>>
--> Catto: Cafe
+-> Catto: Cafe <<if $cafePackageDelivered == false>>
 	<<jump PostOfficeCafeChosen>>
--> Catto: Florist
+-> Catto: Florist <<if $floristPackageDelivered == false>>
 	<<jump PostOfficeFloristChosen>>
--> Catto: Grocery Store
+-> Catto: Grocery Store <<if $groceryPackageDelivered == false>>
 	<<jump PostOfficeGroceryChosen>>
 ===
 

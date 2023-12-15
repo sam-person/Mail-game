@@ -1,0 +1,68 @@
+﻿title: SkipBakery
+---
+<<set $holding to "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $bakeryPackageDelivered = true>>
+<<set $packageAssigned = false>>
+<<jump SkipIntro>>
+===
+
+title: SkipFlorist
+---
+<<set $scissorsQuest = true>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $floristPackageDelivered = true>>
+<<set $packageAssigned = false>>
+<<jump SkipIntro>>
+===
+
+title: SkipCafe
+---
+<<set $cafePackageDelivered = true>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $packageAssigned = false>>
+<<set $hasCorrectDrink = true>>
+<<jump SkipIntro>>
+===
+
+title: SkipGrocery
+---
+<<set $groceryPackageDelivered = true>>
+<<set $packageAssigned = false>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $puddleSteppingAcknowledged = true>>
+<<jump SkipIntro>>
+===
+
+title: SkipThree
+---
+//Skip Florist
+<<set $scissorsQuest = true>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $floristPackageDelivered = true>>
+<<set $packageAssigned = false>>
+///Skip Cafe
+<<set $cafePackageDelivered = true>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $packageAssigned = false>>
+<<set $hasCorrectDrink = true>>
+///Skip Grocery
+<<set $groceryPackageDelivered = true>>
+<<set $packageAssigned = false>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $puddleSteppingAcknowledged = true>>
+
+///<<set $ThreePackagesDelivered = true>>
+<<jump SkipIntro>>
+===
+
+title: SkipIntro
+---
+<<set $playedPOIntro = true>>
+===
