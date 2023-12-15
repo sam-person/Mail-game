@@ -51,7 +51,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     //public delegate void GamePaused(bool isPaused);
     //public static event GamePaused gamePaused;
-
+    public StarterAssetsInputs _input;
 
     private void Awake()
     {
@@ -62,6 +62,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         StartInteractionCooldown(); //make sure this logic starts if nothing else starts it, might not be needed
+        _input = GetComponent<StarterAssetsInputs>();
 
     }
 
@@ -214,10 +215,12 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        //if (Keyboard.current.eKey.wasPressedThisFrame)
+        if(_input.interact)
         {
             animator.SetTrigger("interact");
             CattoInteractor();
+            _input.interact = false;
         }
 
         if (Input.GetMouseButtonDown(0))

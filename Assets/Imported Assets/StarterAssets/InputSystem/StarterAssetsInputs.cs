@@ -40,11 +40,16 @@ namespace StarterAssets
 			JumpInput(value.isPressed);
 		}
 
-		public void OnSprint(InputValue value)
+
+        public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
-		}
+        }
 
+        public void OnInteract(InputValue value)
+        {
+            InteractInput(value.isPressed);
+        }
 
 #endif
 
@@ -62,15 +67,22 @@ namespace StarterAssets
 		public void JumpInput(bool newJumpState)
 		{
 			jump = newJumpState;
-		}
+            //Debug.Log("jump input pressed" + jump);
+        }
 
-		public void SprintInput(bool newSprintState)
+        public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
-		}
+            //Debug.Log("sprint input pressed" + sprint);
+        }
 
+        public void InteractInput(bool newInteractState)
+        {
+            interact = newInteractState;
+            //Debug.Log("sprint input pressed" + sprint);
+        }
 
-		private void OnApplicationFocus(bool hasFocus)
+        private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
 		}

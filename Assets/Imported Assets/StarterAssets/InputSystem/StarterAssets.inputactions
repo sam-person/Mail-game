@@ -33,10 +33,28 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Hop",
                     "type": "PassThrough",
                     "id": "81ff22ba-9a31-4afa-9a9e-ace9aff7fa3b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "PassThrough",
+                    "id": "983e79cb-7a67-463d-b3a3-a0a2099e99fb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "PassThrough",
+                    "id": "9bc9378d-8ca2-4d37-a304-3884dc013589",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -169,7 +187,7 @@
                     "id": "d1d171b6-19d8-47a6-ba3a-71b6a8e7b3c0",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)",
+                    "processors": "InvertVector2(invertX=false),StickDeadzone(min=0.05),ScaleVector2(x=300,y=300)",
                     "groups": "Gamepad",
                     "action": "Look",
                     "isComposite": false,
@@ -189,7 +207,7 @@
                 {
                     "name": "",
                     "id": "c8fcd86e-dcfd-4f88-8e93-b638cdbf3320",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/leftStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -204,7 +222,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Jump",
+                    "action": "Hop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -215,7 +233,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Hop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d8a41ca-59a9-4605-ac65-b777c1395a3c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7aca0a2-9e1b-45b3-827e-89d80ca5abfa",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9038c5fc-7a98-4133-8a76-0d9a66b8f770",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

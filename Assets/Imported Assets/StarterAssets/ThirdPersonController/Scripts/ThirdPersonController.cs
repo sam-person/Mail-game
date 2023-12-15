@@ -169,7 +169,8 @@ namespace StarterAssets
             Move();
             // Debug.Log(_input.jump.ToString());
             //Debug.Log(Input.GetKey(KeyCode.Space).ToString());
-            _animator.SetBool("Jump", Input.GetKey(KeyCode.Space)); 
+            _animator.SetBool("Jump", _input.jump);
+            //Debug.Log("Jump equals " + _input.jump);
         }
 
         private void LateUpdate()
@@ -323,7 +324,7 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (Input.GetKey(KeyCode.Space) && _jumpTimeoutDelta <= 0.0f)
+                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -361,7 +362,7 @@ namespace StarterAssets
                 }
 
                 // if we are not grounded, do not jump
-                _input.jump = false;
+               // _input.jumpy = false;
             }
 
             // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
