@@ -10,7 +10,7 @@ public class cameraZoom : MonoBehaviour
 
     CinemachineComponentBase componentBase;
 
-    float cameraDistance;
+    public float cameraDistance;
     [SerializeField] float sensitivity = 10f;
     [SerializeField] float maxCameraDistance = 20f;
 

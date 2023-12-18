@@ -10,6 +10,7 @@ public class Subarea : MonoBehaviour
 
     public string subareaName = "Inside";
     public CinemachineVirtualCamera subareaCamera;
+    public bool useCamera = false;
 
     private void Awake()
     {
@@ -17,7 +18,10 @@ public class Subarea : MonoBehaviour
     }
 
     public void OnEnterSubarea() {
-        subareaCamera.gameObject.SetActive(true);
+        if (useCamera)
+        {
+            subareaCamera.gameObject.SetActive(true);
+        }
     }
 
     public void OnExitSubarea()
