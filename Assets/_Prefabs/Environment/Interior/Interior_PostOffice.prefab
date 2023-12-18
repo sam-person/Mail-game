@@ -1724,6 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subareaName: Inside
   subareaCamera: {fileID: 4617074749578011756}
+  useCamera: 0
 --- !u!1 &4164737411395172101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,8 +2840,8 @@ GameObject:
   - component: {fileID: 5975844421822215717}
   - component: {fileID: 7515401783447221767}
   - component: {fileID: 7515401783447221784}
-  - component: {fileID: 8840919871914877637}
   - component: {fileID: 8840919871914877638}
+  - component: {fileID: 4225050235697799155}
   m_Layer: 11
   m_Name: Door
   m_TagString: InteractableDoorOut
@@ -2971,15 +2972,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 7515401783447221784}
+  - {fileID: 4225050235697799155}
   oneShot: 0
-  conditions:
-  - variable: $holding
-    type: 0
-    stringComparison: 1
-    intComparison: 0
-    boolComparison: 0
-    value: nothing
+  conditions: []
   interactionState: 0
   interactionRange: 2.5
   outline: {fileID: 5975844421822215717}
@@ -3001,31 +2996,6 @@ MonoBehaviour:
   yRot: 10
   teleType: 1
   subarea: {fileID: 394413788168990380}
---- !u!114 &8840919871914877637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975844421822215718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea8e62f6833637541a877b3f3cd0a8b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Receivers:
-  - {fileID: 8840919871914877638}
-  oneShot: 0
-  conditions:
-  - variable: $holding
-    type: 0
-    stringComparison: 0
-    intComparison: 0
-    boolComparison: 0
-    value: nothing
-  interactionState: 0
-  interactionRange: 2.5
-  outline: {fileID: 5975844421822215717}
 --- !u!114 &8840919871914877638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,14 +3014,38 @@ MonoBehaviour:
   - YarnNode: ForgotPackage
     oneShot: 0
     triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: nothing
+    conditions: []
   secondaryDialogue: []
+--- !u!114 &4225050235697799155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975844421822215718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3636ba9f1b82a41914ebd40e75c8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditional: 1
+  conditions:
+  - variable: $holding
+    type: 0
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 0
+    value: nothing
+  - variable: $packageAssigned
+    type: 1
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 0
+    value: 
+  receivers:
+  - {fileID: 8840919871914877638}
+  failedRecievers:
+  - {fileID: 7515401783447221784}
 --- !u!1 &5975844422378601681
 GameObject:
   m_ObjectHideFlags: 0

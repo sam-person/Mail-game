@@ -1,5 +1,6 @@
 ﻿title: BakeryIntro
 ---
+<<declare $isbreadBurning = false>>
 Chef Meow: Catto! That must mean it’s time for mail, one of my favorite times
 Chef Meow: It’s like getting a present ...Even though I ordered it
 Chef Meow: But I always forget what I’ve ordered so I’m still opening a box with a surprise in it
@@ -9,6 +10,7 @@ Chef Meow: Catto, can I rely on you to save the bread?
 Chef Meow: I could have got to the bread in time if I just stopped talking but now only you can save it
 Chef Meow: There’s no way I would get to it in time, not with these knees of mine
 Chef Meow: Quick Catto! Use your little legs to get to the oven and close the door
+<<set $isbreadBurning = true>>
 <<declare $savedBread = false>>
 <<setQuest "Close the oven door!">>
 ===

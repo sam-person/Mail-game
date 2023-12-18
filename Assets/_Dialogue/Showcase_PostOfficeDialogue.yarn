@@ -9,6 +9,7 @@ title: PostOfficeIntro
 <<declare $cafePackageDelivered = false>>
 <<declare $floristPackageDelivered = false>>
 <<declare $groceryPackageDelivered = false>>
+<<declare $packageAssigned = false>>
 <<set $holding = "nothing">>
 Assistant Cat: Good morning Catto! I hope you slept well
 Assistant Cat: Here’s some news for today
@@ -29,6 +30,7 @@ Assistant Cat: I have a few packages I still need to process, I have this one re
 <<set $bakeryPackageDelivered = false>>
 Assistant Cat: I hope you’ve stretched because you’re going to need to take this one up the hill to the bakery
 -> Catto: Thanks <insert name>, I’ll pick up that package and take it to the bakery now
+<<set $packageAssigned = true>>
 <<setQuest "Pick up the package">>
 ===
 
@@ -51,22 +53,12 @@ Assistant Cat: You’re back! I just finished processing 3 more packages.
 Assistant Cat: You can deliver them in any order you like, none are express so there’s no rush.
 Assistant Cat: The packages are for the Florist, the Grocery Store, and the Cafe
 Assistant Cat: Which package would you like to deliver next?
-
-///<<set $groceryPackageDelivered = false>>
-
-
-///<<set $floristPackageDelivered = false>>
-
-
-///<<set $cafePackageDelivered = false>>
-
 <<jump PostOfficeChooseAnotherPackage>>
 ===
 
 
 title: PostOfficeChooseAnotherPackage
 ---
-<<declare $packageAssigned = false>>
 -> Catto: Cafe <<if $cafePackageDelivered == false>>
 	<<jump PostOfficeCafeChosen>>
 -> Catto: Florist <<if $floristPackageDelivered == false>>
@@ -173,6 +165,7 @@ Assistant Cat: I see you decided to surprise me. This isn’t exactly what I was
 title: PostOfficePackageForValerie
 ---
 Assistant Cat: That's all the content for the prototype so far, thanks for playing!
+<<setQuest "Prototype complete!">>
 <<set $ThreePackagesDelivered = true>>
 ///Assistant Cat: Back already? I’ve just finished processing this package
 ///Assistant Cat: This package is for Valerie at the Nursing home
@@ -182,6 +175,7 @@ Assistant Cat: That's all the content for the prototype so far, thanks for playi
 title: ThreePackagesDelivered
 ---
 Assistant Cat: You delivered all the packages that are in the game so far
+<<setQuest "Prototype complete!">>
 ===
 
 title: PostOfficeRandom1

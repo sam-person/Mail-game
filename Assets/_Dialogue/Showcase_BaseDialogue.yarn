@@ -14,6 +14,7 @@ title: PickUpScissors
 Catto: oh hey some scissors
 <<if $scissorsQuest == true>>
 Catto: they must belong to the florist, i'll take it back to them
+<<setQuest "Return to the Florist">>
 <<set $haveScissors = true>>
 <<else>>
 Catto: hmm I wonder what this is...
@@ -30,4 +31,9 @@ Catto: Weird...
 title: ForgotPackage
 ---
 Catto: Oh.. I almost forgot take the package on the desk
+===
+
+title: BreadBurning
+---
+Catto: I can't leave while the bread is burning!
 ===

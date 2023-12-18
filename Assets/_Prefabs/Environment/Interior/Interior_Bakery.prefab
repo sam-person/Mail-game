@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subareaName: Inside
   subareaCamera: {fileID: 1549203507081765975}
+  useCamera: 0
 --- !u!1 &208545813050671777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,8 +2883,10 @@ GameObject:
   - component: {fileID: 927845603045904673}
   - component: {fileID: 4404757374827854426}
   - component: {fileID: 4404757374827854425}
+  - component: {fileID: 458485107}
+  - component: {fileID: 458485108}
   m_Layer: 11
-  m_Name: Door (2)
+  m_Name: Door_Bakery
   m_TagString: InteractableDoorOut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3011,7 +3014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 4404757374827854425}
+  - {fileID: 458485108}
   oneShot: 0
   conditions: []
   interactionState: 0
@@ -3035,6 +3038,44 @@ MonoBehaviour:
   yRot: 10
   teleType: 1
   subarea: {fileID: 9349669150843842}
+--- !u!114 &458485107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927845603045904675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01c886fbd63a78488f0fd91aaa694a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YarnNode: BreadBurning
+  NPCDefinition: {fileID: 11400000, guid: f99db524cc655304bb4a2bea04c28b30, type: 2}
+--- !u!114 &458485108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927845603045904675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3636ba9f1b82a41914ebd40e75c8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditional: 1
+  conditions:
+  - variable: $isbreadBurning
+    type: 1
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 1
+    value: 
+  receivers:
+  - {fileID: 4404757374827854425}
+  failedRecievers:
+  - {fileID: 458485107}
 --- !u!1 &1183263222105645678
 GameObject:
   m_ObjectHideFlags: 0
@@ -11587,6 +11628,8 @@ GameObject:
   - component: {fileID: 4404757375592918664}
   - component: {fileID: 7717825712662161578}
   - component: {fileID: 6213822786582935494}
+  - component: {fileID: 1388818485}
+  - component: {fileID: 1388818486}
   m_Layer: 0
   m_Name: OvenDoor
   m_TagString: Untagged
@@ -11706,6 +11749,8 @@ MonoBehaviour:
   - {fileID: 4404757375592918666}
   - {fileID: 7717825712662161578}
   - {fileID: 6213822786582935494}
+  - {fileID: 1388818485}
+  - {fileID: 1388818486}
   oneShot: 1
   conditions: []
   interactionState: 1
@@ -11755,6 +11800,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: {fileID: 4404757375592918665}
   interactionState: 1
+--- !u!114 &1388818485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717825712662161579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5faec1d930a3f4db30ebe63f87e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableName: $isbreadBurning
+  variableValue: False
+  VariableType: 1
+--- !u!114 &1388818486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717825712662161579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89eb921e281a974b9dc1d9562feb81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Talk to the Chef
 --- !u!1 &7777638921569524126
 GameObject:
   m_ObjectHideFlags: 0
