@@ -46,6 +46,10 @@ public class InterfaceManager : MonoBehaviour
 
     public Sprite interact_active_icon, interact_locked_icon;
 
+    public Canvas UIcanvas;
+
+    
+
     private void Awake()
     {
         instance = this;
@@ -61,7 +65,8 @@ public class InterfaceManager : MonoBehaviour
         if (PlayerInteractionHandler.instance.closestInteractable != null && GameManager.instance.gameState == GameManager.GameState.Gameplay)
         {
             interactIcon.gameObject.SetActive(true);
-            interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(PlayerInteractionHandler.instance.closestInteractable.transform.position);
+            interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(PlayerInteractionHandler.instance.closestInteractable.transform.position) * (1f/UIcanvas.scaleFactor);
+
             switch (PlayerInteractionHandler.instance.closestInteractable.interactionState)
             {
                 case TRI_Interactable.InteractionType.Active:
@@ -100,6 +105,9 @@ public class InterfaceManager : MonoBehaviour
     /// </summary>
     public void OnDialogueEnd() {
         GameManager.instance.SetGameState(GameManager.GameState.Gameplay);
+        GameManager.instance.currentNPC.OnDialogueEnd();
+        GameManager.instance.currentNPC = null;
+        GameManager.instance._onDynamicYarnVariableChange.Invoke();
         if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
     }
 

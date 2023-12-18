@@ -18,6 +18,7 @@ public class REC_SetYarnVariable : Receiver
     {
         base.Activate();
         GameManager.instance.SetYarnVariable(variableName, variableValue, VariableType);
+        GameManager.instance._onDynamicYarnVariableChange.Invoke();
     }
 
 #if UNITY_EDITOR

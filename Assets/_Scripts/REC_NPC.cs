@@ -12,6 +12,8 @@ public class REC_NPC : Receiver
 {
     public NPCDefinition NPCDefinition;
     public CinemachineVirtualCamera dialogueCamera;
+    public Animator anim;
+    public bool doTalkingAnimation = true;
 
     public List<NPC_DialogueNode> primaryDialogue;
     public List<NPC_DialogueNode> secondaryDialogue;
@@ -124,8 +126,7 @@ public class REC_NPC : Receiver
         //go through each primary dialogue and activate the first one that is valid
         foreach (NPC_DialogueNode node in primaryDialogue) {
             if (node.GetIsValid()) {
-                node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
+                StartDialogueNode(node);
                 return;
             }
         }
@@ -135,8 +136,7 @@ public class REC_NPC : Receiver
         {
             if (node.GetIsValid())
             {
-                node.triggered = true;
-                InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
+                StartDialogueNode(node);
                 return;
             }
         }
@@ -145,8 +145,21 @@ public class REC_NPC : Receiver
         Debug.Log("Ran out of dialogue!");
     }
 
+    void StartDialogueNode(NPC_DialogueNode node) {
+        node.triggered = true;
+        InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
+        if (doTalkingAnimation) anim.SetBool("Talking", true);
+        GameManager.instance.currentNPC = this;
+    }
+
     private void Awake()
     {
         if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
+    }
+
+    public void OnDialogueEnd() {
+        if (doTalkingAnimation) {
+            anim.SetBool("Talking", false);
+        }
     }
 }

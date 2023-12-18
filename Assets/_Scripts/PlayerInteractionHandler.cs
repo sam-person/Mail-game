@@ -145,36 +145,32 @@ public class PlayerInteractionHandler : MonoBehaviour
     }
 
     public void Teleport(REC_Teleport teleport) {
-        StartCoroutine(TeleportPlayer(teleport));
-        InterfaceManager.instance.fader.Fade();
-    }
-
-    private IEnumerator TeleportPlayer(REC_Teleport door)
-    {
-        if (door.inside)
+        //StartCoroutine(TeleportPlayer(teleport));
+        if (teleport.inside)
         {
-            yield return new WaitForSeconds(0.2f);
-            transform.rotation = door.spawnPoint.transform.rotation;
-            transform.position = door.spawnPoint.transform.position;
-            thirdPersonController.SetCameraAngle(door.xRot, door.yRot);
+            //yield return new WaitForSeconds(0.2f);
+            transform.rotation = teleport.spawnPoint.transform.rotation;
+            transform.position = teleport.spawnPoint.transform.position;
+            thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.SolidColor;
-            animator.SetBool("interact", false);
+            //animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);
         }
 
-        else 
+        else
         {
-            yield return new WaitForSeconds(0.2f);
-            transform.rotation = door.spawnPoint.transform.rotation;
-            transform.position = door.spawnPoint.transform.position;
-            thirdPersonController.SetCameraAngle(door.xRot, door.yRot);
+            //yield return new WaitForSeconds(0.2f);
+            transform.rotation = teleport.spawnPoint.transform.rotation;
+            transform.position = teleport.spawnPoint.transform.position;
+            thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.Skybox;
-            animator.SetBool("interact", false);
+            //animator.SetBool("interact", false);
             doorSource.PlayOneShot(doorClip);
         }
     }
+
     public void PlayInteractionAnim()
     {
         interactionAnimatorCoroutine = StartCoroutine(InteractionAnimator());
@@ -191,6 +187,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public void CattoInteractor()
     {
         if (closestInteractable) {
+            animator.SetTrigger("interact");
             closestInteractable.Activate();
             StartInteractionCooldown();
         }
@@ -218,7 +215,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         //if (Keyboard.current.eKey.wasPressedThisFrame)
         if(_input.interact)
         {
-            animator.SetTrigger("interact");
             CattoInteractor();
             _input.interact = false;
         }

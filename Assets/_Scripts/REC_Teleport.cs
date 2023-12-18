@@ -18,6 +18,10 @@ public class REC_Teleport : Receiver
     public override void Activate()
     {
         base.Activate();
+        GameManager.instance.StartTeleport(this);
+    }
+
+    public void Teleport() {
         PlayerInteractionHandler.instance.Teleport(this);
         switch (teleType)
         {

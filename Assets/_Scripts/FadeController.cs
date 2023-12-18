@@ -47,6 +47,7 @@ public class FadeController : MonoBehaviour
 
             if(blackOutSquare.GetComponent<Image>().color.a >= 1)
             {
+                GameManager.instance.OnMidFade();
                 yield return new WaitForSeconds(0.5f);
                 while (blackOutSquare.GetComponent<Image>().color.a > 0)
                 {

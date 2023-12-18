@@ -7,6 +7,7 @@ using Cinemachine;
 using TMPro;
 using Yarn.Unity;
 using Yarn;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     public Transform cameraTarget;
 
     public Subarea currentSubarea;
+
+    public REC_NPC currentNPC;
 
     #region Singleton
     public static GameManager instance;
@@ -69,6 +72,8 @@ public class GameManager : MonoBehaviour
         OnStateEnter(newState);
         //set the new state
         gameState = newState;
+
+        _onGameStateChange?.Invoke();
     }
 
     void OnStateExit(GameState oldState) {
@@ -173,6 +178,7 @@ public class GameManager : MonoBehaviour
 
     public T GetYarnVariable<T>(string variableName) {
         T output;
+
         if (yarnVariables.TryGetValue(variableName, out output))
         {
             return output;
@@ -198,6 +204,32 @@ public class GameManager : MonoBehaviour
         //yarnVariables.SetValue(variableName, value);
     }
 
+    public REC_Teleport pendingTeleport;
+    public void StartTeleport(REC_Teleport teleporter) {
+        if (pendingTeleport != null) {
+            Debug.Log("Can't start this teleport because there is already one pending!");
+            return;
+        }
 
+        pendingTeleport = teleporter;
+        InterfaceManager.instance.fader.Fade();
+    }
+
+    public void OnMidFade() {
+        if (pendingTeleport != null) { 
+            PlayerInteractionHandler.instance.Teleport(pendingTeleport);
+            pendingTeleport = null;
+        }
+    }
+
+    /// <summary>
+    /// When dialogue ends, when the setyarnvariable is triggered
+    /// </summary>
+    /// 
+    public delegate void OnDynamicYarnVariableChange();
+    public OnDynamicYarnVariableChange _onDynamicYarnVariableChange;
+
+    public delegate void OnGameStateChange();
+    public OnGameStateChange _onGameStateChange;
 
 }
