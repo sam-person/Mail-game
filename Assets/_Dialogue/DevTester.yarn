@@ -1,5 +1,6 @@
 ﻿title: SkipBakery
 ---
+Debugger: Skipping Bakery
 <<set $holding to "nothing">>
 <<set $packagesDeliveredCount += 1>>
 <<set $bakeryPackageDelivered = true>>
@@ -9,6 +10,7 @@
 
 title: SkipFlorist
 ---
+Debugger: Skipping Florist
 <<set $scissorsQuest = true>>
 <<set $holding = "nothing">>
 <<set $packagesDeliveredCount += 1>>
@@ -19,6 +21,7 @@ title: SkipFlorist
 
 title: SkipCafe
 ---
+Debugger: Skipping Cafe
 <<set $cafePackageDelivered = true>>
 <<set $holding = "nothing">>
 <<set $packagesDeliveredCount += 1>>
@@ -29,6 +32,7 @@ title: SkipCafe
 
 title: SkipGrocery
 ---
+Debugger: Skipping Grocery
 <<set $groceryPackageDelivered = true>>
 <<set $packageAssigned = false>>
 <<set $holding = "nothing">>
@@ -39,6 +43,7 @@ title: SkipGrocery
 
 title: SkipThree
 ---
+Debugger: Skipping 3
 //Skip Florist
 <<set $scissorsQuest = true>>
 <<set $holding = "nothing">>

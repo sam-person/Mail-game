@@ -13,7 +13,7 @@ public class REC_NPC : Receiver
     public NPCDefinition NPCDefinition;
     public CinemachineVirtualCamera dialogueCamera;
     public Animator anim;
-    public bool doTalkingAnimation = true;
+    public bool doTalkingAnimation = false;
 
     public List<NPC_DialogueNode> primaryDialogue;
     public List<NPC_DialogueNode> secondaryDialogue;
@@ -148,7 +148,7 @@ public class REC_NPC : Receiver
     void StartDialogueNode(NPC_DialogueNode node) {
         node.triggered = true;
         InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
-        if (doTalkingAnimation) anim.SetBool("Talking", true);
+        if (doTalkingAnimation && anim != null) anim.SetBool("Talking", true);
         GameManager.instance.currentNPC = this;
     }
 
@@ -158,7 +158,7 @@ public class REC_NPC : Receiver
     }
 
     public void OnDialogueEnd() {
-        if (doTalkingAnimation) {
+        if (doTalkingAnimation && anim != null) {
             anim.SetBool("Talking", false);
         }
     }

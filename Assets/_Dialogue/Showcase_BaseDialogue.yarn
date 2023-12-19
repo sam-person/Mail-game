@@ -11,9 +11,9 @@ Catto: Anyway, I should probably get to work now
 title: PickUpScissors
 ---
 <<declare $haveScissors = false>>
-Catto: oh hey some scissors
 <<if $scissorsQuest == true>>
-Catto: they must belong to the florist, i'll take it back to them
+Catto: these must be the scissors
+Catto: i'll take them back to the florist
 <<setQuest "Return to the Florist">>
 <<set $haveScissors = true>>
 <<else>>
@@ -36,4 +36,9 @@ Catto: Oh.. I almost forgot take the package on the desk
 title: BreadBurning
 ---
 Catto: I can't leave while the bread is burning!
+===
+
+title: ForgotToDeliverBakery
+---
+Catto: The Chef is still waiting for their delivery
 ===

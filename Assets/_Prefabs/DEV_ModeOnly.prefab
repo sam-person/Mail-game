@@ -1658,6 +1658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: fa8d8479344766144ae3616f8d333e1b, type: 2}
   dialogueCamera: {fileID: 0}
+  anim: {fileID: 0}
+  doTalkingAnimation: 0
   primaryDialogue:
   - YarnNode: SkipFlorist
     oneShot: 1
@@ -2001,6 +2003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: fa8d8479344766144ae3616f8d333e1b, type: 2}
   dialogueCamera: {fileID: 0}
+  anim: {fileID: 0}
+  doTalkingAnimation: 0
   primaryDialogue:
   - YarnNode: SkipGrocery
     oneShot: 1
@@ -2760,6 +2764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: fa8d8479344766144ae3616f8d333e1b, type: 2}
   dialogueCamera: {fileID: 0}
+  anim: {fileID: 0}
+  doTalkingAnimation: 0
   primaryDialogue:
   - YarnNode: SkipThree
     oneShot: 1
@@ -2931,6 +2937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: fa8d8479344766144ae3616f8d333e1b, type: 2}
   dialogueCamera: {fileID: 0}
+  anim: {fileID: 0}
+  doTalkingAnimation: 0
   primaryDialogue:
   - YarnNode: SkipCafe
     oneShot: 1
@@ -3310,8 +3318,11 @@ GameObject:
   - component: {fileID: 8457542214147225220}
   - component: {fileID: 8457542214147225219}
   - component: {fileID: 8457542214147225218}
-  - component: {fileID: 8457542214147225217}
   - component: {fileID: 8457542214147225216}
+  - component: {fileID: 921707241}
+  - component: {fileID: 921707242}
+  - component: {fileID: 921707243}
+  - component: {fileID: 921707244}
   m_Layer: 0
   m_Name: DEV_SkipBakery
   m_TagString: Untagged
@@ -3425,33 +3436,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 8457542214147225217}
   - {fileID: 8457542214147225216}
+  - {fileID: 921707241}
+  - {fileID: 921707243}
+  - {fileID: 921707242}
+  - {fileID: 921707244}
   oneShot: 1
   conditions: []
   interactionState: 0
   interactionRange: 2
   outline: {fileID: 8457542214147225219}
---- !u!114 &8457542214147225217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8457542214147225231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCDefinition: {fileID: 11400000, guid: fa8d8479344766144ae3616f8d333e1b, type: 2}
-  dialogueCamera: {fileID: 0}
-  primaryDialogue:
-  - YarnNode: SkipBakery
-    oneShot: 1
-    triggered: 0
-    conditions: []
-  secondaryDialogue: []
 --- !u!114 &8457542214147225216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,6 +3461,66 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 8457542214147225231}
   toggleType: 0
+--- !u!114 &921707241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457542214147225231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5faec1d930a3f4db30ebe63f87e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableName: $holding
+  variableValue: nothing
+  VariableType: 0
+--- !u!114 &921707242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457542214147225231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5faec1d930a3f4db30ebe63f87e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableName: $packageAssigned
+  variableValue: false
+  VariableType: 1
+--- !u!114 &921707243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457542214147225231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5faec1d930a3f4db30ebe63f87e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableName: $bakeryPackageDelivered
+  variableValue: true
+  VariableType: 1
+--- !u!114 &921707244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457542214147225231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5faec1d930a3f4db30ebe63f87e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableName: $playedPOIntro
+  variableValue: true
+  VariableType: 1
 --- !u!1 &8457542214203147732
 GameObject:
   m_ObjectHideFlags: 0
