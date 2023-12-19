@@ -5,10 +5,16 @@ using Sirenix.OdinInspector;
 using Yarn.Unity;
 using System.Linq;
 using UnityEditor;
-using Unity.VisualScripting;
+using System;
 
+/// <summary>
+/// This is a deprecated component that only sets one variable. Use REC_SetYarnVariables
+/// </summary>
+[Obsolete("This is a deprecated component that only sets one variable. Use REC_SetYarnVariables")]
 public class REC_SetYarnVariable : Receiver
 {
+
+
     [ValueDropdown("GetYarnVariables", AppendNextDrawer = true)]
     public string variableName;
     public string variableValue;
@@ -24,7 +30,7 @@ public class REC_SetYarnVariable : Receiver
 #if UNITY_EDITOR
     private IEnumerable GetYarnVariables()
     {
-        YarnProject project = AssetDatabase.LoadAssetAtPath("Assets/_Prefabs/Bootstrap/[UI].prefab", typeof(GameObject)).GetComponent<Yarn.Unity.DialogueRunner>().yarnProject;
+        YarnProject project = ((GameObject)AssetDatabase.LoadAssetAtPath("Assets/_Prefabs/Bootstrap/[UI].prefab", typeof(GameObject))).GetComponent<DialogueRunner>().yarnProject;
         List<string> variables = project.InitialValues.Keys.ToList<string>();
         for (int i = 0; i < variables.Count; i++) { 
             yield return variables[i];

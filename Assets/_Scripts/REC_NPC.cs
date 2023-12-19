@@ -12,14 +12,16 @@ public class REC_NPC : Receiver
 {
     public NPCDefinition NPCDefinition;
     public CinemachineVirtualCamera dialogueCamera;
-    public Animator anim;
     public bool doTalkingAnimation = false;
+    [ShowIf("doTalkingAnimation")]
+    public Animator anim;
 
     public List<NPC_DialogueNode> primaryDialogue;
     public List<NPC_DialogueNode> secondaryDialogue;
 
     [System.Serializable]
     public class NPC_DialogueNode {
+        [ValueDropdown("GetYarnNodes", AppendNextDrawer = true)]
         public string YarnNode = "";
         [HorizontalGroup("os")]
         public bool oneShot = true;
@@ -37,7 +39,18 @@ public class REC_NPC : Receiver
             return true;
         }
 
-        
+#if UNITY_EDITOR
+        private IEnumerable GetYarnNodes()
+        {
+            YarnProject project = ((GameObject)AssetDatabase.LoadAssetAtPath("Assets/_Prefabs/Bootstrap/[UI].prefab", typeof(GameObject))).GetComponent<Yarn.Unity.DialogueRunner>().yarnProject;
+            List<string> nodes = project.NodeNames.ToList<string>();
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                yield return nodes[i];
+            }
+
+        }
+#endif
 
         [System.Serializable]
         public class NPC_DialogueCondition {
@@ -116,6 +129,8 @@ public class REC_NPC : Receiver
                     yield return variables[i];
                 }
             }
+
+            
 #endif
         }
     }

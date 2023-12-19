@@ -14,11 +14,11 @@ public class Subarea : MonoBehaviour
 
     private void Awake()
     {
-        subareaCamera.gameObject.SetActive(false);
+        if(subareaCamera)subareaCamera.gameObject.SetActive(false);
     }
 
     public void OnEnterSubarea() {
-        if (useCamera)
+        if (useCamera && subareaCamera)
         {
             subareaCamera.gameObject.SetActive(true);
         }
@@ -26,6 +26,6 @@ public class Subarea : MonoBehaviour
 
     public void OnExitSubarea()
     {
-        subareaCamera.gameObject.SetActive(false);
+        if (subareaCamera && useCamera) subareaCamera.gameObject.SetActive(false);
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class REC_Teleport : Receiver
 {
     public bool inside = true;
+    public bool instant = false;
     public Transform spawnPoint;
     public float xRot;
     public float yRot = 10f;
@@ -18,7 +19,13 @@ public class REC_Teleport : Receiver
     public override void Activate()
     {
         base.Activate();
-        GameManager.instance.StartTeleport(this);
+        if (instant)
+        {
+            Teleport();
+        }
+        else { 
+            GameManager.instance.StartTeleport(this);
+        }
     }
 
     public void Teleport() {
