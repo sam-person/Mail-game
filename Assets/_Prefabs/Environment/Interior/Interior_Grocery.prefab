@@ -613,6 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inside: 0
+  instant: 0
   spawnPoint: {fileID: 0}
   xRot: 90
   yRot: 10
@@ -1211,7 +1212,7 @@ GameObject:
   - component: {fileID: 6892121251083801543}
   - component: {fileID: 6892121251083801540}
   - component: {fileID: 6892121251083801541}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3023,6 +3024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: 0694fd1a174ee8e4a9c986bc9f39b0ed, type: 2}
   dialogueCamera: {fileID: 473251859451499902}
+  doTalkingAnimation: 0
+  anim: {fileID: 0}
   primaryDialogue:
   - YarnNode: GroceryPuddleWarning
     oneShot: 1

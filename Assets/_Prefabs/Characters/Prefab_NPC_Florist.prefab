@@ -68,15 +68,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3241642611685662917}
-  m_LocalRotation: {x: 0.0896001, y: 0.72095287, z: -0.09491521, w: 0.68058056}
-  m_LocalPosition: {x: -2.46, y: 0.52, z: 0.3}
+  m_LocalRotation: {x: 0.106433176, y: 0.5705387, z: -0.07488551, w: 0.8108944}
+  m_LocalPosition: {x: -1.718, y: 0.713, z: -0.571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3241642611114349154}
   m_Father: {fileID: 3241642612649075023}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15, y: 93.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.955, y: 70.26, z: 0}
 --- !u!114 &3241642611685662923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   oneShot: 0
   conditions: []
   interactionState: 0
-  interactionRange: 2
+  interactionRange: 3
   outline: {fileID: 3241642612649075025}
 --- !u!114 &3241642612649075027
 MonoBehaviour:
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCDefinition: {fileID: 11400000, guid: cffee60a252d162499b72c4ec82e30c4, type: 2}
   dialogueCamera: {fileID: 3241642611685662923}
-  anim: {fileID: 0}
   doTalkingAnimation: 1
+  anim: {fileID: 0}
   primaryDialogue:
   - YarnNode: FloristWaitingForPackage
     oneShot: 0
