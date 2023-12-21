@@ -7,6 +7,7 @@ using Cinemachine;
 using UnityEditor;
 using Yarn.Unity;
 using System.Linq;
+using System;
 
 public class REC_NPC : Receiver
 {
@@ -101,7 +102,7 @@ public class REC_NPC : Receiver
                         }
                         break;
                     case VariableType.Int:
-                        int intResult = GameManager.instance.GetYarnVariable<int>(variable);
+                        Single intResult = GameManager.instance.GetYarnVariable<Single>(variable);
                         Debug.Log("Got yarn int variable " + variable + " as " + intResult.ToString());
                         switch (intComparison)
                         {

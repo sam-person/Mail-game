@@ -19,14 +19,16 @@ public class FadeController : MonoBehaviour
 
     private void Start()
     {
-        
+        Image blackoutImage = blackOutSquare.GetComponent<Image>();
+        blackoutImage.color = new Color(blackoutImage.color.r, blackoutImage.color.g, blackoutImage.color.b, 1);
+        Fade(false, 1f);
     }
 
-    public void Fade(bool fadeToBlack = true, int fadeSpeed = 5) {
+    public void Fade(bool fadeToBlack = true, float fadeSpeed = 5) {
         StartCoroutine(FadeBlackOutSquare(fadeToBlack, fadeSpeed));
     }
 
-    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 5)
+    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, float fadeSpeed = 5)
     {
 
         Color objectColor = blackOutSquare.GetComponent<Image>().color;

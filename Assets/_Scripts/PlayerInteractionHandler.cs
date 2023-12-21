@@ -61,7 +61,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
-        StartInteractionCooldown(); //make sure this logic starts if nothing else starts it, might not be needed
+        StartInteractionCooldown(2f); //make sure this logic starts if nothing else starts it, might not be needed
         _input = GetComponent<StarterAssetsInputs>();
 
     }

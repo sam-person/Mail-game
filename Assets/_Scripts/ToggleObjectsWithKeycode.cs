@@ -8,7 +8,6 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
     public List<GameObject> objectsToToggle;
     public KeyCode toggleKey = KeyCode.F;
 
-#if UNITY_EDITOR
     void Update()
     {
         if (Input.GetKeyDown(toggleKey))
@@ -23,5 +22,5 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
             }
         }
     }
-#endif
+
 }

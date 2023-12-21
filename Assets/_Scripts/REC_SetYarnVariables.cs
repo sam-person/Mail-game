@@ -4,9 +4,11 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using Yarn.Unity;
 using System.Linq;
-using UnityEditor;
 using System;
+#if UNITY_EDITOR
+using UnityEditor;
 using Sirenix.Utilities;
+#endif
 
 public class REC_SetYarnVariables : Receiver
 {

@@ -44,3 +44,16 @@ title: ForgotToDeliverBakery
 ---
 Catto: The Chef is still waiting for their delivery
 ===
+
+title: NumberVariableTest
+---
+<<declare $numTest = 0>>
+Catto: I can count!
+<<set $numTest = $numTest + 1>>
+Catto: I have counted {$numTest} times!
+===
+
+title: NumberVariableTest2
+---
+Catto: I can't count higher than {$numTest} :(
+===
