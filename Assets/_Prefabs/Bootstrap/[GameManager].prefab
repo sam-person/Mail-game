@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 2722877050892873285}
+  cameraDistance: 0
   sensitivity: 4
   maxCameraDistance: 10
 --- !u!114 &19309683994359919
@@ -230,7 +231,9 @@ MonoBehaviour:
   previousState: 0
   cameraTarget: {fileID: 0}
   currentSubarea: {fileID: 0}
+  currentNPC: {fileID: 0}
   interactables: []
+  pendingTeleport: {fileID: 0}
 --- !u!1 &2722877050892873659
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +453,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -630,7 +633,9 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: MosaicEffectPPSPPSSettings, Unity.Postprocessing.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &2093599595
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ title: PostOfficeIntro
 <<declare $groceryPackageDelivered = false>>
 <<declare $packageAssigned = false>>
 <<set $holding = "nothing">>
+<<set $hasNotMetAssistant = false>>
 Assistant Cat: Good morning Catto! I hope you slept well
 Assistant Cat: Here’s some news for today
 Assistant Cat: It’s a beautiful sunny day out there, perfect for delivering some mail! 
@@ -29,7 +30,7 @@ Assistant Cat: I have a few packages I still need to process, I have this one re
 <<declare $bakeryPackageDelivered = false>>
 <<set $bakeryPackageDelivered = false>>
 Assistant Cat: I hope you’ve stretched because you’re going to need to take this one up the hill to the bakery
--> Catto: Thanks <insert name>, I’ll pick up that package and take it to the bakery now
+-> Catto: Thanks Assistant Cat, I’ll pick up that package and take it to the bakery now
 <<set $packageAssigned = true>>
 <<setQuest "Pick up the package">>
 ===
@@ -37,12 +38,14 @@ Assistant Cat: I hope you’ve stretched because you’re going to need to take 
 
 title: PostOfficeStillProcessing
 ---
-Assistant Cat: Hi Catto, I’m still processing these packages. It should be ready after you’ve delivered your current package to the bakery
+Assistant Cat: Hi Catto, I’m still processing these packages
+Assistant Cat: It should be ready after you’ve delivered your current package to the bakery
 Assistant Cat: I should have these other packages ready for you soon
 <<if $holding == "BakeryPackage">>
-Assistant Cat: Could you deliver that package to the bakery?
+Assistant Cat: Could you please deliver that package to the bakery?
 <<else>>
-Assistant Cat: In the meantime, could you please deliver the package that is on my desk to the bakery?
+Assistant Cat: In the meantime...
+Assistant Cat: Could you please deliver the package that is on my desk to the bakery?
 <<endif>>
 ===
 
@@ -152,10 +155,12 @@ Assistant Cat: Which package would you like to deliver next?
 title: DeliverCafeDrink
 ---
 <<if $hasCorrectDrink>>
-Assistant Cat: You got the drink I wanted! You’re best, thanks Catto
+Assistant Cat: You got the drink I wanted!
+Assistant Cat: You’re best, thanks Catto
 <<else>>
 Assistant Cat: Oh you got me a drink from the Cafe!
-Assistant Cat: I see you decided to surprise me. This isn’t exactly what I was after, but thank you!
+Assistant Cat: I see you decided to surprise me
+Assistant Cat: This isn’t exactly what I was after, but thank you!
 <<endif>>
 <<set $cafeDrinkDelivered = true>>
 <<jump PostOffice3Packages>>

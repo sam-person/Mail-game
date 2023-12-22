@@ -1,12 +1,18 @@
 ﻿title: WakingUp
 ---
-Catto: It’s always hard to leave a cozy bed in the morning. 
-Catto: But it’s easier to get out of bed when you have something to look forward to. 
-Catto: And today, there’s a good reason. It’s March 3rd
+Catto: It’s always hard to leave a cozy bed in the morning
+Catto: But it’s easier to get out of bed when you have something to look forward to
+Catto: And today, there’s a good reason
+Catto: It’s March 3rd
 Catto: It’s my birthday! 
-Catto: I still have to go to work but I don’t mind, I like getting to meet different cats
-Catto: Anyway, I should probably get to work now
+Catto: I still have to go to work but I don’t mind
+Catto: I like getting to meet the other cats
+Catto: Anyway...
+Catto: I should probably get to work now
+<<declare $hasNotMetAssistant = false>>
+<<set $hasNotMetAssistant = true>> ///only set to false if we do tutorial
 <<Trigger TutorialPanels>>
+<<Trigger BedroomDoor>>
 <<set $holding = "nothing">>
 ===
 
@@ -14,12 +20,12 @@ title: PickUpScissors
 ---
 <<declare $haveScissors = false>>
 <<if $scissorsQuest == true>>
-Catto: these must be the scissors
-Catto: i'll take them back to the florist
+Catto: These must be the scissors
+Catto: I'll take them back to the florist
 <<setQuest "Return to the Florist">>
 <<set $haveScissors = true>>
 <<else>>
-Catto: hmm I wonder what this is...
+Catto: Hmm I wonder what this is...
 <<endif>>
 ===
 
@@ -32,7 +38,12 @@ Catto: Weird...
 
 title: ForgotPackage
 ---
-Catto: Oh.. I almost forgot take the package on the desk
+Catto: Oh.. I almost forgot to take the package on the desk
+===
+
+title: HasNotMetAssistant
+---
+Catto: I need to talk with Assistant Cat before I can leave
 ===
 
 title: BreadBurning
