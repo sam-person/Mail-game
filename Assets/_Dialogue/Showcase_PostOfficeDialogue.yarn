@@ -29,8 +29,10 @@ Assistant Cat: I have a few packages I still need to process, I have this one re
 <<Trigger PackageBakery>>
 <<declare $bakeryPackageDelivered = false>>
 <<set $bakeryPackageDelivered = false>>
-Assistant Cat: I hope you’ve stretched because you’re going to need to take this one up the hill to the bakery
--> Catto: Thanks Assistant Cat, I’ll pick up that package and take it to the bakery now
+Assistant Cat: I hope you’ve stretched
+Assistant Cat: You’re going to need to take this one up the hill to the bakery
+-> Catto: Thanks Assistant Cat
+-> Catto: I'm ready to go!
 <<set $packageAssigned = true>>
 <<setQuest "Pick up the package">>
 ===
