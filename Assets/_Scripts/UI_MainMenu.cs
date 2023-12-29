@@ -27,11 +27,23 @@ public class UI_MainMenu : MonoBehaviour
         }
 
         if (fading && _timer > 0) {
-            _timer -= Time.deltaTime;
-            fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, Mathf.InverseLerp(fadeoutTime, 0f, _timer));
-            if (_timer <= 0f) {
-                SceneManager.LoadScene(sceneToLoad);
-            }
+            MainMenu_Play();
         }
+    }
+
+    public void MainMenu_Play()
+    {
+        _timer -= Time.deltaTime;
+        fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, Mathf.InverseLerp(fadeoutTime, 0f, _timer));
+        if (_timer <= 0f)
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+    }
+
+    public void MainMenu_Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quiting game");
     }
 }
