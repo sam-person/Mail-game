@@ -26,7 +26,7 @@ public class InterfaceManager : MonoBehaviour
     public GameObject debugObject;
 
     [BoxGroup("Dialogue")]
-    public TextMeshProUGUI dialogueCharacterName, dialogueText;
+    public TextMeshProUGUI dialogueCharacterName, dialogueText, dialogueNextText;
     [BoxGroup("Dialogue")]
     public Image dialogueBackgroundImage, dialogueOutlineImage, dialogueLeftWhiskers, dialogueRightWhiskers;
     [BoxGroup("Dialogue/Options")]
@@ -69,7 +69,8 @@ public class InterfaceManager : MonoBehaviour
         if (PlayerInteractionHandler.instance.closestInteractable != null && GameManager.instance.gameState == GameManager.GameState.Gameplay)
         {
             interactIcon.gameObject.SetActive(true);
-            interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(PlayerInteractionHandler.instance.closestInteractable.transform.position) * (1f/UIcanvas.scaleFactor);
+            Vector3 iconPos = PlayerInteractionHandler.instance.closestInteractable.interactionPivotOverride == null ? PlayerInteractionHandler.instance.closestInteractable.transform.position : PlayerInteractionHandler.instance.closestInteractable.interactionPivotOverride.position;
+            interactIcon.anchoredPosition = Camera.main.WorldToScreenPoint(iconPos) * (1f/UIcanvas.scaleFactor);
 
             switch (PlayerInteractionHandler.instance.closestInteractable.interactionState)
             {
@@ -115,6 +116,10 @@ public class InterfaceManager : MonoBehaviour
         if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
     }
 
+    public void OnDialogueLine() {
+        GameManager.instance.currentNPC.OnDialogueLine();
+    }
+
     CinemachineVirtualCamera dialogueCamera;
 
     /// <summary>
@@ -125,9 +130,10 @@ public class InterfaceManager : MonoBehaviour
         if (npc != null) {
             //main line
             dialogueText.font = npc.font;
-            dialogueCharacterName.font = npc.font;
+            //dialogueCharacterName.font = npc.font;
             dialogueText.color = npc.fontColour;
             dialogueCharacterName.color = npc.fontColour;
+            dialogueNextText.color = npc.backgroundColor;
 
             dialogueBackgroundImage.color = npc.backgroundColor;
             dialogueOutlineImage.color = npc.outlineColor;

@@ -48,11 +48,14 @@ public class GameManager : MonoBehaviour
 
     InMemoryVariableStorage yarnVariables;
 
+    AudioClip _startAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         yarnVariables = InterfaceManager.instance.GetComponent<InMemoryVariableStorage>();
         SetGameState(GameState.Gameplay);
+        _startAudio = bgmAudio.clip;
     }
 
     // Update is called once per frame
@@ -216,8 +219,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnMidFade() {
-        if (pendingTeleport != null) { 
-            PlayerInteractionHandler.instance.Teleport(pendingTeleport);
+        if (pendingTeleport != null) {
+            pendingTeleport.Teleport();
             pendingTeleport = null;
         }
     }
@@ -231,5 +234,25 @@ public class GameManager : MonoBehaviour
 
     public delegate void OnGameStateChange();
     public OnGameStateChange _onGameStateChange;
+
+    /// <summary>
+    /// Change the bgm audio to a certain clip
+    /// </summary>
+    /// <param name="audio"></param>
+    public void SwitchBGMAudio(AudioClip audio) {
+        bgmAudio.clip = audio;
+        bgmAudio.Stop();
+        bgmAudio.Play();
+    }
+
+    /// <summary>
+    /// Change back to the base audio (what ever was in the audioplayer at the start)
+    /// </summary>
+    public void SwitchBGMAudioToBase()
+    {
+        bgmAudio.clip = _startAudio;
+        bgmAudio.Stop();
+        bgmAudio.Play();
+    }
 
 }

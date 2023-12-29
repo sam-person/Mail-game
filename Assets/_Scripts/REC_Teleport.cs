@@ -16,6 +16,13 @@ public class REC_Teleport : Receiver
     [HideIf("teleType", TeleportType.None)]
     public Subarea subarea;
 
+    [BoxGroup("Audio")]
+    public bool changeAudio = false;
+    [BoxGroup("Audio"), InfoBox("Changes the audio back to the base background music (whatever was in the BGM audio at the start of the scene)", "changeAudioToBase"), ShowIf("changeAudio"), LabelWidth(200f)]
+    public bool changeAudioToBase = true;
+    [BoxGroup("Audio"), ShowIf("changeAudio"), HideIf("changeAudioToBase")]
+    public AudioClip clipToChangeTo;
+
     public override void Activate()
     {
         base.Activate();
@@ -42,6 +49,15 @@ public class REC_Teleport : Receiver
                 break;
             case TeleportType.None:
                 break;
+        }
+        if (changeAudio) {
+            if (changeAudioToBase)
+            {
+                GameManager.instance.SwitchBGMAudioToBase();
+            }
+            else {
+                GameManager.instance.SwitchBGMAudio(clipToChangeTo);
+            }
         }
     }
 

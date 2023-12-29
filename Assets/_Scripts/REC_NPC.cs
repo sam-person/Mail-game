@@ -162,10 +162,14 @@ public class REC_NPC : Receiver
     }
 
     void StartDialogueNode(NPC_DialogueNode node) {
+        GameManager.instance.currentNPC = this;
         node.triggered = true;
         InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
-        if (doTalkingAnimation && anim != null) anim.SetBool("Talking", true);
-        GameManager.instance.currentNPC = this;
+        
+    }
+
+    public void OnDialogueLine() {
+        if (doTalkingAnimation && anim != null) anim.SetTrigger("Talk");
     }
 
     private void Awake()
@@ -174,8 +178,8 @@ public class REC_NPC : Receiver
     }
 
     public void OnDialogueEnd() {
-        if (doTalkingAnimation && anim != null) {
-            anim.SetBool("Talking", false);
-        }
+        //if (doTalkingAnimation && anim != null) {
+        //    anim.SetBool("Talking", false);
+        //}
     }
 }

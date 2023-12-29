@@ -1882,6 +1882,7 @@ MonoBehaviour:
   debugObject: {fileID: 3173141737117735582}
   dialogueCharacterName: {fileID: 1611564814383546925}
   dialogueText: {fileID: 1611564814730702569}
+  dialogueNextText: {fileID: 1611564815685294429}
   dialogueBackgroundImage: {fileID: 1611564815416927424}
   dialogueOutlineImage: {fileID: 1611564815509592679}
   dialogueLeftWhiskers: {fileID: 1611564814512916211}
@@ -1923,7 +1924,19 @@ MonoBehaviour:
   verboseLogging: 1
   onNodeStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1611564814894616540}
+        m_TargetAssemblyTypeName: InterfaceManager, Assembly-CSharp
+        m_MethodName: OnDialogueLine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onNodeComplete:
     m_PersistentCalls:
       m_Calls: []

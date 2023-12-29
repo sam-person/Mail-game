@@ -12,6 +12,8 @@ public class TRI_Interactable : Trigger
 
     public float interactionRange = 2f;
 
+    public Transform interactionPivotOverride;
+
     private void Reset()
     {
         outline = GetComponent<Outline>();
