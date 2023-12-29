@@ -41,10 +41,9 @@ Assistant Cat: You’re going to need to take this one up the hill to the bakery
 title: PostOfficeStillProcessing
 ---
 Assistant Cat: Hi Catto, I’m still processing these packages
-Assistant Cat: It should be ready after you’ve delivered your current package to the bakery
 Assistant Cat: I should have these other packages ready for you soon
 <<if $holding == "BakeryPackage">>
-Assistant Cat: Could you please deliver that package to the bakery?
+Assistant Cat: Could you please deliver your current package to the bakery?
 <<else>>
 Assistant Cat: In the meantime...
 Assistant Cat: Could you please deliver the package that is on my desk to the bakery?
