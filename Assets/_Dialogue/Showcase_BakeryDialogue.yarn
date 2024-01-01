@@ -6,12 +6,13 @@ Chef Meow: It’s like getting a present ...Even though I ordered it
 Chef Meow: But I always forget what I’ve ordered so I’m still opening a box with a surprise in it
 <<Trigger Oven>>
 <<Trigger OvenCamera>>
-Chef Meow: OH NO! The oven door!
-Chef Meow: Catto, can I rely on you to save the bread?
+Chef Meow: OH NO!
+Chef Meow: The bread is starting to burn!
 <<Trigger OvenCamera>>
+Chef Meow: Catto, can I rely on you to save the bread?
 Chef Meow: I could have got to the bread in time if I just stopped talking but now only you can save it
 Chef Meow: There’s no way I would get to it in time, not with these knees of mine
-Chef Meow: Quick Catto! Use your little legs to get to the oven and close the door
+Chef Meow: Quick Catto! Use your little legs to get to the oven and take the bread out
 <<set $isbreadBurning = true>>
 <<declare $savedBread = false>>
 <<setQuest "Close the oven door!">>
@@ -19,7 +20,7 @@ Chef Meow: Quick Catto! Use your little legs to get to the oven and close the do
 
 title: GoSaveBread
 ---
-Chef Meow: Quick Catto! Use your little legs to get to the oven and close the door
+Chef Meow: Quick Catto! Use your little legs to get to the oven and take the bread out
 ===
 
 title: BreadSaved

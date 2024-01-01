@@ -1181,6 +1181,7 @@ MonoBehaviour:
   conditions: []
   interactionState: 0
   interactionRange: 2.5
+  interactionPivotOverride: {fileID: 0}
   outline: {fileID: 4321443508852762560}
 --- !u!114 &4321443508852762563
 MonoBehaviour:
@@ -1201,6 +1202,9 @@ MonoBehaviour:
   yRot: 10
   teleType: 0
   subarea: {fileID: 0}
+  changeAudio: 1
+  changeAudioToBase: 0
+  clipToChangeTo: {fileID: 8300000, guid: 7b5b263bf6b254b44a8cf0a37d30937e, type: 3}
 --- !u!65 &5976381356025937224
 BoxCollider:
   m_ObjectHideFlags: 0

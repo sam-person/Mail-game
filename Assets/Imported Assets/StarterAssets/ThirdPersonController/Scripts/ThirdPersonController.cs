@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
@@ -119,6 +120,9 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        private float jumpAnimTime = .01f;
+        private bool jumpPressed = false;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -167,13 +171,26 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            // Debug.Log(_input.jump.ToString());
-            //Debug.Log(Input.GetKey(KeyCode.Space).ToString());
-            _animator.SetBool("Jump", _input.jump);
-            //Debug.Log("Jump equals " + _input.jump);
+
+            if(_input.jump && !jumpPressed && !(_speed > .1))
+            {
+                StartCoroutine(PlayJumpAnimation());
+            }
+            else if (_input.jump == false)
+            {
+                jumpPressed = false;
+            }
         }
 
-        private void LateUpdate()
+        IEnumerator PlayJumpAnimation()
+        {
+            jumpPressed = true;
+            _animator.SetBool("Jump", true);
+            yield return new WaitForSeconds(jumpAnimTime);
+            _animator.SetBool("Jump", false);
+        }
+
+            private void LateUpdate()
         {
             if(GameManager.instance.gameState == GameManager.GameState.Gameplay) CameraRotation();
         }
@@ -332,7 +349,7 @@ namespace StarterAssets
                     // update animator if using character
                     if (_hasAnimator)
                     {
-                        _animator.SetBool(_animIDJump, true);
+                       // _animator.SetBool(_animIDJump, true);
                     }
                 }
 
@@ -362,7 +379,7 @@ namespace StarterAssets
                 }
 
                 // if we are not grounded, do not jump
-               // _input.jumpy = false;
+                //_input.jump = false;
             }
 
             // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
