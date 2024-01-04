@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoccerGoal : MonoBehaviour
 {
     public GameObject particlesGO;
+    public float particleLifeTime = 3f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +18,7 @@ public class SoccerGoal : MonoBehaviour
     IEnumerator Goal()
     {
         particlesGO.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(particleLifeTime);
         particlesGO.SetActive(false);
     }
 }

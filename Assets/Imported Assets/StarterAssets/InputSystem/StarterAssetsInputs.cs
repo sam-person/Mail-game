@@ -79,7 +79,7 @@ namespace StarterAssets
         public void InteractInput(bool newInteractState)
         {
             interact = newInteractState;
-            //Debug.Log("sprint input pressed" + sprint);
+            Debug.Log("Interact button pressed in SAI and value is " + newInteractState);
         }
 
         private void OnApplicationFocus(bool hasFocus)

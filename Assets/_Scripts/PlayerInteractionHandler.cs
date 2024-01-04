@@ -12,7 +12,6 @@ using System.Linq;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
-
     public static PlayerInteractionHandler instance;
 
     public ParticleSystem meowParticle;
@@ -35,6 +34,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public float interactionCooldown = 2f;
     float _interactionCooldown;
+    private bool interactionButtonPressed = false;
 
 
     public Animator animator;
@@ -212,11 +212,15 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void Update()
     {
-        //if (Keyboard.current.eKey.wasPressedThisFrame)
-        if(_input.interact)
+        if(_input.interact && !interactionButtonPressed)
         {
+            Debug.Log("interact button pressed on PIH script");
             CattoInteractor();
-            _input.interact = false;
+            interactionButtonPressed = true;
+        }
+        else if (!_input.interact)
+        {
+            interactionButtonPressed = false;
         }
 
         if (Input.GetMouseButtonDown(0))

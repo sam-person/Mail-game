@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
 
 public class PushObject : MonoBehaviour
 {
@@ -11,71 +12,53 @@ public class PushObject : MonoBehaviour
 
     private GameObject player;
 
-    [Tooltip("Gets Rigidbody component.")] private Rigidbody rb;
-    [SerializeField] private float physicsDuration = 5f;
-    [SerializeField] private float physicsDurationCountdown;
+    private Rigidbody rb;
+    [SerializeField] private float physicsDurationCountdown = 5f;
     private Coroutine physicsCoroutine;
-    private LayerMask characterLayer;
-    [SerializeField] private float playerDistanceCheck;
-    private PlayerInteractionHandler playerScript;
+    public PlayerInteractionHandler playerScript;
+    private bool interactionButtonPressed = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        physicsDurationCountdown = physicsDuration;
-        characterLayer = LayerMask.GetMask("Character");
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerInteractionHandler>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(pushButton) && playerInRange)
+        if (playerScript._input.interact && playerInRange && !interactionButtonPressed)
         {
-            //DistanceCheck();
+            Debug.Log("interact button pressed in PO");
             Push();
+            interactionButtonPressed = true;
+        }
+        else if (!playerScript._input.interact)
+        {
+            interactionButtonPressed = false;
         }
     }
 
-    //private void DistanceCheck()
-    //{
-    //    // Get the direction from this object to the player
-    //    Vector3 directionToPlayer = player.transform.position - transform.position;
-    //    // Cast a line from this object's position to the player's position
-    //    Ray ray = new Ray(transform.position, directionToPlayer);
-
-    //    // Perform the linecast
-    //    if (Physics.Raycast(ray, out RaycastHit hit, playerDistanceCheck))
-    //    {
-    //        if (physicsCoroutine != null)
-    //        {
-    //            StopCoroutine(physicsCoroutine);
-    //            physicsCoroutine = null;
-    //        }
-    //        Push();
-    //        Debug.Log("Hit object");
-    //    }
-    //}
 
     private void Push()
     {
         rb.isKinematic = false;
-        if (physicsCoroutine != null)
-        {
-            StopCoroutine(physicsCoroutine);
-            physicsCoroutine = null;
-        }
+        //if (physicsCoroutine != null)
+        //{
+        //    StopCoroutine(physicsCoroutine);
+        //    physicsCoroutine = null;
+        //}
         Vector3 pushDirection = transform.position - player.transform.position;
         rb.AddForce(pushDirection.normalized * pushForce, ForceMode.Impulse);
         playerScript.PlayInteractionAnim();
 
-        physicsCoroutine ??= StartCoroutine(DisablePhysics());
+       // physicsCoroutine ??= StartCoroutine(DisablePhysics());
     }
 
     private IEnumerator DisablePhysics()
     {
         yield return new WaitForSeconds(physicsDurationCountdown);
-        rb.isKinematic = true;
+       // rb.isKinematic = true;
         physicsCoroutine = null;
     }
 
@@ -84,7 +67,9 @@ public class PushObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("within range of can");
             player = other.gameObject;
+            playerScript = player.GetComponent<PlayerInteractionHandler>();
             playerInRange = true;
         }
     }
