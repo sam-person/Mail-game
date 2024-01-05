@@ -29,7 +29,7 @@ public class PushObject : MonoBehaviour
     {
         if (playerScript._input.interact && playerInRange && !interactionButtonPressed)
         {
-            Debug.Log("interact button pressed in PO");
+            //Debug.Log("interact button pressed in PO");
             Push();
             interactionButtonPressed = true;
         }

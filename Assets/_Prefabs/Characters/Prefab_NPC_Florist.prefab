@@ -242,15 +242,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3241642611685662917}
-  m_LocalRotation: {x: 0.106433176, y: 0.5705387, z: -0.07488551, w: 0.8108944}
-  m_LocalPosition: {x: -1.718, y: 0.713, z: -0.571}
+  m_LocalRotation: {x: 0.05284439, y: 0.5742298, z: -0.037180867, w: 0.81614053}
+  m_LocalPosition: {x: -1.811, y: 0.67, z: -0.658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3241642611114349154}
   m_Father: {fileID: 3241642612649075023}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 14.955, y: 70.26, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.409, y: 70.26, z: 0}
 --- !u!114 &3241642611685662923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,9 +272,9 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 50
     OrthographicSize: 5
-    NearClipPlane: 0.1
+    NearClipPlane: 0.55
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -301,9 +301,6 @@ GameObject:
   - component: {fileID: 3241642612649075020}
   - component: {fileID: 3241642612649075021}
   - component: {fileID: 3241642612649075022}
-  - component: {fileID: 3241642612649075026}
-  - component: {fileID: 3241642612649075027}
-  - component: {fileID: 3241642612649075025}
   m_Layer: 0
   m_Name: Prefab_NPC_Florist
   m_TagString: Untagged
@@ -388,117 +385,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 3241642612649075016}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3241642612649075026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3241642612649075016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea8e62f6833637541a877b3f3cd0a8b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Receivers:
-  - {fileID: 3241642612649075027}
-  oneShot: 0
-  conditions: []
-  interactionState: 0
-  interactionRange: 3
-  interactionPivotOverride: {fileID: 0}
-  outline: {fileID: 3241642612649075025}
---- !u!114 &3241642612649075027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3241642612649075016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCDefinition: {fileID: 11400000, guid: cffee60a252d162499b72c4ec82e30c4, type: 2}
-  dialogueCamera: {fileID: 3241642611685662923}
-  doTalkingAnimation: 1
-  anim: {fileID: 0}
-  primaryDialogue:
-  - YarnNode: FloristWaitingForPackage
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: FloristPackage
-    - variable: $floristPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: Florist_Scissors
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: FloristPackage
-  - YarnNode: FloristGotScissors
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $haveScissors
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  - YarnNode: FloristDontHaveScissors
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $haveScissors
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  secondaryDialogue:
-  - YarnNode: FloristRandomLine1
-    oneShot: 0
-    triggered: 0
-    conditions: []
-  - YarnNode: FloristRandomLine2
-    oneShot: 0
-    triggered: 0
-    conditions: []
---- !u!114 &3241642612649075025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3241642612649075016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: 0
-  eraseRenderer: 0
 --- !u!1 &4014231743127673466
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &778195359011580036
 Transform:
   m_ObjectHideFlags: 0
@@ -595,12 +486,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.113
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -608,19 +511,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.5761012
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.8173784
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -628,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 250.354
       objectReference: {fileID: 0}
     - target: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -638,8 +541,123 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_FloristCat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8055653594401544798, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+    - {fileID: 1988904298312031722, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+    - {fileID: 7977892719252375822, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+    - {fileID: 6902705809612092426, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+--- !u!1 &8245119528615984940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2978463419301691862, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}
+  m_PrefabInstance: {fileID: 6573333740929662714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &279032363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245119528615984940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDefinition: {fileID: 11400000, guid: cffee60a252d162499b72c4ec82e30c4, type: 2}
+  dialogueCamera: {fileID: 3241642611685662923}
+  doTalkingAnimation: 1
+  anim: {fileID: 0}
+  primaryDialogue:
+  - YarnNode: FloristWaitingForPackage
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $holding
+      type: 0
+      stringComparison: 1
+      intComparison: 0
+      boolComparison: 0
+      value: FloristPackage
+    - variable: $floristPackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+  - YarnNode: Florist_Scissors
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $holding
+      type: 0
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: FloristPackage
+  - YarnNode: FloristGotScissors
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $haveScissors
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: 
+  - YarnNode: FloristDontHaveScissors
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $haveScissors
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+  secondaryDialogue:
+  - YarnNode: FloristRandomLine1
+    oneShot: 0
+    triggered: 0
+    conditions: []
+  - YarnNode: FloristRandomLine2
+    oneShot: 0
+    triggered: 0
+    conditions: []
+--- !u!114 &279032364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245119528615984940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8e62f6833637541a877b3f3cd0a8b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Receivers:
+  - {fileID: 279032363}
+  oneShot: 0
+  conditions: []
+  interactionState: 0
+  interactionRange: 3
+  interactionPivotOverride: {fileID: 0}
+  outline: {fileID: 279032365}
+--- !u!114 &279032365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245119528615984940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
 --- !u!4 &9022925299011861679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2742396356530209365, guid: 43008dce9f3d81d49a09a786f8da23ee, type: 3}

@@ -214,7 +214,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if(_input.interact && !interactionButtonPressed)
         {
-            Debug.Log("interact button pressed on PIH script");
+            //Debug.Log("interact button pressed on PIH script");
             CattoInteractor();
             interactionButtonPressed = true;
         }
