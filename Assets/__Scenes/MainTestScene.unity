@@ -142,6 +142,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Asset: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   m_ActionId: 3007a0e5-c56c-42ee-8b1e-1fea4142c3da
+--- !u!1 &238529256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8780668499179458825, guid: 9e1777ff24518914c8b1e39822b1b4e0, type: 3}
+  m_PrefabInstance: {fileID: 9162353968938178788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &238529266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238529256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3744e4d9c5434d44695aec54057b361b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables:
+  - variableName: $holding
+    VariableType: 0
+    variableValue: BakeryPackage
 --- !u!1 &248074929
 GameObject:
   m_ObjectHideFlags: 0
@@ -10853,6 +10874,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 4118121945810097693}
+    - target: {fileID: 8840919871914877638, guid: fd268df13bf8e8a43bfc04fe1aca3dd7, type: 3}
+      propertyPath: doTalkingAnimation
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd268df13bf8e8a43bfc04fe1aca3dd7, type: 3}
 --- !u!23 &8649732435878000985 stripped
@@ -11032,6 +11057,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 749514217731711217, guid: 9e1777ff24518914c8b1e39822b1b4e0, type: 3}
+      propertyPath: Receivers.Array.data[0]
+      value: 
+      objectReference: {fileID: 238529266}
     - target: {fileID: 2556952103019788141, guid: 9e1777ff24518914c8b1e39822b1b4e0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11080,7 +11109,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactables
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 876362462623090226, guid: 9e1777ff24518914c8b1e39822b1b4e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9e1777ff24518914c8b1e39822b1b4e0, type: 3}
 --- !u!23 &9205039008749829234 stripped
 MeshRenderer:
