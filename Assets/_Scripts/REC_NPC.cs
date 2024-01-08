@@ -147,8 +147,13 @@ public class REC_NPC : Receiver
             }
         }
 
-        //go through secondary nodes //TODO: make random
-        foreach (NPC_DialogueNode node in secondaryDialogue)
+        //create a new list to shuffle into
+        List<NPC_DialogueNode> shuffledList = new List<NPC_DialogueNode>();
+        shuffledList.AddRange(secondaryDialogue);
+        shuffledList.Shuffle();
+
+        //go through secondary nodes
+        foreach (NPC_DialogueNode node in shuffledList)
         {
             if (node.GetIsValid())
             {
@@ -181,5 +186,24 @@ public class REC_NPC : Receiver
         //if (doTalkingAnimation && anim != null) {
         //    anim.SetBool("Talking", false);
         //}
+    }
+}
+
+public static class IListExtensions
+{
+    /// <summary>
+    /// Shuffles the element order of the specified list.
+    /// </summary>
+    public static void Shuffle<T>(this IList<T> ts)
+    {
+        var count = ts.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i)
+        {
+            var r = UnityEngine.Random.Range(i, count);
+            var tmp = ts[i];
+            ts[i] = ts[r];
+            ts[r] = tmp;
+        }
     }
 }
