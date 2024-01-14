@@ -326,15 +326,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5539755637440651571}
-  m_LocalRotation: {x: 0.12017391, y: 0.38695776, z: -0.050943993, w: 0.91281253}
-  m_LocalPosition: {x: -2.75, y: 0.52, z: -1.756}
+  m_LocalRotation: {x: 0.07898997, y: 0.42101005, z: -0.03683362, w: 0.90285903}
+  m_LocalPosition: {x: -1.648, y: 0.901, z: -1.381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5539755636942214036}
   m_Father: {fileID: 5539755638409830585}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15, y: 45.946, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 50, z: 0}
 --- !u!114 &5539755637440651581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,9 +356,9 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 50
     OrthographicSize: 5
-    NearClipPlane: 0.1
+    NearClipPlane: 0.8
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
@@ -494,6 +494,7 @@ MonoBehaviour:
   conditions: []
   interactionState: 0
   interactionRange: 4
+  interactionPivotOverride: {fileID: 0}
   outline: {fileID: 5539755638409830567}
 --- !u!114 &5539755638409830565
 MonoBehaviour:
