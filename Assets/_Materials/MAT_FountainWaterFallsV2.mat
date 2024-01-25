@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_FountainWaterFalls
+  m_Name: MAT_FountainWaterFallsV2
   m_Shader: {fileID: 4800000, guid: af00d14aa5181d14fb8f3436b062c626, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _FountainGradient2:
+        m_Texture: {fileID: 2800000, guid: 9e0c42b6ce2c66e4aaa64ca945213558, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Gradient:
         m_Texture: {fileID: 2800000, guid: 09db651520eff9442ae7232d7a92031d, type: 3}
         m_Scale: {x: 0.5, y: 1}
@@ -42,14 +46,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff: 0.3
+    - _Cutoff: 0.62
+    - _OutlineStrength: 0.98
+    - _StreamSolidity: 0.16
     - __dirty: 0
     m_Colors:
-    - _Speed1: {r: 0, g: 0.5, b: 0, a: 0}
+    - _Speed1: {r: 0, g: 0.8, b: 0, a: 0}
     - _Speed2: {r: 0, g: 0.4, b: 0, a: 0}
     - _Speed3: {r: 0.3, g: 0, b: 0, a: 0}
     - _Speed4: {r: 0, g: 0.1, b: 0, a: 0}
-    - _Tiling1: {r: 1, g: 0.3, b: 0, a: 0}
+    - _Tiling1: {r: 3, g: 0.6, b: 0, a: 0}
     - _Tiling2: {r: 1, g: 0.2, b: 0, a: 0}
     - _Tiling3: {r: 1, g: 0.2, b: 0, a: 0}
     - _Tiling4: {r: 0.1, g: 0.1, b: 0, a: 0}
