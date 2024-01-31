@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_FountainWater
-  m_Shader: {fileID: 4800000, guid: 05eb87df1549fcd46a5abf363a928b6e, type: 3}
+  m_Name: MAT_FountainSplash
+  m_Shader: {fileID: 4800000, guid: 1f11d7e00cd28304aacc111872b58fbc, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -40,6 +40,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GradientInverted:
+        m_Texture: {fileID: 2800000, guid: 4415a86442b2e3f4ea62da4c5181302e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,7 +52,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Noise3:
+    - _Noise1:
         m_Texture: {fileID: 2800000, guid: 5508df388763cdf408cf60d2aac88e86, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -60,11 +64,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
+    - _SmallGradient:
+        m_Texture: {fileID: 2800000, guid: 6c9b4a040eef6504eaa7a1c9f4bc175d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord2:
+    - _Splash:
+        m_Texture: {fileID: 2800000, guid: 6c9b4a040eef6504eaa7a1c9f4bc175d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -74,9 +82,12 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Float6: 1.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _MaskScale: 0.56
+    - _MaskStrength: 0.0171
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -85,17 +96,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UseVertexDisplacement: 0
-    - _VoronoiOffset: 2
-    - _VoronoiPower: 4
-    - _WaveHeight: 0.002
-    - _WaveSpeed: 0.2
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.41960788, g: 0.7297221, b: 1, a: 1}
-    - _ColorVoronoi: {r: 0.495283, g: 0.8645074, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _VoronoiSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - _VoronoiTiling: {r: 3, g: 3, b: 0, a: 0}
+    - _Speed1: {r: 0.5, g: 0.8, b: 0, a: 0}
+    - _Tiling1: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
