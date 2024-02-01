@@ -1,6 +1,6 @@
 // Made with Amplify Shader Editor v1.9.2.2
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "WindFoliage"
+Shader "Custom/WindFoliage"
 {
 	Properties
 	{
@@ -99,7 +99,7 @@ Node;AmplifyShaderEditor.RangedFloatNode;14;-131.8304,310.1248;Inherit;False;Pro
 Node;AmplifyShaderEditor.RangedFloatNode;65;-447.8878,619.4302;Inherit;False;Property;_WindJitterStrength;WindJitterStrength;18;0;Create;True;0;0;0;False;0;False;0;0.0003;0;0.05;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;63;-1630.618,572.0236;Inherit;False;Property;_NoiseJitterSize;NoiseJitterSize;14;0;Create;True;0;0;0;False;0;False;0;0.03;0.003;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FunctionNode;89;1450.167,516.0527;Inherit;False;Wind;1;;7;360f3fb2567afa24a86771d20d9d7926;0;0;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;52;2012.64,16.44344;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;WindFoliage;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Off;0;False;;0;False;;False;0;False;;0;False;;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;0;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;17;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;52;2012.64,16.44344;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;Custom/WindFoliage;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Off;0;False;;0;False;;False;0;False;;0;False;;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;0;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;17;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;16;FLOAT4;0,0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 Node;AmplifyShaderEditor.WorldPosInputsNode;19;-1682.503,32.3914;Inherit;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;59;723.3798,240.8631;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RangedFloatNode;58;-1591.649,673.2938;Inherit;False;Property;_WindJitterSpeed;WindJitterSpeed;17;0;Create;True;0;0;0;False;0;False;0;0.01;0;0.1;0;1;FLOAT;0
@@ -139,4 +139,4 @@ WireConnection;59;1;64;0
 WireConnection;90;0;53;0
 WireConnection;90;1;51;0
 ASEEND*/
-//CHKSM=95F4F6BF8E9AB11F119EE7B8736D8C3447750C0C
+//CHKSM=437C02EF7FEE9765FBA3D6B0EE6287E714B355DE
