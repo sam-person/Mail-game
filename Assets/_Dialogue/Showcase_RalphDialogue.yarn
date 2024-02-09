@@ -1,32 +1,59 @@
 ﻿title: RalphGreeting
 ---
-Ralph: Oh! Catto. I didn’t see you come in. It’s always good to see you
+Ralph: Oh! Catto. I didn’t see you come in
+Ralph: It’s always good to see you
 Ralph: You haven’t seen Valerie around at all, have you?
 -> Catto: I am actually looking for them too
-	Ralph: Oh, well aren’t they popular. Please do let me know if you find them
-Ralph: You should ask Helga, they probably know where Valerie is
+	Ralph: Oh, well aren’t they popular
+	Ralph: Please do let me know if you find them
+	Ralph: You should ask Helga
+	Ralph: They probably know where Valerie is
 -> Catto: No, but I’ll let you know if I see them
-Ralph: I appreciate it. I’d look too but I’m much too comfortable
-Ralph: You should ask Helga, they probably know where Valerie is
+	Ralph: I appreciate it
+		Ralph: I’d look too but I’m much too comfortable
+	Ralph: You should ask Helga
+	Ralph: They probably know where Valerie is
+<<declare $hasfoundValerie = false>>
+<<declare $sharedValerieLocation = false>>
+<<declare $spokenToRalph = false>>
+<<set $spokenToRalph = true>>
 <<setQuest "Talk to Helga">>
 ===
 
 title: RalphStillLooking
 ---
-///if(!hasfoundValerie)
-Ralph: I still haven’t seen Valerie. That said, I’m not really looking
+Ralph: I still haven’t seen Valerie
+Ralph: That said, I’m not really looking
 Ralph: I’m much too comfortable to go searching
-Ralph: You should ask Helga, they probably know where Valerie is
-///if(hasfoundValerie)
-Ralph: Have you seen Valerie yet? 
--> Catto: Yes, Valerie is <insert location>
-Ralph: Oh that’s too far away, I’m much too comfortable. Oh well. Thanks anyway!
--> Catto: Yep!
-	Ralph: Great, where are they?
-	-> Catto:  <insert location>
-Ralph: Oh that’s too far away, I’m much too comfortable. Oh well. Thanks anyway!
--> Catto: I’ll give you a hint, they’re near  <insert location>
-Ralph: Hmm, probably too far away, I’m much too comfortable. 
-Ralph: Oh well. Thanks anyway!
-
+Ralph: You should ask Helga
+Ralph: They probably know where Valerie is
 ===
+
+title: RalphValerieFound
+---
+<<set $sharedValerieLocation = true>>
+Ralph: Have you seen Valerie yet? 
+-> Catto: Yes, Valerie is upstairs in their room
+	Ralph: Oh that’s too far away
+	Ralph: I’m much too comfortable
+	Ralph: Oh well. Thanks anyway!
+-> Catto: Yep!
+	Ralph: ...
+	Ralph: Great, where are they?
+	Catto: Just upstairs in their room
+	Catto: I'm not sure why you didn't think to look there
+	Ralph: Oh that’s too far away
+	Ralph: I’m much too comfortable
+	Ralph: Oh well. Thanks anyway!
+-> Catto: I’ll give you a hint
+	Catto: They’re somewhere upstairs
+	Ralph: Hmm, probably too far away
+	Ralph: I’m much too comfortable. 
+	Ralph: Oh well. Thanks anyway!
+===
+
+title: RalphRandom1
+---
+Ralph: *purr*
+===
+

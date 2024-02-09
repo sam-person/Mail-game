@@ -6,18 +6,40 @@ Helga: Oh, Catto! Have you come to help me look for her too?
 Helga: She always seems to be hiding from me
 Helga: I’m going to miss the start of my show if I don’t find her soon!
 -> Catto: You might just need to watch without Valerie
--> Catto: Don’t worry, you can start watching and I’ll tell Valerie the show is on when I see her.
-Helga: Valerie? Oh! You thought I was looking for Valerie
-Helga: Oh deary I can see your confusion, I was talking about the TV remote
+-> Catto: I’ll tell Valerie the show is on when I see them
+Helga: Valerie? 
+Helga: Oh! You thought I was looking for Valerie
+Helga: Oh deary I can see your confusion
+Helga: I was talking about the TV remote
 Helga: I have a habit of personifying inanimate objects
 Helga: Could you please use those young eyes of yours and help me find the TV remote anyway?
+<<declare $foundTVremote = false>>
+<<Trigger TVRemote>>
 <<setQuest "Find the TV remote">>
 ===
 
 title: HelgaFoundRemote
 ---
-Helga: You found her! Thanks Catto, I really didn’t want to miss my show
-Helga: Oh, by the way. Valerie is just in her room
-Helga: Just walk up to Room 3 and say “<insert random password>”, and Valerie will answer
+Helga: You found her! 
+Helga: Thanks Catto
+Helga: I really didn’t want to miss my show
+Helga: Oh, by the way
+Helga: Valerie is just in her room
+Helga: Just walk up to Room 3 and say...
+Helga: “I'm looking for the biscuit factory”
+Helga: And Valerie will answer
+<<Trigger Room3Door>>
 <<setQuest "Go to room 3">>
+===
+
+title: HelgaStillNoValerie
+---
+Helga: Just walk up to Room 3 and say...
+Helga: “I'm looking for the biscuit factory”
+Helga: And Valerie will answer
+===
+
+title: HelgaRandom1
+---
+Helga: Meow
 ===
