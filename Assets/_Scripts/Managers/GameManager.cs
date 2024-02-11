@@ -208,6 +208,8 @@ public class GameManager : MonoBehaviour
     }
 
     public REC_Teleport pendingTeleport;
+    public REC_SceneChange pendingSceneChange;
+
     public void StartTeleport(REC_Teleport teleporter) {
         if (pendingTeleport != null) {
             Debug.Log("Can't start this teleport because there is already one pending!");
@@ -218,10 +220,30 @@ public class GameManager : MonoBehaviour
         InterfaceManager.instance.fader.Fade();
     }
 
+    public void StartSceneChange(REC_SceneChange scenechanger)
+    {
+        if (pendingSceneChange != null)
+        {
+            Debug.Log("Can't start this scenechange because there is already one pending!");
+            return;
+        }
+
+        pendingSceneChange = scenechanger;
+        pendingTeleport = null; // clear any pending teleport
+        InterfaceManager.instance.fader.Fade();
+    }
+
     public void OnMidFade() {
         if (pendingTeleport != null) {
             pendingTeleport.Teleport();
             pendingTeleport = null;
+            return;
+        }
+
+        if (pendingSceneChange != null)
+        {
+            pendingSceneChange.ChangeScene();
+            pendingSceneChange = null;
         }
     }
 
