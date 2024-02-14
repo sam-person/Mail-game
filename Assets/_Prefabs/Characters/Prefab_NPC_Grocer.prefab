@@ -512,76 +512,8 @@ MonoBehaviour:
   dialogueCamera: {fileID: 5539755637440651581}
   doTalkingAnimation: 1
   anim: {fileID: 0}
-  primaryDialogue:
-  - YarnNode: GroceryNoPackage
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: GroceryPackage
-    - variable: $puddleSteppingAcknowledged
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $groceryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: GroceryStillWaiting
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $puddleSteppingAcknowledged
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: GroceryPackage
-    - variable: $groceryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: GroceryHasPackage
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: GroceryPackage
-  - YarnNode: GroceryKeepingThosePawsDry
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $groceryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  secondaryDialogue:
-  - YarnNode: GroceryRandom1
-    oneShot: 0
-    triggered: 0
-    conditions: []
+  primaryDialogue: []
+  secondaryDialogue: []
 --- !u!114 &5539755638409830567
 MonoBehaviour:
   m_ObjectHideFlags: 0

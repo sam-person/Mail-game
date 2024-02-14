@@ -1282,86 +1282,8 @@ MonoBehaviour:
   dialogueCamera: {fileID: 2909104491486873228}
   doTalkingAnimation: 1
   anim: {fileID: 3340508210040693598}
-  primaryDialogue:
-  - YarnNode: PostOfficeIntro
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $playedPOIntro
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: PostOfficeStillProcessing
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $bakeryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $packageAssigned
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  - YarnNode: PostOfficeReturnedFromBakery
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $bakeryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-    - variable: $floristPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $cafePackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $groceryPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: PostOffice3Packages
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $ThreePackagesDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: ThreePackagesDelivered
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $ThreePackagesDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  secondaryDialogue:
-  - YarnNode: PostOfficeRandom1
-    oneShot: 0
-    triggered: 0
-    conditions: []
+  primaryDialogue: []
+  secondaryDialogue: []
 --- !u!114 &1135539997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1380,6 +1302,7 @@ MonoBehaviour:
   conditions: []
   interactionState: 0
   interactionRange: 3.5
+  interactionPivotOverride: {fileID: 0}
   outline: {fileID: 1135539998}
 --- !u!114 &1135539998
 MonoBehaviour:

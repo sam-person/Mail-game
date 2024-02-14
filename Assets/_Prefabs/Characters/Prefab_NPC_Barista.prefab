@@ -423,6 +423,7 @@ MonoBehaviour:
   conditions: []
   interactionState: 0
   interactionRange: 3
+  interactionPivotOverride: {fileID: 0}
   outline: {fileID: 4169283142919718337}
 --- !u!114 &4169283142919718338
 MonoBehaviour:
@@ -440,48 +441,8 @@ MonoBehaviour:
   dialogueCamera: {fileID: 4169283143242333405}
   doTalkingAnimation: 1
   anim: {fileID: 0}
-  primaryDialogue:
-  - YarnNode: CafeWaitingForPackage
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: CafePackage
-    - variable: $cafePackageDelivered
-      type: 1
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: CafeDelivery
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: CafePackage
-  - YarnNode: CafeAfterDelivery
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $cafePackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  secondaryDialogue:
-  - YarnNode: CafeRandom1
-    oneShot: 0
-    triggered: 0
-    conditions: []
+  primaryDialogue: []
+  secondaryDialogue: []
 --- !u!114 &4169283142919718337
 MonoBehaviour:
   m_ObjectHideFlags: 0

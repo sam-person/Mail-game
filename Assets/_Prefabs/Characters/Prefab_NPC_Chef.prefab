@@ -1039,80 +1039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCDefinition: {fileID: 11400000, guid: e303b80026ac4f4418bc1ff30fa73a36, type: 2}
+  NPCDefinition: {fileID: 11400000, guid: 9b11ec30068839543ba2762ebce5274c, type: 2}
   dialogueCamera: {fileID: 7557496654330991853}
   doTalkingAnimation: 1
   anim: {fileID: 6826379839597809808}
-  primaryDialogue:
-  - YarnNode: WaitingForPackage
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: BakeryPackage
-    - variable: $savedBread
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $bakeryPackageDelivered
-      type: 1
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 1
-      value: true
-  - YarnNode: BakeryIntro
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: BakeryPackage
-  - YarnNode: GoSaveBread
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $savedBread
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: BakeryPackage
-  - YarnNode: BreadSaved
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $savedBread
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: BakeryPackage
-  secondaryDialogue:
-  - YarnNode: ChefLaugh
-    oneShot: 0
-    triggered: 0
-    conditions: []
+  primaryDialogue: []
+  secondaryDialogue: []
 --- !u!1 &3660548285834925192
 GameObject:
   m_ObjectHideFlags: 0

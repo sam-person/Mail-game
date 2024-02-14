@@ -592,62 +592,8 @@ MonoBehaviour:
   dialogueCamera: {fileID: 3241642611685662923}
   doTalkingAnimation: 1
   anim: {fileID: 0}
-  primaryDialogue:
-  - YarnNode: FloristWaitingForPackage
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 1
-      intComparison: 0
-      boolComparison: 0
-      value: FloristPackage
-    - variable: $floristPackageDelivered
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  - YarnNode: Florist_Scissors
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $holding
-      type: 0
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: FloristPackage
-  - YarnNode: FloristGotScissors
-    oneShot: 1
-    triggered: 0
-    conditions:
-    - variable: $haveScissors
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 0
-      value: 
-  - YarnNode: FloristDontHaveScissors
-    oneShot: 0
-    triggered: 0
-    conditions:
-    - variable: $haveScissors
-      type: 1
-      stringComparison: 0
-      intComparison: 0
-      boolComparison: 1
-      value: 
-  secondaryDialogue:
-  - YarnNode: FloristRandomLine1
-    oneShot: 0
-    triggered: 0
-    conditions: []
-  - YarnNode: FloristRandomLine2
-    oneShot: 0
-    triggered: 0
-    conditions: []
+  primaryDialogue: []
+  secondaryDialogue: []
 --- !u!114 &279032364
 MonoBehaviour:
   m_ObjectHideFlags: 0
