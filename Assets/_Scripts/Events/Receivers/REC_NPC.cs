@@ -188,6 +188,21 @@ public class REC_NPC : Receiver
         }
     }
 
+    private void Start()
+    {
+        if (useNavAgent) {
+            switch (navType)
+            {
+                case NavType.FollowPlayer:
+                    SetTarget(PlayerInteractionHandler.instance.transform);
+                    break;
+                case NavType.Nodes:
+                    SetTarget(navNodes[nodeIndex].transform);
+                    break;
+            }
+        }
+    }
+
     private void Update()
     {
         if (useNavAgent) HandleNav();
@@ -214,27 +229,76 @@ public class REC_NPC : Receiver
     [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes)] public List<NavNode> navNodes;
     [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes)] public bool loop = true;
     [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] int nodeIndex = 0;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] float waitTime = 0f;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] float distanceToTarget = 0f;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] Transform target;
 
     void HandleNav() {
+        CalculateDistanceToTarget();
+
+
+
         switch (navType)
         {
             case NavType.FollowPlayer:
-                if (Vector3.Distance(transform.position, PlayerInteractionHandler.instance.transform.position) > distanceThreshold)
+                if (distanceToTarget > distanceThreshold)
                 {
-                    agent.SetDestination(PlayerInteractionHandler.instance.transform.position);
+                    SetTarget(PlayerInteractionHandler.instance.transform);
                 }
                 break;
             case NavType.Nodes:
-                if (Vector3.Distance(transform.position, navNodes[nodeIndex].transform.position) < distanceThreshold)
+                if (distanceToTarget < distanceThreshold)
                 {
-                    nodeIndex++;
-                    if (nodeIndex >= navNodes.Count) nodeIndex = 0;
+                    if(!nodeReached) navNodes[nodeIndex].Visit();
+                    nodeReached = true;
+                    if (navNodes[nodeIndex].nodeType == NavNode.NodeType.Wait)
+                    {
+                        if (waitTime <= 0f)
+                        {
+                            //set the wait time
+                            waitTime = navNodes[nodeIndex].waitTime;
+                        }
+                        else
+                        {
+                            waitTime -= Time.deltaTime;
+                            if (waitTime <= 0f) {
+                                NextNode();
+                                waitTime = 0f;
+                            }
+                        }
+                    }
+                    else {
+                        NextNode();
+                    }
+                    
                 }
-                agent.SetDestination(navNodes[nodeIndex].transform.position);
+                SetTarget(navNodes[nodeIndex].transform);
+                
                 break;
             default:
                 break;
         }
+    }
+
+    bool nodeReached = false;
+    void NextNode() {
+        nodeReached = false;
+        nodeIndex++;
+        if (nodeIndex >= navNodes.Count) nodeIndex = 0;
+    }
+
+    void SetTarget(Transform _target) {
+        target = _target;
+        agent.SetDestination(_target.position);
+    }
+
+    /// <summary>
+    /// Calculates target positions, ignoring y axis
+    /// </summary>
+    void CalculateDistanceToTarget() {
+        Vector3 targetPos = new Vector3(target.position.x, 0, target.position.z);
+        Vector3 playerPos = new Vector3(transform.position.x, 0, transform.position.z);
+        distanceToTarget = Vector3.Distance(targetPos, playerPos);
     }
 
     private void OnDrawGizmos()
