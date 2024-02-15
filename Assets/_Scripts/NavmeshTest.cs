@@ -48,6 +48,7 @@ public class NavmeshTest : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (navType != NavType.Nodes) return;
         Gizmos.color = Color.blue;
         for (int i = 0; i < navNodes.Count - 1; i++) {
             Gizmos.DrawLine(navNodes[i].transform.position, navNodes[i + 1].transform.position);

@@ -8,14 +8,15 @@ using UnityEditor;
 using Yarn.Unity;
 using System.Linq;
 using System;
+using UnityEngine.AI;
 
 public class REC_NPC : Receiver
 {
     public NPCDefinition NPCDefinition;
     public CinemachineVirtualCamera dialogueCamera;
     public bool doTalkingAnimation = false;
-    [ShowIf("doTalkingAnimation")]
-    public Animator anim;
+    [ShowIf("doTalkingAnimation")]public Animator anim;
+    
 
     public List<NPC_DialogueNode> primaryDialogue;
     public List<NPC_DialogueNode> secondaryDialogue;
@@ -167,6 +168,7 @@ public class REC_NPC : Receiver
     }
 
     void StartDialogueNode(NPC_DialogueNode node) {
+        if (useNavAgent) agent.isStopped = true;
         GameManager.instance.currentNPC = this;
         node.triggered = true;
         InterfaceManager.instance.StartDialogue(node.YarnNode, dialogueCamera, NPCDefinition);
@@ -180,13 +182,75 @@ public class REC_NPC : Receiver
     private void Awake()
     {
         if (dialogueCamera != null) dialogueCamera.gameObject.SetActive(false);
+        if (useNavAgent && agent == null) { 
+            useNavAgent = false;
+            Debug.LogError(name + " has nav disable due to no agent assigned!");
+        }
+    }
+
+    private void Update()
+    {
+        if (useNavAgent) HandleNav();
     }
 
     public void OnDialogueEnd() {
+        if (useNavAgent) agent.isStopped = false;
         //if (doTalkingAnimation && anim != null) {
         //    anim.SetBool("Talking", false);
         //}
     }
+
+
+    #region NAVIGATION
+
+    [FoldoutGroup("Navigation")]
+    public bool useNavAgent = false;
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public NavMeshAgent agent;
+
+    public enum NavType { FollowPlayer, Nodes }
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public NavType navType;
+
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public float distanceThreshold = 0.2f;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes)] public List<NavNode> navNodes;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes)] public bool loop = true;
+    [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] int nodeIndex = 0;
+
+    void HandleNav() {
+        switch (navType)
+        {
+            case NavType.FollowPlayer:
+                if (Vector3.Distance(transform.position, PlayerInteractionHandler.instance.transform.position) > distanceThreshold)
+                {
+                    agent.SetDestination(PlayerInteractionHandler.instance.transform.position);
+                }
+                break;
+            case NavType.Nodes:
+                if (Vector3.Distance(transform.position, navNodes[nodeIndex].transform.position) < distanceThreshold)
+                {
+                    nodeIndex++;
+                    if (nodeIndex >= navNodes.Count) nodeIndex = 0;
+                }
+                agent.SetDestination(navNodes[nodeIndex].transform.position);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!useNavAgent || navType != NavType.Nodes) return;
+        Gizmos.color = Color.blue;
+        for (int i = 0; i < navNodes.Count - 1; i++)
+        {
+            Gizmos.DrawLine(navNodes[i].transform.position, navNodes[i + 1].transform.position);
+        }
+        if (loop)
+        {
+            Gizmos.DrawLine(navNodes[navNodes.Count - 1].transform.position, navNodes[0].transform.position);
+        }
+    }
+    #endregion
 }
 
 public static class IListExtensions
