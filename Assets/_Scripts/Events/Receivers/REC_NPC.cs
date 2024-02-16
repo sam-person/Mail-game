@@ -190,7 +190,7 @@ public class REC_NPC : Receiver
 
     private void Start()
     {
-        if (useNavAgent) {
+        if (useNavAgent && autoNavigate) {
             switch (navType)
             {
                 case NavType.FollowPlayer:
@@ -224,6 +224,7 @@ public class REC_NPC : Receiver
 
     public enum NavType { FollowPlayer, Nodes }
     [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public NavType navType;
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public bool autoNavigate = true;
 
     [FoldoutGroup("Navigation"), ShowIf("useNavAgent")] public float distanceThreshold = 0.2f;
     [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes)] public List<NavNode> navNodes;
@@ -234,6 +235,7 @@ public class REC_NPC : Receiver
     [FoldoutGroup("Navigation/Nodes"), ShowIf("@(navType == NavType.Nodes) && useNavAgent", NavType.Nodes), ShowInInspector, ReadOnly] Transform target;
 
     void HandleNav() {
+        if (!target) return;
         CalculateDistanceToTarget();
 
 
@@ -282,6 +284,7 @@ public class REC_NPC : Receiver
 
     bool nodeReached = false;
     void NextNode() {
+        if (!autoNavigate) return;
         nodeReached = false;
         nodeIndex++;
         if (nodeIndex >= navNodes.Count) nodeIndex = 0;
@@ -299,6 +302,23 @@ public class REC_NPC : Receiver
         Vector3 targetPos = new Vector3(target.position.x, 0, target.position.z);
         Vector3 playerPos = new Vector3(transform.position.x, 0, transform.position.z);
         distanceToTarget = Vector3.Distance(targetPos, playerPos);
+    }
+
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent"), Button, YarnCommand("SetAutoNavigation")]
+    public void SetAutoNavigation(bool state) {
+        autoNavigate = state;
+    }
+
+    [FoldoutGroup("Navigation"), ShowIf("useNavAgent"), Button, YarnCommand("GoToNode")]
+    public void GoToNode(int _nodeIndex) {
+        if (_nodeIndex < 0 || _nodeIndex >= navNodes.Count) {
+            Debug.Log("nodeIndex " + _nodeIndex.ToString() + " is out of range! " + NPCDefinition.NPCName + " has only " + navNodes.Count + " nav nodes.");
+            return;
+        }
+
+        nodeIndex = _nodeIndex;
+        nodeReached = false;
+        SetTarget(navNodes[nodeIndex].transform);
     }
 
     private void OnDrawGizmos()
