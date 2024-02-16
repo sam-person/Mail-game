@@ -7,12 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_WaterSea
-  m_Shader: {fileID: 4800000, guid: a014a25e79104664393209b91673b69a, type: 3}
-  m_ValidKeywords:
-  - _USEVERTEXDISPLACEMENT_ON
+  m_Name: MAT_Skybox_Morning
+  m_Shader: {fileID: 4800000, guid: fe6b3a71e27e24a41a74ad3a91b0ac73, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -21,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseNoise:
+        m_Texture: {fileID: 2800000, guid: be03ab7a299e4ae4e90631c9bd5b1ef2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -49,11 +52,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Noise:
-        m_Texture: {fileID: 2800000, guid: 5508df388763cdf408cf60d2aac88e86, type: 3}
+    - _Noise1:
+        m_Texture: {fileID: 2800000, guid: 409a2f73b7536004cb20e19205befaab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Noise1:
+    - _Noise2:
+        m_Texture: {fileID: 2800000, guid: 122317d8b71c106499d016af41153016, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise3:
         m_Texture: {fileID: 2800000, guid: 5508df388763cdf408cf60d2aac88e86, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -76,40 +83,37 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
+    - _CloudsCutoff: 0.1
+    - _CloudsSmoothness: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FoamAmount: 3.04
-    - _FoamCutoff: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HorizonBrightness: 1
+    - _HorizonWidth: 2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ScrollSpeed: 0.5
+    - _ScrollSpeed1: 0.1
+    - _ScrollSpeed2: 0.1
+    - _ScrollSpeed3: 0.05
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UseVertexDisplacement: 1
-    - _VoronoiOffset: 1
-    - _VoronoiPower: 4
-    - _WaveHeight: 0.15
-    - _WaveSpeed: 0.1
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.2886253, g: 0.8867924, b: 0.8688544, a: 1}
-    - _ColorVoronoi: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
-    - _EdgeNoiseTiling: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DayBottomColor: {r: 0.5801887, g: 0.8434924, b: 1, a: 1}
+    - _DayTopColor: {r: 0.3726415, g: 0.63587606, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 1, g: 0, b: 0, a: 1}
-    - _FoamSpeed: {r: 0.1, g: 0, b: 0, a: 0}
-    - _Vector0: {r: 1, g: 1, b: 0, a: 0}
-    - _VoronoiSpeed: {r: -0.2, g: 0, b: 0, a: 0}
-    - _VoronoiTiling: {r: 0.2, g: 0.1, b: 0, a: 0}
-    - _WaveNoiseTiling: {r: 0.02, g: 0.01, b: 0, a: 0}
-    - _WaveSpeed: {r: -0.1, g: 0, b: 0, a: 0}
-    - _WaveSpeed1: {r: -0.1, g: 0, b: 0, a: 0}
+    - _Scale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Scale1: {r: 0.1, g: 0.05, b: 0, a: 0}
+    - _Scale2: {r: 0.3, g: 0.1, b: 0, a: 0}
+    - _Vector0: {r: 205.45, g: 0.44, b: -0.3, a: 0}
   m_BuildTextureStacks: []
