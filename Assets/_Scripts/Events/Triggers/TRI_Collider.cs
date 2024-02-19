@@ -7,7 +7,11 @@ public class TRI_Collider : Trigger
 
     private void OnTriggerEnter(Collider other)
     {
-        base.Activate();
+        if(other.tag == "Player")
+        {
+            base.Activate();
+
+        }
     }
 
 }
