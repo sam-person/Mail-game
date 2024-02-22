@@ -167,19 +167,21 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (PlayerInteractionHandler.instance.playerState == PlayerInteractionHandler.PlayerState.Normal) {
+                JumpAndGravity();
+                GroundedCheck();
+                Move();
 
-            JumpAndGravity();
-            GroundedCheck();
-            Move();
-
-            if(_input.jump && !jumpPressed && !(_speed > .1))
-            {
-                StartCoroutine(PlayJumpAnimation());
+                if (_input.jump && !jumpPressed && !(_speed > .1))
+                {
+                    StartCoroutine(PlayJumpAnimation());
+                }
+                else if (_input.jump == false)
+                {
+                    jumpPressed = false;
+                }
             }
-            else if (_input.jump == false)
-            {
-                jumpPressed = false;
-            }
+            
         }
 
         IEnumerator PlayJumpAnimation()

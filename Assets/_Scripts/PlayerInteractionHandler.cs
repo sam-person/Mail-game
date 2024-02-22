@@ -29,12 +29,15 @@ public class PlayerInteractionHandler : MonoBehaviour
     private bool interactorItemBool = false;
     private bool interactorDialogueBool = false;
 
-    
+
     public List<GameObject> collisionObjects = new List<GameObject>();
 
     public float interactionCooldown = 2f;
     float _interactionCooldown;
     private bool interactionButtonPressed = false;
+
+    public enum PlayerState {Normal, AnimationLock };
+    public PlayerState playerState;
 
 
     public Animator animator;
@@ -90,6 +93,13 @@ public class PlayerInteractionHandler : MonoBehaviour
     void CalculateClosestInteractable() {
         //check if we're on interactable cooldown
         if (_interactionCooldown > 0f) {
+            SetClosestInteractable(null);
+            return;
+        }
+
+        //check if we're in an animation lock
+        if (playerState == PlayerState.AnimationLock)
+        {
             SetClosestInteractable(null);
             return;
         }
@@ -186,15 +196,44 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public void CattoInteractor()
     {
-        if (closestInteractable) {
-            animator.SetTrigger("interact");
-            closestInteractable.Activate();
-            StartInteractionCooldown();
+        switch (playerState)
+        {
+            case PlayerState.Normal:
+                if (closestInteractable)
+                {
+                    animator.SetTrigger("interact");
+                    closestInteractable.Activate();
+                    StartInteractionCooldown();
+                }
+                break;
+            case PlayerState.AnimationLock:
+                ChangeState(PlayerState.Normal);
+                break;
         }
+
+        
 
     }
 
- 
+    public void ChangeState(PlayerState state) {
+        PlayerState oldstate = playerState;
+        playerState = state;
+        StartInteractionCooldown(2f);
+        switch (state)
+        {
+            case PlayerState.Normal:
+                animator.SetBool("AnimationLock", false);
+                break;
+            case PlayerState.AnimationLock:
+                animator.SetBool("AnimationLock", true);
+                break;
+        }
+    }
+
+    public void EnterAnimationLock(string animTrigger) {
+        ChangeState(PlayerState.AnimationLock);
+        animator.SetTrigger(animTrigger);
+    }
 
 
     public  void MeowButton()
