@@ -232,8 +232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Receivers:
   - {fileID: 1828662802806824402}
-  - {fileID: 0}
-  - {fileID: 0}
   oneShot: 0
   conditions:
   - variable: $spokenToRalph
@@ -267,6 +265,16 @@ MonoBehaviour:
     oneShot: 1
     triggered: 0
     conditions: []
+  - YarnNode: LookingForRemote
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $foundTVremote
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
   - YarnNode: HelgaFoundRemote
     oneShot: 1
     triggered: 0
@@ -292,6 +300,13 @@ MonoBehaviour:
     oneShot: 0
     triggered: 0
     conditions: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!114 &1828662802806824401
 MonoBehaviour:
   m_ObjectHideFlags: 0
