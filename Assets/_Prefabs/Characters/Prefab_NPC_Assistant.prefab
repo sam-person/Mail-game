@@ -1132,7 +1132,6 @@ GameObject:
   - component: {fileID: 1184755904593806774}
   - component: {fileID: 1135540000}
   - component: {fileID: 1135539999}
-  - component: {fileID: 1135539996}
   - component: {fileID: 1135539997}
   - component: {fileID: 1135539998}
   m_Layer: 0
@@ -1266,24 +1265,6 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1135539996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769284280363644173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCDefinition: {fileID: 11400000, guid: 667830cb8a5b92c4e930fc4e26f35718, type: 2}
-  dialogueCamera: {fileID: 2909104491486873228}
-  doTalkingAnimation: 1
-  anim: {fileID: 3340508210040693598}
-  primaryDialogue: []
-  secondaryDialogue: []
 --- !u!114 &1135539997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,7 +1278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 1135539996}
+  - {fileID: 8526589395246767457}
   oneShot: 0
   conditions: []
   interactionState: 0
@@ -1715,6 +1696,7 @@ GameObject:
   - component: {fileID: 546273211}
   - component: {fileID: 546273212}
   - component: {fileID: 546273213}
+  - component: {fileID: 8526589395246767457}
   m_Layer: 0
   m_Name: Prefab_NPC_Assistant
   m_TagString: Untagged
@@ -1854,6 +1836,109 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &8526589395246767457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8354215777503404958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDefinition: {fileID: 11400000, guid: 667830cb8a5b92c4e930fc4e26f35718, type: 2}
+  dialogueCamera: {fileID: 2909104491486873228}
+  doTalkingAnimation: 1
+  anim: {fileID: 3340508210040693598}
+  primaryDialogue:
+  - YarnNode: PostOfficeIntro
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $playedPOIntro
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+  - YarnNode: PostOfficeStillProcessing
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $bakeryPackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+    - variable: $packageAssigned
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: 
+  - YarnNode: PostOfficeReturnedFromBakery
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $bakeryPackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: 
+    - variable: $floristPackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+    - variable: $cafePackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+    - variable: $groceryPackageDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+  - YarnNode: PostOffice3Packages
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $ThreePackagesDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+  - YarnNode: ThreePackagesDelivered
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $ThreePackagesDelivered
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: 
+  secondaryDialogue:
+  - YarnNode: PostOfficeRandom1
+    oneShot: 0
+    triggered: 0
+    conditions: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!1 &8652756373562458857
 GameObject:
   m_ObjectHideFlags: 0

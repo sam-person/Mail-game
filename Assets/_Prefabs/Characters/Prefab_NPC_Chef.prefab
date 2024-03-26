@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3660548287783698205}
   - component: {fileID: 3660548287783698211}
   - component: {fileID: 3660548287783698210}
+  - component: {fileID: 8901935052482551153}
   m_Layer: 11
   m_Name: Prefab_NPC_Chef
   m_TagString: Untagged
@@ -184,6 +185,99 @@ MonoBehaviour:
   aimController: {fileID: 3660548286307233426}
   aimTarget: {fileID: 0}
   multiAim: {fileID: 3660548285834925194}
+--- !u!114 &8901935052482551153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222875628315086928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDefinition: {fileID: 11400000, guid: 9b11ec30068839543ba2762ebce5274c, type: 2}
+  dialogueCamera: {fileID: 7557496654330991853}
+  doTalkingAnimation: 1
+  anim: {fileID: 6826379839597809808}
+  primaryDialogue:
+  - YarnNode: WaitingForPackage
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $holding
+      type: 0
+      stringComparison: 1
+      intComparison: 0
+      boolComparison: 0
+      value: BakeryPackage
+    - variable: $savedBread
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+    - variable: $bakeryPackageDelivered
+      type: 1
+      stringComparison: 1
+      intComparison: 0
+      boolComparison: 1
+      value: true
+  - YarnNode: BakeryIntro
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $holding
+      type: 0
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: BakeryPackage
+  - YarnNode: GoSaveBread
+    oneShot: 0
+    triggered: 0
+    conditions:
+    - variable: $savedBread
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 1
+      value: 
+    - variable: $holding
+      type: 0
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: BakeryPackage
+  - YarnNode: BreadSaved
+    oneShot: 1
+    triggered: 0
+    conditions:
+    - variable: $savedBread
+      type: 1
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: 
+    - variable: $holding
+      type: 0
+      stringComparison: 0
+      intComparison: 0
+      boolComparison: 0
+      value: BakeryPackage
+  secondaryDialogue:
+  - YarnNode: ChefLaugh
+    oneShot: 0
+    triggered: 0
+    conditions: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!1 &250225546240936922
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +955,6 @@ GameObject:
   - component: {fileID: 3660548285803225058}
   - component: {fileID: 3660548285803225057}
   - component: {fileID: 4665351210473442952}
-  - component: {fileID: 4665351210473442963}
   m_Layer: 11
   m_Name: body
   m_TagString: InteractableDialogue
@@ -1020,31 +1113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 4665351210473442963}
+  - {fileID: 8901935052482551153}
   oneShot: 0
   conditions: []
   interactionState: 0
   interactionRange: 2
   interactionPivotOverride: {fileID: 0}
   outline: {fileID: 3660548285803225057}
---- !u!114 &4665351210473442963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3659196719921366723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCDefinition: {fileID: 11400000, guid: 9b11ec30068839543ba2762ebce5274c, type: 2}
-  dialogueCamera: {fileID: 7557496654330991853}
-  doTalkingAnimation: 1
-  anim: {fileID: 6826379839597809808}
-  primaryDialogue: []
-  secondaryDialogue: []
 --- !u!1 &3660548285834925192
 GameObject:
   m_ObjectHideFlags: 0
