@@ -3369,9 +3369,9 @@ GameObject:
   - component: {fileID: 4028996654575840903}
   - component: {fileID: 19708235283292450}
   - component: {fileID: 2856113123711325672}
-  - component: {fileID: 2271982099400146788}
+  - component: {fileID: 7296140332468286066}
   m_Layer: 0
-  m_Name: PlantPot_CatEars2 (8)
+  m_Name: PlantPot_CatEars_Violet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3421,7 +3421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4aad49537a5574f438099940f94a769d, type: 2}
+  - {fileID: 2100000, guid: 512a6044f4fd3c04f965a3fc417eed7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3443,8 +3443,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2271982099400146788
-MeshCollider:
+--- !u!65 &7296140332468286066
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3453,10 +3453,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1945293492527663362, guid: 42ec10e57e796dd4dad416041575189c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.005590008, y: 0.0055900076, z: 0.0055244877}
+  m_Center: {x: 0.00010228887, y: -0.00008826988, z: 0.0027325382}
 --- !u!1 &4369071840512931948
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,7 +4524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4aad49537a5574f438099940f94a769d, type: 2}
+  - {fileID: 2100000, guid: 512a6044f4fd3c04f965a3fc417eed7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
