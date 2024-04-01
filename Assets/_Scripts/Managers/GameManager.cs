@@ -176,7 +176,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void Quit() {
-        Application.Quit();
+        if (Application.isEditor)
+        {
+            EditorApplication.ExitPlaymode();
+        }
+        else
+        {
+
+            Application.Quit();
+        }
     }
 
     public T GetYarnVariable<T>(string variableName) {
