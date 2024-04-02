@@ -91,7 +91,10 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Paused:
                 Time.timeScale = 1f;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 InterfaceManager.instance.ShowPauseMenu(false);
+
                 break;
         }
     }
