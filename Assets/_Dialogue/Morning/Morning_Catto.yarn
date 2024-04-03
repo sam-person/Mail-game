@@ -1,4 +1,11 @@
-﻿title: WakingUp
+﻿title: MorningBlocker
+---
+<<declare $isBlocked = "">>
+<<set $isBlocked = "is now blocked">>
+Catto: I can't go this way!
+===
+
+title: WakingUp
 ---
 Catto: It’s always hard to leave a cozy bed in the morning
 Catto: But it’s easier to get out of bed when you have something to look forward to
@@ -14,26 +21,6 @@ Catto: I should probably get to work now
 <<Trigger TutorialPanels>>
 <<Trigger BedroomDoor>>
 <<set $holding = "nothing">>
-===
-
-title: PickUpScissors
----
-<<declare $haveScissors = false>>
-<<if $scissorsQuest == true>>
-Catto: These must be the scissors
-Catto: I'll take them back to the florist
-<<setQuest "Return to the Florist">>
-<<set $haveScissors = true>>
-<<else>>
-Catto: Hmm I wonder what this is...
-<<endif>>
-===
-
-title: CattoReminisce
----
-Catto: Last years birthday party
-Catto: Everyone remembered my birthday then, but not now?
-Catto: Weird...
 ===
 
 title: ForgotPackage
@@ -54,17 +41,4 @@ Catto: I can't leave while the bread is burning!
 title: ForgotToDeliverBakery
 ---
 Catto: The Chef is still waiting for their delivery
-===
-
-title: NumberVariableTest
----
-<<declare $numTest = 0>>
-Catto: I can count!
-<<set $numTest = $numTest + 1>>
-Catto: I have counted {$numTest} times!
-===
-
-title: NumberVariableTest2
----
-Catto: I can't count higher than {$numTest} :(
 ===

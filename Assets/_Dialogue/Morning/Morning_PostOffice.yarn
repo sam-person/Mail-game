@@ -1,0 +1,33 @@
+﻿title: PostOfficeIntro
+---
+///what package Catto is holding
+<<declare $holding = "nothing">>
+<<declare $packagesDeliveredCount = 0>>
+<<declare $playedPOIntro = false>>
+<<declare $packageAssigned = false>>
+<<set $holding = "nothing">>
+<<set $hasNotMetAssistant = false>>
+Assistant Cat: Good morning Catto! I hope you slept well
+Assistant Cat: Here’s some news for today
+Assistant Cat: It’s a beautiful sunny day out there, perfect for delivering some mail! 
+Assistant Cat: We’re in peak sunflower season
+Assistant Cat: Overnight I got a new leaf on my snapdragon plant!
+Assistant Cat: I think that’s all for news
+-> Catto: Anything else happening today?
+	Assistant Cat: No, I think that’s all. Are you ready to start your day?
+	-> Catto: I’m ready to start the day!
+	-> Catto: Nothing else, not even any birthdays?
+		Assistant Cat: I never forget a birthday. Are you ready to start your day?
+		-> Catto: I’m ready to start the day!
+-> Catto: Thanks, I’m ready to start the day!
+Assistant Cat: I have a few packages I still need to process, I have this one ready to be delivered
+<<Trigger PackageBakery>>
+<<declare $bakeryPackageDelivered = false>>
+<<set $bakeryPackageDelivered = false>>
+Assistant Cat: I hope you’ve stretched
+Assistant Cat: You’re going to need to take this one up the hill to the bakery
+-> Catto: Thanks Assistant Cat
+-> Catto: I'm ready to go!
+<<set $packageAssigned = true>>
+<<setQuest "Pick up the package">>
+===

@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
 
         //spawn the UI
         InterfaceManager ui = (InterfaceManager)Instantiate(ui_Prefab);
-        ui.transform.SetParent(bootStrap.transform);
+        //ui.transform.SetParent(bootStrap.transform);
 
         //spawn the player
         PlayerInteractionHandler player = (PlayerInteractionHandler)Instantiate(player_Prefab, startPoint.position, quaternion.identity);
