@@ -31,3 +31,26 @@ Assistant Cat: You’re going to need to take this one up the hill to the bakery
 <<set $packageAssigned = true>>
 <<setQuest "Pick up the package">>
 ===
+
+
+title: PostOfficeStillProcessing
+---
+Assistant Cat: Hi Catto, I’m still processing these packages
+Assistant Cat: I should have these other packages ready for you soon
+<<if $holding == "BakeryPackage">>
+Assistant Cat: Could you please deliver your current package to the bakery?
+<<else>>
+Assistant Cat: In the meantime...
+Assistant Cat: Could you please deliver the package that is on my desk to the bakery?
+<<endif>>
+===
+
+title: PostOfficeReturnedFromBakery
+---
+Assistant Cat: You’re back! I just finished processing 3 more packages. 
+Assistant Cat: You can deliver them in any order you like, none are express so there’s no rush.
+Assistant Cat: The packages are for the Florist, the Grocery Store, and the Cafe
+Assistant Cat: Which package would you like to deliver next?
+<<Trigger SceneDoorSwitcher>>
+<<jump PostOfficeChooseAnotherPackage>>
+===
