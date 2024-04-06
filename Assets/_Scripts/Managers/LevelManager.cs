@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
         //ui.transform.SetParent(bootStrap.transform);
 
         //spawn the player
-        PlayerInteractionHandler player = (PlayerInteractionHandler)Instantiate(player_Prefab, startPoint.position, quaternion.identity);
+        PlayerInteractionHandler player = (PlayerInteractionHandler)Instantiate(player_Prefab, startPoint.position, startPoint.transform.rotation);
         player.transform.SetAsFirstSibling();
 
         //set the follow camera target

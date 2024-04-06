@@ -47,10 +47,67 @@ Assistant Cat: Could you please deliver the package that is on my desk to the ba
 
 title: PostOfficeReturnedFromBakery
 ---
-Assistant Cat: You’re back! I just finished processing 3 more packages. 
+Assistant Cat: You’re back! I just finished processing 2 more packages. 
 Assistant Cat: You can deliver them in any order you like, none are express so there’s no rush.
-Assistant Cat: The packages are for the Florist, the Grocery Store, and the Cafe
+Assistant Cat: The packages are for the Florist and the Cafe
 Assistant Cat: Which package would you like to deliver next?
 <<Trigger SceneDoorSwitcher>>
 <<jump PostOfficeChooseAnotherPackage>>
+===
+
+title: PostOfficeChooseAnotherPackage
+---
+-> Catto: Cafe <<if $cafePackageDelivered == false>>
+	<<jump PostOfficeCafeChosen>>
+-> Catto: Florist <<if $floristPackageDelivered == false>>
+	<<jump PostOfficeFloristChosen>>
+===
+
+title: PostOfficeCafeChosen
+---
+<<if $cafePackageDelivered == false>>
+Assistant Cat: If it’s not too much trouble, I would love a nice drink from the Cafe
+Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+Assistant Cat: Anyway, here’s the package for the Cafe!
+<<Trigger PackageCafe>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+<<else>>
+Assistant Cat: You've already posted that one, choose another
+<<jump PostOfficeChooseAnotherPackage>>
+<<endif>>
+===
+
+
+title: PostOfficeFloristChosen
+---
+<<if $floristPackageDelivered == false>>
+Assistant Cat: Okay, here’s the package for the Florist!
+<<Trigger PackageFlorist>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+<<else>>
+Assistant Cat: You've already posted that one, choose another
+<<jump PostOfficeChooseAnotherPackage>>
+<<endif>>
+===
+
+
+title: PostOffice3Packages
+---
+///Needs to deliver package to florist
+<<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the florist
+
+///Needs to deliver package to cafe
+<<elseif $holding == "CafePackage" && $cafePackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the Cafe
+Assistant Cat: Don't forget my drink!
+Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+
+
+///Hasn't picked up the package
+<<elseif $holding == "nothing" && $packageAssigned == true>>
+Assistant Cat: Don't forget the package on my desk
+<<endif>>
 ===
