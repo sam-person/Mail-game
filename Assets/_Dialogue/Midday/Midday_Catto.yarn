@@ -1,0 +1,12 @@
+﻿title: PickUpScissors
+---
+<<declare $haveScissors = false>>
+<<if $scissorsQuest == true>>
+Catto: These must be the scissors
+Catto: I'll take them back to the florist
+<<setQuest "Return to the Florist">>
+<<set $haveScissors = true>>
+<<else>>
+Catto: Hmm I wonder what this is...
+<<endif>>
+===
