@@ -1,0 +1,85 @@
+﻿title: MiddayPackages
+---
+///Needs to deliver package to florist
+<<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the florist
+
+///Needs to deliver package to cafe
+<<elseif $holding == "CafePackage" && $cafePackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the Cafe
+Assistant Cat: Don't forget my drink!
+Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+
+///Hasn't picked up the package
+<<elseif $holding == "nothing" && $packageAssigned == true>>
+Assistant Cat: Don't forget the package on my desk
+
+//Has delivered package to cafe and has drink
+<<elseif $cafePackageDelivered == true && $cafeDrinkDelivered == false>>
+<<jump DeliverCafeDrink>>
+
+///Has delivered all packages
+<<elseif $floristPackageDelivered == true && $cafePackageDelivered == true>>
+<<Trigger SceneDoorSwitcher>>
+<<jump PostOfficeFinishedMidday>>
+
+//Needs a new package to deliver
+<<elseif $holding == "nothing" && $packageAssigned == false>>
+Assistant Cat: Nice work getting that package delivered
+Assistant Cat: Which package would you like to deliver next?
+<<jump PostOfficeChooseAnotherPackage>>
+<<endif>>
+===
+
+
+title: DeliverCafeDrink
+---
+<<if $hasCorrectDrink>>
+Assistant Cat: You got the drink I wanted!
+Assistant Cat: You’re the best, thanks Catto
+<<else>>
+Assistant Cat: Oh you got me a drink from the Cafe!
+Assistant Cat: I see you decided to surprise me
+Assistant Cat: This isn’t exactly what I was after, but thank you!
+<<endif>>
+<<set $cafeDrinkDelivered = true>>
+<<jump MiddayPackages>>
+===
+
+
+title: PostOfficeFinishedMidday
+---
+Assistant Cat: Great work on delivering those packages!
+Assistant Cat: I've got another 2 packages for you to deliver now
+Assistant Cat: These packages are for the grocery store and the nursing home
+Assistant Cat: Which package would you like to deliver next?
+<<Trigger SceneDoorSwitcher>>
+<<jump PostOfficeChooseAnotherPackageMidday>>
+===
+
+title: PostOfficeChooseAnotherPackageMidday
+---
+-> Catto: Grocery Store
+	<<jump PostOfficeGroceryChosen>>
+-> Catto: Nursing Home
+	<<jump PostOfficeNursingHomeChosen>>
+===
+
+title: PostOfficeGroceryChosen
+---
+Assistant Cat: Okay, here’s the package for the Grocery Store!
+Assistant Cat: Just so you know, the Grocery store is down by the beach
+Assistant Cat: Although, of course you know that. You're the best mail cat in town!
+<<Trigger PackageGrocery>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
+
+title: PostOfficeNursingHomeChosen
+---
+Assistant Cat: Okay, here’s the package for the Nursing Home!
+Assistant Cat: Hopefully this time [something funny]
+<<Trigger PackageNursing>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
