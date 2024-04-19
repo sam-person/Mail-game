@@ -6,30 +6,37 @@ using StarterAssets;
 public class PushObject : MonoBehaviour
 {
     public float pushForce = 10f; // The force to apply to the object.
-    public KeyCode pushButton = KeyCode.E; // The button to trigger the push.
+    //public KeyCode pushButton = KeyCode.E; // The button to trigger the push.
 
-    private bool playerInRange = false; // Flag to track player proximity.
+    private bool playerInRange = false; //track player proximity.
 
     private GameObject player;
 
     private Rigidbody rb;
     [SerializeField] private float physicsDurationCountdown = 5f;
     private Coroutine physicsCoroutine;
-    public PlayerInteractionHandler playerScript;
+    private PlayerInteractionHandler playerScript;
     private bool interactionButtonPressed = false;
+
+    private bool isBreakable;
+    private BreakableObject breakableObject;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerInteractionHandler>();
+        if(gameObject.GetComponent<BreakableObject>())
+        {
+            isBreakable = true;
+            breakableObject = gameObject.GetComponent<BreakableObject>();
+        }
     }
 
     private void Update()
     {
-        if (playerScript._input.interact && playerInRange && !interactionButtonPressed)
+        if (playerScript._input.interact && !interactionButtonPressed && playerInRange)
         {
-            //Debug.Log("interact button pressed in PO");
             Push();
             interactionButtonPressed = true;
         }
@@ -39,37 +46,48 @@ public class PushObject : MonoBehaviour
         }
     }
 
-
     private void Push()
     {
+        if(isBreakable)
+        {
+            StartCoroutine(MakeBreakable());
+        }
         rb.isKinematic = false;
         //if (physicsCoroutine != null)
         //{
         //    StopCoroutine(physicsCoroutine);
         //    physicsCoroutine = null;
         //}
-        Vector3 pushDirection = transform.position - player.transform.position;
+        Vector3 pushDirection = player.transform.forward;
         rb.AddForce(pushDirection.normalized * pushForce, ForceMode.Impulse);
         playerScript.PlayInteractionAnim();
 
        // physicsCoroutine ??= StartCoroutine(DisablePhysics());
     }
 
-    private IEnumerator DisablePhysics()
+    //delay added so it doesn't immediately break from the contact of its current placement
+    private IEnumerator MakeBreakable()
     {
-        yield return new WaitForSeconds(physicsDurationCountdown);
-       // rb.isKinematic = true;
-        physicsCoroutine = null;
+        yield return new WaitForSeconds(.2f);
+        breakableObject.canBeBroken = true;
     }
+
+
+    //private IEnumerator DisablePhysics()
+    //{
+    //    yield return new WaitForSeconds(physicsDurationCountdown);
+    //   // rb.isKinematic = true;
+    //    physicsCoroutine = null;
+    //}
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("within range of can");
-            player = other.gameObject;
-            playerScript = player.GetComponent<PlayerInteractionHandler>();
+            //Debug.Log("within range of pushable object");
+            //player = other.gameObject;
+            //playerScript = player.GetComponent<PlayerInteractionHandler>();
             playerInRange = true;
         }
     }
@@ -81,6 +99,4 @@ public class PushObject : MonoBehaviour
             playerInRange = false;
         }
     }
-
-
 }
