@@ -1,0 +1,80 @@
+﻿title: AfternoonPackages
+---
+///Needs to deliver package to Grocery
+<<if $holding == "GroceryPackage" && $groceryPackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the grocery
+
+///Needs to deliver package to Nursing
+<<elseif $holding == "NursingPackage" && $nursingPackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the nursing home
+Assistant Cat: Make sure to say Hi to Valerie for me!
+Assistant Cat: She can be a bit grumpy sometimes...
+
+///Hasn't picked up the package
+<<elseif $holding == "nothing" && $packageAssigned == true>>
+Assistant Cat: Don't forget the package on my desk
+<<endif>>
+
+<<elseif $groceryPackageDelivered == true && $holding == "nothing" && $nursingPackageDelivered == false>>
+<<jump onlyNursingDeliveryLeft>>
+
+<<elseif $nursingPackageDelivered == true && $holding == "nothing" && $groceryPackageDelivered == false>>
+<<jump onlyGroceryDeliveryLeft>>
+
+///Has delivered all packages
+<<elseif $floristPackageDelivered == true && $cafePackageDelivered == true>>
+<<Trigger SceneDoorSwitcher>>
+<<jump PostOfficeFinishedMidday>>
+<<endif>>
+===
+
+
+title: onlyGroceryDeliveryLeft
+---
+Assistant Cat: Well, the only delivery I have left right now is going to the grocery
+Assistant Cat: I hear the flowers are really nice this time of year
+Assistant Cat: Give them a smell for me!
+<<Trigger PackageFlorist>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
+
+title: onlyNursingDeliveryLeft
+---
+Assistant Cat: The only package I have left to deliver right now is going to the nursing home
+Assistant Cat: If it’s not too much trouble, I would love a nice drink from the Cafe
+Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+Assistant Cat: Anyway, here’s the package for the Cafe!
+<<Trigger PackageCafe>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
+
+
+title: PostOfficeFinishedAfternoon
+---
+Assistant Cat: Great work on delivering those packages!
+Assistant Cat: I've got another 2 packages for you to deliver now
+Assistant Cat: These packages are for the grocery store and the nursing home
+Assistant Cat: Which package would you like to deliver next?
+<<jump PostOfficeChooseAnotherPackageMidday>>
+===
+
+title: PostOfficeGroceryChosen
+---
+Assistant Cat: Okay, here’s the package for the Grocery Store!
+Assistant Cat: Just so you know, the Grocery store is down by the beach
+Assistant Cat: Although, of course you know that. You're the best mail cat in town!
+<<Trigger PackageGrocery>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
+
+title: PostOfficeNursingHomeChosen
+---
+Assistant Cat: Okay, here’s the package for the Nursing Home!
+Assistant Cat: Hopefully this time [something funny]
+<<Trigger PackageNursing>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+===
