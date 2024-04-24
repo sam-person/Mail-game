@@ -1,5 +1,7 @@
 ﻿title: MiddayPackages
 ---
+
+
 ///Needs to deliver package to florist
 <<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the florist
@@ -28,7 +30,7 @@ Assistant Cat: Don't forget the package on my desk
 ///Has delivered all packages
 <<elseif $floristPackageDelivered == true && $cafePackageDelivered == true>>
 <<Trigger SceneDoorSwitcher>>
-<<jump PostOfficeFinishedMidday>>
+<<jump ThreePackagesDelivered>>
 <<endif>>
 ===
 
@@ -72,11 +74,12 @@ Assistant Cat: This isn’t exactly what I was after, but thank you!
 
 title: PostOfficeFinishedMidday
 ---
-Assistant Cat: Great work on delivering those packages!
+Assistant Cat: Great work on delivering those packages fuckface!
 Assistant Cat: I've got another 2 packages for you to deliver now
 Assistant Cat: These packages are for the grocery store and the nursing home
 Assistant Cat: Which package would you like to deliver next?
 <<jump PostOfficeChooseAnotherPackageMidday>>
+<<set $ThreePackagesDelivered = true>>
 ===
 
 title: PostOfficeChooseAnotherPackageMidday
@@ -104,4 +107,16 @@ Assistant Cat: Hopefully this time [something funny]
 <<Trigger PackageNursing>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
+===
+
+
+title: ThreePackagesDelivered
+---
+<<declare $AfternoonPackagesFinished = false>>
+Assistant Cat: Great work on delivering those packages fuckface!
+Assistant Cat: I've got another 2 packages for you to deliver now
+Assistant Cat: These packages are for the grocery store and the nursing home
+Assistant Cat: Which package would you like to deliver next?
+<<jump PostOfficeChooseAnotherPackageMidday>>
+<<set $ThreePackagesDelivered = true>>
 ===

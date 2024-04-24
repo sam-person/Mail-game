@@ -2,11 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using StarterAssets;
 
 public class ToggleObjectsWithKeycode : MonoBehaviour
 {
     public List<GameObject> objectsToToggle;
     public KeyCode toggleKey = KeyCode.F;
+    private bool isFast = false;
+    private ThirdPersonController tpc;
+    private GameObject playerObj;
+
+    public void Start()
+    {
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        tpc = playerObj.GetComponent<ThirdPersonController>();
+    }
 
     void Update()
     {
@@ -20,6 +30,17 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
                     obj.SetActive(!obj.activeSelf);
                 }
             }
+            if (!isFast)
+            {
+                tpc.MoveSpeed = 20;
+                isFast = true;
+            }
+            else
+            {
+                tpc.MoveSpeed = 2;
+                isFast = false;
+            }
+
         }
     }
 
