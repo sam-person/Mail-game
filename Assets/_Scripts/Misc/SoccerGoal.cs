@@ -6,10 +6,11 @@ public class SoccerGoal : MonoBehaviour
 {
     public GameObject particlesGO;
     public float particleLifeTime = 3f;
+    public LayerMask layerToCheck;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Can" && !particlesGO.activeSelf)
+        if (layerToCheck == (layerToCheck | (1 << other.gameObject.layer)) && !particlesGO.activeSelf)
         {
             StartCoroutine(Goal());
         }
