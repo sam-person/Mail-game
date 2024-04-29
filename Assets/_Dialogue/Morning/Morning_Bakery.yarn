@@ -1,39 +1,49 @@
 ﻿title: BakeryIntro
 ---
 <<declare $isbreadBurning = false>>
-Chef Meow: Catto! That must mean it’s time for mail, one of my favorite times
-Chef Meow: It’s like getting a present ...Even though I ordered it
-Chef Meow: But I always forget what I’ve ordered so I’m still opening a box with a surprise in it
+Sous Chef: Good morning Mr Catto!
+Sous Chef: Oh is that a present for me?
+Sous Chef: Awh, it’s just another delivery
+Sous Chef: You can take that ov-
+<<Trigger BakerInterruptCam>>
+Chef Meow: OH NO! HEY! My bread is burning
 <<Trigger Oven>>
 <<Trigger OvenCamera>>
-Chef Meow: OH NO!
-Chef Meow: The bread is starting to burn!
+Chef Meow: My tiny little arms can't reach the oven door!
 <<Trigger OvenCamera>>
-Chef Meow: Catto, can I rely on you to save the bread?
-Chef Meow: I could have got to the bread in time if I just stopped talking but now only you can save it
-Chef Meow: There’s no way I would get to it in time, not with these knees of mine
-Chef Meow: Quick Catto! Use your little legs to get to the oven and take the bread out
+Chef Meow: Catto, please save my bread
+<<Trigger BakerInterruptCam>>
 <<set $isbreadBurning = true>>
 <<declare $savedBread = false>>
 <<setQuest "Close the oven door!">>
 ===
 
-title: GoSaveBread
+title: GoSaveBreadChef
 ---
 Chef Meow: Quick Catto! Use your little legs to get to the oven and take the bread out
 ===
 
+title: GoSaveBreadSous
+---
+Sous Chef: Quick Catto! Use your little legs to get to the oven and take the bread out
+===
+
 title: BreadSaved
 ---
-Chef Meow: Wow, you saved it! Thank you so much, Catto.
-Chef Meow: Anyway, you had a delivery for me?
-Chef Meow: Thanks Catto!
+<<Trigger OvenDoor>>
+Chef Meow: Phew,  you saved my bread! Thank you so much Catto!
+Chef Meow: Another 50 minutes in there and those would’ve been toast!
+Chef Meow: Oh I see that you have a delivery for me
+Chef Meow:  I can take them off your paws now
 <<set $holding to "nothing">>
 <<set $packagesDeliveredCount += 1>>
 <<set $bakeryPackageDelivered = true>>
 <<set $packageAssigned = false>>
+Chef Meow: Thanks Catto :)
 Chef Meow: If you ever take a break from the Post Office, I think you’d make a great chef here.
-Chef Meow: You’ve definitely proven that you’re bready for it. Hahahahaha!
+<<Trigger NPC_SousChef>>
+Sous Chef: Just as long as you don’t take my job Mr Catto hehe
+<<Trigger NPC_SousChef>>
 <<setQuest "Return to the post office">>
 ===
 
@@ -45,4 +55,19 @@ Chef Meow: Hi Catto! I'm waiting for a package. Have you been to the post office
 title: ChefLaugh
 ---
 Chef Meow: Hahahahahahahaha!
+===
+
+title: ChefWorkForMe
+---
+Chef Meow: Oh, are you ready to work for me? Hahahaha!
+===
+
+title: SousChefHiAgain
+---
+Sous Chef: Oh hi again Mr Catto
+===
+
+title: SousChefFatherFigure
+---
+Sous Chef: I love working with Chef Meow
 ===

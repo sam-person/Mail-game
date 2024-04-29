@@ -7,17 +7,21 @@
 <<declare $packageAssigned = false>>
 <<set $holding = "nothing">>
 <<set $hasNotMetAssistant = false>>
-Assistant Cat: Good morning Catto! I hope you slept well
+Assistant Cat: Good Meowning Catto! I hope you slept well. 
 Assistant Cat: Here’s some news for today
-Assistant Cat: It’s a beautiful sunny day out there, perfect for delivering some mail! 
-Assistant Cat: We’re in peak sunflower season
-Assistant Cat: Overnight I got a new leaf on my snapdragon plant!
+Assistant Cat: The sun was so big today it looked like the egg I had for breakfast!
+Assistant Cat: Have I told you about how nutritious eggs are by the way?
+Assistant Cat: The protein to calorie ratio is just off the charts!
+Assistant Cat: Speaking of which, your hat kind of looks like…
+Assistant Cat: Anyway!
 Assistant Cat: I think that’s all for news
--> Catto: Anything else happening today?
-	Assistant Cat: No, I think that’s all. Are you ready to start your day?
+Assistant Cat: Are you ready for your first delivery?
+-> Catto:  Is there aaaaaaaaanything else you forgot to mention?
+	Assistant Cat: Nope, I think that’s all!
 	-> Catto: I’m ready to start the day!
-	-> Catto: Nothing else, not even any birthdays?
-		Assistant Cat: I never forget a birthday. Are you ready to start your day?
+	-> Catto: Nothing else? Not even any birthdays?????
+		Assistant Cat: I never forget a birthday.
+		Assistant Cat: Are you ready to start your day?
 		-> Catto: I’m ready to start the day!
 -> Catto: Thanks, I’m ready to start the day!
 Assistant Cat: I have a few packages I still need to process, I have this one ready to be delivered
@@ -47,9 +51,10 @@ Assistant Cat: Could you please deliver the package that is on my desk to the ba
 
 title: PostOfficeReturnedFromBakery
 ---
-Assistant Cat: You’re back! I just finished processing 2 more packages. 
-Assistant Cat: You can deliver them in any order you like, none are express so there’s no rush.
-Assistant Cat: The packages are for the Florist and the Cafe
+Assistant Cat: Oh Catto you’re back! I just finished processing 2 more packages.  
+Assistant Cat:  You can deliver them in any order you like.
+Assistant Cat: None are express so there’s no rush.
+Assistant Cat: The packages are for the Florist and the Cafe.
 Assistant Cat: Which package would you like to deliver next?
 <<Trigger SceneDoorSwitcher>>
 <<jump PostOfficeChooseAnotherPackage>>
@@ -83,6 +88,8 @@ title: PostOfficeFloristChosen
 ---
 <<if $floristPackageDelivered == false>>
 Assistant Cat: Okay, here’s the package for the Florist!
+Assistant Cat: I hear the flowers are really nice this time of year
+Assistant Cat: Give them a smell for me!
 <<Trigger PackageFlorist>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>

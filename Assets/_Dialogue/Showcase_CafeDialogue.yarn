@@ -9,19 +9,20 @@ Barista: I can't wait to get it
 
 title: CafeDelivery
 ---
-Barista: My delivery! Perfect timing Catto
-Barista: Can I make you a drink? My gift to you
+Barista: What’s that, a package for me?
+Barista: I’m pretty busy right now, just leave it on the counter for me
 <<declare $hasCorrectDrink = false>>
-Barista: Er.. as in it’s free. For doing a great job, nothing to do with what day it is
+Barista:  Is that it, or do you need anything else?
 -> Catto: a room-temperature lactose-free milk please
     <<set $hasCorrectDrink = true>>
 -> Catto: a cool bowl of water please
+    <<set $hasCorrectDrink = false>>
+-> Catto: a cup of catpuccino please
     <<set $hasCorrectDrink = false>>
 Barista: Coming right up! …
 Barista: …
 Barista: Here’s your drink
 Barista: Have a good day Catto!
-Barista: It's just like any other day
 <<setQuest "Return to the post office">>
 <<set $cafePackageDelivered = true>>
 <<set $holding = "nothing">>

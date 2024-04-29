@@ -74,7 +74,7 @@ Assistant Cat: This isn’t exactly what I was after, but thank you!
 
 title: PostOfficeFinishedMidday
 ---
-Assistant Cat: Great work on delivering those packages fuckface!
+Assistant Cat: Great work on delivering those packages!
 Assistant Cat: I've got another 2 packages for you to deliver now
 Assistant Cat: These packages are for the grocery store and the nursing home
 Assistant Cat: Which package would you like to deliver next?
@@ -93,8 +93,7 @@ title: PostOfficeChooseAnotherPackageMidday
 title: PostOfficeGroceryChosen
 ---
 Assistant Cat: Okay, here’s the package for the Grocery Store!
-Assistant Cat: Just so you know, the Grocery store is down by the beach
-Assistant Cat: Although, of course you know that. You're the best mail cat in town!
+Assistant Cat: Make sure you take in that sea breeze while you’re down there
 <<Trigger PackageGrocery>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
@@ -103,7 +102,8 @@ Assistant Cat: Although, of course you know that. You're the best mail cat in to
 title: PostOfficeNursingHomeChosen
 ---
 Assistant Cat: Okay, here’s the package for the Nursing Home!
-Assistant Cat: Hopefully this time [something funny]
+Assistant Cat: Grandmeow Cat sometimes doesn’t like to leave her room
+Assistant Cat: Good luck with that
 <<Trigger PackageNursing>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
