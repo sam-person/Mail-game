@@ -15,6 +15,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public static PlayerInteractionHandler instance;
 
     public ParticleSystem meowParticle;
+    public ParticleSystem ekekekParticle;
 
     public ThirdPersonController thirdPersonController;
     public AudioSource doorSource;
@@ -66,7 +67,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         thirdPersonController = GetComponent<ThirdPersonController>();
         StartInteractionCooldown(2f); //make sure this logic starts if nothing else starts it, might not be needed
         _input = GetComponent<StarterAssetsInputs>();
-
+        Ekekek(false);
     }
 
     void HandleInteractionCooldown() {
@@ -282,6 +283,17 @@ public class PlayerInteractionHandler : MonoBehaviour
         
     }
 
+    public void Ekekek(bool playEk)
+    {
+        var ekEmission = ekekekParticle.emission;
+        if (playEk)
+        {
+            ekEmission.enabled = true;
+        }
+        else
+        {
+            ekEmission.enabled = false;
+        }
 
-
+    }
 }

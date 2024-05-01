@@ -8,9 +8,9 @@ using System.Collections;
 
 
 public class LandingSpot:MonoBehaviour{
-    [HideInInspector]
+    //[HideInInspector]
     public FlockChild landingChild;
-    [HideInInspector]
+   // [HideInInspector]
     public bool landing;
     int lerpCounter;
     [HideInInspector]
