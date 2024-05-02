@@ -140,7 +140,7 @@ public class InterfaceManager : MonoBehaviour
             dialogueText.font = npc.font;
             //dialogueCharacterName.font = npc.font;
             dialogueText.color = npc.fontColour;
-            dialogueCharacterName.color = npc.fontColour;
+            dialogueCharacterName.color = npc.nameColour;
             dialogueNextText.color = npc.backgroundColor;
 
             dialogueBackgroundImage.color = npc.backgroundColor;

@@ -8,6 +8,7 @@ public class NPCDefinition : ScriptableObject
 {
     public string NPCName = "NPC";
     public Color fontColour = Color.white;
+    public Color nameColour = Color.black;
     public TMP_FontAsset font;
     public Color backgroundColor = new Color(0.9245283f, 0.5712887f, 0.6278643f, 1f);
     public Color outlineColor = Color.white;
