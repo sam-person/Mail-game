@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5641142463791954683}
   - component: {fileID: 4221863399527888945}
+  - component: {fileID: 4574835996962278433}
   m_Layer: 0
   m_Name: '[LevelManager]'
   m_TagString: Untagged
@@ -83,6 +84,24 @@ MonoBehaviour:
   gameManger_Prefab: {fileID: 19309683994359919, guid: a7a2001d799dae04cb213670b5882c38, type: 3}
   ui_Prefab: {fileID: 1611564814894616540, guid: 407476f1bdd7801429a301db6966ed65, type: 3}
   playerCameraTarget: {fileID: 6774023865527622839}
+  interiorExteriorLightingSwitcher: {fileID: 0}
+--- !u!114 &4574835996962278433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548329030228801209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4922a71614d5dca49933dec0abc5a295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interiorLightingSettings: {fileID: 11400000, guid: fecdbe22f6306ad41b54935d8d89494c, type: 2}
+  exteriorLightingSettings: {fileID: 11400000, guid: 5ff884ea7a89a6e47a9bde97a19bad6f, type: 2}
+  interiorSun: {fileID: 0}
+  exteriorSun: {fileID: 0}
+  startInside: 0
 --- !u!1 &4589627963801661567
 GameObject:
   m_ObjectHideFlags: 0

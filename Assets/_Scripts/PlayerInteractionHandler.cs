@@ -18,6 +18,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public ParticleSystem ekekekParticle;
 
     public ThirdPersonController thirdPersonController;
+    public InteriorExteriorLightingSwitcher interiorExteriorLightingSwitcher;
     public AudioSource doorSource;
     public AudioClip doorClip;
     public bool isGamePaused = false;
@@ -65,6 +66,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private void Start()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
+        interiorExteriorLightingSwitcher = FindObjectOfType<InteriorExteriorLightingSwitcher>();
         StartInteractionCooldown(2f); //make sure this logic starts if nothing else starts it, might not be needed
         _input = GetComponent<StarterAssetsInputs>();
         Ekekek(false);
@@ -163,6 +165,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             transform.rotation = teleport.spawnPoint.transform.rotation;
             transform.position = teleport.spawnPoint.transform.position;
             thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
+            interiorExteriorLightingSwitcher.SwitchToInteriorLighting();
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.SolidColor;
             //animator.SetBool("interact", false);
@@ -175,6 +178,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             transform.rotation = teleport.spawnPoint.transform.rotation;
             transform.position = teleport.spawnPoint.transform.position;
             thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
+            interiorExteriorLightingSwitcher.SwitchToExteriorLighting();
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.Skybox;
             //animator.SetBool("interact", false);
