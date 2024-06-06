@@ -243,6 +243,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public  void MeowButton()
     {
+        _input.meow = false;
         var index = Random.Range(0, meows.Length);
         AudioSource.PlayClipAtPoint(meows[index], this.transform.position, meowsVolume);
         meowParticle.Emit(1); 
@@ -256,9 +257,14 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private void Update()
     {
+        if(_input.escape)
+        {
+            GameManager.instance.TogglePause();
+            _input.escape = false;
+        }
+
         if(_input.interact && !interactionButtonPressed)
         {
-            //Debug.Log("interact button pressed on PIH script");
             CattoInteractor();
             interactionButtonPressed = true;
         }
@@ -267,7 +273,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             interactionButtonPressed = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (_input.meow)
         {
             MeowButton();
         }

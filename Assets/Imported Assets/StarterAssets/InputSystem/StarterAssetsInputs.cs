@@ -13,6 +13,8 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
         public bool interact;
+        public bool meow;
+        public bool escape;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -40,10 +42,19 @@ namespace StarterAssets
 			JumpInput(value.isPressed);
 		}
 
-
         public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
+        }
+
+        public void OnMeow(InputValue value)
+        {
+            MeowInput(value.isPressed);
+        }
+
+        public void OnEscape(InputValue value)
+        {
+            EscapeInput(value.isPressed);
         }
 
         public void OnInteract(InputValue value)
@@ -72,8 +83,18 @@ namespace StarterAssets
 
         public void SprintInput(bool newSprintState)
 		{
-			sprint = newSprintState;
+			sprint = !sprint;
             //Debug.Log("sprint input pressed" + sprint);
+        }
+
+        public void MeowInput(bool newMeowState)
+        {
+            meow = newMeowState;
+        }
+
+        public void EscapeInput(bool newEscapeState)
+        {
+            escape = newEscapeState;
         }
 
         public void InteractInput(bool newInteractState)

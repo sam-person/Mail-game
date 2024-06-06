@@ -8,12 +8,11 @@ using TMPro;
 using Yarn.Unity;
 using Yarn;
 using System;
+using StarterAssets;
 
 public class GameManager : MonoBehaviour
 {
-
     public AudioSource bgmAudio;
-
 
     //Cinemachine References
     //public CinemachineTargetGroup targetGroup;
@@ -58,11 +57,7 @@ public class GameManager : MonoBehaviour
         _startAudio = bgmAudio.clip;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        HandlePauseInput();
-    }
+
     public void SetGameState(GameState newState) {
         //check that we're changing to a new state
         //if (gameState == newState) return;
@@ -146,13 +141,8 @@ public class GameManager : MonoBehaviour
     //    //targetGroup.m_Targets[num].target = target;
     //}
 
-    void HandlePauseInput() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            TogglePause();
-        }
-    }
-
-    public void TogglePause() {
+    public void TogglePause() 
+    {
         switch (gameState)
         {
             case GameState.Gameplay:

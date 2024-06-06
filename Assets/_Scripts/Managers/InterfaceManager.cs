@@ -44,7 +44,7 @@ public class InterfaceManager : MonoBehaviour
 
     public TextMeshProUGUI questText;
 
-    public Sprite interact_active_icon, interact_locked_icon;
+    public Sprite interact_active_icon, interact_locked_icon, interact_active_icon_PS, interact_active_icon_XB, interact_active_icon_KBM;
 
     public Canvas UIcanvas;
 
@@ -102,6 +102,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void ShowPauseMenu(bool _active) {
         pauseMenu.SetActive(_active);
+        pauseMenu.GetComponent<CanvasGroup>().interactable = _active;
     }
 
     public void PauseButton_Quit() {
@@ -111,6 +112,7 @@ public class InterfaceManager : MonoBehaviour
     public void PauseButton_Resume()
     {
         GameManager.instance.TogglePause();
+        pauseMenu.GetComponent<CanvasGroup>().interactable = false;
     }
 
     /// <summary>
@@ -174,4 +176,19 @@ public class InterfaceManager : MonoBehaviour
         spawned.SetPanel(_image, _text, _time);
     }
 
+    public void OnInputDeviceChanged(string device)
+    {
+        if (device == "PS")
+        {
+            interact_active_icon = interact_active_icon_PS;
+        }
+        else if (device == "XB")
+        {
+            interact_active_icon = interact_active_icon_XB;
+        }
+        else
+        {
+            interact_active_icon = interact_active_icon_KBM;
+        }
+    }
 }

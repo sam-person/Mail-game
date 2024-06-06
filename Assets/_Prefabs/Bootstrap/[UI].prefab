@@ -1376,6 +1376,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1611564815685294428}
+  - {fileID: 3246598997025302810}
   m_Father: {fileID: 1611564816168597276}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1822,6 +1823,7 @@ GameObject:
   - component: {fileID: 1611564814894616543}
   - component: {fileID: 1611564814894616542}
   - component: {fileID: 8258395412419918451}
+  - component: {fileID: 8306349891830370721}
   m_Layer: 5
   m_Name: '[UI]'
   m_TagString: Untagged
@@ -1896,6 +1898,9 @@ MonoBehaviour:
   questText: {fileID: 5839152555854422404}
   interact_active_icon: {fileID: 21300000, guid: 81a2029e1421b654399c2eb72936121f, type: 3}
   interact_locked_icon: {fileID: 21300000, guid: bcdd615f55a7a634e8d236dd1ab65fe9, type: 3}
+  interact_active_icon_PS: {fileID: 21300000, guid: 1485341645910a84fb5f773895de1231, type: 3}
+  interact_active_icon_XB: {fileID: 21300000, guid: 3b60d6ea54217e5499233a8107434e82, type: 3}
+  interact_active_icon_KBM: {fileID: 21300000, guid: 81a2029e1421b654399c2eb72936121f, type: 3}
   UIcanvas: {fileID: 250886575957402423}
 --- !u!114 &1611564814894616543
 MonoBehaviour:
@@ -1985,6 +1990,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLanguageCode: en-AU
+--- !u!114 &8306349891830370721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611564814894616532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b614e478ab88243aab63dec065860c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInputDeviceChanged_Images:
+  - {fileID: 0}
+  interfaceManager: {fileID: 1611564814894616540}
 --- !u!1 &1611564814942892148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,19 +2685,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueView: {fileID: 1611564816168597270}
-  continueActionType: 1
+  continueActionType: 3
   continueActionKeyCode: 32
-  continueActionReference: {fileID: 0}
+  continueActionReference: {fileID: 4714019599845599701, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   continueAction:
     m_Name: Skip
     m_Type: 1
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 4ba4665b-07cf-4c96-a31d-0ec56fccb432
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 
+      m_Id: 11e3e455-4ac4-4f77-8df2-3dc514cd2d50
       m_Path: Submit
       m_Interactions: 
       m_Processors: 
@@ -2734,7 +2754,7 @@ CanvasGroup:
   m_GameObject: {fileID: 1611564816016012066}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1611564816168597279
@@ -3981,6 +4001,82 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1 &3417379305303608284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3246598997025302810}
+  - component: {fileID: 7040114126746472446}
+  - component: {fileID: 6546185716517688961}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &3246598997025302810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417379305303608284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611564814575561229}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 165.5, y: -3.2889}
+  m_SizeDelta: {x: 58.4221, y: 58.4221}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7040114126746472446
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417379305303608284}
+  m_CullTransparentMesh: 1
+--- !u!114 &6546185716517688961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417379305303608284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5b1c77cab5269c4499fc1f33ccffbb10, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3486993589086701488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4422,18 +4518,18 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_PointAction: {fileID: 407461025233520364, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_MoveAction: {fileID: 6406344917823902551, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_SubmitAction: {fileID: 1420836752128225174, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_CancelAction: {fileID: 8947345371541705578, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_LeftClickAction: {fileID: 4714019599845599701, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_MiddleClickAction: {fileID: -4220979397740901918, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_RightClickAction: {fileID: -1939768739101692556, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_ScrollWheelAction: {fileID: -5862032353811294883, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 5470698332018304803, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -4743921550962687527, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
 --- !u!1 &4383739073449186206
@@ -4447,10 +4543,10 @@ GameObject:
   - component: {fileID: 4383739073449185895}
   - component: {fileID: 4383739073449185892}
   - component: {fileID: 4383739073449185893}
-  - component: {fileID: 4383739073449186201}
   - component: {fileID: 4383739073449186202}
   - component: {fileID: 4383739073449186203}
   - component: {fileID: 4383739073449186200}
+  - component: {fileID: 4383739073449186201}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -4521,23 +4617,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 5
---- !u!114 &4383739073449186201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383739073449186206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac0c40fc910845709d9cef7c876cb99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 4383739073449186200}
-  optionViewPrefab: {fileID: 5665317717604146022, guid: e9af8baab2e4ac546862fc747733f668, type: 3}
-  lastLineText: {fileID: 5470031270097974386}
-  fadeTime: 0.1
-  showUnavailableOptions: 0
 --- !u!114 &4383739073449186202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4669,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4383739073449186201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383739073449186206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac0c40fc910845709d9cef7c876cb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 4383739073449186200}
+  optionViewPrefab: {fileID: 5665317717604146022, guid: e9af8baab2e4ac546862fc747733f668, type: 3}
+  lastLineText: {fileID: 5470031270097974386}
+  fadeTime: 0.1
+  showUnavailableOptions: 0
 --- !u!1 &4383739073503221395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,9 +6386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueView: {fileID: 4383739073449186201}
-  continueActionType: 1
+  continueActionType: 3
   continueActionKeyCode: 32
-  continueActionReference: {fileID: 0}
+  continueActionReference: {fileID: 4714019599845599701, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   continueAction:
     m_Name: Skip
     m_Type: 1
