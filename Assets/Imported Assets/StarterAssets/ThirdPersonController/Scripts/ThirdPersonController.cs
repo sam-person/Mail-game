@@ -266,7 +266,6 @@ namespace StarterAssets
             if (_input.move == Vector2.zero)
             {
                 targetSpeed = 0.0f;
-                _input.sprint = false;
             }
 
             // a reference to the players current horizontal velocity

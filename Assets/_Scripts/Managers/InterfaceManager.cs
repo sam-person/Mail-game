@@ -23,6 +23,7 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI debugGameState;
 
     public GameObject pauseMenu;
+    public GameObject pauseMenuControls;
     public GameObject debugObject;
 
     [BoxGroup("Dialogue")]
@@ -113,6 +114,12 @@ public class InterfaceManager : MonoBehaviour
     {
         GameManager.instance.TogglePause();
         pauseMenu.GetComponent<CanvasGroup>().interactable = false;
+    }
+
+    public void PauseMenu_Controls(bool _active)
+    {
+        pauseMenuControls.SetActive(_active);
+        ShowPauseMenu(!_active);
     }
 
     /// <summary>

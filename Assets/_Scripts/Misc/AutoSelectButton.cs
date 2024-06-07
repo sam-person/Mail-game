@@ -6,9 +6,21 @@ using UnityEngine.UI;
 public class AutoSelectButton : MonoBehaviour
 {
     public Button button;
+    public UIInputDevice _UIInputDevice;
 
-    private void Awake()
+    private void OnEnable()
     {
-        button.Select();
+        if (_UIInputDevice != null)
+        {
+            //only preselect a button if using a controller
+            if (!_UIInputDevice.usingKBM)
+            {
+                button.Select();
+            }
+        }
+        else
+        {
+            Debug.LogError("_UIInputDevice was not set");
+        }
     }
 }

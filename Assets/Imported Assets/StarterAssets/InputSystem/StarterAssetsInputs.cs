@@ -83,7 +83,7 @@ namespace StarterAssets
 
         public void SprintInput(bool newSprintState)
 		{
-			sprint = !sprint;
+			sprint = newSprintState;
             //Debug.Log("sprint input pressed" + sprint);
         }
 
