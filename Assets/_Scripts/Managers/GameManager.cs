@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
 
     AudioClip _startAudio;
 
+    public bool isUsingKBM = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -127,8 +129,11 @@ public class GameManager : MonoBehaviour
                 //dialogueCamera.gameObject.SetActive(true);
                 break;
             case GameState.Paused:
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                if (isUsingKBM)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                }
                 Time.timeScale = 0f;
                 InterfaceManager.instance.ShowPauseMenu(true);
                 break;

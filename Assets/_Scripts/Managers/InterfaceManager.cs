@@ -9,6 +9,7 @@ using System;
 using Yarn;
 using Yarn.Unity;
 using Sirenix.OdinInspector;
+using UnityEngine.InputSystem;
 
 public class InterfaceManager : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI /*dialogue_options_CharacterName,*/ dialogue_options_Text;
     [BoxGroup("Dialogue/Options")]
     public Image dialogue_options_BackgroundImage, dialogue_options_OutlineImage, dialogue_options_LeftWhiskers, dialogue_options_RightWhiskers;
+    public Transform continueButtonMousePos;
 
     [BoxGroup("TutorialPanels")]
     public Transform tutorialParent;
@@ -183,11 +185,15 @@ public class InterfaceManager : MonoBehaviour
         UI_Tutorial_Panel spawned = Instantiate(panelObject, tutorialParent);
         spawned.gameObject.SetActive(true);
 
-        if (currentInputDevice != "KeyboardMouse")
+        if (currentInputDevice == "PS")
         {
             spawned.SetPanel(_imagePS, _textPS, _time);
         }
-       else
+        else if (currentInputDevice == "KBM")
+        {
+            spawned.SetPanel(_image, _text, _time);
+        }
+        else
         {
             spawned.SetPanel(_image, _text, _time);
         }
@@ -197,15 +203,26 @@ public class InterfaceManager : MonoBehaviour
     {
         if (device == "PS")
         {
+            GameManager.instance.isUsingKBM = false;
             interact_active_icon = interact_active_icon_PS;
         }
         else if (device == "XB")
         {
+            GameManager.instance.isUsingKBM = false;
             interact_active_icon = interact_active_icon_XB;
         }
         else
         {
+            GameManager.instance.isUsingKBM = true;
             interact_active_icon = interact_active_icon_KBM;
         }
+    }
+
+    public void SetMousePosToBottomRight()
+    {
+        Debug.Log("Setting mouse position to bottom right of screen");
+        Vector2 bottomRightPosition = new Vector2(continueButtonMousePos.position.x, continueButtonMousePos.position.y);
+        //Cursor.SetCursor(null, bottomRightPosition, CursorMode.Auto);
+        Mouse.current.WarpCursorPosition(bottomRightPosition);
     }
 }

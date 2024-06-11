@@ -10,6 +10,13 @@ public class UIInputDevice : MonoBehaviour
     private string currentDevice;
     public bool usingKBM = true;
 
+    public bool autoSelectControlScheme = true;
+    public enum controlScheme { KBM, PS, XB}
+    public controlScheme currentControlScheme = controlScheme.KBM;
+
+    public controlScheme overridenControlScheme = controlScheme.KBM;
+    public bool overrideControlScheme = false;
+
     public OnInputDeviceChanged_Image[] onInputDeviceChanged_Images;
     public InterfaceManager interfaceManager;
 
@@ -18,8 +25,6 @@ public class UIInputDevice : MonoBehaviour
     void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
-        currentDevice = playerInput.currentControlScheme;
-        interfaceManager.currentInputDevice = currentDevice;
     }
 
     void Update()
@@ -30,33 +35,72 @@ public class UIInputDevice : MonoBehaviour
         //}
 
         //if the input device changes
-        if (playerInput.currentControlScheme != currentDevice)
+        if (playerInput.currentControlScheme != currentDevice && autoSelectControlScheme)
         {
-            interfaceManager.currentInputDevice = currentDevice;
-            Debug.Log("Change control scheme to " + currentDevice);
+            Debug.Log("Change control scheme to " + playerInput.currentControlScheme);
             //if the input device is not a Keyboard and Mouse
-            if (playerInput.currentControlScheme != "KeyboardMouse")
+            if (playerInput.currentControlScheme == "KeyboardMouse")
             {
-                usingKBM = false;
-                //EventSystem.current.SetSelectedGameObject(lastSelectedGameObject);
-                interfaceManager.OnInputDeviceChanged("PS");
-                foreach (var item in onInputDeviceChanged_Images)
-                {
-                    item.OnInputDeviceChanged("PS");
-                }
+                SelectedControlScheme(controlScheme.KBM);
             }
-            else
+            else if (playerInput.currentControlScheme == "Gamepad")
             {
-                usingKBM = true;
-                interfaceManager.OnInputDeviceChanged("KBM");
-                EventSystem.current.SetSelectedGameObject(null); //deselect any buttons that are currently selected
-                foreach (var item in onInputDeviceChanged_Images)
-                {
-                    item.OnInputDeviceChanged("KBM");
-                }
+                SelectedControlScheme(controlScheme.PS);
             }
         }
-
         currentDevice = playerInput.currentControlScheme;
+    }
+
+    public void SelectedControlScheme(controlScheme control)
+    {
+        switch (control)
+        {
+            case controlScheme.KBM:
+                HandleChangeInput(controlScheme.KBM, "KBM");
+                break;
+            case controlScheme.PS:
+                HandleChangeInput(controlScheme.PS, "PS");
+                break;
+            case controlScheme.XB:
+                HandleChangeInput(controlScheme.XB, "XB");
+                break;
+            default:
+                HandleChangeInput(controlScheme.KBM, "KBM");
+                break;
+        }
+    }
+
+
+    void HandleChangeInput(controlScheme control, string controlString)
+    {
+        currentControlScheme = control;
+        interfaceManager.currentInputDevice = controlString;
+
+        if(controlString == "KBM")
+        {
+            usingKBM = true;
+            EventSystem.current.SetSelectedGameObject(null); //deselect any buttons that are currently selected
+        }
+        else
+        {
+            usingKBM = false;
+            //Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
+            //EventSystem.current.SetSelectedGameObject(lastSelectedGameObject);
+        }
+
+        interfaceManager.OnInputDeviceChanged(controlString);
+
+        foreach (var item in onInputDeviceChanged_Images)
+        {
+            item.OnInputDeviceChanged(controlString);
+        }
+    }
+
+    public void OverrideControlScheme(controlScheme control)
+    {
+        overridenControlScheme = control;
+        overrideControlScheme = true;
+        SelectedControlScheme(control);
     }
 }
