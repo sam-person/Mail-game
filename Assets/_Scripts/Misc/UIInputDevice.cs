@@ -18,6 +18,8 @@ public class UIInputDevice : MonoBehaviour
     void Start()
     {
         playerInput = FindObjectOfType<PlayerInput>();
+        currentDevice = playerInput.currentControlScheme;
+        interfaceManager.currentInputDevice = currentDevice;
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class UIInputDevice : MonoBehaviour
         //if the input device changes
         if (playerInput.currentControlScheme != currentDevice)
         {
+            interfaceManager.currentInputDevice = currentDevice;
             Debug.Log("Change control scheme to " + currentDevice);
             //if the input device is not a Keyboard and Mouse
             if (playerInput.currentControlScheme != "KeyboardMouse")

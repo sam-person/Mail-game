@@ -8,6 +8,7 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
 {
     public List<GameObject> objectsToToggle;
     public KeyCode toggleKey = KeyCode.F;
+    public KeyCode toggleKeyForBuild = KeyCode.M;
     private bool isFast = false;
     private ThirdPersonController tpc;
     private GameObject playerObj;
@@ -20,28 +21,38 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        if (Input.GetKeyDown(toggleKey) && (Application.isEditor || Debug.isDebugBuild))
         {
-            // Toggle the visibility of each GameObject in the list
-            foreach (GameObject obj in objectsToToggle)
+            ToggleVisibility();
+        }
+        else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift))
+        {
+            if(Input.GetKeyDown(toggleKeyForBuild))
             {
-                if (obj != null)
-                {
-                    obj.SetActive(!obj.activeSelf);
-                }
+                ToggleVisibility();
             }
-            if (!isFast)
-            {
-                tpc.MoveSpeed = 20;
-                isFast = true;
-            }
-            else
-            {
-                tpc.MoveSpeed = 2;
-                isFast = false;
-            }
-
         }
     }
 
+    void ToggleVisibility()
+    {
+        // Toggle the visibility of each GameObject in the list
+        foreach (GameObject obj in objectsToToggle)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(!obj.activeSelf);
+            }
+        }
+        if (!isFast)
+        {
+            tpc.MoveSpeed = 20;
+            isFast = true;
+        }
+        else
+        {
+            tpc.MoveSpeed = 2;
+            isFast = false;
+        }
+    }
 }
