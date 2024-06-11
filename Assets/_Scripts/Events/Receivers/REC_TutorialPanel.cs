@@ -6,14 +6,19 @@ using Sirenix.OdinInspector;
 
 public class REC_TutorialPanel : Receiver
 {
-    [PreviewField(Alignment = ObjectFieldAlignment.Left)]
+//    [PreviewField(Alignment = ObjectFieldAlignment.Left)]
+    public float tutorialTime;
+
     public Sprite tutorialImage;
     public string tutorialText;
-    public float tutorialTime;
+    public Sprite tutorialImagePS;
+    public string tutorialTextPS;
+    public Sprite tutorialImageXB;
+    public string tutorialTextXB;
 
     public override void Activate()
     {
         base.Activate();
-        InterfaceManager.instance.SpawnTutorialPanel(tutorialImage, tutorialText, tutorialTime);
+        InterfaceManager.instance.SpawnTutorialPanel(tutorialImage, tutorialImagePS, tutorialText, tutorialTextPS, tutorialTime);
     }
 }
