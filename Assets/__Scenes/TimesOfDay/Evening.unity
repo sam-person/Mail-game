@@ -1517,9 +1517,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db677beaef739af43ab242e4cb230400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialTime: 3
   tutorialImage: {fileID: 21300000, guid: ff7bfa7addf40784d86f62b8e4a034a6, type: 3}
   tutorialText: Use WASD to move!
-  tutorialTime: 3
+  tutorialImagePS: {fileID: 0}
+  tutorialTextPS: 
+  tutorialImageXB: {fileID: 0}
+  tutorialTextXB: 
 --- !u!114 &451765577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,9 +2006,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db677beaef739af43ab242e4cb230400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialTime: 3
   tutorialImage: {fileID: 21300000, guid: 81a2029e1421b654399c2eb72936121f, type: 3}
   tutorialText: Press E to interact!
-  tutorialTime: 3
+  tutorialImagePS: {fileID: 0}
+  tutorialTextPS: 
+  tutorialImageXB: {fileID: 0}
+  tutorialTextXB: 
 --- !u!114 &685184221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18595,6 +18603,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.70999753
       objectReference: {fileID: 0}
+    - target: {fileID: 318556269576511527, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+      propertyPath: xRot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318556269576511527, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 318556268537744784}
     - target: {fileID: 966661868771218466, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
       propertyPath: Receivers.Array.data[0]
       value: 
@@ -18735,6 +18751,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.40133405
       objectReference: {fileID: 0}
+    - target: {fileID: 5029307617589988597, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 318556268537744783}
     - target: {fileID: 6234613466570497050, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -18925,6 +18945,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+--- !u!4 &318556268537744783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 318556268670043961, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+  m_PrefabInstance: {fileID: 318556268537744782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &318556268537744784 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1945298669288219589, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+  m_PrefabInstance: {fileID: 318556268537744782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &358564301089999461 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7991092002345359759, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
