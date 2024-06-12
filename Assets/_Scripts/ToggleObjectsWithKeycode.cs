@@ -21,11 +21,11 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey) && (Application.isEditor || Debug.isDebugBuild))
+        if (Input.GetKeyDown(toggleKey) && (Application.isEditor))
         {
             ToggleVisibility();
         }
-        else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift))
         {
             if(Input.GetKeyDown(toggleKeyForBuild))
             {

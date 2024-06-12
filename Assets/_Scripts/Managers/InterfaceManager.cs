@@ -110,6 +110,7 @@ public class InterfaceManager : MonoBehaviour
     }
 
     public void PauseButton_Quit() {
+        Application.Quit();
         GameManager.instance.Quit();
     }
 
