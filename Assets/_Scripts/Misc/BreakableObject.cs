@@ -8,6 +8,7 @@ public class BreakableObject : MonoBehaviour
     private bool broken = false;
     [HideInInspector]
     public bool canBeBroken = false;
+    public float multiplyScaleAmount = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,9 @@ public class BreakableObject : MonoBehaviour
         }
         if(canBeBroken)
         {
+            Vector3 goScale = gameObject.transform.localScale;
             GameObject brokenObject = Instantiate(brokenGO, transform.position, transform.rotation);
+            brokenObject.transform.localScale = goScale*multiplyScaleAmount;
             Debug.Log("Breakable object collision");
             gameObject.SetActive(false);
         }
