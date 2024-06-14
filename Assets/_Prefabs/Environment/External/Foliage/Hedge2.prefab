@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4897074170265632727}
   - component: {fileID: 850067454121879072}
   - component: {fileID: 3287725526723922617}
+  - component: {fileID: 5150739964992525414}
+  - component: {fileID: 6921584896263856359}
   m_Layer: 0
   m_Name: Hedge.005
   m_TagString: Untagged
@@ -83,6 +85,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5150739964992525414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21155950889182002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4d1892794f59d4aa4f14af6d857384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystemToPlay: {fileID: 8456815857481649966, guid: 57640533caf7d6c44b20a1a349d27cdd, type: 3}
+  ParticleSystemPrefab: {fileID: 9203045594301776351, guid: 57640533caf7d6c44b20a1a349d27cdd, type: 3}
+  speedToTriggerParticles: 3
+  playSound: 1
+  audioClip: {fileID: 8300000, guid: ca3392f53b6303a48a8824e345232146, type: 3}
+  triggerOnExit: 1
+  spawnAtTriggerPoint: 1
+--- !u!65 &6921584896263856359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21155950889182002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010000003, y: 0.040145323, z: 0.0095833335}
+  m_Center: {x: 0, y: 0.00000023841858, z: 0.004791666}
 --- !u!1 &213780152383004401
 GameObject:
   m_ObjectHideFlags: 0
