@@ -121,7 +121,8 @@ namespace StarterAssets
         private bool _hasAnimator;
 
         private float jumpAnimTime = .01f;
-        private bool jumpPressed = false;
+        [HideInInspector]
+        public bool jumpPressed = false;
 
         private bool IsCurrentDeviceMouse
         {
@@ -171,17 +172,15 @@ namespace StarterAssets
                 JumpAndGravity();
                 GroundedCheck();
                 Move();
-
-                if (_input.jump && !jumpPressed && !(_speed > .1))
-                {
-                    StartCoroutine(PlayJumpAnimation());
-                }
-                else if (_input.jump == false)
-                {
-                    jumpPressed = false;
-                }
             }
-            
+        }
+
+        public void Jump()
+        {
+            if (!jumpPressed && !(_speed > .1))
+            {
+                StartCoroutine(PlayJumpAnimation());
+            }
         }
 
         IEnumerator PlayJumpAnimation()

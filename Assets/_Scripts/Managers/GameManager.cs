@@ -9,6 +9,7 @@ using Yarn.Unity;
 using Yarn;
 using System;
 using StarterAssets;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -161,12 +162,14 @@ public class GameManager : MonoBehaviour
                 {
                     case GameState.Gameplay:
                         SetGameState(GameState.Gameplay);
+                        EventSystem.current.SetSelectedGameObject(null);
                         break;
                     case GameState.Dialogue:
                         SetGameState(GameState.Dialogue);
                         break;
                     case GameState.Paused:
                         SetGameState(GameState.Gameplay);
+                        EventSystem.current.SetSelectedGameObject(null);
                         break;
                 }
                 break;

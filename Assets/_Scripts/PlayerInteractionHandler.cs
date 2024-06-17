@@ -215,9 +215,6 @@ public class PlayerInteractionHandler : MonoBehaviour
                 ChangeState(PlayerState.Normal);
                 break;
         }
-
-        
-
     }
 
     public void ChangeState(PlayerState state) {
@@ -273,15 +270,11 @@ public class PlayerInteractionHandler : MonoBehaviour
             interactionButtonPressed = false;
         }
 
-        if (_input.meow)
-        {
-            MeowButton();
-        }
-
         //for the time being, check for closest interactable every frame
         switch (GameManager.instance.gameState)
         {
             case GameManager.GameState.Gameplay:
+                GameplayInputs();
                 HandleInteractionCooldown();
                 CalculateClosestInteractable();
                 break;
@@ -290,7 +283,23 @@ public class PlayerInteractionHandler : MonoBehaviour
             case GameManager.GameState.Paused:
                 break;
         }
-        
+    }
+
+    private void GameplayInputs()
+    {
+        if (_input.meow)
+        {
+            MeowButton();
+        }
+
+        if (_input.jump)
+        {
+            thirdPersonController.Jump();
+        }
+        else if (_input.jump == false)
+        {
+            thirdPersonController.jumpPressed = false;
+        }
     }
 
     public void Ekekek(bool playEk)
