@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 5f0d96d51edb1be47acd733645f03c4c
+guid: 747f8697ea7e9274d8eeb3105174d3da
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Breads
+    second: {fileID: 5066690075197916319, guid: 2647c0a22dc134c4d94c0cd6e1bc35bf, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -30,10 +35,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["window sill","window","Walls.001","todo list","rectangle
-      pot","purple flower","poster","flower white","flower stem","plant pot","light
-      string","box.001","book.002","book.001","book","bedside table","Cube","blanket","bed","bedframe"],"padding":[157,88,25,194,256,256,114,256,256,256,256,187,256,256,256,104,189,71,69,52],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -50,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
