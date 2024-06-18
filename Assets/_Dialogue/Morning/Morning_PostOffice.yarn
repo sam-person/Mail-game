@@ -60,6 +60,25 @@ Assistant Cat: Which package would you like to deliver next?
 <<jump PostOfficeChooseAnotherPackage>>
 ===
 
+
+
+
+title: PostOfficeReturnedFromBakeryDemo
+---
+Assistant Cat: Oh Catto you’re back! I just finished processing a package to the Florist.  
+Assistant Cat: I hear the flowers are really nice this time of year
+Assistant Cat: Give them a smell for me!
+<<Trigger PackageFlorist>>
+<<setQuest "Pick up the package">>
+<<set $packageAssigned = true>>
+<<Trigger SceneDoorSwitcher>>
+===
+
+
+
+
+
+
 title: PostOfficeChooseAnotherPackage
 ---
 -> Catto: Cafe <<if $cafePackageDelivered == false>>

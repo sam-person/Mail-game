@@ -35,6 +35,8 @@ Assistant Cat: Don't forget the package on my desk
 ===
 
 
+
+
 title: onlyFloristDeliveryLeft
 ---
 Assistant Cat: Well, the only delivery I have left right now is going to the Florist
@@ -120,3 +122,58 @@ Assistant Cat: Which package would you like to deliver next?
 <<jump PostOfficeChooseAnotherPackageMidday>>
 <<set $ThreePackagesDelivered = true>>
 ===
+
+
+
+
+
+
+
+
+title: MiddayPackagesDemo
+---
+
+
+///Needs to deliver package to florist
+<<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the florist
+
+///Needs to deliver package to cafe
+<<elseif $holding == "CafePackage" && $cafePackageDelivered == false>>
+Assistant Cat: Your current package needs to go to the Cafe
+Assistant Cat: Don't forget my drink!
+Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+
+///Hasn't picked up the package
+<<elseif $holding == "nothing" && $packageAssigned == true>>
+Assistant Cat: Don't forget the package on my desk
+<<endif>>
+
+//Has delivered package to cafe and has drink
+<<if $cafePackageDelivered == true && $cafeDrinkDelivered == false>>
+<<jump DeliverCafeDrink>>
+
+<<elseif $cafePackageDelivered == true && $cafeDrinkDelivered == true && $holding == "nothing" && $floristPackageDelivered == false>>
+<<jump onlyFloristDeliveryLeft>>
+
+<<elseif $floristPackageDelivered == true && $holding == "nothing">>
+<<jump DemoFinished>>
+
+///Has delivered all packages
+<<elseif $floristPackageDelivered == true && $cafePackageDelivered == true>>
+<<Trigger SceneDoorSwitcher>>
+<<jump ThreePackagesDelivered>>
+<<endif>>
+===
+
+
+title: DemoFinished
+---
+
+Assistant Cat: Thanks for delivering that package to the Florist Catto!
+Assistant Cat: That's the end of the demo for now.
+Assistant Cat: Don't forget to wishlist the game if you liked it!!!
+Assistant Cat: The game will return to the Main Menu now
+<<Trigger DemoFinish>>
+===
+
