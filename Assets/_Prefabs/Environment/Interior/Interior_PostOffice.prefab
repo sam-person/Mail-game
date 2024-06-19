@@ -99,7 +99,7 @@ BoxCollider:
   m_GameObject: {fileID: 141527577}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   inside: 1
   instant: 0
   spawnPoint: {fileID: 0}
-  xRot: 0
+  xRot: -90
   yRot: 10
   teleType: 0
   subarea: {fileID: 0}
@@ -412,7 +412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383476484}
   m_LocalRotation: {x: 0.0000001192093, y: 1, z: -0, w: 0.000000014901163}
-  m_LocalPosition: {x: 0.073, y: -0.45, z: -18.2}
+  m_LocalPosition: {x: 0.07, y: -0.45, z: -7}
   m_LocalScale: {x: 0.83683425, y: 0.40203056, z: 9.859243}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1283,7 +1283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4617074750498583264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.013118379, y: -0.02183594, z: -0.039666362}
+  m_LocalPosition: {x: -0.013118184, y: -0.021835936, z: -0.03966634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1743,6 +1743,13 @@ MonoBehaviour:
     triggered: 0
     conditions: []
   secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!114 &4225050235697799155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1804,13 @@ MonoBehaviour:
     triggered: 0
     conditions: []
   secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!114 &4225050235697799156
 MonoBehaviour:
   m_ObjectHideFlags: 0
