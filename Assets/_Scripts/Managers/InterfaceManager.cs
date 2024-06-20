@@ -10,6 +10,8 @@ using Yarn;
 using Yarn.Unity;
 using Sirenix.OdinInspector;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class InterfaceManager : MonoBehaviour
 {
@@ -110,8 +112,20 @@ public class InterfaceManager : MonoBehaviour
     }
 
     public void PauseButton_Quit() {
-        Application.Quit();
-        GameManager.instance.Quit();
+
+        //The below lines close the game
+        //Application.Quit();
+        //GameManager.instance.Quit();
+
+        //Get a reference to the yarnstorage script and use it to clear all yarn variables
+        Yarn.Unity.InMemoryVariableStorage yarnStorage = FindObjectOfType<Yarn.Unity.InMemoryVariableStorage>();
+        yarnStorage.Clear();
+
+        //Unpause the game, destroy this object, and load the main menu scene
+        GameManager.instance.TogglePause();
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("MainMenu");
+
     }
 
     public void PauseButton_Resume()
