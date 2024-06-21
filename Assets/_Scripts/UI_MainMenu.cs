@@ -23,9 +23,9 @@ public class UI_MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown && !fading) {
-            fading = true;
-        }
+        //if (Input.anyKeyDown && !fading) {
+        //    fading = true;
+        //}
 
         if (fading && _timer > 0) {
             MainMenu_Play();
@@ -45,6 +45,7 @@ public class UI_MainMenu : MonoBehaviour
 
     public void MainMenu_Play()
     {
+        fading = true;
         _timer -= Time.deltaTime;
         fader.color = new Color(fader.color.r, fader.color.g, fader.color.b, Mathf.InverseLerp(fadeoutTime, 0f, _timer));
         if (_timer <= 0f)
