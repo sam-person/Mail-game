@@ -1946,7 +1946,9 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: MosaicEffectPPSPPSSettings, Unity.Postprocessing.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1206663523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,8 +2312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usingKBM: 1
   autoSelectControlScheme: 1
-  currentControlScheme: 0
-  overridenControlScheme: 0
+  currentControlScheme: 1
+  overridenControlScheme: 1
   overrideControlScheme: 0
   onInputDeviceChanged_Images: []
   interfaceManager: {fileID: 0}
@@ -2331,7 +2333,7 @@ MonoBehaviour:
   button: {fileID: 1578108260}
   _UIInputDevice: {fileID: 1404288942}
   addDelay: 1
-  delayAmount: 0.1
+  delayAmount: 0.5
 --- !u!1 &1415934162
 GameObject:
   m_ObjectHideFlags: 0
