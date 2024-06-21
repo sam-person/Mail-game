@@ -743,7 +743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &568246640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,7 +1990,9 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: MosaicEffectPPSPPSSettings, Unity.Postprocessing.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1206663523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,6 +2134,8 @@ GameObject:
   - component: {fileID: 1404288937}
   - component: {fileID: 1404288936}
   - component: {fileID: 1404288941}
+  - component: {fileID: 1404288943}
+  - component: {fileID: 1404288942}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2337,6 +2341,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1404288942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404288935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b614e478ab88243aab63dec065860c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usingKBM: 1
+  autoSelectControlScheme: 1
+  currentControlScheme: 0
+  overridenControlScheme: 0
+  overrideControlScheme: 0
+  onInputDeviceChanged_Images: []
+  interfaceManager: {fileID: 0}
+  lastSelectedGameObject: {fileID: 0}
+--- !u!114 &1404288943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404288935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae380eecd93bfc3468fa01ee80e63ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1578108260}
+  _UIInputDevice: {fileID: 1404288942}
 --- !u!1 &1415934162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,7 +4009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2063963695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8128,6 +8166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7433289905800023109}
   - component: {fileID: 7810237248376755968}
+  - component: {fileID: 7810237248376755970}
+  - component: {fileID: 7810237248376755969}
   m_Layer: 7
   m_Name: '[Player]'
   m_TagString: Player
@@ -8155,6 +8195,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7810237248376755969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810237248376755967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e087ecce43ebbff45a1b360637807d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {x: 0, y: 0}
+  look: {x: 0, y: 0}
+  jump: 0
+  sprint: 0
+  interact: 0
+  meow: 0
+  escape: 0
+  analogMovement: 0
+  cursorLocked: 1
+  cursorInputForLook: 1
+--- !u!114 &7810237248376755970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810237248376755967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 368125810}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: KeyboardMouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1206663520}
 --- !u!4 &7870600601783282702
 Transform:
   m_ObjectHideFlags: 0

@@ -74,7 +74,11 @@ public class UIInputDevice : MonoBehaviour
     void HandleChangeInput(controlScheme control, string controlString)
     {
         currentControlScheme = control;
-        interfaceManager.currentInputDevice = controlString;
+        if(interfaceManager != null)
+        { 
+            interfaceManager.currentInputDevice = controlString; 
+        }
+        
 
         if(controlString == "KBM")
         {
@@ -89,11 +93,17 @@ public class UIInputDevice : MonoBehaviour
             //EventSystem.current.SetSelectedGameObject(lastSelectedGameObject);
         }
 
-        interfaceManager.OnInputDeviceChanged(controlString);
-
-        foreach (var item in onInputDeviceChanged_Images)
+        if (interfaceManager != null)
         {
-            item.OnInputDeviceChanged(controlString);
+            interfaceManager.OnInputDeviceChanged(controlString);
+        }
+
+        if (onInputDeviceChanged_Images != null)
+        {
+            foreach (var item in onInputDeviceChanged_Images)
+            {
+                item.OnInputDeviceChanged(controlString);
+            }
         }
     }
 
