@@ -8,7 +8,28 @@ public class AutoSelectButton : MonoBehaviour
     public Button button;
     public UIInputDevice _UIInputDevice;
 
+    public bool addDelay = false;
+    public float delayAmount = 0.1f;
+
     private void OnEnable()
+    {
+        if(addDelay)
+        {
+            StartCoroutine(DelayButtonSelection());
+        }
+        else
+        {
+            SelectButton();
+        }
+    }
+
+    private IEnumerator DelayButtonSelection()
+    {
+        yield return new WaitForSeconds(delayAmount);
+        SelectButton();
+    }
+
+    private void SelectButton()
     {
         if (_UIInputDevice != null)
         {

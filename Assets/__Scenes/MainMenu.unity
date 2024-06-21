@@ -727,50 +727,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491401892}
   m_Mesh: {fileID: -9164872769317092116, guid: 5f0d96d51edb1be47acd733645f03c4c, type: 3}
---- !u!1 &568246639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 568246641}
-  - component: {fileID: 568246640}
-  m_Layer: 0
-  m_Name: EnableMouse
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &568246640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568246639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c547b7ed41bc74e92bb1d915ed1f12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &568246641
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568246639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1019.2356, y: 799.8496, z: -58.748344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602241111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,9 +1946,7 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles:
-  - assemblyQualifiedName: MosaicEffectPPSPPSSettings, Unity.Postprocessing.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_AfterStackBundles: []
 --- !u!114 &1206663523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,8 +2088,8 @@ GameObject:
   - component: {fileID: 1404288937}
   - component: {fileID: 1404288936}
   - component: {fileID: 1404288941}
-  - component: {fileID: 1404288943}
   - component: {fileID: 1404288942}
+  - component: {fileID: 1404288943}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2158,6 +2112,7 @@ MonoBehaviour:
   sceneToLoad: QGF_Morning
   fadeoutTime: 2
   fader: {fileID: 1440785689}
+  uIInputDevice: {fileID: 1404288942}
 --- !u!114 &1404288937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2375,6 +2330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1578108260}
   _UIInputDevice: {fileID: 1404288942}
+  addDelay: 1
+  delayAmount: 0.1
 --- !u!1 &1415934162
 GameObject:
   m_ObjectHideFlags: 0

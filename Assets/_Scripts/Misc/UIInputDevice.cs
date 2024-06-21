@@ -88,8 +88,8 @@ public class UIInputDevice : MonoBehaviour
         else
         {
             usingKBM = false;
-            //Cursor.visible = false;
-            //Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             //EventSystem.current.SetSelectedGameObject(lastSelectedGameObject);
         }
 

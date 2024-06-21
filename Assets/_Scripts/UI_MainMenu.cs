@@ -13,6 +13,7 @@ public class UI_MainMenu : MonoBehaviour
     public Image fader;
     float _timer;
     bool fading = false;
+    public UIInputDevice uIInputDevice;
 
     private void Start()
     {
@@ -28,6 +29,17 @@ public class UI_MainMenu : MonoBehaviour
 
         if (fading && _timer > 0) {
             MainMenu_Play();
+        }
+
+        if(uIInputDevice.usingKBM)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
