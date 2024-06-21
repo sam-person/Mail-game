@@ -69,17 +69,13 @@ public class InterfaceManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void ShowDebug()
+    {
+        debugGameState.text = GameManager.instance.gameState.ToString();
+        debugObject.SetActive(!debugObject.activeInHierarchy);
+    }
     private void Update()
     {
-        if (Debug.isDebugBuild || Application.isEditor) {//only do this in editor or debug build
-            debugGameState.text = GameManager.instance.gameState.ToString();
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                debugObject.SetActive(!debugObject.activeInHierarchy);
-            }
-        }
-        
-
         if (PlayerInteractionHandler.instance.closestInteractable != null && GameManager.instance.gameState == GameManager.GameState.Gameplay)
         {
             interactIcon.gameObject.SetActive(true);

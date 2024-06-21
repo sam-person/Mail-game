@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 
     public Transform playerCameraTarget;
 
+    private InterfaceManager ui;
+
     private void Awake()
     {
         if (instance != null) instance = this;
@@ -31,7 +33,8 @@ public class LevelManager : MonoBehaviour
         
 
         //spawn the UI
-        InterfaceManager ui = (InterfaceManager)Instantiate(ui_Prefab);
+        if(ui == null)
+        ui = (InterfaceManager)Instantiate(ui_Prefab);
         //ui.transform.SetParent(bootStrap.transform);
 
         //spawn the player

@@ -36,6 +36,7 @@ public class ToggleObjectsWithKeycode : MonoBehaviour
 
     void ToggleVisibility()
     {
+        InterfaceManager.instance.ShowDebug();
         // Toggle the visibility of each GameObject in the list
         foreach (GameObject obj in objectsToToggle)
         {
