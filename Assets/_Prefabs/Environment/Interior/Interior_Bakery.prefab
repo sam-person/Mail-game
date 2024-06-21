@@ -5605,9 +5605,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074948531213922986}
-  m_LocalRotation: {x: 1.2860815e-14, y: -0.11312802, z: -1.1295704e-13, w: -0.99358046}
-  m_LocalPosition: {x: -18.61422, y: 0.4351926, z: 6.3896594}
-  m_LocalScale: {x: 0.88709265, y: 0.9771407, z: 0.49080023}
+  m_LocalRotation: {x: -0.106568106, y: 0.018545669, z: -0.0019878403, w: -0.9941305}
+  m_LocalPosition: {x: -0.015481707, y: 0.29977345, z: 36.823467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5213949659307872543}
@@ -6158,9 +6158,13 @@ GameObject:
   - component: {fileID: 2416304727103455947}
   - component: {fileID: 645230303618359497}
   - component: {fileID: 510532448869729213}
-  m_Layer: 0
+  - component: {fileID: 1954399720190206169}
+  - component: {fileID: 5885788655138521594}
+  - component: {fileID: 8663903288078436445}
+  - component: {fileID: 1789113435101580523}
+  m_Layer: 11
   m_Name: Doorway
-  m_TagString: Untagged
+  m_TagString: InteractableDoorOut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6284,6 +6288,122 @@ MonoBehaviour:
   - {fileID: 645230303618359497}
   oneShot: 0
   conditions: []
+--- !u!114 &1954399720190206169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831585226550108942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3636ba9f1b82a41914ebd40e75c8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditional: 1
+  conditions:
+  - variable: $isbreadBurning
+    type: 1
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 1
+    value: 
+  receivers:
+  - {fileID: 5885788655138521594}
+  failedRecievers:
+  - {fileID: 1789113435101580523}
+  useDelay: 0
+  delay: 1
+--- !u!114 &5885788655138521594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831585226550108942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3636ba9f1b82a41914ebd40e75c8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditional: 1
+  conditions:
+  - variable: $holding
+    type: 0
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 0
+    value: BakeryPackage
+  - variable: $bakeryPackageDelivered
+    type: 1
+    stringComparison: 0
+    intComparison: 0
+    boolComparison: 1
+    value: 
+  receivers:
+  - {fileID: 8663903288078436445}
+  failedRecievers:
+  - {fileID: 645230303618359497}
+  useDelay: 0
+  delay: 1
+--- !u!114 &8663903288078436445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831585226550108942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDefinition: {fileID: 11400000, guid: f99db524cc655304bb4a2bea04c28b30, type: 2}
+  dialogueCamera: {fileID: 2257924321910830866}
+  doTalkingAnimation: 0
+  anim: {fileID: 0}
+  primaryDialogue:
+  - YarnNode: ForgotToDeliverBakery
+    oneShot: 1
+    triggered: 0
+    conditions: []
+  secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
+--- !u!114 &1789113435101580523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831585226550108942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDefinition: {fileID: 11400000, guid: f99db524cc655304bb4a2bea04c28b30, type: 2}
+  dialogueCamera: {fileID: 9068871923812427716}
+  doTalkingAnimation: 0
+  anim: {fileID: 0}
+  primaryDialogue:
+  - YarnNode: BreadBurning
+    oneShot: 0
+    triggered: 0
+    conditions: []
+  secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!1 &2849089211665388900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,7 +6414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5459387962834949920}
   - component: {fileID: 4562084849625364679}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11573,7 +11693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5213949659307872543}
   - component: {fileID: 3941454154802529385}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11631,9 +11751,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308934200521630612}
-  m_LocalRotation: {x: 1.41335435e-14, y: -0.12432308, z: -1.12804866e-13, w: -0.99224186}
-  m_LocalPosition: {x: -16.904343, y: 0.43480375, z: 13.693195}
-  m_LocalScale: {x: 0.8859513, y: 0.9771407, z: 0.50851506}
+  m_LocalRotation: {x: -0.09781631, y: 0.15290418, z: -0.0152109675, w: -0.9832705}
+  m_LocalPosition: {x: 3.2317019, y: 0.2845886, z: 42.331047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5459387962834949920}
