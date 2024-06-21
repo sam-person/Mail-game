@@ -236,4 +236,28 @@ public class InterfaceManager : MonoBehaviour
         //Cursor.SetCursor(null, bottomRightPosition, CursorMode.Auto);
         Mouse.current.WarpCursorPosition(bottomRightPosition);
     }
+
+    public void UpdateNPCInfo(NPCDefinition npc)
+    {
+        //main line
+        dialogueText.font = npc.font;
+        //dialogueCharacterName.font = npc.font;
+        dialogueText.color = npc.fontColour;
+        dialogueCharacterName.color = npc.nameColour;
+        dialogueNextText.color = npc.backgroundColor;
+
+        dialogueBackgroundImage.color = npc.backgroundColor;
+        dialogueOutlineImage.color = npc.outlineColor;
+        dialogueLeftWhiskers.color = npc.leftWhiskerColor;
+        dialogueRightWhiskers.color = npc.rightWhiskerColor;
+
+        //options
+        dialogue_options_Text.font = npc.font;
+        dialogue_options_Text.color = npc.fontColour;
+        dialogue_options_BackgroundImage.color = npc.backgroundColor;
+        dialogue_options_OutlineImage.color = npc.outlineColor;
+        dialogue_options_LeftWhiskers.color = npc.leftWhiskerColor;
+        dialogue_options_RightWhiskers.color = npc.rightWhiskerColor;
+    }
 }
+
