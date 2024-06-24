@@ -10,6 +10,7 @@ public class AutoSelectButton : MonoBehaviour
 
     public bool addDelay = false;
     public float delayAmount = 0.1f;
+    public bool alwaysSelectButton = false;
 
     private void OnEnable()
     {
@@ -19,25 +20,30 @@ public class AutoSelectButton : MonoBehaviour
         }
         else
         {
-            SelectButton();
+            SelectMainMenuPlayButton();
         }
     }
 
     private IEnumerator DelayButtonSelection()
     {
         yield return new WaitForSeconds(delayAmount);
-        SelectButton();
+        SelectMainMenuPlayButton();
     }
 
-    private void SelectButton()
+    public void SelectMainMenuPlayButton()
     {
         if (_UIInputDevice != null)
         {
-            //only preselect a button if using a controller
-            if (!_UIInputDevice.usingKBM)
+            if (alwaysSelectButton)
             {
                 button.Select();
             }
+            //only preselect a button if using a controller
+            else if (!_UIInputDevice.usingKBM)
+            {
+                button.Select();
+            }
+
         }
         else
         {

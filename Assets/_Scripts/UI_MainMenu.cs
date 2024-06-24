@@ -4,6 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 [LabelText("For now, you press any button to load the main scene")]
 public class UI_MainMenu : MonoBehaviour
@@ -14,6 +15,8 @@ public class UI_MainMenu : MonoBehaviour
     float _timer;
     bool fading = false;
     public UIInputDevice uIInputDevice;
+    public bool hasNotSwitchedBackToGamepad;
+    public AutoSelectButton autoSelectButton;
 
     private void Start()
     {
@@ -31,15 +34,23 @@ public class UI_MainMenu : MonoBehaviour
             MainMenu_Play();
         }
 
-        if(uIInputDevice.usingKBM)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else
+
+        if(!uIInputDevice.usingKBM)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            if(hasNotSwitchedBackToGamepad)
+            {
+                autoSelectButton.SelectMainMenuPlayButton();
+                hasNotSwitchedBackToGamepad = false;
+            }
+        }
+        else 
+        {
+            hasNotSwitchedBackToGamepad = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 

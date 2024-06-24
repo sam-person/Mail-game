@@ -21,6 +21,8 @@ public class UIInputDevice : MonoBehaviour
     public InterfaceManager interfaceManager;
 
     public GameObject lastSelectedGameObject;
+    public bool isMainMenu = false;
+    public GameObject mainMenuButton;
 
     void Start()
     {
@@ -38,7 +40,7 @@ public class UIInputDevice : MonoBehaviour
         if (playerInput.currentControlScheme != currentDevice && autoSelectControlScheme)
         {
             Debug.Log("Change control scheme to " + playerInput.currentControlScheme);
-            //if the input device is not a Keyboard and Mouse
+            //if the input device is a Keyboard and Mouse
             if (playerInput.currentControlScheme == "KeyboardMouse")
             {
                 SelectedControlScheme(controlScheme.KBM);
@@ -83,6 +85,15 @@ public class UIInputDevice : MonoBehaviour
         if(controlString == "KBM")
         {
             usingKBM = true;
+            
+            if(isMainMenu)
+            {
+                lastSelectedGameObject = mainMenuButton;
+            }
+            else
+            {
+                lastSelectedGameObject = EventSystem.current.currentSelectedGameObject;
+            }
             EventSystem.current.SetSelectedGameObject(null); //deselect any buttons that are currently selected
         }
         else
@@ -90,7 +101,10 @@ public class UIInputDevice : MonoBehaviour
             usingKBM = false;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            //EventSystem.current.SetSelectedGameObject(lastSelectedGameObject);
+            if(lastSelectedGameObject != null && isMainMenu)
+            {
+                EventSystem.current.SetSelectedGameObject(mainMenuButton);
+            }
         }
 
         if (interfaceManager != null)

@@ -2047,7 +2047,6 @@ MonoBehaviour:
   continueButtonMousePos: {fileID: 1993536546645931828}
   tutorialParent: {fileID: 5770823803093801413}
   panelObject: {fileID: 5839491335998491445}
-  tutorialPanels: []
   interactIcon: {fileID: 1435395580151898204}
   interactImage: {fileID: 6933296634861942925}
   questText: {fileID: 5839152555854422404}
@@ -2179,6 +2178,8 @@ MonoBehaviour:
   - {fileID: 5215292191506730167}
   interfaceManager: {fileID: 1611564814894616540}
   lastSelectedGameObject: {fileID: 0}
+  isMainMenu: 0
+  mainMenuButton: {fileID: 0}
 --- !u!1 &1611564814942892148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +2947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1611564815106041686}
   _UIInputDevice: {fileID: 8306349891830370721}
+  addDelay: 0
+  delayAmount: 0.1
+  alwaysSelectButton: 0
 --- !u!1 &1611564816168597279
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,7 +3965,6 @@ MonoBehaviour:
   image: {fileID: 3021300302042110861}
   tutorialText: {fileID: 3083724843146683649}
   canvasGroup: {fileID: 3316017910599099080}
-  interfaceManager: {fileID: 0}
 --- !u!1 &2921113809833384942
 GameObject:
   m_ObjectHideFlags: 0
@@ -9109,6 +9112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 4380089304089959721}
   _UIInputDevice: {fileID: 8306349891830370721}
+  addDelay: 0
+  delayAmount: 0.1
+  alwaysSelectButton: 0
 --- !u!1 &8048004297289116932
 GameObject:
   m_ObjectHideFlags: 0
