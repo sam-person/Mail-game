@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8085660452307050100, guid: ea8c8743570feba46b3ef2ae74ad21ce, type: 3}
       propertyPath: m_Name
-      value: Prefab_NPC_SousChef (1)
+      value: Prefab_NPC_SousChef
       objectReference: {fileID: 0}
     - target: {fileID: 8085660452307050100, guid: ea8c8743570feba46b3ef2ae74ad21ce, type: 3}
       propertyPath: m_IsActive
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Receivers:
   - {fileID: 22441479}
-  - {fileID: 22441480}
+  - {fileID: 22441483}
   oneShot: 0
   conditions: []
 --- !u!114 &22441479
@@ -295,7 +295,7 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 22441475}
   toggleType: 2
---- !u!114 &22441480
+--- !u!114 &22441483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,11 +304,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 22441477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eda8d561eb18934587677a4247260fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e95c6299fe2e8489fee08c4ac84491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 22441476}
-  toggleType: 1
+  interactionState: 0
 --- !u!1 &56883224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +1953,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0a1ee491a9fc744a5fc56e66c4b148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1329824688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7509693254045904782, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+  m_PrefabInstance: {fileID: 318556268537744782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329824697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329824688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e95c6299fe2e8489fee08c4ac84491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 22441476}
+  interactionState: 1
 --- !u!43 &1392148912
 Mesh:
   m_ObjectHideFlags: 0
@@ -2978,6 +2997,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.70999753
       objectReference: {fileID: 0}
+    - target: {fileID: 318556268695494568, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+      propertyPath: Receivers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 318556268695494568, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
+      propertyPath: Receivers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1329824697}
     - target: {fileID: 318556269576511516, guid: 5efa051367429a84bb170c8d4bdc3252, type: 3}
       propertyPath: m_Enabled
       value: 0
