@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.83
   m_CustomReflection: {fileID: 8900000, guid: 28f1256b5b11e8045accbc267be5d121, type: 3}
   m_Sun: {fileID: 1422287080}
-  m_IndirectSpecularColor: {r: 0.10054806, g: 0.3603407, b: 0.8237766, a: 0.83}
+  m_IndirectSpecularColor: {r: 0.101060174, g: 0.36072934, b: 0.82378757, a: 0.83}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5121,6 +5121,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8979d08313d77d46af17a529045fe6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1190959723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 253581305871442166}
+    m_Modifications:
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9483
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.307657
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -285.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180694150398728034, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957231570726522328, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
+      propertyPath: m_Name
+      value: TapMorning
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac49991a1e4bb17468e50bfad4419e40, type: 3}
 --- !u!1 &1194450932
 GameObject:
   m_ObjectHideFlags: 0
@@ -29844,6 +29901,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011050335644198949, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4404983349856337627, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.229
@@ -29936,6 +29997,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 205491445}
+    - target: {fileID: 5078932026414104652, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5151986024023161050, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
       propertyPath: m_Materials.Array.size
       value: 3
@@ -29952,6 +30017,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e502b33b228f151438c4f0d0da6ee32f, type: 2}
+    - target: {fileID: 6764219055154435479, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6961281584536062992, guid: 9924ed10a6713314e975c54e831eb24d, type: 3}
       propertyPath: m_Mesh
       value: 
