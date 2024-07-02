@@ -12,7 +12,7 @@ public class InteriorExteriorLightingSwitcher : MonoBehaviour
 
     public bool startInside = false;
 
-    private void Start()
+    private void Awake()
     {
         if(startInside)
         {
