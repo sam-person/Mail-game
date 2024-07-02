@@ -1,7 +1,5 @@
 ﻿title: MiddayPackages
 ---
-
-
 ///Needs to deliver package to florist
 <<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the florist
@@ -34,9 +32,6 @@ Assistant Cat: Don't forget the package on my desk
 <<endif>>
 ===
 
-
-
-
 title: onlyFloristDeliveryLeft
 ---
 Assistant Cat: Well, the only delivery I have left right now is going to the Florist
@@ -57,7 +52,6 @@ Assistant Cat: Anyway, here’s the package for the Cafe!
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
 ===
-
 
 title: DeliverCafeDrink
 ---
@@ -111,7 +105,6 @@ Assistant Cat: Good luck with that
 <<set $packageAssigned = true>>
 ===
 
-
 title: ThreePackagesDelivered
 ---
 <<declare $AfternoonPackagesFinished = false>>
@@ -123,17 +116,9 @@ Assistant Cat: Which package would you like to deliver next?
 <<set $ThreePackagesDelivered = true>>
 ===
 
-
-
-
-
-
-
-
 title: MiddayPackagesDemo
 ---
-
-
+<<declare $DemoFinished = false>>
 ///Needs to deliver package to florist
 <<if $holding == "FloristPackage" && $floristPackageDelivered == false>>
 Assistant Cat: Your current package needs to go to the florist
@@ -166,14 +151,24 @@ Assistant Cat: Don't forget the package on my desk
 <<endif>>
 ===
 
-
 title: DemoFinished
 ---
-
+<<if $DemoFinished == true>>
+<<jump DemoFinished2>>
+<<else>>
 Assistant Cat: Thanks for delivering that package to the Florist Catto!
 Assistant Cat: That's the end of the demo for now
 Assistant Cat: Don't forget to wishlist the game if you liked it!!!
-Assistant Cat: The game will return to the Main Menu now
-<<Trigger DemoFinish>>
+<<set $DemoFinished = true>>
+<<jump DemoFinished2>>
+<<endif>>
 ===
 
+title: DemoFinished2
+---
+Assistant Cat: Would you like to finish playing or look around some more?
+-> Catto: Finish playing
+	<<Trigger DemoFinish>>
+-> Catto: Look around
+	Assistant Cat: Okay, have fun!
+===
