@@ -11,14 +11,11 @@ public class REC_TutorialPanel : Receiver
 
     public Sprite tutorialImage;
     public string tutorialText;
-    public Sprite tutorialImagePS;
-    public string tutorialTextPS;
-    public Sprite tutorialImageXB;
-    public string tutorialTextXB;
+    public string tutorialTextGamepad;
 
     public override void Activate()
     {
         base.Activate();
-        InterfaceManager.instance.SpawnTutorialPanel(tutorialImage, tutorialImagePS, tutorialText, tutorialTextPS, tutorialTime);
+        InterfaceManager.instance.SpawnTutorialPanel(tutorialImage, tutorialText, tutorialTextGamepad, tutorialTime);
     }
 }

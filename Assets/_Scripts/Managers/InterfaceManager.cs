@@ -191,14 +191,14 @@ public class InterfaceManager : MonoBehaviour
         instance.questText.text = text;
     }
 
-    public void SpawnTutorialPanel(Sprite _image, Sprite _imagePS, string _text, string _textPS, float _time) 
+    public void SpawnTutorialPanel(Sprite _image, string _text, string _textGamepad, float _time) 
     {
         UI_Tutorial_Panel spawned = Instantiate(panelObject, tutorialParent);
         spawned.gameObject.SetActive(true);
 
-        if (currentInputDevice == "PS")
+        if (currentInputDevice == "PS" || currentInputDevice == "XB")
         {
-            spawned.SetPanel(_imagePS, _textPS, _time);
+            spawned.SetPanel(_image, _textGamepad, _time);
         }
         else if (currentInputDevice == "KBM")
         {

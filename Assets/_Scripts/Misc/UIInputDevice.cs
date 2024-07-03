@@ -9,6 +9,8 @@ public class UIInputDevice : MonoBehaviour
     PlayerInput playerInput;
     private string currentDevice;
     public bool usingKBM = true;
+    public enum defaultControllerInput { PS, XB}
+    public defaultControllerInput currentDefaultControllerInput = defaultControllerInput.XB;
 
     public bool autoSelectControlScheme = true;
     public enum controlScheme { KBM, PS, XB}
@@ -47,7 +49,15 @@ public class UIInputDevice : MonoBehaviour
             }
             else if (playerInput.currentControlScheme == "Gamepad")
             {
-                SelectedControlScheme(controlScheme.PS);
+                if(currentDefaultControllerInput == defaultControllerInput.PS)
+                {
+                    SelectedControlScheme(controlScheme.PS);
+                }
+                else
+                {
+                    SelectedControlScheme(controlScheme.XB);
+                }
+
             }
         }
         currentDevice = playerInput.currentControlScheme;
