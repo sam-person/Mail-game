@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2726726742185074056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8676291256592216827}
+  - component: {fileID: 4904446794185057686}
+  - component: {fileID: 7557841892106464819}
+  m_Layer: 0
+  m_Name: ExitPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8676291256592216827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726726742185074056}
+  m_LocalRotation: {x: 0.7071068, y: 0.00000011920929, z: -0.000000059604645, w: 0.7071068}
+  m_LocalPosition: {x: -0.00248, y: -0.01504, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2470562822660943719}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &4904446794185057686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726726742185074056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa5bcadf785a7d478beaad8703866f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Receivers:
+  - {fileID: 7557841892106464819}
+  oneShot: 0
+  conditions: []
+--- !u!114 &7557841892106464819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726726742185074056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4949bce528b2f4eb2f9f60025af242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionToTeleport: {fileID: 8676291256592216827}
 --- !u!1 &2955174310006601181
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,6 +81,7 @@ GameObject:
   - component: {fileID: 7604401157830578340}
   - component: {fileID: 4706462296775318464}
   - component: {fileID: 6431372573053538932}
+  - component: {fileID: 7551235996479710740}
   m_Layer: 0
   m_Name: CarboardBox_Open
   m_TagString: Untagged
@@ -39,6 +102,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4449303167696631319}
+  - {fileID: 8676291256592216827}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -64.218}
@@ -185,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Receivers:
   - {fileID: 6431372573053538932}
+  - {fileID: 7551235996479710740}
   oneShot: 0
   conditions: []
   interactionState: 0
@@ -205,6 +270,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockPivot: {fileID: 4449303167696631319}
   animTrigger: Sit
+--- !u!114 &7551235996479710740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955174310006601181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e6ad4a1ebca9b4fad65c0b28d4110c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followUpTrigger: {fileID: 4904446794185057686}
 --- !u!1 &3502052696703526250
 GameObject:
   m_ObjectHideFlags: 0

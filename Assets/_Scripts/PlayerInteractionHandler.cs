@@ -54,6 +54,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     [ReadOnly]
     public TRI_Interactable closestInteractable;
 
+	Trigger _followUpTrigger;
+
     //public delegate void GamePaused(bool isPaused);
     //public static event GamePaused gamePaused;
     public StarterAssetsInputs _input;
@@ -94,6 +96,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     //Calculate the closest interactable
     void CalculateClosestInteractable() {
+
         //check if we're on interactable cooldown
         if (_interactionCooldown > 0f) {
             SetClosestInteractable(null);
@@ -157,6 +160,10 @@ public class PlayerInteractionHandler : MonoBehaviour
         closestInteractable = interactable;
     }
 
+	public void SetFollowUpInteraction(Trigger nextInteraction){
+		_followUpTrigger = nextInteraction;
+	}
+
     public void Teleport(REC_Teleport teleport) {
         //StartCoroutine(TeleportPlayer(teleport));
         if (teleport.inside)
@@ -201,6 +208,13 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public void CattoInteractor()
     {
+		if(_followUpTrigger != null){
+			_followUpTrigger.Activate();
+            ChangeState(PlayerState.Normal);
+			_followUpTrigger = null;
+			return;
+		}
+
         switch (playerState)
         {
             case PlayerState.Normal:
