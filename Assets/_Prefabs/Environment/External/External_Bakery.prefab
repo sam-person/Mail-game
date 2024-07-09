@@ -308,6 +308,7 @@ Transform:
   - {fileID: 980878448582137053}
   - {fileID: 1442814067686535501}
   - {fileID: 8743080732826581630}
+  - {fileID: 1202493309202601061}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -441,6 +442,94 @@ Transform:
   m_Father: {fileID: 980878448582137053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1673830764790379406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 153469650691649751}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 82.46
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.860001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -299.751
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2363409567543424235, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7391b14cd305f34588b063a51ce661b, type: 2}
+    - target: {fileID: 919132149155446097, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_Name
+      value: Bakery_V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+--- !u!4 &1202493309202601061 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+  m_PrefabInstance: {fileID: 1673830764790379406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2016431653177413343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d98b202385dd354d8e08cf27a60ce01, type: 3}
+  m_PrefabInstance: {fileID: 1673830764790379406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7288392218910278070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016431653177413343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.089245796, y: 0.06668089, z: 0.06752422}
+  m_Center: {x: -0.0004674339, y: 8.687513e-16, z: 0.032989968}
 --- !u!1001 &4630184918326320422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -455,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 2981169514443004983, guid: 7809452ab9a63ce448adbc48c1fee2ce, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8d5746a704b407f4fb140557e04b8b58, type: 2}
+      objectReference: {fileID: 2100000, guid: 7d9fdcae01516e845b8c4d21e3b997ea, type: 2}
     - target: {fileID: 3629832652480511458, guid: 7809452ab9a63ce448adbc48c1fee2ce, type: 3}
       propertyPath: m_Name
       value: Door_New
@@ -646,7 +735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 930704053364972481, guid: e44680d4457ca8d49afbe42a2db3b702, type: 3}
       propertyPath: m_Name
-      value: Prefab_BakeryOutside
+      value: OLD_Prefab_BakeryOutside
+      objectReference: {fileID: 0}
+    - target: {fileID: 930704053364972481, guid: e44680d4457ca8d49afbe42a2db3b702, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44680d4457ca8d49afbe42a2db3b702, type: 3}
