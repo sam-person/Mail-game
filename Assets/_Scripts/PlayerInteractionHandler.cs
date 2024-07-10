@@ -172,7 +172,10 @@ public class PlayerInteractionHandler : MonoBehaviour
             transform.rotation = teleport.spawnPoint.transform.rotation;
             transform.position = teleport.spawnPoint.transform.position;
             thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
-            interiorExteriorLightingSwitcher.SwitchToInteriorLighting();
+            if(teleport.switchLighting)
+            {
+                interiorExteriorLightingSwitcher.SwitchToInteriorLighting();
+            }
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.SolidColor;
             //animator.SetBool("interact", false);
@@ -185,7 +188,10 @@ public class PlayerInteractionHandler : MonoBehaviour
             transform.rotation = teleport.spawnPoint.transform.rotation;
             transform.position = teleport.spawnPoint.transform.position;
             thirdPersonController.SetCameraAngle(teleport.xRot, teleport.yRot);
-            interiorExteriorLightingSwitcher.SwitchToExteriorLighting();
+            if (teleport.switchLighting)
+            {
+                interiorExteriorLightingSwitcher.SwitchToExteriorLighting();
+            }
             VrCamForceUpdate.VrCamForceResetAction?.Invoke();
             GameManager.instance.mainCamera.clearFlags = CameraClearFlags.Skybox;
             //animator.SetBool("interact", false);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class REC_Teleport : Receiver
 {
     public bool inside = true;
+    public bool switchLighting = true;
     public bool instant = false;
     public Transform spawnPoint;
     public float xRot;
