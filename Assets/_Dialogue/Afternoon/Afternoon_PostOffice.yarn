@@ -32,10 +32,9 @@ Assistant Cat: Don't forget the package on my desk
 
 title: onlyGroceryDeliveryLeft
 ---
-Assistant Cat: Well, the only delivery I have left right now is going to the grocery
-Assistant Cat: I hear the flowers are really nice this time of year
-Assistant Cat: Give them a smell for me!
-<<Trigger PackageFlorist>>
+Assistant Cat: Well, the only delivery I have left right now is going to the grocery store
+Assistant Cat: Make sure you take in that sea breeze while you’re down there
+<<Trigger PackageGrocery>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
 ===
@@ -43,10 +42,10 @@ Assistant Cat: Give them a smell for me!
 title: onlyNursingDeliveryLeft
 ---
 Assistant Cat: The only package I have left to deliver right now is going to the nursing home
-Assistant Cat: If it’s not too much trouble, I would love a nice drink from the Cafe
-Assistant Cat: A nice room-temperature lactose-free milk would really hit the spot
+Assistant Cat: Grandmeow Cat sometimes doesn’t like to leave her room
+Assistant Cat: Good luck with that
 Assistant Cat: Anyway, here’s the package for the Cafe!
-<<Trigger PackageCafe>>
+<<Trigger PackageNursing>>
 <<setQuest "Pick up the package">>
 <<set $packageAssigned = true>>
 ===

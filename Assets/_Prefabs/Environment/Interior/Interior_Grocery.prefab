@@ -122,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473251859427738801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.04141, y: 4.540185, z: 446.78183}
+  m_LocalPosition: {x: -17.368969, y: 6.2740026, z: -0.70999753}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175,9 +175,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473251859451499888}
-  m_LocalRotation: {x: 0.21617916, y: 0.5915948, z: -0.16868208, w: 0.7581745}
-  m_LocalPosition: {x: -13.77093, y: 4.337, z: -0.61637807}
-  m_LocalScale: {x: 0.9944124, y: 1.0020827, z: 1.0053067}
+  m_LocalRotation: {x: 0.21617918, y: 0.5915948, z: -0.16868208, w: 0.75817454}
+  m_LocalPosition: {x: -13.770982, y: 4.3370047, z: -0.6163708}
+  m_LocalScale: {x: 0.9944124, y: 1.0020828, z: 1.0053068}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3351658542297056434}
@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inside: 0
+  switchLighting: 1
   instant: 0
   spawnPoint: {fileID: 0}
   xRot: -90
@@ -5857,6 +5858,13 @@ MonoBehaviour:
     triggered: 0
     conditions: []
   secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!114 &8626526767501628786
 MonoBehaviour:
   m_ObjectHideFlags: 0

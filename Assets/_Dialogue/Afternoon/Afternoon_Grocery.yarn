@@ -1,14 +1,17 @@
 ﻿title: GroceryPuddleWarning
 position: -43,-351
 ---
-Clerk: Careful!
-Clerk: There’s a puddle there
-<<declare $hasSteppedInPuddle = false>>
+Clerk: Hey! Careful!
+Clerk: There’s a puddle in that aisle
+<<Trigger Grocery_PuddleCam>>
 Clerk: I was just about to grab the wet floor sign
-Clerk: Please don’t step in the puddle
-Clerk: There’s nothing negative that will happen if you step in the puddle
-Clerk: But you just shouldn’t step in the puddle
+<<Trigger Grocery_PuddleCam>>
+<<declare $hasSteppedInPuddle = false>>
+Clerk: Come down one of the other aisles
+Clerk: We don’t want you to slip and get your peets wet
+Clerk: (and since we don’t have insurance…)
 ===
+
 
 title: GroceryNoPackage
 position: -47,-178
@@ -24,28 +27,22 @@ position: -47,-178
 title: GrocerySteppedInPuddle
 position: -154,47
 ---
-Clerk: So you stepped in the puddle… 
-Clerk: It almost looked like it was on purpose…
-Clerk: Now your paws are wet.
-Clerk: Try not to step into any more puddles
-Clerk: It can't be pleasant
 <<set $puddleSteppingAcknowledged = true>>
 Clerk: I'm expecting a delivery today
 Clerk: Try not to get any muddy paw prints on it
-Clerk: It's an important package
+Clerk: It's a VERY important package
 ===
+
 
 title: GroceryAvoidedPuddle
 position: 61,50
 ---
-Clerk: Thanks for dodging that puddle
-Clerk: I feel like most people would actively try to step into it
-Clerk: Be careful out there, keep them paws dry
 <<set $puddleSteppingAcknowledged = true>>
-Clerk: I'm expecting a delivery today
-Clerk: I trust you'll handle it carefully
-Clerk: It's an important package
+Clerk: I don't mean to rush you
+Clerk: But I really need that package today
+Clerk: It's a VERY important package
 ===
+
 
 title: GroceryStillWaiting
 position: -44,220
@@ -75,22 +72,22 @@ Clerk: It's an important package
 <<endif>>
 ===
 
+
 title: GroceryHasPackagePuddle
 position: -40,652
 ---
 <<if $hasSteppedInPuddle>>
 Clerk: So you stepped in the puddle… 
 Clerk: It almost looked like it was on purpose…
-Clerk: Now your paws are wet
-Clerk: Try not to step into any more puddles
-Clerk: It can't be pleasant
-Clerk: I see you have a delivery for me
+Clerk: Now your little peets are all wet 
+Clerk: At least you didn’t fall and hurt yourself (Phew…)
+Clerk: Ah I see you have a delivery for me
 Clerk: It didn't get wet did it?!
 Clerk: ...
-Clerk: Not a single sign of wear on the box
-Clerk: Clearly handled by a master of their craft
+Clerk: Wow it’s completely dry!
 Clerk: I'm glad it's in your capable paws
 Clerk: It's an important package
+Clerk: Thanks!
 <<setQuest "Return to the post office">>
 <<set $groceryPackageDelivered = true>>
 <<set $packageAssigned = false>>
@@ -99,14 +96,12 @@ Clerk: It's an important package
 <<set $puddleSteppingAcknowledged = true>>
 <<else>>
 Clerk: Thanks for dodging that puddle
-Clerk: I feel like most people would actively try to step into it
-Clerk: Be careful out there, keep them paws dry
-Clerk: I see you have a delivery for me
-Clerk: ...
-Clerk: Not a single sign of wear on the box
-Clerk: Clearly handled by a master of their craft
-Clerk: I'm glad it's in your capable paws
-Clerk: It's an important package
+Clerk: I feel like most people would actively try to step in it
+Clerk: Anyways, what’s up Catto?
+Clerk: Oh you have a package for me
+Clerk: I can take that from you now
+Clerk: Thanks for the delivery!
+Clerk: You be careful out there and keep them paws dry
 <<setQuest "Return to the post office">>
 <<set $groceryPackageDelivered = true>>
 <<set $packageAssigned = false>>
@@ -115,6 +110,7 @@ Clerk: It's an important package
 <<set $puddleSteppingAcknowledged = true>>
 <<endif>>
 ===
+
 
 title: GroceryKeepingThosePawsDry
 ---
