@@ -1,22 +1,22 @@
 ﻿title: FloristWaitingForPackage
 ---
-Florist: Ah, my delivery!
-Florist: ...
-Florist: Oh... you don't have my delivery yet 
-Florist: Not to worry
-Florist: I know you'll have it for me soon
+Little Miss Florist: Ah, my delivery!
+Little Miss Florist: ...
+Little Miss Florist: Oh... you don't have my delivery yet 
+Little Miss Florist: Not to worry
+Little Miss Florist: I know you'll have it for me soon
 ===
 
 
 title: Florist_Scissors
 ---
 <<declare $scissorsQuest = false>>
-Florist: Ah, my delivery! Thanks Catto!
-Florist: I have my paws full at the moment
-Florist: Can I ask you a huge favour?
-Florist: I was out collecting samples from the garden this morning
-Florist: And I think I dropped my scissors somewhere out there
-Florist: Would you be a sweetie and get the scissors from the garden for me?
+Little Miss Florist: Ah, my delivery! Thanks Catto!
+Little Miss Florist: I have my paws full at the moment
+Little Miss Florist: Can I ask you a huge favour?
+Little Miss Florist: I was out collecting samples from the garden this morning
+Little Miss Florist: And I think I dropped my scissors somewhere out there
+Little Miss Florist: Would you be a sweetie and get the scissors from the garden for me?
 <<setQuest "Search garden for scissors">>
 <<set $scissorsQuest = true>>
 <<Trigger FloristScissors>>
@@ -25,11 +25,11 @@ Florist: Would you be a sweetie and get the scissors from the garden for me?
 
 title: FloristGotScissors
 ---
-Florist: You found my scissors!
-Florist: You’re a cut above the rest Catto, thank you
-Florist: Now if only I actually knew how to use these
-Florist: I can take the package off your paws now
-Florist: Have a splendid day Catto, and thanks again
+Little Miss Florist: You found my scissors!
+Little Miss Florist: You’re a cut above the rest Catto, thank you
+Little Miss Florist: Now if only I actually knew how to use these
+Little Miss Florist: I can take the package off your paws now
+Little Miss Florist: Have a splendid day Catto, and thanks again
 <<setQuest "Return to the post office">>
 <<set $holding = "nothing">>
 <<set $packagesDeliveredCount += 1>>
@@ -40,19 +40,19 @@ Florist: Have a splendid day Catto, and thanks again
 
 title: FloristDontHaveScissors
 ---
-Florist: I dropped my scissors in the garden just outside
-Florist: Can you find them?
+Little Miss Florist: I dropped my scissors in the garden just outside
+Little Miss Florist: Can you find them?
 ===
 
 
 title: FloristRandomLine2
 ---
-Florist: Looks like it's going to be a colorful season this year
+Little Miss Florist: Looks like it's going to be a colorful season this year
 ===
 
 
 title: FloristRandomLine1
 ---
-Florist: It's good having my scissors back 
-Florist: I don't what I would have done without them
+Little Miss Florist: It's good having my scissors back 
+Little Miss Florist: I don't what I would have done without them
 ===

@@ -3,11 +3,11 @@
 ///current state of the telescope interaction
 <<declare $telescopeActive = false>>
 <<declare $hasLookedThrough = false>>
-Telescope Cat: Oh hi there Catto
-Telescope Cat: Did you know there's going to be a rare celestial event tonight?
-Telescope Cat: I've setup my telescope early in case I'm busy doing something else later tonight...
-Telescope Cat: Feel free to take a peep now if you want
-Telescope Cat: Though you won't be able to see much besides the moon during the day
+Astronomew: Oh hi there Catto
+Astronomew: Did you know there's going to be a rare celestial event tonight?
+Astronomew: I've setup my telescope early in case I'm busy doing something else later tonight...
+Astronomew: Feel free to take a peep now if you want
+Astronomew: Though you won't be able to see much besides the moon during the day
 <<Trigger Telescope_Top>>
 <<set $telescopeActive = true>>
 ===
@@ -16,15 +16,15 @@ Telescope Cat: Though you won't be able to see much besides the moon during the 
 title: TelescopeFinished
 ---
 Catto: I don't know what I expected...
-Telescope Cat: Yeah... I told you it wasn't very interesting yet
-Telescope Cat: Maybe come back later tonight
-Telescope Cat: I could use the company
+Astronomew: Yeah... I told you it wasn't very interesting yet
+Astronomew: Maybe come back later tonight
+Astronomew: I could use the company
 ===
 
 
 title: TelescopeWaiting
 ---
-Telescope Cat: Well, did you take a look yet?
+Astronomew: Well, did you take a look yet?
 Catto: Not yet!
 ===
 
