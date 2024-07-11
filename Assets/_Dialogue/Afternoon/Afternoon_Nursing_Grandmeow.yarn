@@ -1,0 +1,45 @@
+﻿title: ValeriePassword
+---
+<<set $hasfoundValerie = true>>
+-> Catto: Meow Meow
+    Grandmeow Cat: ...
+-> Catto: Meow Meow Meow
+    Grandmeow Cat: ...
+-> Catto: Meow Meow Meow Meow
+    <<jump ValeriePasswordCorrect>>
+-> Catto: Meeeeeeeeeeeeeooooooooooooooow
+    Grandmeow Cat: Whoa calm down
+
+<<jump ValeriePassword>>
+===
+
+title: ValeriePasswordOption
+---
+===
+
+title: ValeriePasswordCorrect
+---
+Grandmeow: Who is it?
+-> Catto: It's Catto
+Grandmeow: That must mean my mail has arrived!
+Grandmeow: Ooh..but I'm afraid if I get up I won't find this comfy spot again
+Grandmeow: I need to finish this nap before tonight
+Grandmeow: Could you please leave it by the door?
+-> Catto: No problem
+-> Catto: Sure. Grandpaw is looking for You
+    Grandmeow: Well he can't be looking very hard 
+    Grandmeow: He hasn't thought to check our room
+    Grandmeow: I haven't moved
+    Grandmeow: Anyway
+Grandmeow: Thank you Catto
+<<set $nursingPackageDelivered = true>>
+<<set $holding = "nothing">>
+<<set $packagesDeliveredCount += 1>>
+<<set $packageAssigned = false>>
+<<setQuest "Return to Post Office">>
+===
+
+title: ValerieRandom1
+---
+Valerie: Meow
+===

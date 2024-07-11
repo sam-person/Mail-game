@@ -1,0 +1,50 @@
+﻿title: RalphGreeting
+---
+Grandpaw Cat: Hello there little Catto
+Grandpaw Cat: Did I ever tell you about the time I caught a bird
+Grandpaw Cat: Well it was nineteen tickity two
+Grandpaw Cat: *Several Minutes of rambling later*
+Grandpaw Cat: Oh sorry young fella.  I can really waffle on. What were you after again?
+Grandpaw Cat: Grandmeow Cat? Sorry I haven’t seen her all day. Ask Auntie Kat she might know
+<<declare $hasfoundValerie = false>>
+<<declare $sharedValerieLocation = false>>
+<<declare $spokenToRalph = false>>
+<<Trigger GrandpawTrigger>>
+<<set $spokenToRalph = true>>
+<<setQuest "Talk to Helga">>
+===
+
+title: RalphGreetingNoPackage
+---
+Grandpaw Cat: I'm snug as a bug in a rug
+Grandpaw Cat: For real
+===
+
+
+title: RalphStillLooking
+---
+Grandpaw Cat: I still haven’t seen Grandmeow Cat. That said, I’m not really looking
+Grandpaw Cat: I’m much too comfortable to go searching
+Grandpaw Cat: You should ask Auntie Cat, they probably know where she is
+===
+
+title: RalphValerieFound
+---
+<<set $sharedValerieLocation = true>>
+Grandpaw Cat: Have you seen Grandmeow Cat yet? 
+-> Catto: Yes, she's in her room
+	Grandpaw Cat: Oh that’s too far away, I’m much too comfortable. Oh well. Thanks anyway!
+-> Catto: Yep!
+	Grandpaw Cat: Great, where are they?
+	-> Catto:  She’s up in her room
+		Grandpaw Cat: Oh that’s too far away, I’m much too comfortable. Oh well. Thanks anyway!
+-> Catto: I’ll give you a hint, she’s somewhere upstairs
+	Grandpaw Cat: Hmm, probably too far away, I’m much too comfortable. 
+	Grandpaw Cat: Oh well. Thanks anyway!
+===
+
+title: RalphRandom1
+---
+Ralph: *purr*
+===
+

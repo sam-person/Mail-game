@@ -24,7 +24,7 @@ Assistant Cat: Don't forget the package on my desk
 
 ///Has delivered all packages
 <<elseif $groceryPackageDelivered == true && $nursingPackageDelivered == true>>
-<<Trigger SceneDoorSwitcher>>
+<<Trigger SleepyTime>>
 <<jump PostOfficeFinishedAfternoon>>
 <<endif>>
 ===
@@ -53,12 +53,16 @@ Assistant Cat: Anyway, here’s the package for the Cafe!
 
 title: PostOfficeFinishedAfternoon
 ---
-Assistant Cat: Wow you've had such a productive day catto!
-Assistant Cat: I love you!
-Assistant Cat: I've only got one more package left to deliver today
-Assistant Cat: This one is weird though, it doesn't have a specific person
-Assistant Cat: The instructions just say "Leave in Community Centre"
-Assistant Cat: I guess you should head there then...
-<<setQuest "Pick up the package">>
-<<set $packageAssigned = true>>
+Assistant Cat: Catto You’re back!
+Assistant Cat: How was Grandpaw Cat?
+Catto: He was much too comfortable
+Assistant Cat: And what about Grandmeow Cat?
+Catto: She’s trying to finish her nap before tonight
+Catto: Speaking of naps, I think I need a nap myself. 
+Assistant Cat: Knock yourself out! You did have a VERY big day 
+Assistant Cat: Remember to take your nap in your bedroom
+Assistant Cat: We don’t want a repeat of the last incident…
+<<setQuest "Go for a nap">>
+<<set $packageAssigned = false>>
+<<set $AfternoonPackagesFinished = true>>
 ===

@@ -1,0 +1,39 @@
+﻿title: CarerWhoAreYouLookingFor
+---
+Nurse: Hi Catto, who are you looking for today?
+-> Catto: I’m looking for Grandmeow Cat
+	Nurse: Hmm, I’m not sure where she is right now
+	Nurse: You know who would know though? 
+	Nurse: Grandpaw Cat. He's just in the activity room down the hall
+	<<setQuest "Talk to Ralph">>
+-> Catto: I’m just visiting at the moment
+	Nurse: It's good to have you here
+===
+
+title: CarerNoPackage1
+---
+<<declare $buttOnce = false>>
+Nurse: Are you here to visit someone today Catto?
+-> Catto: No, I'm just looking around
+	Nurse: Okay well feel free to talk to our residents
+	Nurse: They can always use the company
+-> Catto: Yeah, your butt!
+	Nurse: That's not very nice
+	<<set $buttOnce = true>>
+===
+
+title: CarerNoPackage2
+---
+Nurse: Are you here to visit someone today Catto?
+-> Catto: No, I'm just looking around
+	Nurse: Okay well feel free to talk to our residents
+	Nurse: They can always use the company
+-> Catto: Yeah, your butt!
+	Nurse: Really? Again?
+	Nurse: Okay it's a bit funnier the second time
+===
+
+title: CarerRandom1
+---
+Nurse: Meow
+===

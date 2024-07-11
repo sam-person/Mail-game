@@ -1,0 +1,41 @@
+﻿title: HelgaGreeting
+---
+Helga: Oh, Catto! Have you come to help me look for her? 
+Helga: She always seems to be hiding from me
+Helga: I’m going to miss the start of my show if I don’t find her soon!
+-> Catto: You might just need to watch without Grandmeow 
+-> Catto: Don’t worry, you can start watching and I’ll tell Grandmeow the show is on when I see her.
+Helga: Grandmeow? Oh! That’s not who I’m looking for
+Helga: I was talking about the TV remote
+Helga: I have a habit of personifying inanimate objects
+Helga: You look pretty spry
+Helga: Maybe you could find the remote for me?
+Helga: Maybe if I had the remote I would remember where Grandmeow is… heh
+<<declare $foundTVremote = false>>
+<<Trigger TVRemote>>
+<<setQuest "Find the TV remote">>
+===
+
+title: LookingForRemote
+---
+Helga: I know the remote is around here somewhere
+===
+
+title: HelgaFoundRemote
+---
+Helga: You found her! Thanks Catto, I really didn’t want to miss my show
+Helga: Oh, by the way. Grandmeow  is just in her room
+Helga: Just walk up to Room 3 and say “meow meow meow meow”, and Grandmeow will answer
+<<Trigger Room3Door>>
+<<setQuest "Go to room 3">>
+===
+
+title: HelgaStillNoValerie
+---
+Helga: To find Grandmeow Cat, go to Room 3 and say "meow meow meow meow"
+===
+
+title: HelgaRandom1
+---
+Helga: *is busy watching their show*
+===
