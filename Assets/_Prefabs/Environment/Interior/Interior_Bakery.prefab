@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620518942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.02210342, y: 0.18301044, z: -0.035401624, w: 0.9822247}
+  m_LocalPosition: {x: -1.6475308, y: 0.53, z: 1.07498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5282,7 +5282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927845601431566883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0571492, y: 6.242204e-15, z: 16.400112}
+  m_LocalPosition: {x: -0, y: 6.242204e-15, z: 16.4}
   m_LocalScale: {x: 1.05, y: 2.18559, z: 0.08911999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5443,7 +5443,7 @@ MonoBehaviour:
   interactionState: 0
   interactionRange: 2.5
   interactionPivotOverride: {fileID: 0}
-  outline: {fileID: 0}
+  outline: {fileID: 927845603045904673}
 --- !u!114 &4404757374827854425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11034,7 +11034,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450777293269813403}
-  - component: {fileID: 4390470072618337988}
   - component: {fileID: 8562410278740823193}
   - component: {fileID: 2416304727103455947}
   - component: {fileID: 645230303618359497}
@@ -11068,14 +11067,6 @@ Transform:
   m_Father: {fileID: 541192488588595605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -29.497, z: 0}
---- !u!33 &4390470072618337988
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831585226550108942}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8562410278740823193
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21109,7 +21100,7 @@ MonoBehaviour:
   - {fileID: 857994622}
   - {fileID: 857994621}
   - {fileID: 857994628}
-  - {fileID: 0}
+  - {fileID: 930198155710800356}
   oneShot: 1
   conditions: []
   interactionState: 2
@@ -21176,7 +21167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjects:
-  - {fileID: 0}
+  - {fileID: 1487923960965289177}
   toggleType: 1
 --- !u!114 &8066722535434665678
 MonoBehaviour:
@@ -21191,7 +21182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Receivers:
-  - {fileID: 0}
+  - {fileID: 930198155710800356}
   oneShot: 0
   conditions: []
 --- !u!4 &7428590451023724878 stripped
@@ -21286,6 +21277,7 @@ MonoBehaviour:
   Receivers:
   - {fileID: 1384950736}
   - {fileID: 1258033688}
+  - {fileID: 0}
   oneShot: 1
   conditions: []
 --- !u!1001 &6961754500798394837

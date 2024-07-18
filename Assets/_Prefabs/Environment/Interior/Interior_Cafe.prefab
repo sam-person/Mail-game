@@ -1699,6 +1699,13 @@ MonoBehaviour:
     triggered: 0
     conditions: []
   secondaryDialogue: []
+  useNavAgent: 0
+  agent: {fileID: 0}
+  navType: 0
+  autoNavigate: 1
+  distanceThreshold: 0.2
+  navNodes: []
+  loop: 1
 --- !u!114 &2084402209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2957,6 +2964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inside: 0
+  switchLighting: 1
   instant: 0
   spawnPoint: {fileID: 0}
   xRot: 135
@@ -3434,7 +3442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6600515470181388205}
   m_LocalRotation: {x: -0, y: -0.25457707, z: -0, w: 0.9670525}
-  m_LocalPosition: {x: -10.935, y: 7.177, z: -10.705}
+  m_LocalPosition: {x: -16.85, y: 6.8094883, z: -7.7244415}
   m_LocalScale: {x: 1.9663, y: 3.5971, z: 2.4805155}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3518,6 +3526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inside: 0
+  switchLighting: 1
   instant: 0
   spawnPoint: {fileID: 0}
   xRot: 135
