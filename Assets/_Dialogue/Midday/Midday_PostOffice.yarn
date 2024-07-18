@@ -156,9 +156,11 @@ title: DemoFinished
 <<if $DemoFinished == true>>
 <<jump DemoFinished2>>
 <<else>>
-Assistant Cat: Thanks for delivering that package to the Florist Catto!
+Assistant Cat: Thanks for delivering that package to the Florist!
 Assistant Cat: That's the end of the demo for now
-Assistant Cat: Don't forget to wishlist the game if you liked it!!!
+Assistant Cat: Don't forget to wishlist the game on Steam if you liked it!
+Assistant Cat: And follow our social media to stay up to date with the game
+Assistant Cat: Especially if you want to play on the Nintendo Switch!
 <<set $DemoFinished = true>>
 <<jump DemoFinished2>>
 <<endif>>
@@ -166,8 +168,8 @@ Assistant Cat: Don't forget to wishlist the game if you liked it!!!
 
 title: DemoFinished2
 ---
-Assistant Cat: Would you like to finish playing or look around some more?
--> Catto: Finish playing
+Assistant Cat: Have you finished playing or would you like to look around some more?
+-> Catto: Close the game
 	<<Trigger DemoFinish>>
 -> Catto: Look around
 	Assistant Cat: Okay, have fun!
