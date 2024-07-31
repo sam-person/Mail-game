@@ -7,6 +7,7 @@ public class FadeController : MonoBehaviour
 {
 
     public GameObject blackOutSquare;
+    Image blackoutImage;
 
     Coroutine fadePauseCoroutine;
 
@@ -14,12 +15,15 @@ public class FadeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //if(Input.GetKeyDown(KeyCode.M))
+        //{
+        //    Debug.Log("fade color = " + blackoutImage.color.a);
+        //}
     }
 
     private void Start()
     {
-        Image blackoutImage = blackOutSquare.GetComponent<Image>();
+        blackoutImage = blackOutSquare.GetComponent<Image>();
         blackoutImage.color = new Color(blackoutImage.color.r, blackoutImage.color.g, blackoutImage.color.b, 1);
         Fade(false, 1f);
     }
@@ -31,54 +35,61 @@ public class FadeController : MonoBehaviour
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, float fadeSpeed = 5)
     {
 
-        Color objectColor = blackOutSquare.GetComponent<Image>().color;
+        Color objectColor = blackoutImage.color;
         float fadeAmount;
 
 
         if (fadeToBlack)
         {
-            //bool fadefinished = false;
+            //0 is clear
+            //1 is black
 
-            while (blackOutSquare.GetComponent<Image>().color.a < 1)
+            Debug.Log("starting fade to black - fade color = " + blackoutImage.color.a);
+
+            // First while loop to fade in
+            while (blackoutImage.color.a < 1)
             {
                 fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                blackOutSquare.GetComponent<Image>().color = objectColor;
+                blackoutImage.color = objectColor;
                 yield return null;
             }
 
-            if(blackOutSquare.GetComponent<Image>().color.a >= 1)
+            Debug.Log("faded to black - fade color = " + blackoutImage.color.a);
+
+            // Ensure the alpha is exactly 1
+            blackoutImage.color = new Color(objectColor.r, objectColor.g, objectColor.b, 1);
+            GameManager.instance.OnMidFade();
+            yield return new WaitForSeconds(0.5f);
+            Debug.Log("waited at black - fade color = " + blackoutImage.color.a);
+
+            // Second while loop to fade out
+            while (blackoutImage.color.a > 0)
             {
-                GameManager.instance.OnMidFade();
-                yield return new WaitForSeconds(0.5f);
-                while (blackOutSquare.GetComponent<Image>().color.a > 0)
-                {
-                    fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
-                    objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                    blackOutSquare.GetComponent<Image>().color = objectColor;
-                    yield return null;
-                }
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                blackoutImage.color = objectColor;
+                yield return null;
             }
+
+            // Ensure the alpha is exactly 0
+            Debug.Log("faded out of black - fade color = " + blackoutImage.color.a);
+            blackoutImage.color = new Color(objectColor.r, objectColor.g, objectColor.b, 0);
+            Debug.Log("set value to 0 - fade color = " + blackoutImage.color.a);
         }
         else
         {
-            while (blackOutSquare.GetComponent<Image>().color.a > 0)
+            Debug.Log("else not fading to black");
+            while (blackoutImage.color.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
-
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                blackOutSquare.GetComponent<Image>().color = objectColor;
+                blackoutImage.color = objectColor;
                 yield return null;
             }
 
             yield return new WaitForEndOfFrame();
         }
 
-
     }
-
-
-   
-
-    
 }

@@ -43,7 +43,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.5
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: PP_Morning
+  m_Name: PP_Screenshots
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -3028138917256620531}
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 2034088071550408355}
   - {fileID: 3607399212277369215}
   - {fileID: 4219717362436573621}
-  - {fileID: 5940315159834568154}
+  - {fileID: 4441319728905504478}
 --- !u!114 &2034088071550408355
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -239,7 +239,7 @@ MonoBehaviour:
     value: 1
   contrast:
     overrideState: 1
-    value: 0
+    value: 9
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -1512,7 +1512,7 @@ MonoBehaviour:
     value: 1
   rounded:
     overrideState: 1
-    value: 1
+    value: 0
   mask:
     overrideState: 0
     value: {fileID: 0}
@@ -1538,7 +1538,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 100
+    value: 32
   intensityX:
     overrideState: 1
     value: 0.576
@@ -1553,8 +1553,8 @@ MonoBehaviour:
     value: 0
   scale:
     overrideState: 1
-    value: 0.86
---- !u!114 &5940315159834568154
+    value: 1.09
+--- !u!114 &4441319728905504478
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1566,16 +1566,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   focusDistance:
     overrideState: 1
-    value: 7.86
+    value: 7.4
   aperture:
     overrideState: 1
-    value: 9.7
+    value: 4.3
   focalLength:
     overrideState: 1
     value: 300
