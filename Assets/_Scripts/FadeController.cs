@@ -59,8 +59,9 @@ public class FadeController : MonoBehaviour
 
             // Ensure the alpha is exactly 1
             blackoutImage.color = new Color(objectColor.r, objectColor.g, objectColor.b, 1);
-            GameManager.instance.OnMidFade();
+            
             yield return new WaitForSeconds(0.5f);
+            GameManager.instance.OnMidFade();
             Debug.Log("waited at black - fade color = " + blackoutImage.color.a);
 
             // Second while loop to fade out

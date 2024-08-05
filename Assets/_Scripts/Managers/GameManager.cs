@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
 
     public bool isUsingKBM = true;
 
+    public float _teleportTimer = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -258,6 +260,19 @@ public class GameManager : MonoBehaviour
             pendingSceneChange = null;
         }
     }
+
+
+    //private void Update()
+    //{
+    //    if(pendingTeleport != null)
+    //    {
+    //        _teleportTimer -= Time.deltaTime;
+    //        if (_teleportTimer <= 0)
+    //        {
+    //            pendingTeleport = null;
+    //        }
+    //    }
+    //}
 
     /// <summary>
     /// When dialogue ends, when the setyarnvariable is triggered
