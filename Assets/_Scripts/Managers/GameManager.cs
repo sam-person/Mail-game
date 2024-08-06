@@ -224,9 +224,10 @@ public class GameManager : MonoBehaviour
     public REC_SceneChange pendingSceneChange;
 
     public void StartTeleport(REC_Teleport teleporter) {
-        if (pendingTeleport != null) {
+        if (pendingTeleport != null)
+        {
             Debug.Log("Can't start this teleport because there is already one pending!");
-            return;
+            //return;
         }
 
         pendingTeleport = teleporter;
