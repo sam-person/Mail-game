@@ -8,6 +8,11 @@ Catto: The tap must be broken
 <<Trigger HydrantCam>>
 Catto: My paws will get all wet if I try to cross this
 Catto: I better just avoid it until someone comes to clean it up
+<<if $holding == "nothing">>
+Catto: It's time to go back to the post office for the next delivery
+<<else>>
+Catto: It's time to go to the bakery to delivery this package
+<<endif>>
 ===
 
 title: ThatWasWeird
@@ -58,5 +63,10 @@ Catto: The Chef is still waiting for their delivery
 title: BrokenTap
 ---
 Catto: The tap is broken
-Catto: I should leave it for now
+Catto: I will leave it for now
+<<if $holding == "nothing">>
+Catto: It's time to go back to the post office for the next delivery
+<<else>>
+Catto: It's time to go to the bakery to delivery this package
+<<endif>>
 ===
