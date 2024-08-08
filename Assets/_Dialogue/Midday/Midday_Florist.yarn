@@ -31,7 +31,7 @@ Little Miss Florist: Now if only I actually knew how to use these
 Little Miss Florist: I can take the package off your paws now
 Little Miss Florist: Have a splendid day Catto, and thanks again
 <<setQuest "Return to the post office">>
-<<set $holding = "nothing">>
+<<set $holding to "nothing">>
 <<set $packagesDeliveredCount += 1>>
 <<set $floristPackageDelivered = true>>
 <<set $packageAssigned = false>>
